@@ -1,0 +1,21 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.42.2.1 }
+
+\bibitem{NBR14724:2001}
+\abntrefinfo{ABNT}{ABNT}{2001}
+{ASSOCIA{\c C}\~AO BRASILEIRA DE NORMAS T\'ECNICAS. \emph{{NBR} 14724}:
+  Informa{\c c}\~ao e documenta{\c c}\~ao --- trabalhos acad\^emicos ---
+  apresenta{\c c}\~ao.
+Rio de Janeiro, jul. 2001. 6~p.}
+
+\bibitem{abnt-classe-doc}
+\abntrefinfo{Frasson}{FRASSON}{2002}
+{FRASSON, M.~V. S. \emph{Classe {ABNT}}: confecção de trabalhos acadêmicos em
+  {\LaTeX} segundo as normas {ABNT}.
+[S.l.], 2002. Dispon{\'\i}vel em: $<$http://abntex.codigolivre.org.br$>$.}
+
+\end{thebibliography}

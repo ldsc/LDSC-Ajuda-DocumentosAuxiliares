@@ -1,0 +1,4 @@
+Se tiver acesso a internet dê preferência ao site do aplicativo pois terá acesso as informações mais atualizadas do que manuais em pdf.
+
+O site de ajuda do gnome em português:
+https://help.gnome.org/users/gnome-help/stable/index.html.pt

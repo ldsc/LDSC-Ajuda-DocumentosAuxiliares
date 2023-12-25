@@ -1,0 +1,559 @@
+\nocite{8.11.3-1b}
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.45.2.1 }
+
+\bibitem[A~flor prometida 1995]{10520-2002:6.3-8}
+\abntrefinfo{A~flor\ldots}{A~FLOR\ldots}{1995}
+{A~FLOR prometida.
+\emph{A Folha de S.~Paulo}, São Paulo, p.~4, 2 abr. 1995.}
+{\footnotesize\begin{verbatim}
+@article{10520-2002:6.3-8,
+address={São Paulo},
+journal={A Folha de S.~Paulo},
+month={2 abr.},
+pages={4},
+title={A~flor prometida},
+year={1995}}
+\end{verbatim}}
+\bibitem[Abreu 1999]{Abreu}
+\abntrefinfo{Abreu}{ABREU}{1999}
+{ABREU, X. Y.~Z. \emph{Exemplo de cita{\c c}\~ao no texto}. [S.l.: s.n.],
+  1999.}
+{\footnotesize\begin{verbatim}
+@book{Abreu,
+author={X. Y. Z. Abreu},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1999}}
+\end{verbatim}}
+\bibitem[Anteprojeto de lei 1987]{10520-2002:6.3-7}
+\abntrefinfo{Anteprojeto\ldots}{ANTEPROJETO\ldots}{1987}
+{ANTEPROJETO de lei.
+\emph{Estudos e Debates}, Brasília, DF, n.~13, p. 51--60, jan. 1987.}
+{\footnotesize\begin{verbatim}
+@article{10520-2002:6.3-7,
+address={Brasília, DF},
+journal={Estudos e Debates},
+month={jan.},
+number={13},
+pages={51-60},
+title={Anteprojeto de lei},
+year={1987}}
+\end{verbatim}}
+\bibitem[Associa{\c c}\~ao Brasileira de Normas T\'ecnicas 1988]{NBR10520:1988}
+\abntrefinfo{ABNT}{ABNT}{1988}
+{ASSOCIA{\c C}\~AO BRASILEIRA DE NORMAS T\'ECNICAS. \emph{{NBR} 10520}:
+  Apresenta{\c c}\~ao de cita{\c c}\~oes em documentos --- procedimentos.
+Rio de Janeiro, out. 1988. 3~p.}
+{\footnotesize\begin{verbatim}
+@manual{NBR10520:1988,
+address={Rio de Janeiro},
+month={out.},
+organization={Associa{\c c}\~ao Brasileira de Normas T\'ecnicas},
+org-short={ABNT},
+pages={3},
+subtitle={Apresenta{\c c}\~ao de cita{\c c}\~oes em documentos ---
+  Procedimentos},
+title={{NBR} 10520},
+year={1988}}
+\end{verbatim}}
+\bibitem[Associa{\c c}\~ao Brasileira de Normas T\'ecnicas 2000]{NBR6023:2000}
+\abntrefinfo{ABNT}{ABNT}{2000}
+{\underline{\ \ \ \ \ \ \ \ }. \emph{{NBR} 6023}: Informa{\c c}\~ao e
+  documenta{\c c}\~ao --- refer\^encias --- elabora{\c c}\~ao.
+Rio de Janeiro, ago. 2000. 22~p.}
+{\footnotesize\begin{verbatim}
+@manual{NBR6023:2000,
+address={Rio de Janeiro},
+month={ago.},
+organization={Associa{\c c}\~ao Brasileira de Normas T\'ecnicas},
+org-short={ABNT},
+pages={22},
+subtitle={Informa{\c c}\~ao e documenta{\c c}\~ao --- Refer\^encias ---
+  Elabora{\c c}\~ao},
+title={{NBR} 6023},
+year={2000}}
+\end{verbatim}}
+\bibitem[Associa{\c c}\~ao Brasileira de Normas T\'ecnicas 2001]{NBR10520:2001}
+\abntrefinfo{ABNT}{ABNT}{2001}
+{\underline{\ \ \ \ \ \ \ \ }. \emph{{NBR} 10520}: Informa{\c c}\~ao e
+  documenta{\c c}\~ao --- apresenta{\c c}\~ao de cita{\c c}\~oes em documentos.
+Rio de Janeiro, jul. 2001. 4~p. Substitui a Ref.~\citeonline{NBR10520:1988}.}
+{\footnotesize\begin{verbatim}
+@manual{NBR10520:2001,
+address={Rio de Janeiro},
+month={jul.},
+note={Substitui a Ref.~\citeonline{NBR10520:1988}},
+organization={Associa{\c c}\~ao Brasileira de Normas T\'ecnicas},
+org-short={ABNT},
+pages={4},
+subtitle={Informa{\c c}\~ao e documenta{\c c}\~ao --- Apresenta{\c c}\~ao de
+  cita{\c c}\~oes em documentos},
+title={{NBR} 10520},
+year={2001}}
+\end{verbatim}}
+\bibitem[Associa{\c c}\~ao Brasileira de Normas T\'ecnicas 2002]{NBR10520:2002}
+\abntrefinfo{ABNT}{ABNT}{2002a}
+{\underline{\ \ \ \ \ \ \ \ }. \underline{\ \ \ \ \ \ \ \ }.
+Rio de Janeiro, ago. 2002. 7~p. Substitui a Ref.~\citeonline{NBR10520:2001}.}
+{\footnotesize\begin{verbatim}
+@manual{NBR10520:2002,
+address={Rio de Janeiro},
+month={ago.},
+note={Substitui a Ref.~\citeonline{NBR10520:2001}},
+organization={Associa{\c c}\~ao Brasileira de Normas T\'ecnicas},
+org-short={ABNT},
+pages={7},
+subtitle={Informa{\c c}\~ao e documenta{\c c}\~ao --- Apresenta{\c c}\~ao de
+  cita{\c c}\~oes em documentos},
+title={{NBR} 10520},
+year={2002}}
+\end{verbatim}}
+\bibitem[Associa{\c c}\~ao Brasileira de Normas T\'ecnicas 2002]{NBR6023:2002}
+\abntrefinfo{ABNT}{ABNT}{2002b}
+{\underline{\ \ \ \ \ \ \ \ }. \emph{{NBR} 6023}: Informa{\c c}\~ao e
+  documenta{\c c}\~ao --- refer\^encias --- elabora{\c c}\~ao.
+Rio de Janeiro, ago. 2002. 24~p. Substitui a Ref.~\citeonline{NBR6023:2000}.}
+{\footnotesize\begin{verbatim}
+@manual{NBR6023:2002,
+address={Rio de Janeiro},
+month={ago.},
+note={Substitui a Ref.~\citeonline{NBR6023:2000}},
+organization={Associa{\c c}\~ao Brasileira de Normas T\'ecnicas},
+org-short={ABNT},
+pages={24},
+subtitle={Informa{\c c}\~ao e documenta{\c c}\~ao --- Refer\^encias ---
+  Elabora{\c c}\~ao},
+title={{NBR} 6023},
+year={2002}}
+\end{verbatim}}
+\bibitem[Authler-Reiriz 1982]{10520:4.1-1}
+\abntrefinfo{Authler-Reiriz}{AUTHLER-REIRIZ}{1982}
+{AUTHLER-REIRIZ, X. Y.~Z. \emph{Exemplo de cita{\c c}\~ao no texto}. [S.l.:
+  s.n.], 1982.}
+{\footnotesize\begin{verbatim}
+@book{10520:4.1-1,
+author={X. Y. Z. Authler-Reiriz},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1982}}
+\end{verbatim}}
+\bibitem[Bobbio 1995]{10520-2002:6.3-2}
+\abntrefinfo{Bobbio}{BOBBIO}{1995}
+{BOBBIO, N. \emph{O positivismo jur{\'\i}dico}: li{\c c}\~oes de filosofia do
+  direito. S\~ao Paulo: \'Icone, 1995.}
+{\footnotesize\begin{verbatim}
+@book{10520-2002:6.3-2,
+address={S\~ao Paulo},
+author={Noberto Bobbio},
+publisher={\'Icone},
+subtitle={li{\c c}\~oes de Filosofia do Direito},
+title={O positivismo jur{\'\i}dico},
+year={1995}}
+\end{verbatim}}
+\bibitem[Brasil. {Ministério da Administração Federal e da Reforma do Estado}
+  1995]{10520-2002:6.3-6}
+\abntrefinfo{Brasil}{BRASIL}{1995}
+{BRASIL. {Ministério da Administração Federal e da Reforma do Estado}.
+  \emph{Plano diretor da reforma do aparelho do estado}.
+Brasília, DF, 1995.}
+{\footnotesize\begin{verbatim}
+@manual{10520-2002:6.3-6,
+address={Brasília, DF},
+organization={Brasil. {Ministério da Administração Federal e da Reforma do
+  Estado}},
+org-short={Brasil},
+title={Plano diretor da reforma do aparelho do estado},
+year={1995}}
+\end{verbatim}}
+\bibitem[Candido 1993]{10520:4.8.1}
+\abntrefinfo{Candido}{CANDIDO}{1993}
+{CANDIDO, X. Y.~Z. \emph{Exemplo de cita{\c c}\~ao no texto}. [S.l.: s.n.],
+  1993.}
+{\footnotesize\begin{verbatim}
+@book{10520:4.8.1,
+author={X. Y. Z. Candido},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1993}}
+\end{verbatim}}
+\bibitem[Comiss\~ao das Comunidades Europ\'eias 1992]{10520-2002:6.3-5}
+\abntrefinfo{Comiss\~ao das Comunidades Europ\'eias}{COMISS\~AO DAS COMUNIDADES
+  EUROP\'EIAS}{1992}
+{COMISS\~AO DAS COMUNIDADES EUROP\'EIAS. \emph{A uni\~ao europ\'eia}.
+  Luxemburgo: Servi{\c c}o das Publica{\c c}\~oes Oficiais das Comunidades
+  Europ\'eias, 1992.}
+{\footnotesize\begin{verbatim}
+@book{10520-2002:6.3-5,
+address={Luxemburgo},
+organization={Comiss\~ao das Comunidades Europ\'eias},
+publisher={Servi{\c c}o das Publica{\c c}\~oes Oficiais das Comunidades
+  Europ\'eias},
+title={A uni\~ao europ\'eia},
+year={1992}}
+\end{verbatim}}
+\bibitem[Cruz, Correa e Costa 1998]{10520:5.1.4-98}
+\abntrefinfo{Cruz, Correa e Costa}{CRUZ; CORREA; COSTA}{1998}
+{CRUZ, X. Y.~Z.; CORREA, X. Y.~Z.; COSTA, X. Y.~Z. \emph{Exemplo de cita{\c
+  c}\~ao no texto}. [S.l.: s.n.], 1998.}
+{\footnotesize\begin{verbatim}
+@book{10520:5.1.4-98,
+author={X. Y. Z. Cruz and X. Y. Z. Correa and X. Y. Z. Costa},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1998}}
+\end{verbatim}}
+\bibitem[Cruz, Correa e Costa 1999]{10520:5.1.4-99}
+\abntrefinfo{Cruz, Correa e Costa}{CRUZ; CORREA; COSTA}{1999}
+{\underline{\ \ \ \ \ \ \ \ }. \underline{\ \ \ \ \ \ \ \ }. [S.l.: s.n.],
+  1999.}
+{\footnotesize\begin{verbatim}
+@book{10520:5.1.4-99,
+author={X. Y. Z. Cruz and X. Y. Z. Correa and X. Y. Z. Costa},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1999}}
+\end{verbatim}}
+\bibitem[Cruz, Correa e Costa 2000]{10520:5.1.4-00}
+\abntrefinfo{Cruz, Correa e Costa}{CRUZ; CORREA; COSTA}{2000}
+{\underline{\ \ \ \ \ \ \ \ }. \underline{\ \ \ \ \ \ \ \ }. [S.l.: s.n.],
+  2000.}
+{\footnotesize\begin{verbatim}
+@book{10520:5.1.4-00,
+author={X. Y. Z. Cruz and X. Y. Z. Correa and X. Y. Z. Costa},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={2000}}
+\end{verbatim}}
+\bibitem[Deng et al. 2000]{Deng00}
+\abntrefinfo{Deng et al.}{DENG et al.}{2000}
+{DENG, Z.-Y. et al. Subband structures and exciton and impurity states in
+  {V}-shaped {GaAs-Ga$_{1-x}$Al$_x$As} quantum wires.
+\emph{Phys.\ Rev.\ B}, v.~61, p. 15905--15913, 2000.}
+{\footnotesize\begin{verbatim}
+@article{Deng00,
+author={Z-Y Deng and X Chen and T Ohji and T Kobayashi},
+journal={Phys.\ Rev.\ B},
+pages={15905-15913},
+title={Subband structures and exciton and impurity states in {V}-shaped
+  {GaAs-Ga$_{1-x}$Al$_x$As} quantum wires},
+volume={61},
+year={2000}}
+\end{verbatim}}
+\bibitem[Depoimento sobre qualquer coisa 1978]{10520:4.1-3}
+\abntrefinfo{Depoimento\ldots}{DEPOIMENTO\ldots}{1978}
+{DEPOIMENTO sobre qualquer coisa. [S.l.: s.n.], 1978. 101-114~p.}
+{\footnotesize\begin{verbatim}
+@book{10520:4.1-3,
+pages={101-114},
+title={Depoimento sobre qualquer coisa},
+year={1978}}
+\end{verbatim}}
+\bibitem[Derrida 1967]{10520:4.1-2}
+\abntrefinfo{Derrida}{DERRIDA}{1967}
+{DERRIDA, X. Y.~Z. \emph{Exemplo de cita{\c c}\~ao no texto}. [S.l.: s.n.],
+  1967. 293~p.}
+{\footnotesize\begin{verbatim}
+@book{10520:4.1-2,
+author={X. Y. Z. Derrida},
+pages={293},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1967}}
+\end{verbatim}}
+\bibitem[Evans 1987]{Evans}
+\abntrefinfo{Evans}{EVANS}{1987}
+{EVANS, X. Y.~Z. \emph{Exemplo de cita{\c c}\~ao no texto}. [S.l.: s.n.],
+  1987.}
+{\footnotesize\begin{verbatim}
+@book{Evans,
+author={X. Y. Z. Evans},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1987}}
+\end{verbatim}}
+\bibitem[Fonseca 1997]{10520:5.1.5a}
+\abntrefinfo{Fonseca}{FONSECA}{1997}
+{FONSECA, X. Y.~Z. \emph{Exemplo de cita{\c c}\~ao no texto}. [S.l.: s.n.],
+  1997.}
+{\footnotesize\begin{verbatim}
+@book{10520:5.1.5a,
+author={X. Y. Z. Fonseca},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1997}}
+\end{verbatim}}
+\bibitem[Fonseca e Paiva 1997]{10520:5.1.5ab}
+\abntrefinfo{Fonseca e Paiva}{FONSECA; PAIVA}{1997}
+{FONSECA, X. Y.~Z.; PAIVA, X. Y.~Z. \emph{Exemplo de cita{\c c}\~ao no texto}.
+  [S.l.: s.n.], 1997.}
+{\footnotesize\begin{verbatim}
+@book{10520:5.1.5ab,
+author={X. Y. Z. Fonseca and X. Y. Z. Paiva},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1997}}
+\end{verbatim}}
+\bibitem[Jossua e Metz 1976]{10520-2002:6.3-3}
+\abntrefinfo{Jossua e Metz}{JOSSUA; METZ}{1976}
+{JOSSUA, J.~P.; METZ, J.~B. Editorial: Teologia e literatura.
+\emph{Concilium}, Petr\'opolis, v.~115, n.~5, p.~2--5, 1976.}
+{\footnotesize\begin{verbatim}
+@article{10520-2002:6.3-3,
+address={Petr\'opolis},
+author={Jossua, Jean Pierre and Metz, Johann Baptist},
+journal={Concilium},
+number={5},
+pages={2-5},
+title={Editorial: Teologia e Literatura},
+volume={115},
+year={1976}}
+\end{verbatim}}
+\bibitem[Lopes 2000]{10520-2002:6.3-1}
+\abntrefinfo{Lopes}{LOPES}{2000}
+{LOPES, J.~R. de L. \emph{O direito na história}. São Paulo: Max Limonad,
+  2000.}
+{\footnotesize\begin{verbatim}
+@book{10520-2002:6.3-1,
+address={São Paulo},
+author={Jos\'e Reinaldo de Lima Lopes},
+publisher={Max Limonad},
+title={O direito na história},
+year={2000}}
+\end{verbatim}}
+\bibitem[Makau 1962]{8.11.3-1}
+\abntrefinfo{Makau}{MAKAU}{1962}
+{MAKAU, A.~B. \emph{Esperanza de la educaci\'on hoy}. Lisboa: J.~Piaget, 1962.
+  Separata de: \abntreprintinfo{ 8.11.3-1b}}
+{\footnotesize\begin{verbatim}
+@book{8.11.3-1,
+address={Lisboa},
+author={A. B. Makau},
+publisher={J.~Piaget},
+reprinted-from={8.11.3-1b},
+title={Esperanza de la educaci\'on hoy},
+year={1962}}
+\end{verbatim}}
+\bibitem[Merriam e Caffarella 1991]{10520-2002:6.3-4}
+\abntrefinfo{Merriam e Caffarella}{MERRIAM; CAFFARELLA}{1991}
+{MERRIAM, S.; CAFFARELLA, R. \emph{Learning in adulthood}: a comprehensive
+  guide. San Francisco: Jossey-Bass, 1991.}
+{\footnotesize\begin{verbatim}
+@book{10520-2002:6.3-4,
+address={San Francisco},
+author={S. Merriam and R. Caffarella},
+publisher={Jossey-Bass},
+subtitle={a comprehensive guide},
+title={Learning in adulthood},
+year={1991}}
+\end{verbatim}}
+\bibitem[Moore 1960]{8.11.3-1b}
+\abntrefinfo{Moore}{MOORE}{1960}
+{MOORE, W. (Ed.). \emph{Construtivismo del movimiento educacional}: soluciones.
+  C\'ordoba, AR: [s.n.], 1960. 309-340~p.\footnote{Essa referência ainda traz
+  importantes problemas de implementação. No original aparecem dois campos
+  address/publisher. A segunda ocorrência desses campos por enquanto é ignorada
+  pelo estilo.}}
+{\footnotesize\begin{verbatim}
+@book{8.11.3-1b,
+address={C\'ordoba, AR},
+editor={W. Moore},
+pages={309-340},
+subtitle={soluciones},
+title={Construtivismo del movimiento educacional},
+year={1960}}
+\end{verbatim}}
+\bibitem[Mumford 1949]{10520:4.2-1}
+\abntrefinfo{Mumford}{MUMFORD}{1949}
+{MUMFORD, X. Y.~Z. \emph{Exemplo de cita{\c c}\~ao no texto}. [S.l.: s.n.],
+  1949.}
+{\footnotesize\begin{verbatim}
+@book{10520:4.2-1,
+author={X. Y. Z. Mumford},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1949}}
+\end{verbatim}}
+\bibitem[Nos~canaviais, mutilação em vez de lazer e escola
+  1995]{10520-2002:6.3-9}
+\abntrefinfo{Nos~canaviais\ldots}{NOS~CANAVIAIS\ldots}{1995}
+{NOS~CANAVIAIS, mutilação em vez de lazer e escola.
+\emph{O~Globo} --- O Pa{\'\i}s, Rio de Janeiro, p.~12, 16 jul.
+  1995.\footnote{Não sabemos porque no original a seção vem antes da página.
+  Ainda estamos verificando isso.}}
+{\footnotesize\begin{verbatim}
+@article{10520-2002:6.3-9,
+address={Rio de Janeiro},
+journal={O~Globo},
+month={16 jul.},
+pages={12},
+section={O Pa{\'\i}s},
+title={Nos~canaviais, mutilação em vez de lazer e escola},
+year={1995}}
+\end{verbatim}}
+\bibitem[Oliveira e Leonardos 1943]{10520:4.2-2}
+\abntrefinfo{Oliveira e Leonardos}{OLIVEIRA; LEONARDOS}{1943}
+{OLIVEIRA, X. Y.~Z.; LEONARDOS, X. Y.~Z. \emph{Exemplo de cita{\c c}\~ao no
+  texto}. [S.l.: s.n.], 1943.}
+{\footnotesize\begin{verbatim}
+@book{10520:4.2-2,
+author={X. Y. Z. Oliveira and X. Y. Z. Leonardos},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1943}}
+\end{verbatim}}
+\bibitem[Paiva 1997]{10520:5.1.5b}
+\abntrefinfo{Paiva}{PAIVA}{1997}
+{PAIVA, X. Y.~Z. \emph{Exemplo de cita{\c c}\~ao no texto}. [S.l.: s.n.],
+  1997.}
+{\footnotesize\begin{verbatim}
+@book{10520:5.1.5b,
+author={X. Y. Z. Paiva},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1997}}
+\end{verbatim}}
+\bibitem[Reeside 1927]{10520:5.1.3a}
+\abntrefinfo{Reeside}{REESIDE}{1927a}
+{REESIDE, X. Y.~Z. \emph{Exemplo de cita{\c c}\~ao no texto}. [S.l.: s.n.],
+  1927.}
+{\footnotesize\begin{verbatim}
+@book{10520:5.1.3a,
+author={X. Y. Z. Reeside},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1927}}
+\end{verbatim}}
+\bibitem[Reeside 1927]{10520:5.1.3b}
+\abntrefinfo{Reeside}{REESIDE}{1927b}
+{\underline{\ \ \ \ \ \ \ \ }. \underline{\ \ \ \ \ \ \ \ }. [S.l.: s.n.],
+  1927.}
+{\footnotesize\begin{verbatim}
+@book{10520:5.1.3b,
+author={X. Y. Z. Reeside},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1927}}
+\end{verbatim}}
+\bibitem[S\~ao Paulo {(Estado). Secretaria do Meio Ambiente} 1999]{7.3.2-3}
+\abntrefinfo{S\~ao Paulo {(Estado). Secretaria do Meio Ambiente}}{S\~AO PAULO
+  {(Estado). Secretaria do Meio Ambiente}}{1999}
+{S\~AO PAULO {(Estado). Secretaria do Meio Ambiente}. Tratados e organiza{\c
+  c}\~oes ambientais em mat\'eria de meio ambiente.
+In:  \underline{\ \ \ \ \ \ \ \ }. \emph{Entendendo o meio ambiente}. S\~ao
+  Paulo, 1999. v.~1.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.bdt\-.org\-.br\-/sma\-/entendendo\-/a%
+tual\-.htm$>$}{http://www.bdt.org.br/sma/entendendo/atual.htm}. Acesso em: 8
+  mar. 1999.}
+{\footnotesize\begin{verbatim}
+@inbook{7.3.2-3,
+address={S\~ao Paulo},
+booktitle={Entendendo o meio ambiente},
+organization={S\~ao Paulo {(Estado). Secretaria do Meio Ambiente}},
+title={Tratados e organiza{\c c}\~oes ambientais em mat\'eria de meio
+  ambiente},
+url={http://www.bdt.org.br/sma/entendendo/atual.htm},
+urlaccessdate={8 mar. 1999},
+volume={1},
+year={1999}}
+\end{verbatim}}
+\bibitem[S\'a 1995]{10520:4.2-3}
+\abntrefinfo{S\'a}{S\'A}{1995}
+{S\'A, X. Y. Z.~P. de. \emph{Exemplo de cita{\c c}\~ao no texto}. [S.l.: s.n.],
+  1995.}
+{\footnotesize\begin{verbatim}
+@book{10520:4.2-3,
+author={X. Y. Z. Pereira~de~S\'a},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1995}}
+\end{verbatim}}
+\hiddenbibitem[Sage 1992]{Sage}
+\abntrefinfo{Sage}{SAGE}{1992}
+{}
+{\footnotesize\begin{verbatim}
+@hidden{Sage,
+author={X. Y. Z. Sage},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1992}}
+\end{verbatim}}
+\bibitem[Santos 1994]{7.2.2-2}
+\abntrefinfo{Santos}{SANTOS}{1994}
+{SANTOS, F.~R. dos. A coloniza{\c c}\~ao da terra do {T}ucuj\'us.
+In:  \underline{\ \ \ \ \ \ \ \ }. \emph{Hist\'oria do Amap\'a, {1$^o$} grau}.
+  2. ed. Macap\'a: Valcan, 1994. cap.~3, p. 15--24.}
+{\footnotesize\begin{verbatim}
+@inbook{7.2.2-2,
+address={Macap\'a},
+author={dos Santos, Fernando Rodrigues},
+booktitle={Hist\'oria do Amap\'a, {1$^o$} grau},
+chapter={3},
+edition={2},
+pages={15-24},
+publisher={Valcan},
+title={A coloniza{\c c}\~ao da terra do {T}ucuj\'us},
+year={1994}}
+\end{verbatim}}
+\hiddenbibitem[Silva 1992]{Silva}
+\abntrefinfo{Silva}{SILVA}{1992}
+{}
+{\footnotesize\begin{verbatim}
+@hidden{Silva,
+author={X. Y. Z. Silva},
+year={1992}}
+\end{verbatim}}
+\bibitem[Silva 1997]{10520:5.1.5c}
+\abntrefinfo{Silva}{SILVA}{1997}
+{SILVA, X. Y.~Z. \emph{Exemplo de cita{\c c}\~ao no texto}. [S.l.: s.n.],
+  1997.}
+{\footnotesize\begin{verbatim}
+@book{10520:5.1.5c,
+author={X. Y. Z. Silva},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1997}}
+\end{verbatim}}
+\bibitem[Simp\'osio Brasileiro de Redes de Computadores 1995]{7.5.1.2-1}
+\abntrefinfo{Simp\'osio Brasileiro de Redes de Computadores}{SIMP\'OSIO
+  BRASILEIRO DE REDES DE COMPUTADORES}{1995}
+{SIMP\'OSIO BRASILEIRO DE REDES DE COMPUTADORES, 13., 1995, Belo Horizonte.
+  \emph{Anais...} Belo Horizonte: UFMG, 1995. 655~p.}
+{\footnotesize\begin{verbatim}
+@proceedings{7.5.1.2-1,
+address={Belo Horizonte},
+conference-number={13},
+conference-year={1995},
+conference-location={Belo Horizonte},
+organization={Simp\'osio Brasileiro de Redes de Computadores},
+pages={655},
+publisher={UFMG},
+title={Anais...},
+year={1995}}
+\end{verbatim}}
+\bibitem[Souto 1916]{10520:4.8}
+\abntrefinfo{Souto}{SOUTO}{1916}
+{SOUTO, X. Y.~Z. \emph{Exemplo de cita{\c c}\~ao no texto}. [S.l.: s.n.],
+  1916.}
+{\footnotesize\begin{verbatim}
+@book{10520:4.8,
+author={X. Y. Z. Souto},
+title={Exemplo de cita{\c c}\~ao no texto},
+year={1916}}
+\end{verbatim}}
+\bibitem[Urani et al. 1994]{8.1.1.2}
+\abntrefinfo{Urani et al.}{URANI et al.}{1994}
+{URANI, A. et al. \emph{Constitui{\c c}\~ao de uma matriz de contabilidade
+  social para o Brasil}. Bras{\'\i}lia, DF: IPEA, 1994.}
+{\footnotesize\begin{verbatim}
+@book{8.1.1.2,
+address={Bras{\'\i}lia, DF},
+author={Urani, A and others},
+publisher={IPEA},
+title={Constitui{\c c}\~ao de uma matriz de contabilidade social para o
+  Brasil},
+year={1994}}
+\end{verbatim}}
+\bibitem[Weber 2003]{abnt-bibtex-doc}
+\abntrefinfo{Weber}{WEBER}{2003}
+{WEBER, G. \emph{Estilo bibtex compat{\'\i}vel com a `norma' 6023/2000 da
+  {ABNT}}.
+[S.l.], 2003. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/abntex\-.codigolivre\-.org\-.br$>$}{http://%
+abntex.codigolivre.org.br}.}
+{\footnotesize\begin{verbatim}
+@manual{abnt-bibtex-doc,
+author={Gerald Weber},
+organization={Grupo abnTeX},
+title={Estilo bibtex compat{\'\i}vel com a `norma' 6023/2000 da {ABNT}},
+url={http://abntex.codigolivre.org.br},
+year={2003}}
+\end{verbatim}}
+\end{thebibliography}

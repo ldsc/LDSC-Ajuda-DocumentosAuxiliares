@@ -1,0 +1,22 @@
+
+Coloque aqui informações sobre os pacotes e manuais do ABNTEX.
+Instruções de instalação e uso.
+A ideia é que baixem estas informações e mantenham no seu computador para tirar dúvidas.
+
+Diretório:
+/home/andreduartebueno/Dropbox/05-Gestao/Modelos/Modelos-Documentos-Diretorios/
+DocumentosAuxiliares-2-Manuais-Softwares/03-Ajuda-LaTeX-LyX/
+
+*** LaTeX-LyX
+Repositório com documentos auxiliares, manuais e instrucões, TeX, LaTeX, Lyx.
+**** TODO Ler sobre abntex2 (manuais e links).
+Aqui estão alguns exemplos de como o abntex2 pode ser usado para formatar documentos:
+Para formatar um artigo científico, você pode usar a classe abntex2-article.
+Para formatar uma monografia, você pode usar a classe abntex2-monografia.
+Para formatar uma dissertação, você pode usar a classe abntex2-dissertation.
+Para formatar uma tese, você pode usar a classe abntex2-thesis.
+
+**** TODO Atualizar os arquivos da pasta/home/andreduartebueno/Dropbox/05-Gestao/Modelos/Modelos-Documentos-Diretorios/DocumentosAuxiliares-2-Manuais-Softwares/LaTeX-LyX/2-Pacotes/Pacote-abntex2[atualizar]
+**** TODO Modelo-DiretorioBolsita: Os modelos de TCC/MSC/DSC existentes usam arquivos do abntex1.
+**** TODO Modelo-DiretorioBolsita: Falta fazer funcionar  o abntex2. reclamando do arquivo de layout. Ler sobre.
+**** TODO Criar modelo de documento do LyX que usa apenas arquivos auxiliares do ABNTEX2.

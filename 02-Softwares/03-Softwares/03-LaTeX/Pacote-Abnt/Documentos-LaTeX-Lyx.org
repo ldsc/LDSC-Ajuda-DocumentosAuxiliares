@@ -1,0 +1,54 @@
+
+* Diretórios:
+** 1-Manuais
+- Manual de TeX/LaTeX da ufpr
+- Manual de TeX/LaTeX do professor Bueno
+- Manual do pacote listings
+
+** 2-Pacotes
+
+O diretório Pacotes tem os pacotes:
+- Pacote-abntex1-v0.8
+- Pacote-abntex2 (contem exemplos de documentos .tex)
+
+Em distribuições antigas usávamos o abntex1 (pacote abntex0.8),
+mas como não vinha nas distribuições a instalação era manual.
+
+Nas distribuições mais novas o pacote abntex2 esta disponível.
+A instalação é feita usando o comando abaixo:
+dnf install texlive-abntex2
+
+** 3-ArquivosAuxiliares-DocumentosFormato-abnt-PacoteABNTEX1
+
+Uma maneira de fazer um documento usando o modelo de documento da abnt
+é copiar para dentro do diretório do lyx os arquivos que estão no diretório
+"3-ArquivosAuxiliares-DocumentosFormato-abnt-PacoteABNTEX1".
+
+** 4-ArquivosAuxiliares-DocumentosFormato-abnt-PacoteABNTEX2
+
+* Tarefas
+** TODO criar modelo documento no lyx usando ABNTEX2
+*** Feito, mas ainda aparecem mensagens de erro. 
+
+
+** Sites
+*** github do projeto: https://github.com/abntex/abntex2/tree/master
+*** Arquivos do pacote ABNTEX2 
+- Fonte: https://packages.fedoraproject.org/pkgs/texlive/texlive-abnt/fedora-38.html
+usr/
+    share/
+        licenses/
+            texlive-abnt/
+                lppl1.3.txt
+texlive/
+    texmf-dist/
+        doc/
+            latex/
+                abnt/
+                    README.md
+                    abnt-doc.pdf
+                    abnt-doc.tex
+tex/
+    latex/
+        abnt/
+            abnt.sty

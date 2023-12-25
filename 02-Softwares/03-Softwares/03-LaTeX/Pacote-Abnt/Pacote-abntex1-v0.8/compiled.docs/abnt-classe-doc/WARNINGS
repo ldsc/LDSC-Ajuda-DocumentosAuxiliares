@@ -1,0 +1,29 @@
+No implementation found for style `hyperref'
+No implementation found for style `dsfont'
+No implementation found for style `eucal'
+No implementation found for style `relsize'
+No implementation found for style `setspace'
+No implementation found for style `calc'
+No implementation found for style `ifthen'
+No implementation found for style `mdwlist'
+No implementation found for style `pifont'
+
+redefining command \latex 
+
+previous meaning of \latex will be lost
+
+redefining command \ 
+
+previous meaning of \ will be lost
+
+*** wrap_cmd_ not defined, cannot wrap \ 
+
+? brace missing for \newedcommand
+
+? brace missing for \
+
+? brace missing for \hyperref
+couldn't convert character inodot into available encodings
+couldn't convert character ob into available encodings
+
+ ...set $ACCENT_IMAGES  to get an image 

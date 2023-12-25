@@ -1,0 +1,1503 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>abnt-bibtex-alf-doc</TITLE>
+<META NAME="description" CONTENT="abnt-bibtex-alf-doc">
+<META NAME="keywords" CONTENT="abnt-bibtex-alf-doc">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="abnt-bibtex-alf-doc.css">
+
+</HEAD>
+
+<BODY >
+
+ 
+ 
+<P>
+Estilo bibtex compat&#237;vel com a `norma' 6023  da ABNT:
+Quest&#245;es espec&#237;ficas da `norma' 10520 
+<BR>Vers&#227;o <!-- MATH
+ $Revision: 1.29$
+ -->
+<SPAN CLASS="MATH"></SPAN>
+G. Weber
+Manual de uso do estilo bibliogr&#225;ficos alfab&#233;tico (sistema autor-data).
+Grupo 
+<!-- MATH
+ $Date: 2004/03/23 17:35:47$
+ -->
+<SPAN CLASS="MATH"></SPAN>
+abntex.codigolivre.org.br
+
+<P>
+
+<P>
+
+<H1><A NAME="SECTION00100000000000000000">
+Avisos</A>
+</H1>
+
+<H1><A NAME="SECTION00110000000000000000">
+Prefira o sistema num&#233;rico, se poss&#237;vel</A>
+</H1>
+
+<P>
+Se voc&#234; est&#225; usando <SPAN CLASS="logo,LaTeX">L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X</SPAN>presumir que est&#225; usando um
+computador.
+Neste caso a cita&#231;&#227;o no esquema auto-data &#233; uma coisa t&#227;o arcaica e desnecess&#225;ria
+quanto uma r&#233;gua-de-c&#225;lculo. A leitura de um texto com chamadas no
+sistema autor-data &#233; desajeitada, especialmente quando muitas refer&#234;ncias
+s&#227;o chamadas de uma s&#243; vez.
+Voc&#234; n&#227;o tem absolutamente nenhum motivo para
+usar o sistema autor-data j&#225; que a ABNT
+``autorizou'' o uso do sistema cita&#231;&#227;o num&#233;rico
+por um cochilo qualquer.
+
+<P>
+Por outro lado, h&#225; aqueles
+que se d&#227;o ao trabalho de te dar trabalho de seguir regras esdr&#250;xulas na hora
+de escrever teses.
+Estes podem estar exigindo que voc&#234; use o arcaico sistema
+autor-data. Tamb&#233;m pode acontecer que os examinadores da banca, seja por que
+n&#227;o leram a sua tese ou porque n&#227;o entenderam nada realmente (ou ambos),
+acabem se enroscando
+em picuinhas.
+A&#237; mandam voc&#234; colocar todas as suas refer&#234;ncias num&#233;ricas em formato
+autor-data.
+Comentamos isso porque tudo isso j&#225; aconteceu e continua acontecendo 
+com outras pessoas.
+Portanto: <SPAN  CLASS="textit">esteja preparado</SPAN>. 
+Antes de come&#231;ar a escrever recomendamos verificar quais s&#227;o 
+as regras <SPAN  CLASS="textit">de fato</SPAN> da sua faculdade ou empresa. 
+
+<P>
+
+<H1><A NAME="SECTION00120000000000000000">
+Cuidado! Estilo em fase de acabamento!</A>
+</H1>
+
+<P>
+O estilo <SPAN CLASS="logo,LaTeX">L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X</SPAN>#43#><TT>abntcite.sty</TT> est&#225; em fase final de desenvolvimento.
+Embora j&#225; apresente alguma maturidade sua implementa&#231;&#227;o pode mudar entre
+uma vers&#227;o e outra e &#233; poss&#237;vel que seu texto necessite de algumas
+pequenas adapta&#231;&#245;es futuramente.
+
+<P>
+
+<H1><A NAME="SECTION00130000000000000000">
+Cuidado! Normas nebulosas!</A>
+</H1>
+
+<P>
+N&#243;s elaboramos os estilos debru&#231;ados diretamente sobre os orginais da ABNT
+e as seguimos escrupulosamente. Mas n&#227;o se iluda! O que a sua coordena&#231;&#227;o
+de p&#243;s-graduca&#231;&#227;o, ou orientador, ou chefe etc., entendem por `normas ABNT'
+pode n&#227;o ter qualquer v&#237;nculo com a realidade. Por isso <SPAN  CLASS="textit">n&#227;o garantimos</SPAN>
+que ao usar os estilos do &#234; esteja em conformidade com os estilos
+da sua institui&#231;&#227;o ou empresa.
+
+<P>
+Um exemplo cl&#225;ssico &#233; o sistema de chamada num&#233;rico
+(cita&#231;&#227;o num&#233;rica, usada em [<A
+ HREF="abnt-bibtex-alf-doc.html#abnt-bibtex-doc">Weber 2003</A>]).
+Embora <SPAN  CLASS="textit">todas</SPAN> as `normas' da ABNT [<A
+ HREF="abnt-bibtex-alf-doc.html#NBR10520:1988">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 1988</A>,<A
+ HREF="abnt-bibtex-alf-doc.html#NBR6023:2000">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2000</A>,<A
+ HREF="abnt-bibtex-alf-doc.html#NBR6023:2002">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2002</A>,<A
+ HREF="abnt-bibtex-alf-doc.html#NBR10520:2001">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2001</A>,<A
+ HREF="abnt-bibtex-alf-doc.html#NBR10520:2002">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2002</A>]
+`autorizem' seu uso a maioria das institui&#231;&#245;es, orientadores, membros de banca
+ir&#227;o dizer que isso n&#227;o &#233; ABNT. Acredite se quiser.
+
+<P>
+
+<H1><A NAME="SECTION00200000000000000000">
+Como usar a cita&#231;&#227;o alfab&#233;tica (sistema autor-data)</A>
+</H1>
+
+<P>
+
+<H1><A NAME="SECTION00210000000000000000">
+Como chamar os pacotes e estilos</A>
+</H1>
+
+<P>
+Para usar o estilo de cita&#231;&#227;o alfab&#233;tico
+(se&#231;&#227;o 9.2 em 6023/2000&nbsp;[<A
+ HREF="abnt-bibtex-alf-doc.html#NBR6023:2000">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2000</A>])
+utilize no pre&#226;mbulo
+<PRE>
+\usepackage[alf]{abntcite}
+</PRE>
+Voc&#234; <SPAN  CLASS="textit">n&#227;o precisa</SPAN> selecionar o comando <code>\bibliographystyle</code>
+e a base bibliogr&#225;fica <code>abnt-options</code> tamb&#233;m estar&#225; automaticamente
+inclu&#237;da.
+
+<P>
+Se voc&#234; quiser usar apenas o estilo bibliogr&#225;fico
+selecione com o comando
+<PRE>
+\bibliographystyle{abnt-alf}
+</PRE>
+mas esteja avisado que nesse caso as chamadas no texto <SPAN  CLASS="textit">n&#227;o estar&#227;o</SPAN>
+em conformidade com a `norma'.
+
+<P>
+
+<H1><A NAME="SECTION00220000000000000000">
+Como usar a cita&#231;&#227;o no sistema autor-data</A>
+</H1>
+
+<P>
+Este sistema de cita&#231;&#227;o &#233; descrito em NBR10520:2002, note que
+essa `norma' entrou em vigor em agosto de 2002 apenas um ano depois da
+NBR10520:2001.
+Esse sistema aceita b&#225;sicamente duas formata&#231;&#245;es para a cita&#231;&#227;o
+dependendo da maneira como ocorre a cita&#231;&#227;o no texto.
+
+<P>
+
+<H2><A NAME="SECTION00221000000000000000">
+Refer&#234;ncias explic&#237;tas (<TT>citeonline</TT>) </A>
+</H2>
+
+<P>
+&#201; o caso em que voc&#234; menciona <SPAN  CLASS="textit">explicitamente</SPAN> o autor da refer&#234;ncia na sentenca, algo
+do tipo ``Fulano (1900)". Neste caso o nome do autor &#233; escrito
+normalmente. Para isso use o comando <code>\citeonline</code>.
+
+<P>
+Exemplos apresentadas em NBR10520:2001:
+
+<P>
+<BR>
+<BR>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+A ironia será assim uma \ldots\ proposta
+por \citeonline{10520:4.1-1}.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+A ironia ser&#225; assim uma ...
+por 10520:4.1-1.
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\citeonline[p.~146]{10520:4.2-2}
+dizem que \ldots\
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+[p.&nbsp;146]10520:4.2-2 dizem que ...
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+Segundo \citeonline[p.~27]{10520:4.2-3}
+\ldots\
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+Segundo [p.&nbsp;27]10520:4.2-3  ...
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+Aqui vai um texto qualquer só para poder
+citar alguém
+\cite[p.~225]{10520-2002:6.3-1}.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+Aqui vai um texto qualquer s&#243; para poder
+citar algu&#233;m
+[<A
+ HREF="abnt-bibtex-alf-doc.html#10520-2002:6.3-1">Lopes 2000</A>, p.&nbsp;225].
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\citeonline[p.~35]{10520-2002:6.3-2}
+apresenta uma série
+de coisas incompreensíveis.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+[p.&nbsp;35]10520-2002:6.3-2
+apresenta uma s&#233;rie
+de coisas incompreens&#237;veis.
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+Mais um exemplo articifial
+mas necessário de citação
+\cite[p.~3]{10520-2002:6.3-3}.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+Mais um exemplo articifial
+mas necess&#225;rio de cita&#231;&#227;o
+[<A
+ HREF="abnt-bibtex-alf-doc.html#10520-2002:6.3-3">Jossua e Metz 1976</A>, p.&nbsp;3].
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\citeonline{10520-2002:6.3-4}
+são mais um exemplo de citação
+bem bacana.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+10520-2002:6.3-4
+s&#227;o mais um exemplo de cita&#231;&#227;o
+bem bacana.
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+Exemplo que mostra alguma
+coisa também
+\cite[p.~34]{10520-2002:6.3-5}.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+Exemplo que mostra alguma
+coisa tamb&#233;m
+[<A
+ HREF="abnt-bibtex-alf-doc.html#10520-2002:6.3-5">Comiss&#227;o das Comunidades Europ&#233;ias 1992</A>, p.&nbsp;34].
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+
+<H2><A NAME="SECTION00222000000000000000">
+Refer&#234;ncias a <TT>organization</TT></A>
+</H2>
+
+<P>
+Se a autoria do texto for do tipo <TT>organization</TT> voc&#234; pode usar
+as cita&#231;&#245;es normalmente. No entanto &#233; recomendado, para organiza&#231;&#245;es com
+descri&#231;&#227;o longa, que voc&#234; controle o que aparece no texto com o campo <TT>org-short</TT>.
+No exemplo seguinte temos
+<PRE>
+ organization={Comiss\~ao das Comunidades Europ\'eias},
+</PRE>
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+Exemplo que mostra alguma
+coisa também
+\cite[p.~34]{10520-2002:6.3-5}.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+Exemplo que mostra alguma
+coisa tamb&#233;m
+[<A
+ HREF="abnt-bibtex-alf-doc.html#10520-2002:6.3-5">Comiss&#227;o das Comunidades Europ&#233;ias 1992</A>, p.&nbsp;34].
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+J&#225; neste exemplo:
+<PRE>
+ organization={Brasil. {Ministério da Administração Federal
+ e da Reforma do Estado}},
+ org-short   ={Brasil},
+</PRE>
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+E a pátria não poderia faltar
+\cite{10520-2002:6.3-6}.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+E a p&#225;tria n&#227;o poderia faltar
+[<A
+ HREF="abnt-bibtex-alf-doc.html#10520-2002:6.3-6">Brasil. Minist&#233;rio da Administra&#231;&#227;o Federal e da Reforma do Estado
+  1995</A>].
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+
+<H2><A NAME="SECTION00223000000000000000">
+Cita&#231;&#245;es com autoria dada pelo t&#237;tulo</A>
+</H2>
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+Uma lei anônima
+\cite[p.~55]{10520-2002:6.3-7}.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+Uma lei an&#244;nima
+[<A
+ HREF="abnt-bibtex-alf-doc.html#10520-2002:6.3-7">Anteprojeto de lei 1987</A>, p.&nbsp;55].
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+Uma artigo anônimo
+\cite[p.~4]{10520-2002:6.3-8}.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+Uma artigo an&#244;nimo
+[<A
+ HREF="abnt-bibtex-alf-doc.html#10520-2002:6.3-8">A&nbsp;flor prometida 1995</A>, p.&nbsp;4].
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+Outro artigo anônimo
+\cite[p.~12]{10520-2002:6.3-9}.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+Outro artigo an&#244;nimo
+[<A
+ HREF="abnt-bibtex-alf-doc.html#10520-2002:6.3-9">Nos&nbsp;canaviais, mutila&#231;&#227;o em vez de lazer e escola
+  1995</A>, p.&nbsp;12].
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+
+<H2><A NAME="SECTION00224000000000000000">
+Refer&#234;ncias implicitas (<TT>cite</TT>)</A>
+</H2>
+
+<P>
+S&#227;o aquelas refer&#234;ncias que n&#227;o fazem parte do texto. Use com <code>\cite</code>.
+
+<P>
+Exemplos:
+
+<P>
+<BR>
+<BR>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+para que \ldots\  à sociedade
+\cite[p.~46, grifo nosso]{10520:4.8}  
+\ldots\
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+para que ...&amp;#224; sociedade 
+[<A
+ HREF="abnt-bibtex-alf-doc.html#10520:4.8">Souto 1916</A>, p.&nbsp;46, grifo nosso]
+.../TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+b) desejo de \ldots\  passado colonial
+\cite[v.~2, p.~12, grifo do autor]%
+{10520:4.8.1} \ldots\
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+b) desejo de ...colonial
+[<A
+ HREF="abnt-bibtex-alf-doc.html#10520:4.8.1">Candido 1993</A>, v.&nbsp;2, p.&nbsp;12, grifo do autor] .../TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+``Apesar das \ldots\  da filosofia''
+\cite[p.~293]{10520:4.1-2}.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+``Apesar das ... da filosofia'' [<A
+ HREF="abnt-bibtex-alf-doc.html#10520:4.1-2">Derrida 1967</A>, p.&nbsp;293].
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+Depois, \ldots\  que prefiro
+\cite[p.~101--114]{10520:4.1-3}.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+Depois, ... que prefiro [<A
+ HREF="abnt-bibtex-alf-doc.html#10520:4.1-3">Depoimento sobre qualquer coisa 1978</A>, p.&nbsp;101-114].
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+A produção de \ldots\  em 1928
+\cite[p.~513]{10520:4.2-1} .
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+A produ&#231;&#227;o de ... em 1928 [<A
+ HREF="abnt-bibtex-alf-doc.html#10520:4.2-1">Mumford 1949</A>, p.&nbsp;513] .
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+
+<H2><A NAME="SECTION00225000000000000000">
+Refer&#234;ncias citadas por outra refer&#234;ncia (<TT>apud</TT>)</A>
+</H2>
+
+<P>
+Para citar uma refer&#234;ncia que &#233; citada dentro de outra refer&#234;ncia pode-se
+usar o comand <code>\apud</code> e <code>\apudonline</code> como nos exemplos abaixo.
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\apud[p.~2--3]{Sage}{Evans}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+[p.&nbsp;2-3]SageEvans
+</TD></TR>
+</TABLE>
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+Segundo \apudonline[p.~2]{Silva}{Abreu}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+Segundo [p.&nbsp;2]SilvaAbreu
+</TD></TR>
+</TABLE>
+
+<P>
+Nestes casos todas as refer&#234;ncas aparecer&#227;o na lista de refer&#234;ncias, exceto
+aquelas definidas como entrada <TT>@hidden</TT>. Ou seja, se voc&#234; n&#227;o quiser
+que uma entrada apare&#231;a na lista de refer&#234;ncias voc&#234; deve definir ela como
+<TT>@hidden</TT> na sua base bibliogr&#225;fica.
+
+<P>
+
+<H2><A NAME="SECTION00226000000000000000">
+Uso de idem, ibidem, opus citatum e outros</A>
+</H2>
+
+<P>
+Implementamos comandos espec&#237;ficos para idem (mesmo autor),
+ibidem (mesma obra), opus citatum (obra citada), passim (aqui e al&#237;),
+loco citato (no lugar citado), confira e et sequentia (e sequ&#234;ncia).
+Veja seu uso nos exemplos abaixo.
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\Idem[p.~2]{NBR6023:2000}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+[p.&nbsp;2]NBR6023:2000
+</TD></TR>
+</TABLE>
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\Ibidem[p.~2]{NBR6023:2000}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+[p.&nbsp;2]NBR6023:2000
+</TD></TR>
+</TABLE>
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\opcit[p.~2]{NBR6023:2000}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+[p.&nbsp;2]NBR6023:2000
+</TD></TR>
+</TABLE>
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\passim{NBR6023:2000}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+NBR6023:2000
+</TD></TR>
+</TABLE>
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\loccit{NBR6023:2000}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+NBR6023:2000
+</TD></TR>
+</TABLE>
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\cfcite[p.~2]{NBR6023:2000}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+[p.&nbsp;2]NBR6023:2000
+</TD></TR>
+</TABLE>
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\etseq[p.~2]{NBR6023:2000}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+[p.&nbsp;2]NBR6023:2000
+</TD></TR>
+</TABLE>
+
+<P>
+Note que estes comandos s&#243; fazem sentido para cita&#231;&#245;es a uma &#250;nica refer&#234;ncia
+por vez. Segundo o &#237;tem 6.1.3 da `norma' [<A
+ HREF="abnt-bibtex-alf-doc.html#NBR10520:2001">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2001</A>] estas express&#245;es s&#243; devem ser
+usadas em notas, n&#227;o no texto. Apenas a express&#227;o apud poderia ser usada no texto.
+
+<P>
+
+<H2><A NAME="SECTION00227000000000000000"></A>
+<A NAME="mult-ref"></A><BR>
+Refer&#234;ncias m&#250;ltiplas
+</H2>
+
+<P>
+Frequentemente queremos citar diversas refer&#234;ncias de uma vez.
+Utilize <TT>cite</TT>  ou <TT>citeonline</TT> separando cada chave
+por uma v&#237;rgula sem espa&#231;os e sem mudan&#231;a de linha.
+
+<P>
+<BR>
+<BR>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\cite{10520:5.1.4-98,10520:5.1.4-99,%
+10520:5.1.4-00}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+[<A
+ HREF="abnt-bibtex-alf-doc.html#10520:5.1.4-98">Cruz, Correa e Costa 1998</A>,<A
+ HREF="abnt-bibtex-alf-doc.html#10520:5.1.4-99">Cruz, Correa e Costa 1999</A>,<A
+ HREF="abnt-bibtex-alf-doc.html#10520:5.1.4-00">Cruz, Correa e Costa 2000</A>]
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\citeonline{10520:5.1.4-98,%
+10520:5.1.4-99,10520:5.1.4-00}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+10520:5.1.4-98,10520:5.1.4-99,10520:5.1.4-00
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\cite{NBR10520:1988,NBR6023:2000,%
+NBR10520:2001}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+[<A
+ HREF="abnt-bibtex-alf-doc.html#NBR10520:1988">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 1988</A>,<A
+ HREF="abnt-bibtex-alf-doc.html#NBR6023:2000">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2000</A>,]
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\citeonline{NBR10520:1988,NBR6023:2000,%
+NBR10520:2001}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+NBR10520:1988,NBR6023:2000,NBR10520:2001
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+
+<H2><A NAME="SECTION00228000000000000000"></A>
+<A NAME="mult-abc"></A><BR>
+M&#250;ltiplas refer&#234;ncias com mesmo autor-data
+</H2>
+Quando h&#225; v&#225;rias refer&#234;ncias com o mesmo autor-data o <TT>abnt-alf.sty</TT>
+gera autom&#225;ticamente um `a', `b' etc adicional. Isto atende ao &#237;tem
+5.1.3 da `norma' [<A
+ HREF="abnt-bibtex-alf-doc.html#NBR10520:2001">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2001</A>].
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\cite{10520:5.1.3a,10520:5.1.3b}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+[<A
+ HREF="abnt-bibtex-alf-doc.html#10520:5.1.3a">Reeside 1927</A>,<A
+ HREF="abnt-bibtex-alf-doc.html#10520:5.1.3b">Reeside 1927</A>]
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+\citeonline{10520:5.1.3a,10520:5.1.3b}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+10520:5.1.3a,10520:5.1.3b
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+
+<H2><A NAME="SECTION00229000000000000000">
+Mais de tr&#234;s autores e o uso de et al.</A>
+</H2>
+
+<P>
+A `norma' [<A
+ HREF="abnt-bibtex-alf-doc.html#NBR10520:2001">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2001</A>] completamente &#233; omissa sobre o caso de chamadas a obras
+com mais de tr&#234;s autores. Mesmo entre os 204 exemplos da `norma' [<A
+ HREF="abnt-bibtex-alf-doc.html#NBR6023:2000">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2000</A>]
+ocorre apenas um &#250;nico caso usado nos exemplos a seguir.
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+Segundo \citeonline{8.1.1.2}
+entende-se que \ldots\
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+Segundo 8.1.1.2
+entende-se que ...
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+Em recente estudo \cite{Deng00}
+foram investigados estados em 
+fios quânticos.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+Em recente estudo [<A
+ HREF="abnt-bibtex-alf-doc.html#Deng00">Deng et al. 2000</A>]
+foram investigados estados em 
+fios qu&#226;nticos.
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+Voc&#234; pode altera esse comportamento usando as op&#231;&#245;es <TT>abnt-etal-cite</TT>,
+<TT>abnt-etal-list</TT> e <TT>abnt-etal-text</TT>.
+Veja mais informac&#245;es na tabela <A HREF="#tabela-opcoes">1</A> e em [<A
+ HREF="abnt-bibtex-alf-doc.html#abnt-bibtex-doc">Weber 2003</A>].
+
+<P>
+
+<H2><A NAME="SECTION002210000000000000000">
+Cita&#231;&#245;es de partes da refer&#234;ncia</A>
+</H2>
+
+<P>
+&#192;s vezes voc&#234; pode se ver na necessidade de citar apenas uma parte
+da refer&#234;ncia, como apenas o autor ou apenas o ano.
+Para isso foram implementados diversos comandos.
+
+<P>
+
+<H3><A NAME="SECTION002210100000000000000">
+Apenas o autor (<TT>citeauthoronline</TT>), forma expl&#237;cita</A>
+</H3>
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+A produção de \ldots\ em 1928
+mencionada por
+\citeauthoronline{10520:4.2-1}.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+A produ&#231;&#227;o de ...<EM>1928  
+mencionada por
+10520:4.2-1.
+</EM></TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+
+<H3><A NAME="SECTION002210200000000000000">
+Apenas o autor (<TT>citeauthor</TT>), forma impl&#237;cita</A>
+</H3>
+
+<P>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+A produção de \ldots\  em 1928
+(\citeauthor{10520:4.2-1} 1928).
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+A produ&#231;&#227;o de ... em 1928
+(10520:4.2-1 1928).
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+
+<H3><A NAME="SECTION002210300000000000000">
+Apenas o ano (<TT>citeyear</TT>)</A>
+</H3>
+
+<P>
+<BR>
+<BR>
+<TABLE  WIDTH="2">
+<TR><TD><PRE>
+Em \citeyear{10520:4.1-1} a ironia
+será assim uma \ldots\  proposta por.
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+Em 10520:4.1-1 a ironia ser&#225; assim uma ... proposta por.
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+
+<H1><A NAME="SECTION00300000000000000000">
+Altera&#231;&#227;o do estilo alfab&#233;tico <TT>[citeoption]</TT></A>
+</H1>
+
+<P>
+Com o comando <code>\citeoption</code> ou <code>\usepackage</code> voc&#234; pode alterar alguns comportamentos
+do estilo bibliogr&#225;fico. Na tabela <A HREF="#tabela-opcoes">1</A> listamos as
+op&#231;&#245;es que s&#227;o espec&#237;ficas do estilo <TT>abnt-alf</TT>. 
+Por exemplo para desativar a substitui&#231;&#227;o dos autores por `et al.'
+voc&#234; chamar o seguinte comando
+<PRE>
+\usepackage[alf,abnt-etal-cite=0]{abntcite}
+</PRE>
+ou, em qualquer lugar do texto,
+<PRE>
+\citeoption{abnt-etal-cite=0}
+</PRE>
+Para ver as demais
+op&#231;&#245;es e o modo de uso veja o documento&nbsp;[<A
+ HREF="abnt-bibtex-alf-doc.html#abnt-bibtex-doc">Weber 2003</A>].
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="600"></A>
+<TABLE>
+<CAPTION><STRONG>Tabela 1:</STRONG>
+
+Op&#231;&#245;es de altera&#231;&#227;o da composi&#231;&#227;o dos estilos bibliogr&#225;ficos.</CAPTION>
+<TR><TD><DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="LEFT">campo</TD>
+<TD ALIGN="RIGHT">op&#231;&#245;es</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>descri&#231;&#227;o</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><SPAN  CLASS="textit">abnt-and-type</SPAN></TD>
+<TD ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>determina de que maneira &#233; formatado o <SPAN  CLASS="textit">and</SPAN>.</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>abnt-and-type=e</TT></TD>
+<TD ALIGN="RIGHT"><SPAN ID="txt582"><TT>e</TT></SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Usa `e' como em `Fonseca e Paiva'.</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>abnt-and-type=&amp;</TT></TD>
+<TD ALIGN="RIGHT"><TT>&amp;</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Usa `&amp;' como em `Fonseca &amp; Paiva'.</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><SPAN  CLASS="textit">abnt-etal-cite</SPAN></TD>
+<TD ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>controla como e quando os co-autores s&#227;o
+substitu&#237;dos por <SPAN  CLASS="textit">et al.</SPAN>.  Note que a substitui&#231;&#227;o
+por <SPAN  CLASS="textit">et al.</SPAN> continua ocorrendo <SPAN  CLASS="textit">sempre</SPAN> se os co-autores tiverem sido indicados
+como <TT>others</TT>.</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>abnt-etal-cite=0</TT></TD>
+<TD ALIGN="RIGHT"><TT>0</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>n&#227;o abrevia a lista de autores.</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>abnt-etal-cite=2</TT></TD>
+<TD ALIGN="RIGHT"><TT>2</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>abrevia com mais de 2 autores.</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>abnt-etal-cite=3</TT></TD>
+<TD ALIGN="RIGHT"><SPAN ID="txt595"><TT>3</TT></SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>abrevia com mais de 2 autores.</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><SPAN CLASS="MATH"></SPAN></TD>
+<TD ALIGN="RIGHT"><SPAN CLASS="MATH"></SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>abnt-etal-cite=5</TT></TD>
+<TD ALIGN="RIGHT"><TT>5</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>abrevia com mais de 5 autores.</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<A NAME="tabela-opcoes"></A></TD></TR>
+</TABLE>
+</DIV><P></P><BR>
+
+<P>
+
+<H1><A NAME="SECTION00400000000000000000">
+&#205;tens que ainda n&#227;o foram implementados</A>
+</H1>
+
+<P>
+
+<H1><A NAME="SECTION00410000000000000000">
+Autores com mesmo sobrenome e nome diferente</A>
+</H1>
+
+<P>
+A `norma' [<A
+ HREF="abnt-bibtex-alf-doc.html#NBR10520:2001">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2001</A>] no seu &#237;tem 5.1.2 sugere que se coloque o nome por extenso quando
+o sobrenome+data forem iguais. Isto em geral n&#227;o &#233; poss&#237;vel pois raramente
+se conhece o primeiro nome de um autor. Em todo caso veja a se&#231;&#227;o&nbsp;<A HREF="#mult-abc">2.2.8</A>
+para ver como &#233; resolvido o caso de autor-data igual.
+
+<P>
+
+<H1><A NAME="SECTION00420000000000000000">
+Refer&#234;ncias em notas de roda-p&#233;</A>
+</H1>
+
+<P>
+N&#227;o h&#225; inten&#231;&#227;o, a curto prazo, em implementar refer&#234;ncias em notas de roda-p&#233;
+conforme sugerido no &#237;tem 6 da `norma' 10520.
+
+<P>
+
+<H1><A NAME="SECTION00500000000000000000">
+Problemas com a `norma' 10520</A>
+</H1>
+
+<P>
+Como j&#225; foi dito, a `norma' 10520 [<A
+ HREF="abnt-bibtex-alf-doc.html#NBR10520:2001">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2001</A>] &#233; incompleta e
+inconsistente. Aqui apresentamos uma descri&#231;&#227;o dos principais problemas
+encontrados e como foram resolvidos (quando poss&#237;vel).
+
+<P>
+
+<H1><A NAME="SECTION00510000000000000000">
+Refer&#234;ncias m&#250;ltiplas</A>
+</H1>
+
+<P>
+As refer&#234;ncias a v&#225;rios autores simult&#226;neamente, ou v&#225;rias obras de um
+mesmo autor s&#227;o um verdadeiro mist&#233;rio na ``norma'' [<A
+ HREF="abnt-bibtex-alf-doc.html#NBR10520:2001">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2001</A>].
+No exemplo da se&#231;&#227;o 5.1.4 diz a ``norma'''
+<BLOCKQUOTE>
+As cita&#231;&#245;es de diversos documentos de um mesmo autor, publicados em anos diferentes
+e mencionados simultaneamente, t&#234;m as suas datas separadas por v&#237;rgula.
+<BR>Exemplo: (CRUZ; CORREA; COSTA; 1998, 1999, 2000)<A NAME="tex2html2"
+  HREF="#foot613"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A>
+</BLOCKQUOTE>
+Podemos ent&#227;o entender que Cruz, Correa e Costa s&#227;o os tr&#234;s autores e 1998, 1999
+e 2000 s&#227;o os tr&#234;s anos de publica&#231;&#227;o referindo-se a tr&#234;s documentos separados?
+Antes de responder sim, veja o que diz a se&#231;&#227;o seguinte, 5.1.5:
+<BLOCKQUOTE>
+As cita&#231;&#245;es de diversos documentos de v&#225;rios autores, mencionados simultaneamente,
+devem ser separadas por ponto e v&#237;rgula.
+<BR>Exemplo: (FONSECA; PAIVA; SILVA, 1997)<A NAME="tex2html3"
+  HREF="#foot616"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A>
+</BLOCKQUOTE>
+E agora? Trata-se de tr&#234;s autores separados, Fonseca, Paiva, Silva? Ou um
+autor Fonseca e outro documento com dois autores, Paiva e Silva? Ou um
+documento com dois autores Fonseca e Paiva seguido de um autor Silva?
+Quem n&#227;o l&#234; a descri&#231;&#227;o da se&#231;&#227;o 5.1.5 pode inclusive achar que se trata
+de um &#250;nico documento. Ou o exemplo da se&#231;&#227;o 5.1.5 est&#225; errado:
+faltam datas aos outros autores, ou foi uma tentativa
+desastrada de agrupar tr&#234;s documentos com o mesmo ano de publica&#231;&#227;o.
+J&#225; exemplo anterior, da se&#231;&#227;o 5.1.4,  tem problemas tamb&#233;m
+h&#225; um ponto-e-v&#237;rgula ap&#243;s o COSTA quando deveria ter apenas uma v&#237;rgula.
+Veja na se&#231;&#227;o&nbsp;<A HREF="#mult-ref">2.2.7</A> como fica a nossa solu&#231;&#227;o.
+
+<P>
+Exemplo da se&#231;&#227;o 5.1.5:
+<BR><TABLE  WIDTH="2">
+<TR><TD><PRE>
+\cite{10520:5.1.5a,10520:5.1.5b,%
+10520:5.1.5c}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+[<A
+ HREF="abnt-bibtex-alf-doc.html#10520:5.1.5a">Fonseca 1997</A>,<A
+ HREF="abnt-bibtex-alf-doc.html#10520:5.1.5b">Paiva 1997</A>,<A
+ HREF="abnt-bibtex-alf-doc.html#10520:5.1.5c">Silva 1997</A>]
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><TABLE  WIDTH="2">
+<TR><TD><PRE>
+\citeonline{10520:5.1.5a,10520:5.1.5b,%
+10520:5.1.5c}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+10520:5.1.5a,10520:5.1.5b,10520:5.1.5c
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+ou, supondo que Fonseca e Paiva sejam co-autores,
+<BR><TABLE  WIDTH="2">
+<TR><TD><PRE>
+\cite{10520:5.1.5ab,10520:5.1.5c}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+[<A
+ HREF="abnt-bibtex-alf-doc.html#10520:5.1.5ab">Fonseca e Paiva 1997</A>,<A
+ HREF="abnt-bibtex-alf-doc.html#10520:5.1.5c">Silva 1997</A>]
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><TABLE  WIDTH="2">
+<TR><TD><PRE>
+\citeonline{10520:5.1.5ab,10520:5.1.5c}
+</PRE></TD></TR>
+</TABLE><TABLE  WIDTH="2">
+<TR><TD>
+10520:5.1.5ab,10520:5.1.5c
+</TD></TR>
+</TABLE><BR>
+<BR>
+<BR><P>
+
+<H1><A NAME="SECTION00520000000000000000">
+et al.</A>
+</H1>
+
+<P>
+A `norma' 10520 [<A
+ HREF="abnt-bibtex-alf-doc.html#NBR10520:2001">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2001</A>] nada diz sobre como
+devem ser tratadas as chamadas a refer&#234;ncias com mais de
+tr&#234;s autores. Supondo que exista uma rela&#231;&#227;o l&#243;gica entre as
+`normas' 10520 [<A
+ HREF="abnt-bibtex-alf-doc.html#NBR10520:2001">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2001</A>] e 6023 [<A
+ HREF="abnt-bibtex-alf-doc.html#NBR6023:2000">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2000</A>],
+ent&#227;o faz sentido pensar que deve-se usar `et al.'
+na chamada exatamente nos mesmos casos em que `et al.' &#233; usado
+na lista bibliogr&#225;fica. No caso a 6023 diz que se deve usar 
+`et al.' para <SPAN  CLASS="textit">mais de</SPAN> tr&#234;s autores, ou seja, a partir de quatro
+autores.<A NAME="tex2html4"
+  HREF="#foot672"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A>
+<P>
+Parece l&#243;gico, n&#227;o &#233; mesmo? Ent&#227;o veja o seguinte caso. 
+Fomos informados que nas `normas'
+da UFLA (que <SPAN  CLASS="textit">supostamente</SPAN> seguem as `normas' da ABNT) exige-se
+o uso de `et al.' na chamada j&#225; com tr&#234;s autores e n&#227;o se use
+`et al.' na lista bibliogr&#225;fica. E agora? Cad&#234; a l&#243;gica?
+
+<P>
+Por isso insistimos que voc&#234; sempre verifique a `l&#243;gica' da sua
+institui&#231;&#227;o <SPAN  CLASS="textit">bem antes</SPAN> de entregar a sua tese.
+
+<P>
+
+<H2><A NAME="SECTION00600000000000000000">
+Refer&ecirc;ncias Bibliogr&aacute;ficas</A>
+</H2><DL COMPACT><DD>
+
+<P></P><DT><A NAME="10520-2002:6.3-8">A&nbsp;flor prometida 1995</A>
+<DD>
+
+A&nbsp;FLOR prometida.
+<SPAN  CLASS="textit">A Folha de S.&nbsp;Paulo</SPAN>, S&#227;o Paulo, p.&nbsp;4, 2 abr. 1995.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="Abreu">Abreu 1999</A>
+<DD>
+
+ABREU, X. Y.&nbsp;Z. <SPAN  CLASS="textit">Exemplo de cita&#231;&#227;o no texto</SPAN>. [S.l.: s.n.],
+  1999.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520-2002:6.3-7">Anteprojeto de lei 1987</A>
+<DD>
+
+ANTEPROJETO de lei.
+<SPAN  CLASS="textit">Estudos e Debates</SPAN>, Bras&#237;lia, DF, n.&nbsp;13, p. 51-60, jan. 1987.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="NBR10520:1988">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 1988</A>
+<DD>
+
+ASSOCIA&#199;&#195;O BRASILEIRA DE NORMAS T&#201;CNICAS. <SPAN  CLASS="textit">NBR 10520</SPAN>:
+  Apresenta&#231;&#227;o de cita&#231;&#245;es em documentos -- procedimentos.
+Rio de Janeiro, out. 1988. 3&nbsp;p.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="NBR6023:2000">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2000</A>
+<DD>
+
+<SPAN ID="txt2685">
+<BR>
+<BR>
+<BR>
+<BR></SPAN>. <SPAN  CLASS="textit">NBR 6023</SPAN>: Informa&#231;&#227;o e
+  documenta&#231;&#227;o -- refer&#234;ncias -- elabora&#231;&#227;o.
+Rio de Janeiro, ago. 2000. 22&nbsp;p.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="NBR10520:2001">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2001</A>
+<DD>
+
+<SPAN ID="txt2697">
+<BR>
+<BR>
+<BR>
+<BR></SPAN>. <SPAN  CLASS="textit">NBR 10520</SPAN>: Informa&#231;&#227;o e
+  documenta&#231;&#227;o -- apresenta&#231;&#227;o de cita&#231;&#245;es em documentos.
+Rio de Janeiro, jul. 2001. 4&nbsp;p. Substitui a Ref.&nbsp;NBR10520:1988.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="NBR10520:2002">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2002</A>
+<DD>
+
+<SPAN ID="txt2711">
+<BR>
+<BR>
+<BR>
+<BR></SPAN>. <SPAN ID="txt2712">
+<BR>
+<BR>
+<BR>
+<BR></SPAN>.
+Rio de Janeiro, ago. 2002. 7&nbsp;p. Substitui a Ref.&nbsp;NBR10520:2001.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="NBR6023:2002">Associa&#231;&#227;o Brasileira de Normas T&#233;cnicas 2002</A>
+<DD>
+
+<SPAN ID="txt2721">
+<BR>
+<BR>
+<BR>
+<BR></SPAN>. <SPAN  CLASS="textit">NBR 6023</SPAN>: Informa&#231;&#227;o e
+  documenta&#231;&#227;o -- refer&#234;ncias -- elabora&#231;&#227;o.
+Rio de Janeiro, ago. 2002. 24&nbsp;p. Substitui a Ref.&nbsp;NBR6023:2000.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:4.1-1">Authler-Reiriz 1982</A>
+<DD>
+
+AUTHLER-REIRIZ, X. Y.&nbsp;Z. <SPAN  CLASS="textit">Exemplo de cita&#231;&#227;o no texto</SPAN>. [S.l.:
+  s.n.], 1982.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520-2002:6.3-2">Bobbio 1995</A>
+<DD>
+
+BOBBIO, N. <SPAN  CLASS="textit">O positivismo jur&#237;dico</SPAN>: li&#231;&#245;es de filosofia do
+  direito. S&#227;o Paulo: &#205;cone, 1995.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520-2002:6.3-6">Brasil. Minist&#233;rio da Administra&#231;&#227;o Federal e da Reforma do Estado
+  1995</A>
+<DD>
+
+BRASIL. Minist&#233;rio da Administra&#231;&#227;o Federal e da Reforma do Estado.
+  <SPAN  CLASS="textit">Plano diretor da reforma do aparelho do estado</SPAN>.
+Bras&#237;lia, DF, 1995.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:4.8.1">Candido 1993</A>
+<DD>
+
+CANDIDO, X. Y.&nbsp;Z. <SPAN  CLASS="textit">Exemplo de cita&#231;&#227;o no texto</SPAN>. [S.l.: s.n.],
+  1993.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520-2002:6.3-5">Comiss&#227;o das Comunidades Europ&#233;ias 1992</A>
+<DD>
+
+COMISS&#195;O DAS COMUNIDADES EUROP&#201;IAS. <SPAN  CLASS="textit">A uni&#227;o europ&#233;ia</SPAN>.
+  Luxemburgo: Servi&#231;o das Publica&#231;&#245;es Oficiais das Comunidades
+  Europ&#233;ias, 1992.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:5.1.4-98">Cruz, Correa e Costa 1998</A>
+<DD>
+
+CRUZ, X. Y.&nbsp;Z.; CORREA, X. Y.&nbsp;Z.; COSTA, X. Y.&nbsp;Z. <SPAN  CLASS="textit">Exemplo de cita&#231;&#227;o no texto</SPAN>. [S.l.: s.n.], 1998.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:5.1.4-99">Cruz, Correa e Costa 1999</A>
+<DD>
+
+<SPAN ID="txt2780">
+<BR>
+<BR>
+<BR>
+<BR></SPAN>. <SPAN ID="txt2781">
+<BR>
+<BR>
+<BR>
+<BR></SPAN>. [S.l.: s.n.],
+  1999.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:5.1.4-00">Cruz, Correa e Costa 2000</A>
+<DD>
+
+<SPAN ID="txt2788">
+<BR>
+<BR>
+<BR>
+<BR></SPAN>. <SPAN ID="txt2789">
+<BR>
+<BR>
+<BR>
+<BR></SPAN>. [S.l.: s.n.],
+  2000.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="Deng00">Deng et al. 2000</A>
+<DD>
+
+DENG, Z.-Y. et al. Subband structures and exciton and impurity states in
+  V-shaped GaAs-Ga<SPAN CLASS="MATH"></SPAN>Al<SPAN CLASS="MATH"></SPAN>As quantum wires.
+<SPAN  CLASS="textit">Phys. Rev. B</SPAN>, v.&nbsp;61, p. 15905-15913, 2000.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:4.1-3">Depoimento sobre qualquer coisa 1978</A>
+<DD>
+
+DEPOIMENTO sobre qualquer coisa. [S.l.: s.n.], 1978. 101-114&nbsp;p.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:4.1-2">Derrida 1967</A>
+<DD>
+
+DERRIDA, X. Y.&nbsp;Z. <SPAN  CLASS="textit">Exemplo de cita&#231;&#227;o no texto</SPAN>. [S.l.: s.n.],
+  1967. 293&nbsp;p.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="Evans">Evans 1987</A>
+<DD>
+
+EVANS, X. Y.&nbsp;Z. <SPAN  CLASS="textit">Exemplo de cita&#231;&#227;o no texto</SPAN>. [S.l.: s.n.],
+  1987.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:5.1.5a">Fonseca 1997</A>
+<DD>
+
+FONSECA, X. Y.&nbsp;Z. <SPAN  CLASS="textit">Exemplo de cita&#231;&#227;o no texto</SPAN>. [S.l.: s.n.],
+  1997.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:5.1.5ab">Fonseca e Paiva 1997</A>
+<DD>
+
+FONSECA, X. Y.&nbsp;Z.; PAIVA, X. Y.&nbsp;Z. <SPAN  CLASS="textit">Exemplo de cita&#231;&#227;o no texto</SPAN>.
+  [S.l.: s.n.], 1997.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520-2002:6.3-3">Jossua e Metz 1976</A>
+<DD>
+
+JOSSUA, J.&nbsp;P.; METZ, J.&nbsp;B. Editorial: Teologia e literatura.
+<SPAN  CLASS="textit">Concilium</SPAN>, Petr&#243;polis, v.&nbsp;115, n.&nbsp;5, p.&nbsp;2-5, 1976.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520-2002:6.3-1">Lopes 2000</A>
+<DD>
+
+LOPES, J.&nbsp;R. de L. <SPAN  CLASS="textit">O direito na hist&#243;ria</SPAN>. S&#227;o Paulo: Max Limonad,
+  2000.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="8.11.3-1">Makau 1962</A>
+<DD>
+
+MAKAU, A.&nbsp;B. <SPAN  CLASS="textit">Esperanza de la educaci&#243;n hoy</SPAN>. Lisboa: J.&nbsp;Piaget, 1962.
+  Separata de:  8.11.3-1b
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520-2002:6.3-4">Merriam e Caffarella 1991</A>
+<DD>
+
+MERRIAM, S.; CAFFARELLA, R. <SPAN  CLASS="textit">Learning in adulthood</SPAN>: a comprehensive
+  guide. San Francisco: Jossey-Bass, 1991.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="8.11.3-1b">Moore 1960</A>
+<DD>
+
+MOORE, W. (Ed.). <SPAN  CLASS="textit">Construtivismo del movimiento educacional</SPAN>: soluciones.
+  C&#243;rdoba, AR: [s.n.], 1960. 309-340&nbsp;p.<A NAME="tex2html5"
+  HREF="#foot2870"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A>
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:4.2-1">Mumford 1949</A>
+<DD>
+
+MUMFORD, X. Y.&nbsp;Z. <SPAN  CLASS="textit">Exemplo de cita&#231;&#227;o no texto</SPAN>. [S.l.: s.n.],
+  1949.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520-2002:6.3-9">Nos&nbsp;canaviais, mutila&#231;&#227;o em vez de lazer e escola
+  1995</A>
+<DD>
+
+NOS&nbsp;CANAVIAIS, mutila&#231;&#227;o em vez de lazer e escola.
+<SPAN  CLASS="textit">O&nbsp;Globo</SPAN> -- O Pa&#237;s, Rio de Janeiro, p.&nbsp;12, 16 jul.
+  1995.<A NAME="tex2html6"
+  HREF="#foot2886"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A>
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:4.2-2">Oliveira e Leonardos 1943</A>
+<DD>
+
+OLIVEIRA, X. Y.&nbsp;Z.; LEONARDOS, X. Y.&nbsp;Z. <SPAN  CLASS="textit">Exemplo de cita&#231;&#227;o no
+  texto</SPAN>. [S.l.: s.n.], 1943.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:5.1.5b">Paiva 1997</A>
+<DD>
+
+PAIVA, X. Y.&nbsp;Z. <SPAN  CLASS="textit">Exemplo de cita&#231;&#227;o no texto</SPAN>. [S.l.: s.n.],
+  1997.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:5.1.3a">Reeside 1927</A>
+<DD>
+
+REESIDE, X. Y.&nbsp;Z. <SPAN  CLASS="textit">Exemplo de cita&#231;&#227;o no texto</SPAN>. [S.l.: s.n.],
+  1927.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:5.1.3b">Reeside 1927</A>
+<DD>
+
+<SPAN ID="txt2914">
+<BR>
+<BR>
+<BR>
+<BR></SPAN>. <SPAN ID="txt2915">
+<BR>
+<BR>
+<BR>
+<BR></SPAN>. [S.l.: s.n.],
+  1927.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="7.3.2-3">S&#227;o Paulo (Estado). Secretaria do Meio Ambiente 1999</A>
+<DD>
+
+S&#195;O PAULO (Estado). Secretaria do Meio Ambiente. Tratados e organiza&#231;&#245;es ambientais em mat&#233;ria de meio ambiente.
+In:  <SPAN ID="txt2925">
+<BR>
+<BR>
+<BR>
+<BR></SPAN>. <SPAN  CLASS="textit">Entendendo o meio ambiente</SPAN>. S&#227;o
+  Paulo, 1999. v.&nbsp;1.
+Dispon&#237;vel em:
+  #2#1. Acesso em: 8
+  mar. 1999.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:4.2-3">S&#225; 1995</A>
+<DD>
+
+S&#193;, X. Y. Z.&nbsp;P. de. <SPAN  CLASS="textit">Exemplo de cita&#231;&#227;o no texto</SPAN>. [S.l.: s.n.],
+  1995.
+<PRE>
+</PRE>
+[Sage 1992]Sage
+
+
+<PRE>
+</PRE>
+<P></P><DT><A NAME="7.2.2-2">Santos 1994</A>
+<DD>
+
+SANTOS, F.&nbsp;R. dos. A coloniza&#231;&#227;o da terra do Tucuj&#250;s.
+In:  <SPAN ID="txt2952">
+<BR>
+<BR>
+<BR>
+<BR></SPAN>. <SPAN  CLASS="textit">Hist&#243;ria do Amap&#225;, 1<SPAN CLASS="MATH"></SPAN> grau</SPAN>.
+  2. ed. Macap&#225;: Valcan, 1994. cap.&nbsp;3, p. 15-24.
+<PRE>
+</PRE>
+[Silva 1992]Silva
+
+
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:5.1.5c">Silva 1997</A>
+<DD>
+
+SILVA, X. Y.&nbsp;Z. <SPAN  CLASS="textit">Exemplo de cita&#231;&#227;o no texto</SPAN>. [S.l.: s.n.],
+  1997.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="7.5.1.2-1">Simp&#243;sio Brasileiro de Redes de Computadores 1995</A>
+<DD>
+
+SIMP&#211;SIO BRASILEIRO DE REDES DE COMPUTADORES, 13., 1995, Belo Horizonte.
+  <SPAN  CLASS="textit">Anais...</SPAN> Belo Horizonte: UFMG, 1995. 655&nbsp;p.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="10520:4.8">Souto 1916</A>
+<DD>
+
+SOUTO, X. Y.&nbsp;Z. <SPAN  CLASS="textit">Exemplo de cita&#231;&#227;o no texto</SPAN>. [S.l.: s.n.],
+  1916.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="8.1.1.2">Urani et al. 1994</A>
+<DD>
+
+URANI, A. et al. <SPAN  CLASS="textit">Constitui&#231;&#227;o de uma matriz de contabilidade
+  social para o Brasil</SPAN>. Bras&#237;lia, DF: IPEA, 1994.
+<PRE>
+</PRE>
+<P></P><DT><A NAME="abnt-bibtex-doc">Weber 2003</A>
+<DD>
+
+WEBER, G. <SPAN  CLASS="textit">Estilo bibtex compat&#237;vel com a `norma' 6023/2000 da
+  ABNT</SPAN>.
+[S.l.], 2003. Dispon&#237;vel em:
+  #2#1.
+<PRE>
+</PRE>
+</DL>
+<BR><HR><H4>Footnotes</H4>
+<DL>
+<DT><A NAME="foot613">... 2000)</A><A
+ HREF="abnt-bibtex-alf-doc.html#tex2html2"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A></DT>
+<DD>Transcrição exata, esta
+chamada não foi gerada automaticamente.
+
+</DD>
+<DT><A NAME="foot616">... 1997)</A><A
+ HREF="abnt-bibtex-alf-doc.html#tex2html3"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A></DT>
+<DD>Transcrição exata, esta
+chamada não foi gerada automaticamente.
+
+</DD>
+<DT><A NAME="foot672">...
+autores.</A><A
+ HREF="abnt-bibtex-alf-doc.html#tex2html4"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A></DT>
+<DD>Muitas pessoas entendem isso errado e pensam
+que se usa `et al.' já com três autores
+
+</DD>
+<DT><A NAME="foot2870">... 309-340&nbsp;p.</A><A
+ HREF="abnt-bibtex-alf-doc.html#tex2html5"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A></DT>
+<DD>Essa referência ainda traz
+  importantes problemas de implementação. No original aparecem dois campos
+  address/publisher. A segunda ocorrência desses campos por enquanto é ignorada
+  pelo estilo.
+
+</DD>
+<DT><A NAME="foot2886">... 1995.</A><A
+ HREF="abnt-bibtex-alf-doc.html#tex2html6"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A></DT>
+<DD>Não sabemos porque no original a seção vem antes da página.
+  Ainda estamos verificando isso.
+
+</DD>
+</DL><BR><HR>
+
+</BODY>
+</HTML>

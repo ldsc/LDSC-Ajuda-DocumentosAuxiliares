@@ -1,0 +1,36 @@
+O que é?
+=========
+Fonte: https://imagemagick.org/script/magick++.php
+Fonte: https://imagemagick.org/index.php
+
+Inglês:
+Magick++ supports an object model which is inspired by PerlMagick. Images support implicit reference counting so that copy constructors and assignment incur almost no cost. The cost of actually copying an image (if necessary) is done just before modification and this copy is managed automagically by Magick++. De-referenced copies are automagically deleted. The image objects support value (rather than pointer) semantics so it is trivial to support multiple generations of an image in memory at one time.
+
+Magick++ provides integrated support for the Standard Template Library (STL) so that the powerful containers available (e.g. deque, vector, list, and map) can be used to write programs similar to those possible with PERL & PerlMagick. STL-compatible template versions of ImageMagick's list-style operations are provided so that operations may be performed on multiple images stored in STL containers.
+
+Tradução Google:
+Magick suporta um modelo de objeto inspirado em PerlMagick.
+As imagens suportam contagem de referência implícita, de modo que os construtores de cópia e a atribuição quase não incorrem em custos.
+O custo de copiar uma imagem (se necessário) é feito imediatamente antes da modificação e esta cópia é gerenciada automaticamente pela Magick.
+Cópias desreferenciadas são excluídas automaticamente. Os objetos de imagem suportam semântica de valor (em vez de ponteiro), portanto é trivial suportar múltiplas gerações de uma imagem na memória ao mesmo tempo.
+Magick fornece suporte integrado para a Biblioteca de Modelos Padrão (STL) para que os poderosos contêineres disponíveis (por exemplo, deque, vetor, lista e mapa) possam ser usados para escrever programas semelhantes aos possíveis com PERL e PerlMagick.
+Versões de modelo compatíveis com STL das operações de estilo de lista do ImageMagick são fornecidas para que as operações possam ser executadas em várias imagens armazenadas em contêineres STL.
+
+Download e instalação via github:
+=================================
+Veja
+https://github.com/ImageMagick/ImageMagick/tree/main/Magick%2B%2B
+
+Git clone https://github.com/ImageMagick/ImageMagick/tree/main
+
+Download e instalação usando pacotes:
+=====================================
+dnf install ImageMagick-libs ImageMagick ImageMagick-devel ImageMagick-c++-devel
+
+No meu Fedora 39:
+ImageMagick-libs-7.1.1.15-1.fc39.x86_64
+ImageMagick-7.1.1.15-1.fc39.x86_64
+ImageMagick-devel-7.1.1.15-1.fc39.x86_64.rpm
+ImageMagick-c++-devel-7.1.1.15-1.fc39.x86_64
+
+

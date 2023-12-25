@@ -1,0 +1,137 @@
+Dicas para instalação do Fedora
+
+0) Faça uma limpeza nos seus arquivos apagando o que for lixo.
+
+1) Use aplicativo do windows para descriptografar seu disco rígido.
+
+2) Faça backup de todos os seus arquivos na nuvem.
+
+3) Faça backup de seus arquivos em HD externo.
+
+4) Leia informações do Fedora no site oficial: https://fedoraproject.org/
+
+5) Baixe a iso do Fedora, neste link:
+https://download.fedoraproject.org/pub/fedora/linux/releases/39/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-39-1.5.iso
+(no site do Fedora vai ter o link para versão mais recente, opte pela versão Workstation).
+
+6) Verifique a iso
+Windows
+GNU/Linux
+Se já tem um Fedora antigo e quer verificar se a iso esta integra:
+Import Fedora's GPG key(s)
+curl -O https://fedoraproject.org/fedora.gpg
+Verify the checksum file is valid
+gpgv --keyring ./fedora.gpg Fedora-Workstation-39-1.5-x86_64-CHECKSUM
+Verify the checksum matches
+sha256sum -c Fedora-Workstation-39-1.5-x86_64-CHECKSUM
+If the output states that the file is valid, then it's ready to use!
+
+7) Você deve copiar o arquivo iso para um pendrive bootável, para fazer isso irá precisar um aplicativo como o rufus, que pode ser obtido aqui:
+https://rufus.ie/pt_BR/
+Baixe e instale o rufus, a seguir rode o mesmo e selecione a iso do Fedora.
+Execute a instalação da iso no pendrive.
+Este vídeo mostra como fazer: https://www.youtube.com/watch?v=pJuzfKGh0vY
+
+NOTA: os passos 5/6/7 podem ser desconsiderados se você tiver um colega que já tenha o pendrive bootável com o Fedora.
+
+8) Assista vídeos que mostram como instalar o Fedora.
+Assista mais de um vídeo para fixar os conceitos e ver se encontra um vídeo que mostra uma configuração semelhante a que você tem no seu PC.
+Ou seja, cada pessoa instala de acordo com sua configuração.
+Video que mostra como instalar dual boot:
+https://www.youtube.com/watch?v=2wcqGTzUbXY
+https://www.youtube.com/watch?v=KF2nCGBan9s
+
+Vídeo que explica como particionar o disco durante a instalação do Fedora:
+https://www.youtube.com/watch?v=DpwANhOJ1Ug
+
+Vídeo com dicas para pós-instalação do Fedora 38
+https://www.youtube.com/watch?v=A5wyoxOY6ZY
+
+9) Agora execute a instalação do Fedora.
+Se assitiu os vídeos vai conseguir fazer sem maiores problemas.
+
+
+10) Dicas para pós-instalação do Fedora 38
+
+1) Ativar RPM fusion
+dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+2) Atualizar sistema
+dnf -y upgrade --refresh
+
+3) Instalar pacotes abaixo
+
+# Pacotes edição de texto
+dnf install kate emacs
+dnf install aspell-pt_BR
+
+# Pacotes programação global(ggtags)
+dnf install g++ clang global cpplint cppcheck kdiff3 kdevelop qt-creator qt-devel rabbitvcs-nautilus doxygen libasan libubsan
+
+# Pacotes navegação
+dnf install AdobeReader
+
+# Pacotes arquivos pdf
+dnf install google-chrome
+
+# Pacotes LyX/Tex/Latex
+dnf install lyx 'tex(esint10.pfb)'  'tex(lgrcmr.fd)' 'tex(subscript.sty)' 'tex(lgrenc.def)'
+dnf install texlive-prettyref
+dnf install texlive-textgreek
+dnf install texlive-accents texlive-lastpage
+dnf install texlive-babel-portuges
+dnf install texlive-multirow texlive-tablefootnote
+dnf install texlive-pmboxdraw
+dnf install texlive-sectsty
+dnf install texlive-greek-fontenc texlive-cbfonts
+dnf install texlive-luainputenc
+dnf install texlive-mhchem texlive-chemgreek
+#texconfig
+dnf install texlive-texlive-scripts-extra
+#abntex
+dnf install  texlive-abnt.noarch texlive-abntex2.noarch texlive-abntex2-doc.noarch  texlive-abntexto.noarch texlive-biblatex-abnt.noarch texlive-biblatex-abnt-doc.noarch
+
+# Pacotes gráficos/fotos
+dnf install gimp gthumb
+
+# Pacotes atualização do sistema
+dnf install dnf-plugin-system-upgrade
+
+# Pacotes modernos tldr=man fdfind=find btop=top bat=cat, fdupes=arquivos duplicados
+dnf install tldr
+dnf install fdfind
+dnf install btop
+dnf install bashtop
+dnf install ncdu
+dnf install duf
+dnf install bat
+dnf install fdupes
+#dnf install tldr fdfind btop bashtop ncdu duf bat
+
+dnf install tldr fdfind btop bashtop
+
+4) Instalar dropbox
+http://www.dropbox.com
+sudo dnf install nautilus-dropbox
+
+5) Codecs e multimidia apenas se você houve música e vê vídeos
+dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+dnf groupupdate sound-and-video
+dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel ffmpeg gstreamer-ffmpeg
+dnf install lame\* --exclude=lame-devel
+dnf group upgrade --with-optional Multimedia
+
+# Decoders
+dnf install ffmpeg ffmpeg-libs libva libva-utils
+dnf install intel-media-driver
+
+# Gnome plugins
+dnf install gnome-tweaks
+dnf install nautilus-python
+
+Exemplos de extensões do gnome:
+https://extensions.gnome.org/extension/3843/just-perfection/
+https://extensions.gnome.org/extension/5446/quick-settings-tweaker/
+https://extensions.gnome.org/extension/779/clipboard-indicator/
+
+

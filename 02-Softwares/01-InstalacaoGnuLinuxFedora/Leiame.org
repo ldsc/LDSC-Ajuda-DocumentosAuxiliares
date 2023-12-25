@@ -1,0 +1,83 @@
+* Porque usar software livre
+** Justificativa
+*** Basicamente usamos software livre nas disciplinas de modelagem matemática computacional pois assim os alunos tem acesso e permissão para instalar e usar os diferentes softwares sem necessitar ter recursos financeiros para compra dos mesmos.
+*** Antigamento tínhamos uma disciplina optativa de Software Livre onde ensinávamos conceitos básicos de uso dos softwares.
+*** Neste diretório você vai encontrar o arquivo com uma das aulas dadas naquela época
+*** PorqueMigrarParaSL.pdf
+*** E vai encontrar o livro https://fpabramo.org.br/publicacoes/wp-content/uploads/sites/5/2017/05/Software_livre.pdf
+*** Outros livros: 
+**** Software Livre - Uma História de Resistência
+**** Software Livre - Potencialidades E Modelos De Negócio
+**** Software Livre na Administração Pública Brasileira
+**** A Tecnoutopia do Software Livre: uma História do Projeto Técnico e Político do GNU
+
+* Antes de instalar o Fedora
+** Faça uma limpeza nos seus arquivos apagando o que for lixo.
+** Use aplicativo do windows para descriptografar seu disco rígido.
+** Faça backup de todos os seus arquivos na nuvem.
+** Faça backup de seus arquivos em HD externo.
+* Como instalar o Fedora
+** Comece assistindo vídeos explicativos
+*** Atualmente temos uma quantidade enorme de vídeos na internet que nos possibilitam entender:
+*** As vantagens do uso de software livre (notadamente em sala de aula).
+*** Como instalar o sistema operacional GNU/Linux/Fedora.
+*** Como instalar aplicativos como:
+**** O editor de textos profissional LyX.
+**** O gerador de gráficos profissionais gnuplot.
+**** O compilador e os pacotes de programação da GNU.
+*** Exemplos de vídeos:
+*** Como Baixar E Instalar O Linux Fedora (5min): 
+**** https://www.youtube.com/watch?v=C7oRABN8Q2c
+*** Como INSTALAR o NOVO LINUX FEDORA 38 (15min)
+**** https://www.youtube.com/watch?v=zRQk5ChAsY8
+*** Como INSTALAR (30min)
+**** https://www.youtube.com/watch?v=CXZ5I_-bMcY
+*** Outros vídeos:
+**** Video que mostra como instalar dual boot:
+***** https://www.youtube.com/watch?v=2wcqGTzUbXY
+***** https://www.youtube.com/watch?v=KF2nCGBan9s
+**** Vídeo que explica como particionar o disco durante a instalação do Fedora:
+***** https://www.youtube.com/watch?v=DpwANhOJ1Ug
+**** Vídeo com dicas para pós-instalação do Fedora 38 
+***** https://www.youtube.com/watch?v=A5wyoxOY6ZY
+
+** Depois leia as instruções neste site:
+*** Leia informações do Fedora no site oficial: 
+**** https://fedoraproject.org/
+*** Veja ainda este blog: 
+**** https://www.blogopcaolinux.com.br/2023/11/Guia-instalacao-Fedora-39-Workstation.html
+** Requisitos mínimos para instalação
+*** 15gb de disco (ideal 40 ou mais)
+*** 2gb de ram (ideal 4 ou mais)
+*** Processador dual core (AMD® ou Intel®) de 2 GHz ou mais veloz;
+** Passo a passo resumido da instalação
+*** Fonte: https://www.blogopcaolinux.com.br/2023/11/Guia-instalacao-Fedora-39-Workstation.html
+*** Note que os vídeos que assistimos mostram este passo a passo.
+*** Faça BACKUP de TODOS os seus arquivos
+*** Faça a DESFRAGMENTAÇÃO ou OTIMIZAÇÃO da partição onde está o Windows 
+*** Desative a Inicialização rápida do Windows
+*** Faça o download do Fedora 39 Workstation:
+**** https://fedoraproject.org/workstation/download
+**** https://download.fedoraproject.org/pub/fedora/linux/releases/39/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-39-1.5.iso
+*** Verifique se a imagem ISO não está corrompida
+*** Crie uma mídia de instalação do Fedora 39 (pode ser um pendrive)
+*** Libere espaço no seu SSD ou HDD (pelo Windows ou com o GParted)
+**** A ideia aqui é liberar espaço no seu HD para podermos instalar o GNU/Linux/Fedora.
+*** Inicialize o PC a partir da mídia de instalação.
+*** Siga com as definições e instalações.
+**** Se tiver um outro computador ou celular pode ver vídeos simultaneamente a instalação.
+*** O computador fica com dual boot, sendo as opções Fedora ou Windows.
+*** Reinicie o computador e selecione a opção FEDORA.
+** Passo a passo para pós-instalação
+*** Leia instruções sobre pós instalação do Fedora:
+****  https://www.blogopcaolinux.com.br/2023/11/Guia-pos-instalacao-Fedora-39-Workstation.html
+*** Use um script de pós-instalação para agilizar a instalação dos programas que costumamos usar com mais frequência.
+**** Veja exemplo no arquivo: 03-Dicas-PosInstalacaoFedora.txt (anexo no diretório)
+** Dicas de leitura
+*** No repositório disponibilizamos alguns guias de referência, incluindo guias de referência para o GNU/Linux:
+**** Site com informações úteis: https://guiafoca.org/guiaonline/intermediario/
+**** 
+
+
+
+

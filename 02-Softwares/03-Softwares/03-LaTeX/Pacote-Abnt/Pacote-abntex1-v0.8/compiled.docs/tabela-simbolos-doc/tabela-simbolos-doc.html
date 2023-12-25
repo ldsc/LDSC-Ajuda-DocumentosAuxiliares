@@ -1,0 +1,537 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>tabela-simbolos-doc</TITLE>
+<META NAME="description" CONTENT="tabela-simbolos-doc">
+<META NAME="keywords" CONTENT="tabela-simbolos-doc">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="tabela-simbolos-doc.css">
+
+</HEAD>
+
+<BODY >
+
+<P>
+
+<P>
+
+<H1><A NAME="SECTION00100000000000000000">
+Introdu&#231;&#227;o</A>
+</H1>
+
+<P>
+Este manual discute o uso de listas de siglas e s&#237;mbolos usando o programa
+<TT>makeindex</TT>. A id&#233;ia basica &#233; automatizar a gera&#231;&#227;o destas listas.
+Este projeto teve in&#237;cio a partir de sugest&#245;es de Dornelles Vissotto Junior da
+UFPR.
+
+<P>
+
+<H1><A NAME="SECTION00110000000000000000">
+Como usar</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00111000000000000000">
+No pre&#226;mbulo</A>
+</H2>
+
+<P>
+Voc&#234; deve chamar o pacote atrav&#233;s do comando
+<PRE>
+\usepackage{tabela-simbolos}
+</PRE>
+
+<P>
+op&#231;&#245;es podem ser acrescentadas, por exemplo
+<PRE>
+\usepackage[caixa=Mm]{tabela-simbolos}
+</PRE>
+neste caso os s&#237;mbolos de letras mai&#250;sculas s&#227;o colocados antes dos s&#237;mbolos
+de letras min&#250;sculas.
+
+<P>
+Para definir v&#225;rias op&#231;&#245;es de uma vez, separe por v&#237;rgulas
+<PRE>
+\usepackage[romanos=2,gregos=3,simbolos=1]{tabela-simbolos}
+</PRE>
+
+<P>
+Veja as tabelas&nbsp;<A HREF="#opcoes">1</A>, <A HREF="#opcoes-ordem">2</A> e&nbsp;<A HREF="#estilos">3</A> para outras op&#231;&#245;es.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="224"></A>
+<TABLE>
+<CAPTION><STRONG>Tabela 1:</STRONG>
+Op&#231;&#245;es para o pacote <TT>tabela-simbolos</TT>.</CAPTION>
+<TR><TD><DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="LEFT">op&#231;&#227;o</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>paginas=</TT></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>mostra ou n&#227;o o n&#250;mero da p&#225;gina onde o s&#237;mbolo foi definido.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><SPAN ID="txt44"><TT>nao</TT></SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>op&#231;&#227;o padr&#227;o.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><TT>sim</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>mostra as p&#225;ginas.</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>esquema=</TT></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>esquema em que as listas s&#227;o ordenadas.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><SPAN ID="txt47"><TT>separado</TT></SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>separa s&#237;mbolos romanos, gregos e outros.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><TT>misto</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>mistura os s&#237;mbolos</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>caixa=</TT></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>controla o tratamento de letras min&#250;sculas e mai&#250;sculas.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><SPAN ID="txt50"><TT>mM</TT></SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>ordena todas as letras min&#250;sculas <SPAN  CLASS="textit">antes</SPAN> de todas as letra
+mai&#250;sculas. Ex.: <!-- MATH
+ $a,b,c,d,A,B,C,D$
+ -->
+<SPAN CLASS="MATH">1#1</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><TT>Mm</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>ordena todas as letras min&#250;sculas <SPAN  CLASS="textit">depois</SPAN> de todas as letra
+mai&#250;sculas.Ex.: <!-- MATH
+ $A,B,C,D,a,b,c,d$
+ -->
+<SPAN CLASS="MATH">2#2</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><TT>mista</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>mistura letras min&#250;sculas e mai&#250;sculas. Ex.: <!-- MATH
+ $a, A, b, B, c, C, d, D$
+ -->
+<SPAN CLASS="MATH">3#3</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>lista=</TT></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>controla se a lista de s&#237;mbolos s&#227;o mostradas separadamente ou n&#227;o.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><SPAN ID="txt56"><TT>unica</TT></SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>mostra uma &#250;nica lista.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><TT>separada</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>mostra as listas separadamente.</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>ordem=</TT></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>controla o ordenamento das siglas e s&#237;mbolos.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><SPAN ID="txt59"><TT>alf</TT></SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>ordenamento alfab&#233;tico.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><TT>oc</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>ordena na mesma sequ&#234;ncia em que ocorre no texto.</TD>
+</TR>
+</TABLE>
+
+<A NAME="opcoes"></A>
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P><BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="226"></A>
+<TABLE>
+<CAPTION><STRONG>Tabela 2:</STRONG>
+Op&#231;&#245;es de ordenamento para o o pacote <TT>tabela-simbolos</TT>.</CAPTION>
+<TR><TD><DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="LEFT">op&#231;&#227;o</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>romanos=</TT></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>ordem de aparecimentos da lista de s&#237;mbolos romanos.</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>gregos=</TT></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>ordem de aparecimentos da lista de s&#237;mbolos gregos.</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>simbolos=</TT></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>ordem de aparecimentos da lista de outros s&#237;mbolos.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><TT>1</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>aparece em primeiro lugar.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><TT>2</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>aparece em segundo.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><TT>3</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>aparece em terceiro lugar.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>O padr&#227;o &#233; <TT>romanos=1</TT>, <TT>gregos=2</TT>, <TT>simbolos=3</TT>. Se
+houver alguma inconsist&#234;ncia o pacote reverte automaticamente para a
+defini&#231;&#227;o padr&#227;o.</TD>
+</TR>
+</TABLE>
+
+<A NAME="opcoes-ordem"></A>
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P><BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="106"></A>
+<TABLE>
+<CAPTION><STRONG>Tabela 3:</STRONG>
+Estilos pr&#233;-definidos.</CAPTION>
+<TR><TD><DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="LEFT">op&#231;&#227;o</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>estilo=</TT></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>seleciona automaticamente as op&#231;&#245;es mais compat&#237;veis com
+                 um dado estilo.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><SPAN ID="txt89"><TT>14724:2001</TT></SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>segue a `norma' da refer&#234;ncia&nbsp;NBR14724:2001.
+Equivale a <TT>paginas=sim</TT>, <TT>ordem=oc</TT>, <TT>esquema=misto</TT>, <TT>caixa=mista</TT>,
+<TT>lista=unica</TT>.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><TT>UFPR</TT></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=350>o padr&#227;o equivale ao que se pede na UFPR. Equivale
+a <TT>paginas=nao</TT>, <TT>ordem=alf</TT> , <TT>esquema=separado</TT> , <TT>caixa=mM</TT>,
+<TT>lista=unica</TT>, <TT>romanos=1</TT>, <TT>gregos=2</TT>, <TT>simbolos=3</TT>.</TD>
+</TR>
+</TABLE>
+
+<A NAME="estilos"></A>
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P><BR>
+
+<P>
+
+<H2><A NAME="SECTION00112000000000000000">
+No texto</A>
+</H2>
+
+<P>
+
+<H3><A NAME="SECTION00112100000000000000">
+Definindo a posi&#231;&#227;o das listas</A>
+</H3>
+
+<P>
+As listas s&#227;o geradas pelos comandos
+<PRE>
+\listadesiglas
+\listadesimbolos
+</PRE>
+Se voc&#234; estiver usando a classe <TT>abnt</TT>[<A
+ HREF="tabela-simbolos-doc.html#abnt-classe-doc">2</A>] a posi&#231;&#227;o recomendada &#233; logo
+ap&#243;s o comando <code>\sumario</code>.
+
+<P>
+
+<H3><A NAME="SECTION00112200000000000000">
+Definindo os s&#237;mbolos</A>
+</H3>
+
+<P>
+No texto voc&#234; deve definir os s&#237;mbolos usando os comandos <code>\sigla</code>,<code>\simbolo</code>,
+<code>\simbologrego</code> e <code>simbolomisc</code> para s&#237;mbolos romanos, gregos e outros.
+Para s&#237;mbolos de letras mai&#250;sculas use <code>\Simbolo</code> e <code>\Simbologrego</code>.
+Por exemplo,
+<PRE>
+\sigla{OMC}{Organização Mundial do Comércio}
+\simbolo{r}{raio}
+\simbologrego{\alpha}{coeficiente de dilatação térmica}
+\simbolomisc{'}{derivada primeira}
+\Simbolo{R}{raio}
+\Simbologrego{\Omega}{Resistência}
+</PRE>
+todos os s&#237;mbolos s&#227;o formatados automaticamente em modo matem&#225;tico.
+No caso de formata&#231;&#245;es especiais use o par&#226;metro opcional, como nos
+exemplos abaixo
+<PRE>
+\simbolomisc[${\sf 0}$]{0}{matriz nula}
+\Simbolo[$\bf R$]{R}{vetor raio}
+\simbolomisc[$\frac{\partial}{\partial x}$]{parcial}{drivada parcial%
+ em relação a $x$}
+</PRE>
+Neste caso o par&#226;metro opcional entre [] vai ser usado para a formata&#231;&#227;o exata
+enquanto o par&#226;metro seguinte ser&#225; usado apenas fins de ordenamento alfab&#233;tico.
+
+<P>
+
+<H1><A NAME="SECTION00120000000000000000">
+Execu&#231;&#227;o</A>
+</H1>
+
+<P>
+Na execu&#231;&#227;o do <SPAN CLASS="logo,LaTeX">L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X</SPAN>&#227;o gerados at&#233; seis &#237;ndices: <TT>.siglax</TT>,
+<TT>.romanlowx</TT>, <TT>.romanuppx</TT>, <TT>.greeklowx</TT>, <TT>.greekuppx</TT>,
+<TT>.miscelanx</TT> ou <TT>.symbolsx</TT>. 
+Para cada um deles execute <TT>makeindex</TT>:
+<PRE>
+makeindex -s tabela-simbolos.ist -o arquivo.symbols arquivo.symbolsx
+</PRE>
+onde <TT>arquivo</TT> &#233; o nome do seu arquivo <SPAN CLASS="logo,LaTeX">L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X</SPAN>.
+Para Linux existe um bash script <TT>geratss</TT> que automatiza este processo:
+<PRE>
+geratss arquivo
+</PRE>
+ap&#243;s a gera&#231;&#227;o dos &#237;ndices, execute <SPAN CLASS="logo,LaTeX">L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X</SPAN>.
+
+<P>
+
+<H1><A NAME="SECTION00130000000000000000">
+Alterando os textos pr&#233;-definidos</A>
+</H1>
+
+<P>
+Altere os textos pr&#233;definidos atrav&#233;s do comando <code>\renewcommand</code>
+<PRE>
+\renewcommand{\listofsymbolsname}{Símbolos usados neste trabalho}
+</PRE>
+Veja a tabela&nbsp;<A HREF="#textos">4</A> para a lista completa de textos pr&#233;-definidos.
+
+<P>
+
+<H1><A NAME="SECTION00140000000000000000">
+Alterando as larguas pr&#233;-definidas</A>
+</H1>
+
+<P>
+A largura da parte textual das listas podem ser alteradas, por exemplo
+<PRE>
+\renewcommand{\abrevtablewidth}{6cm}
+</PRE>
+Veja a tabela&nbsp;<A HREF="#textos">4</A> para a lista completa de larguas pr&#233;-definidas.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="154"></A>
+<TABLE>
+<CAPTION><STRONG>Tabela 4:</STRONG>
+Textos,larguras e comandos pr&#233;-definidos.</CAPTION>
+<TR><TD><DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="LEFT">comando</TD>
+<TD ALIGN="LEFT">significado atual</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><code>\listofabreviationsname</code></TD>
+<TD ALIGN="LEFT"><SPAN  CLASS="textit">Lista de abreviaturas e siglas</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><code>\listofsymbolsname</code></TD>
+<TD ALIGN="LEFT"><SPAN  CLASS="textit">Lista de s&#237;mbolos</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><code>\romansymbolsname</code></TD>
+<TD ALIGN="LEFT"><SPAN  CLASS="textit">S&#237;mbolos romanos</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><code>\greeksymbolsname</code></TD>
+<TD ALIGN="LEFT"><SPAN  CLASS="textit">S&#237;mbolos gregos</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><code>\othersymbolsname</code></TD>
+<TD ALIGN="LEFT"><SPAN  CLASS="textit">Outros s&#237;mbolos</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><code>\abrevtablewidth</code></TD>
+<TD ALIGN="LEFT"><code>0.7\textwidth</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><code>\abrevcolumns</code></TD>
+<TD ALIGN="LEFT"><code>lp{\abrevtablewidth}l</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><code>\Babrevtable</code></TD>
+<TD ALIGN="LEFT"><code>\begin{center}\begin{tabular}{\abrevcolumns}</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><code>\Eabrevtable</code></TD>
+<TD ALIGN="LEFT"><code>\end{tabular}\end{center}</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><code>\symboltablewidth</code></TD>
+<TD ALIGN="LEFT"><code>0.7\textwidth</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><code>\symbolcolumns</code></TD>
+<TD ALIGN="LEFT"><code>lp{\symboltablewidth}l</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><code>\Bsymboltable</code></TD>
+<TD ALIGN="LEFT"><code>\begin{center}\begin{tabular}{\symbolcolumns}</code></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><code>\Esymboltable</code></TD>
+<TD ALIGN="LEFT"><code>\end{tabular}\end{center}</code></TD>
+</TR>
+</TABLE>
+
+<A NAME="textos"></A>
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P><BR>
+
+<P>
+
+<H1><A NAME="SECTION00150000000000000000">
+Altera&#245;es mais sofisticadas</A>
+</H1>
+
+<P>
+Esta se&#231;&#227;o d&#225; uma id&#233;ia geral de como realizar altera&#231;&#245;es mais sofisticadas.
+Os exemplos aqui apresentados n&#227;o foram exaustivamente testados.
+
+<P>
+
+<H2><A NAME="SECTION00151000000000000000">
+Alterando as colunas das tabelas</A>
+</H2>
+
+<P>
+As tabelas de siglas e s&#237;mbolos foram implementados com o ambiente <TT>tabular</TT>
+em tr&#234;s colunas. Por exemplo, para alterar as colunas da tabela de siglas para 3 colunas centradas
+use
+<PRE>
+\renewcommand{\abrevcolumns}{ccc}
+</PRE>
+Para alterar as colunas da lista de s&#237;mbolos altere <code>\symbolcolumns</code>.
+
+<P>
+
+<H2><A NAME="SECTION00152000000000000000">
+Alterando o n&#250;mero de colunas</A>
+</H2>
+
+<P>
+Voc&#234; pode introduzir outras colunas, por exemplo para ter uma coluna com
+as unidades dos s&#237;mbolos.
+Proceda seguinte maneira: altere as colunas,
+<PRE>
+\renewcommand{\symbolcolumns}{llp{\symboltablewidth}l}
+</PRE>
+Passe a chamar seus s&#237;mbolos da seguinte maneira (exemplo)
+<PRE>
+\simbolo[$r$ &amp; metro]{r}{raio}
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00153000000000000000">
+Alterando o tipo de tabela</A>
+</H2>
+
+<P>
+Se voc&#234; tiver listas muito longas de tabelas pode valer a pena
+usar um ambiente diferente de <TT>table</TT>.
+Por exemplo para usar o ambiente <TT>superabular</TT> voc&#234; deve
+fazer as seguintes redefini&#231;&#245;es.
+<PRE>
+\renewcommand{\Bsymboltable}{\begin{center}\begin{supertabular}{\abrevcolumns}}
+\renewcommand{\Esymboltable}{\end{supertabular}\end{center}}
+</PRE>
+
+<P>
+
+<H1><A NAME="SECTION00160000000000000000">
+Problemas conhecidos</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00161000000000000000">
+hyperref, pdflatex</A>
+</H2>
+
+<P>
+Este estilo exige que se use <TT>hyperindex=false</TT>, assim tanto
+o pacote hyperref como pdflatex funcionam corretamente.
+
+<P>
+OMCOrganiza&#231;&#227;o Mundial do Com&#233;rcio
+rraio
+[<SPAN CLASS="MATH">4#4</SPAN>]0matriz nula
+gradiente
+r_iraio inicial
+[<SPAN CLASS="MATH">5#5</SPAN>]Rvetor raio
+a_jkamplitudes de pequenas oscila&#231;&#245;es em modos normais
+dist&#226;ncia entre dois pontos
+Resist&#234;ncia
+[<SPAN CLASS="MATH">6#6</SPAN>]M_ijelemento de matriz do tensor de momento angular de um
+campo
+J_,J_,J_rvari&#225;veis de a&#231;&#227;o
+ABNTAssocia&#231;&#227;o Brasileira de Normas T&#233;cnicas
+UnicampUniversidade Estadual de Campinas
+mmassa
+[<SPAN CLASS="MATH">7#7</SPAN>]Mmatriz jacobiana da transforma&#231;&#227;o can&#244;nica
+coeficiente de dilata&#231;&#227;o t&#233;rmica
+'derivada primeira
+[<!-- MATH
+ $\frac{\partial}{\partial x}$
+ -->
+<SPAN CLASS="MATH">8#8</SPAN>]parcialdrivada parcial em rela&#231;&#227;o a <SPAN CLASS="MATH">9#9</SPAN>
+MQWpo&#231;o qu&#226;ntico m&#250;ltiplo (m&#250;ltiple quantum well)
+
+<P>
+
+<H2><A NAME="SECTION00200000000000000000">
+Refer&ecirc;ncias Bibliogr&aacute;ficas</A>
+</H2><DL COMPACT><DD>
+
+<P></P><DT><A NAME="NBR14724:2001">1</A>
+<DD>
+
+ASSOCIA&#199;&#195;O BRASILEIRA DE NORMAS T&#201;CNICAS. <SPAN  CLASS="textit">NBR 14724</SPAN>:
+  Informa&#231;&#227;o e documenta&#231;&#227;o -- trabalhos acad&#234;micos --
+  apresenta&#231;&#227;o.
+Rio de Janeiro, jul. 2001. 6&nbsp;p.
+
+<P></P><DT><A NAME="abnt-classe-doc">2</A>
+<DD>
+
+FRASSON, M.&nbsp;V. S. <SPAN  CLASS="textit">Classe ABNT</SPAN>: confec&#231;&#227;o de trabalhos acad&#234;micos em
+  <SPAN CLASS="logo,LaTeX">L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X</SPAN> segundo as normas ABNT.
+[S.l.], 2002. Dispon&#237;vel em: <SPAN CLASS="MATH">10#10</SPAN>http://abntex.codigolivre.org.br<SPAN CLASS="MATH">11#11</SPAN>.
+</DL>
+
+<P>
+<BR><HR>
+
+</BODY>
+</HTML>

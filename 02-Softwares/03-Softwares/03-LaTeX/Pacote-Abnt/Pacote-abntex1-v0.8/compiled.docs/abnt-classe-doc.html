@@ -1,0 +1,1798 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>abnt-classe-doc</TITLE>
+<META NAME="description" CONTENT="abnt-classe-doc">
+<META NAME="keywords" CONTENT="abnt-classe-doc">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="abnt-classe-doc.css">
+
+</HEAD>
+
+<BODY >
+
+<P>
+
+<P>
+
+<H1><A NAME="SECTION00010000000000000000">
+Introdu&#231;&#227;o</A>
+</H1>
+
+<P>
+<SPAN  CLASS="textsl">Caro usu&#225;rio</SPAN>
+
+<P>
+Se voc&#234; tiver coment&#225;rios, sugest&#245;es ou cr&#237;ticas referentes &#224;
+classe ou aos estilos , por favor entre em contato com o grupo
+ no C&#243;digo Livre, atrav&#233;s da nossa p&#225;gina
+#2#1.
+Seu <SPAN  CLASS="textsl">feedback</SPAN> &#233; de grande ajuda para que possamos melhorar nosso
+trabalho.
+
+<P>
+Dentre o que foi implementado por esta classe, destacamos
+
+<P>
+<DL>
+<DT><STRONG>Folha de rosto e capa</STRONG></DT>
+<DD>Um mecanismo semelhante ao
+  <TT>maketitle</TT> para sua folha de rosto e capa.
+
+<P>
+</DD>
+<DT><STRONG>Resumo e abstract</STRONG></DT>
+<DD>Use os ambientes
+  <TT>resumo</TT> e 
+  <TT>abstract</TT> para a
+  correta formata&#231;&#227;o destas partes do texto. 
+
+<P>
+</DD>
+<DT><STRONG>Anexos e ap&#234;ndices</STRONG></DT>
+<DD>Use os comandos <TT>anexo</TT> ou
+  <TT>apendice</TT>, e depois comandos <TT>chapter</TT> para gerar
+  os t&#237;tulos de anexos e ap&#234;ndices.
+  Veja se&#231;&#227;o&nbsp;<A HREF="#subsec:_format_anexo_apendice">4.4</A> para como personalizar
+  t&#237;tulos destas partes. 
+
+<P>
+</DD>
+<DT><STRONG>Espa&#231;amento entrelinhas</STRONG></DT>
+<DD>Este item &#233; automaticamente
+  tratado pela classe, descrito em [<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.3].
+
+<P>
+</DD>
+<DT><STRONG>Numera&#231;&#227;o das p&#225;ginas</STRONG></DT>
+<DD>Como descrito em
+  [<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.4], a partir da folha de rosto, todas as
+  p&#225;ginas s&#227;o contadas mas n&#227;o numeradas, e a numera&#231;&#227;o aparece somente na
+  parte textual. Isso &#233; feito pela classe. Outros estilos de numera&#231;&#227;o
+  ser&#227;o discutidos na se&#231;&#227;o&nbsp;<A HREF="#subsec:_numeracao_das_paginas">4.1</A>.
+
+<P>
+</DD>
+<DT><STRONG>Cabe&#231;alhos de p&#225;gina</STRONG></DT>
+<DD>De acordo com a norma, a numera&#231;&#227;o da p&#225;gina
+  aparece no canto superior direito de todas as p&#225;ginas a partir da parte
+  textual [<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.4]. Veja
+  se&#231;&#227;o&nbsp;<A HREF="#subsec:_cabecalhos_de_paginas">4.2</A> para detalhes.
+
+<P>
+</DD>
+<DT><STRONG>T&#237;tulos de cap&#237;tulos e se&#231;&#245;es</STRONG></DT>
+<DD>De acordo com
+  [<A
+ HREF="abnt-classe-doc.html#abnt-numeracao-progressiva">NBR 6024</A>], o t&#237;tulo das se&#231;&#245;es &#233; alinhado &#224;
+  esquerda com o texto, em fonte que enfatize a hierarquia das se&#231;&#245;es, com
+  seu indicativo (n&#250;mero) precedendo o t&#237;tulo, na mesma linha. Nas se&#231;&#245;es
+  sem numera&#231;&#227;o, o t&#237;tulo &#233; centralizado. Um cap&#237;tulo &#233; uma se&#231;&#227;o prim&#225;ria.
+
+<P>
+</DD>
+<DT><STRONG>Sum&#225;rio</STRONG></DT>
+<DD>Agora, todos os cap&#237;tulos depois do sum&#225;rio,
+  inclusive os sem numera&#231;&#227;o (gerados com <TT>chapter*</TT>), aparecem
+  automaticamente no sum&#225;rio. Isso inclui refer&#234;ncias, &#237;ndice remissivo,
+  cap&#237;tulos e se&#231;&#245;es n&#227;o numerados, etc. Os n&#250;meros de p&#225;gina seguem a
+  norma [<A
+ HREF="abnt-classe-doc.html#abnt-sumario">NBR 6027</A>].
+
+<P>
+</DD>
+</DL>
+
+<P>
+Outras funcionalidades tamb&#233;m foram implementadas, e ser&#227;o discutidas a
+seguir. 
+
+<P>
+<SPAN  CLASS="textbf">Obs.:</SPAN> Os exemplos deste manual
+assumem que o pacote <TT>inputenc</TT>, com a op&#231;&#227;o <TT>latin1</TT>, tenha
+sido carregado, para o uso de caracteres acentuados diretamente no arquivo <SPAN CLASS="logo,LaTeX">L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X</SPAN>.
+
+<P>
+
+<H1><A NAME="SECTION00020000000000000000"></A><A NAME="sec:_opcoes_de_classe"></A><BR>
+Op&#231;&#245;es da classe
+</H1>
+
+<P>
+Para uma maior compatibilidade com pacotes existentes, a classe  &#233;
+apenas uma modifica&#231;&#227;o da classe <SPAN  CLASS="textsl">standard</SPAN> . Por isso, todas
+as op&#231;&#245;es da classe  s&#227;o suportadas. As op&#231;&#245;es <TT>12pt</TT> e
+<TT>a4paper</TT> s&#227;o ativas [<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.1], mas voc&#234; tem a
+liberdade de usar qualquer outra op&#231;&#227;o da classe  no comando
+<TT>documentclass[<SPAN  CLASS="textit">op&#231;&#245;es</SPAN>]abnt</TT>. Vale lembrar que,
+pela norma, a impress&#227;o &#233; apenas em anverso (frente), com a excess&#227;o da
+folha de rosto, em cujo verso consta a <SPAN  CLASS="textit">ficha catalogr&#225;fica</SPAN>
+[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.4]. 
+
+<P>
+Todas as op&#231;&#245;es do  est&#227;o presentes:
+<TT>10pt</TT>,
+<TT>11pt</TT>,  
+<TT>12pt</TT> (<SPAN  CLASS="textsl">default</SPAN>);
+<TT>a4paper</TT> (<SPAN  CLASS="textsl">default</SPAN>), 
+<TT>a5paper</TT>, 
+<TT>b5paper</TT>,
+<TT>letterpaper</TT>;
+<TT>landscape</TT>;
+<TT>titlepage</TT> (<SPAN  CLASS="textsl">default</SPAN>),
+<BR><TT>notitlepage</TT>;
+<TT>leqno</TT><A NAME="tex2html1"
+  HREF="#foot90"><SUP><SPAN CLASS="arabic">1</SPAN></SUP></A>; 
+<TT>fleqn</TT><A NAME="tex2html2"
+  HREF="#foot92"><SUP><SPAN CLASS="arabic">2</SPAN></SUP></A>; 
+<TT>oneside</TT> (<SPAN  CLASS="textsl">default</SPAN>),
+<TT>twoside</TT>;
+<TT>openright</TT> (<SPAN  CLASS="textsl">default</SPAN>
+para impress&#227;o frente e verso), 
+<TT>openany</TT>;
+<TT>onecolumn</TT> (<SPAN  CLASS="textsl">default</SPAN>) e
+<TT>twocolumn</TT>. 
+
+<P>
+Est&#227;o tamb&#233;m definidas as seguintes op&#231;&#245;es.
+
+<P>
+<DL>
+<DT><STRONG>pnumabnt (<SPAN  CLASS="textsl">default</SPAN>), pnumromarab, pnumplain</STRONG></DT>
+<DD>
+<BR>  Estilo de pagina&#231;&#227;o do documento. Explicado na
+  se&#231;&#227;o&nbsp;<A HREF="#subsec:_numeracao_das_paginas">4.1</A>.
+
+<P>
+</DD>
+<DT><STRONG>sumariocompleto (<SPAN  CLASS="textsl">default</SPAN>), sumarioincompleto</STRONG></DT>
+<DD>
+<BR>  Agora a maioria das estruturas incluem-se automaticamente no sum&#225;rio.
+  Isso se aplica aos cap&#237;tulos n&#227;o numerados (<TT>chapter*</TT>),
+  refer&#234;ncias, &#237;ndice remissivo, etc. Se voc&#234; quiser <SPAN  CLASS="textit">n&#227;o</SPAN> incluir
+  algo, poder&#225; desativar a auto inclus&#227;o com a op&#231;&#227;o
+  <TT>sumarioincompleto</TT> ou usar o comando
+  <TT>ProximoForaDoSumario</TT><A NAME="tex2html3"
+  HREF="#foot726"><SUP><SPAN CLASS="arabic">3</SPAN></SUP></A>    antes de um cap&#237;tulo ou se&#231;&#227;o. 
+
+<P>
+</DD>
+<DT><STRONG>abnttoc (<SPAN  CLASS="textsl">default</SPAN>), normaltoc</STRONG></DT>
+<DD>
+<BR>  De acordo com a norma [<A
+ HREF="abnt-classe-doc.html#abnt-sumario">NBR 6027</A>], os n&#250;meros das p&#225;ginas dos
+  &#237;tens do sum&#225;rio devem vir precedidos por ``p.''. Este comportamento &#233;
+  ativo com a op&#231;&#227;o <TT>tocabnt</TT>, e desativado com
+  <TT>normaltoc</TT>.
+
+<P>
+</DD>
+<DT><STRONG>abntfigtabnum (<SPAN  CLASS="textsl">default</SPAN>), normalfigtabnum</STRONG></DT>
+<DD>
+<BR>  De acordo com a norma [<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>], a numera&#231;&#227;o das figuras e
+  tabelas deve ser independente dos cap&#237;tulos e se&#231;&#245;es. A op&#231;&#227;o
+  <TT>normalfigtabnum</TT> faz com que tais numera&#231;&#245;es dependam dos
+  cap&#237;tulos (o normal do <SPAN CLASS="logo,LaTeX">L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X</SPAN>).
+
+<P>
+</DD>
+<DT><STRONG>espacosimples, espacoumemeio (<SPAN  CLASS="textsl">default</SPAN>), espacoduplo</STRONG></DT>
+<DD>
+<BR>  O espa&#231;amento 1,5 &#233; prescrito pela norma.
+  Leia a respeito na se&#231;&#227;o&nbsp;<A HREF="#subsec:_espacamento_entrelinhas">4.5</A>.
+
+<P>
+</DD>
+<DT><STRONG>plainheader (<SPAN  CLASS="textsl">default</SPAN>), header, ruledheader, noheader</STRONG></DT>
+<DD>
+<BR>  Alguns estilos de cabe&#231;alhos de p&#225;gina. Tratado na
+  se&#231;&#227;o&nbsp;<A HREF="#subsec:_cabecalhos_de_paginas">4.2</A>.
+
+<P>
+</DD>
+<DT><STRONG>capchap, capsec</STRONG></DT>
+<DD>
+<BR>  Colocam em mai&#250;sculas os t&#237;tulos dos cap&#237;tulos e se&#231;&#245;es,
+  respectivamente. No entanto, no sum&#225;rio e cabe&#231;alhos de p&#225;gina, as letras
+  n&#227;o t&#234;m o tipo alterado.
+
+<P>
+</DD>
+<DT><STRONG>autobm (<SPAN  CLASS="textsl">default</SPAN>), noautobm</STRONG></DT>
+<DD>
+<BR>  A op&#231;&#227;o faz o modo matem&#225;tico acompanhar o negrito do texto. &#218;til
+  especialmente em t&#237;tulos de cap&#237;tulos e se&#231;&#245;es. A op&#231;&#227;o <TT>noautobm</TT>
+  desativa este <SPAN  CLASS="textsl">auto bold math</SPAN>.
+
+<P>
+</DD>
+<DT><STRONG>times</STRONG></DT>
+<DD>
+<BR>  Explicada na se&#231;&#227;o <A HREF="#subsec:_fontes">4.7</A>. Vale lembrar que as
+  normas  n&#227;o fazem refer&#234;ncia a uma fonte espec&#237;fica.
+
+<P>
+</DD>
+<DT><STRONG>indentfisrt (<SPAN  CLASS="textsl">default</SPAN>), noindentfirst</STRONG></DT>
+<DD>
+<BR>  Esta classe n&#227;o suprime mais a tabula&#231;&#227;o dos primeiros par&#225;grafos de
+  cap&#237;tulos e se&#231;&#245;es. Reative o comportamento padr&#227;o das classes
+  <SPAN  CLASS="textsl">standard</SPAN> do <SPAN CLASS="logo,LaTeX">L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X</SPAN> com a op&#231;&#227;o <TT>noindentfirst</TT>.
+
+<P>
+</DD>
+</DL>
+
+<P>
+<SPAN  CLASS="textbf">Obs.:</SPAN> As op&#231;&#245;es <TT>paccomuns</TT> e
+<TT>sempaccomuns</TT> n&#227;o ser&#227;o mais suportadas a partir da vers&#227;o 1.
+
+<P>
+
+<H1><A NAME="SECTION00030000000000000000">
+Partes</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00031000000000000000">
+Folha de rosto e capa</A>
+</H2>
+
+<P>
+Os dados da capa e da folha de rosto devem aparecer em uma seq&#252;&#234;ncia
+espec&#237;fica (ver se&#231;&#227;o&nbsp;<A HREF="#subsubsec:_elementos_pre-textuais">A.1.1</A>).
+Implementamos um mecanismo semelhante ao <TT>maketitle</TT>. Voc&#234;
+tamb&#233;m tem a op&#231;&#227;o de n&#227;o usar o nosso mecanismo (caso queira outro
+<SPAN  CLASS="textsl">layout</SPAN>), como ser&#225; explicado na
+se&#231;&#227;o&nbsp;<A HREF="#subsec:_folha_de_rosto_personalizada">3.1.2</A>. 
+
+<P>
+
+<H3><A NAME="SECTION00031100000000000000">
+Comandos folhaderosto e capa</A>
+</H3>
+
+<P>
+Para usar nossa folha de rosto, entre com as informa&#231;&#245;es atrav&#233;s dos
+seguintes comandos (todos com nomes em portugu&#234;s, sem acentos): 
+
+<P>
+ 
+<TT>autor<SPAN  CLASS="textit">nome do autor</SPAN></TT>
+
+<P>
+<TT>titulo<SPAN  CLASS="textit">t&#237;tulo</SPAN></TT>
+
+<P>
+<TT>orientador[<SPAN  CLASS="textit">alternativa para
+    `Orientador:'</SPAN>]<SPAN  CLASS="textit">nome do orientador</SPAN></TT> 
+
+<P>
+<TT>coorientador[<SPAN  CLASS="textit">alternativa para
+    `Co-orientador:'</SPAN>]<SPAN  CLASS="textit">nome do co-orientador</SPAN></TT>
+
+<P>
+<TT>comentario<SPAN  CLASS="textit">texto com a natureza e o objetivo do trabalho</SPAN></TT>
+
+<P>
+<TT>instituicao<SPAN  CLASS="textit">nome da institui&#231;&#227;o</SPAN></TT>
+
+<P>
+<TT>local<SPAN  CLASS="textit">local</SPAN></TT>
+
+<P>
+<TT>data<SPAN  CLASS="textit">data (ano do dep&#243;sito)</SPAN></TT>
+
+
+<P>
+Depois disso, use os comandos
+
+<P>
+<TT>capa</TT> e <TT>folhaderosto</TT> 
+
+<P>
+logo ap&#243;s os comandos anteriores. A capa em geral n&#227;o &#233;
+necess&#225;ria, j&#225; que a maioria das institui&#231;&#245;es a fornecer&#227;o. 
+Alguns coment&#225;rios:
+
+<P>
+
+<UL>
+<LI>O comando <TT>orientador</TT> admite um par&#226;metro <SPAN  CLASS="textit">opcional</SPAN>
+  que descreve o que vai aparecer no lugar da palavra ``Orientador:'', que &#233;
+  o padr&#227;o (mude, por exemplo, caso tenha orientadora ou orientadores). Se
+  o par&#226;metro opcional n&#227;o for usado, 
+  usa-se ``<TT>Orientador:vspace1mm</TT>''. Se
+  voc&#234; desejar esta palavra e o nome do orientador na mesma linha, omita a
+  quebra de linha (). Se voc&#234; usar
+  <TT>orientador[]<SPAN  CLASS="textit">nome do orientador</SPAN></TT> somente o nome
+  do orientador aparecer&#225;. Esses coment&#225;rios se aplicam de modo an&#225;logo ao
+  comando <TT>coorientador</TT>.
+
+<P>
+</LI>
+<LI>Se voc&#234; deseja colocar mais de uma linha no comando
+  <TT>instituicao</TT>, separe as linhas com o comando <TT>par</TT>,
+  como no exemplo
+
+<P>
+<code>\instituicao{Universidade de São Paulo\par</code>
+<BR><code>     Instituto de Ciências Matemáticas e de Computação}</code>
+
+<P>
+</LI>
+<LI>&#201; poss&#237;vel alterar todas as fontes na folha de rosto. Veja
+  a se&#231;&#227;o&nbsp;<A HREF="#subsubsec:_fontes_da_folha_de_rosto">4.7.3</A>.
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<H3><A NAME="SECTION00031200000000000000"></A>
+<A NAME="subsec:_folha_de_rosto_personalizada"></A><BR>
+Folha de rosto personalizada
+</H3>
+
+<P>
+Se o comando <TT>folhaderosto</TT> n&#227;o &#233; aplic&#225;vel para sua
+necessidade, voc&#234; pode fazer sua pr&#243;pria folha de rosto
+personalizada. Escreva o texto da sua folha de rosto dentro do ambiente
+<TT>titlepage</TT>. Se usar este ambiente, a numera&#231;&#227;o das p&#225;ginas se
+manter&#225; correta<A NAME="tex2html4"
+  HREF="#foot675"><SUP><SPAN CLASS="arabic">4</SPAN></SUP></A>. Um exemplo simples:
+
+<P>
+<PRE>
+% Folha de rosto sem o uso de \folhaderosto
+\begin{titlepage}
+ \vfill
+ \begin{center}
+   {\large Autor} \\[5cm]
+   {\Huge Título da minha dissertação}\\[1cm]
+   \hspace{.45\textwidth} % posicionando a minipage
+   \begin{minipage}{.5\textwidth}
+     \begin{espacosimples}
+       Dissertação apresentada na Universidade Tal para a
+       obtenção do título de mestre em ...
+     \end{espacosimples}
+   \end{minipage}
+   \vfill
+   Maio de 2002
+ \end{center}
+\end{titlepage}
+</PRE>
+
+<P>
+Estes coment&#225;rios valem para a capa, tamb&#233;m feita com o
+ambiente <TT>titlepage</TT>.
+
+<P>
+
+<H2><A NAME="SECTION00032000000000000000">
+Folha de aprova&#231;&#227;o</A>
+</H2>
+
+<P>
+A norma [<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>] n&#227;o determina a formata&#231;&#227;o exata da folha
+de aprova&#231;&#227;o. Diz apenas que &#233; elemento obrigat&#243;rio, deve conter autor,
+t&#237;tulo por extenso e subt&#237;tulo, se houver, local e data de aprova&#231;&#227;o, nome,
+assinatura e institui&#231;&#227;o dos membros componentes da banca examinadora. N&#227;o
+est&#225; inclu&#237;da nas excess&#245;es de tamanho de fonte ou espa&#231;amento entrelinha,
+portanto a fonte &#233; 12pt em espa&#231;amento um e meio.
+
+<P>
+Para facilitar a montagem da folha de aprova&#231;&#227;o, que exige espa&#231;o simples,
+introduzimos o ambiente <TT>folhadeaprovacao</TT> e o comando
+<TT>assinatura<SPAN  CLASS="textit">nome da pessoa</SPAN></TT>, que desenha a linha de
+assinatura. Um exemplo de folha de aprova&#231;&#227;o:
+
+<P>
+<PRE>
+  \begin{folhadeaprovacao}
+    Tese de Doutorado sob o título \textit{``Quem veio primiro,
+    o ovo ou a galinha?''}, defendida por Zé do Bode e aprovada
+    em 29 de fevereiro de 2002, em Santo Antônio do Aracanguá,
+    Estado de São Paulo, pela banca examinadora constituída pelos
+    doutores:
+    \assinatura{Prof. Dr. Fulado de Tal \\ Orientador}
+    \assinatura{Prof. Dr. Cicrano de Tal \\ Universidade de
+      Mariápolis}
+    \assinatura{Prof. Dr. Beltrano de Tal \\ Universidade
+      de Vicentinópolis} 
+  \end{folhadeaprovacao}
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00032100000000000000">
+Mais sobre o comando
+  assinatura</A>
+</H3>
+
+<P>
+O comprimento da linha &#233; ajustado pelo comprimento
+<TT>ABNTsignwidth</TT>, que &#233; 8&nbsp;cm inicialmente. A grossura da linha &#233;
+dada pelo comprimento <TT>ABNTsignthickness</TT>, que &#233; <TT>0pt</TT>
+por <SPAN  CLASS="textsl">default</SPAN>. O espa&#231;o vertical deixado para a assinatura &#233;
+<TT>ABNTsignskip</TT>, 2,5&nbsp;cm por <SPAN  CLASS="textsl">default</SPAN>. O comando
+<TT>assinatura</TT> produz a linha de assinatura centralizada. Se voc&#234;
+n&#227;o desejar isso, use a vers&#227;o ``estrelada'' do comando e posicione por sua
+conta.
+
+<P>
+Por exemplo, suponha que se voc&#234; prefere uma linha tra&#231;ada, com apenas 2&nbsp;cm
+entre as linhas de assinatura e mais pr&#243;ximo da margem esquerda. Ent&#227;o
+esperimente isso: 
+
+<P>
+<PRE>
+\setlength{\ABNTsignthickness}{0.4pt}
+\setlength{\ABNTsignskip}{2cm}
+
+\hspace*{1cm}
+\assinatura*{Prof. Dr. Fulano de Tal\\ Orientador}
+\hspace*{1cm}
+\assinatura*{Prof. Dr. Cicrano de Tal\\ Universidade de Mariápolis} 
+\hspace*{1cm}
+\assinatura*{Prof. Dr. Beltrano de Tal\\ Univ. de Vicentinópolis}
+</PRE>
+
+<P>
+Voc&#234; notar&#225; que as assinaturas ficar&#227;o mais proximas da margem, mas ainda
+continuar&#227;o alinhadas ao centro entre si.
+
+<P>
+
+<H2><A NAME="SECTION00033000000000000000">
+Resumo e abstract</A>
+</H2>
+
+<P>
+A norma dita que o resumo e o abstract s&#227;o em espa&#231;amento simples. Est&#225;
+escrito em [<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 51] que as <SPAN  CLASS="textit">&#250;nicas</SPAN> estruturas com
+fonte em tamanho menor s&#227;o as cita&#231;&#245;es longas e as notas de rodap&#233;, ou
+seja, o resumo e o abstract <SPAN  CLASS="textit">n&#227;o</SPAN> est&#227;o inclu&#237;dos nessa regra.
+
+<P>
+Use os ambientes <TT>resumo</TT> e <TT>abstract</TT> (nesta ordem) para a
+correta formata&#231;&#227;o do texto. Exemplo:
+
+<P>
+<PRE>
+\begin{resumo}
+  Escreva aqui o texto de seu resumo...
+\end{resumo}
+
+\begin{abstract}
+  Write here the English version of your `Resumo'...
+\end{abstract}
+</PRE>
+
+<P>
+Se o resumo em l&#237;ngua estrangeira n&#227;o &#233; em ingl&#234;s, basta redefinir o
+comando <TT>ABNTabstractname</TT> para Resumen (castelhano) ou R&#233;sum&#233;
+(franc&#234;s). Exemplo:
+
+<P>
+<TT>renewcommandABNTabstractnameResumem</TT>
+
+<P>
+
+<H2><A NAME="SECTION00034000000000000000">
+Lista de s&#237;mbolos, siglas, etc</A>
+</H2>
+
+<P>
+&#201; poss&#237;vel o uso de uma listas de s&#237;mbolos, siglas ou abrevia&#231;&#245;es. Essas
+listas devem aparecer ap&#243;s o sum&#225;rio, mas ainda na parte pr&#233;-textual,
+seguindo o esquema de numera&#231;&#227;o da parte pre-textual. Um comando 
+<TT>chapter*<SPAN  CLASS="textit">nome da lista</SPAN></TT> n&#227;o funcionaria, j&#225; que a
+classe interpreta esse cap&#237;tulo n&#227;o numerado como estando na parte
+textual. Ent&#227;o criamos um comando para p&#244;r um cap&#237;tulo (sem numera&#231;&#227;o) na
+parte pre-textual: 
+<P>
+  
+<TT>
+<BR>pretextualchapter<SPAN  CLASS="textit">nome da lista</SPAN>
+</TT>
+<P>
+<TT>
+<BR>
+<BR><SPAN  CLASS="textit">c&#243;digo da sua lista de s&#237;mbolos ou siglas...</SPAN>
+</TT>
+
+<P>
+<SPAN  CLASS="textbf">Obs.:</SPAN> O <SPAN CLASS="logo,LaTeX">L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X</SPAN> oferece a
+possibilidade de se montar a lista de s&#237;mbolos de maneira mais autom&#225;tica,
+mais ou menos do mesmo modo como se faz sum&#225;rio, sem a necessidade de fazer &#224;
+m&#227;o. A t&#237;tulo de exemplo, colocamos um maneira de fazer sua lista.
+Isto n&#227;o ordenar&#225; as entradas, o que est&#225; de acordo com a norma (ver item
+<SPAN  CLASS="textit">lista de s&#237;mbolos</SPAN> da
+se&#231;&#227;o&nbsp;<A HREF="#subsubsec:_elementos_pre-textuais">A.1.1</A>). Aqui, o comando
+<TT>simb</TT> imprime o s&#237;mbolo no texto e na lista de s&#237;mbolos, e o
+comando <TT>listadesimbolos</TT> imprimir&#225; a lista.
+
+<P>
+<PRE>
+% *****  Definição da Lista de Símbolos  *****
+
+% \simb[entrada na lista de símbolos]{símbolo}: 
+%   Escreve o simbolo no texto e uma entrada na Lista de Símbolos.
+%   Se o parâmetro opcional é omitido, usa-se o parâmetro obrigatório.
+\newcommand{\simb}[2][]{%
+  \ifthenelse{\equal{#1}{}}
+    {\addcontentsline{los}{simbolo}{\ensuremath{#2}}}
+    {\addcontentsline{los}{simbolo}{#1}}
+  \ensuremath{#2}}
+
+\makeatletter % para aceitar comandos com @ (at) no nome
+
+% \listadesimbolos:  comando que imprime a lista de simbolos
+\newcommand{\listadesimbolos}{
+  \pretextualchapter{Lista de Símbolos}
+  {\setlength{\parindent}{0cm}
+   \@starttoc{los}}}
+
+% como a entrada será impressa
+\newcommand\l@simbolo[2]{\par #1, p.\thinspace#2} 
+
+\makeatother
+% ***** fim da Lista de Símbolos *****
+</PRE>
+
+<P>
+Exemplo de uso:
+
+<P>
+
+<code>\newcommand{\R}{\mathds{R}}  % usando o pacote `dsfont'</code>
+<BR><code>\newcommand{\Cinf}{\mathcal{C}^\infty}</code>
+<BR><code>\newcommand{\Cinfc}{\Cinf_c}</code>
+
+<P>
+no texto
+
+<P>
+<code>... seja \simb{\R^n} o espaço euclidiano $n$-dimencional...</code>
+<BR><code>... $\phi\in \simb[$\Cinfc$ (funções $\Cinf$ de suporte</code>
+<BR><code>  compacto)]{\Cinfc}$</code>
+
+<P>
+produziria as seguintes entradas na lista de s&#237;mbolos:
+
+<P>
+
+<P>
+
+<P>
+
+<H2><A NAME="SECTION00035000000000000000"></A><A NAME="subsec:_anexos_e_apendices"></A><BR>
+Anexos e ap&#234;ndices
+</H2>
+
+<P>
+Ap&#234;ndices consistem em um texto ou documento <SPAN  CLASS="textit">elaborado pelo autor</SPAN>, a
+fim de complementar sua argumenta&#231;&#227;o, sem preju&#237;zo da unidade nuclear do
+trabalho. Anexos consistem em um texto ou documento <SPAN  CLASS="textit">n&#227;o elaborado
+  pelo autor</SPAN>, que serve de fundamenta&#231;&#227;o, comprova&#231;&#227;o e ilustra&#231;&#227;o
+[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4.3.2 e 4.3.3]. 
+
+<P>
+Quando forem come&#231;ar os ap&#234;ndices, use o comando <TT>apendice</TT>, e
+agora cada comando <TT>chapter</TT> gerar&#225; uma entrada de ap&#234;ndice. O
+mesmo com anexos, mas use o comando <TT>anexo</TT> na ocasi&#227;o do in&#237;cio
+dos anexos.
+ou
+<PRE>
+\anexo
+\chapter{Primeiro anexo}
+\chapter{Segundo anexo}
+</PRE>
+Como a boa formata&#231;&#227;o dessas partes poder&#225; depender do caso particular,
+colocamos comandos que personalizam os t&#237;tulos dessas partes, descritos na
+se&#231;&#227;o&nbsp;<A HREF="#subsec:_format_anexo_apendice">4.4</A>.
+
+<P>
+<SPAN  CLASS="textbf">Obs.:</SPAN> O comando <TT>chapter*</TT>
+continua funcionando da mesma maneira.
+
+<P>
+
+<H2><A NAME="SECTION00036000000000000000">
+&#205;ndice remissivo</A>
+</H2>
+
+<P>
+Voc&#234; pode fazer seu &#237;ndice remissivo com o programa
+<SPAN  CLASS="textsl">MakeIndex</SPAN>. Este coleciona as entradas do seu &#237;ndice no arquivo
+<TT><SPAN  CLASS="textit">&lt;nome-do-arquivo&gt;</SPAN>.idx</TT>. Ent&#227;o &#233; necess&#225;rio rodar o
+programa <SPAN  CLASS="textsl">MakeIndex</SPAN> para ordenar as entradas, produzindo um arquivo
+com o nome <TT><SPAN  CLASS="textit">&lt;nome-do-arquivo&gt;</SPAN>.ind</TT>, que deve ser inclu&#237;do
+no seu documento com
+<TT>input<SPAN  CLASS="textit">&lt;nome-do-arquivo&gt;</SPAN>.ind</TT>. Isto produzir&#225; seu
+&#237;ndice remissivo. A novidade &#233; que ele se auto-incluir&#225; no sum&#225;rio e as
+colunas ser&#227;o balanceadas, o que n&#227;o acontecia com a classe . Se
+voc&#234; n&#227;o quiser o &#237;ndice com colunas balanceadas, acrescente no cabe&#231;alho o
+comando <TT>IndiceNaoBalanceado</TT>.
+
+<P>
+<SPAN  CLASS="textbf">Obs.:</SPAN> Freq&#252;entemente, quando se usa o
+<SPAN  CLASS="textsl">MakeIndex</SPAN> com l&#237;nguas que possuem acentos ortogr&#225;ficos (como em nossa
+l&#237;ngua portuguesa), aparecem problemas de ordena&#231;&#227;o de palavras, j&#225; que ele 
+ordena de acordo como est&#225; <SPAN  CLASS="textit">literalmente</SPAN> escrito. Por exemplo, a palavra
+``&#225;tomo'': o comando <TT>index&#225;tomo</TT> transforma, pelo pacote
+<TT>inputenc</TT>, <TT>&#225;tomo</TT> em <TT>'atomo</TT>), implicando que
+palavra &#233; vista pelo <SPAN  CLASS="textsl">MakeIndex</SPAN> como se come&#231;asse por um
+s&#237;mbolo, n&#227;o come&#231;ando pela letra A. As palavras ``cabana''
+e ``ca&#231;ador'' apresentam ordem alafab&#233;tica trocada depois do
+<SPAN  CLASS="textsl">MakeIndex</SPAN>, porque ele as v&#234; como <TT>cabana</TT> e
+<TT>cac cador</TT> (e  (barra invertida) vem antes da letra B na ordem
+alfab&#233;tica). Para solucionar esse problema, Arnaldo Mandel 
+(#2#1)
+criou um programa em Perl chamado
+<SPAN  CLASS="textsl">FazIndex</SPAN> que faz a
+''desTeXifica&#231;&#227;o'' das entradas e depois 
+roda o <SPAN  CLASS="textsl">MakeIndex</SPAN>, corrigindo todos esses problemas. N&#227;o importa,
+inclusive, que uma entrada tenha comandos de fonte. O <SPAN  CLASS="textsl">FazIndex</SPAN> &#233;
+realmente esperto. Pegue-o em
+#2#1.
+
+<P>
+
+<H1><A NAME="SECTION00040000000000000000">
+Formata&#231;&#227;o</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00041000000000000000"></A><A NAME="subsec:_numeracao_das_paginas"></A><BR>
+Numera&#231;&#227;o das p&#225;ginas
+</H2>
+
+<P>
+No item <SPAN  CLASS="textit">pagina&#231;&#227;o</SPAN> de <A HREF="#subsec:_formas_de_apresentacao">A.1.4</A> est&#225;
+descrito o mecanismo segundo o qual as p&#225;ginas s&#227;o numeradas de acordo com as
+normas, o que n&#227;o &#233; o ``mais natural''-- algu&#233;m pode
+dizer. No padr&#227;o internacional, a numera&#231;&#227;o come&#231;a depois da 
+folha de rosto, em algarismos romanos at&#233; o sum&#225;rio; na parte textual, a
+numera&#231;&#227;o come&#231;aria novamente, agora em algarismos ar&#225;bicos. Democr&#225;ticos,
+implementamos os dois esquemas. O esquema  &#233; padr&#227;o. O outro, descrito
+acima, &#233; acionado pela op&#231;&#227;o de classe <TT>pnumromarab</TT>. Se voc&#234; deseja
+que a classe n&#227;o interfira na pagina&#231;&#227;o, use a op&#231;&#227;o <TT>pnumplain</TT>.
+
+<P>
+Tamb&#233;m, de acordo com a norma [<A
+ HREF="abnt-classe-doc.html#abnt-sumario">NBR 6027</A>], os n&#250;meros das p&#225;ginas
+no sum&#225;rio e lista de figuras e tabelas s&#227;o precedidos pela abrevia&#231;&#227;o
+``p.''. As op&#231;&#245;es de classe <TT>abnttoc</TT> e <TT>normaltoc</TT>
+ativam e desativam, respectivamente, esse comportamento.
+
+<P>
+
+<H2><A NAME="SECTION00042000000000000000"></A><A NAME="subsec:_cabecalhos_de_paginas"></A><BR>
+Cabe&#231;alhos de p&#225;gina
+</H2>
+
+<P>
+De acordo com a norma, na parte pr&#233;-textual, nenhuma p&#225;gina apresenta
+numera&#231;&#227;o. A partir da parte textual (ap&#243;s o sum&#225;rio em geral) a numera&#231;&#227;o
+aparece em todas as p&#225;ginas, inclusive aquelas com t&#237;tulos de cap&#237;tulos,
+que tradicionalmente n&#227;o continham cabe&#231;alhos de p&#225;gina. Para sua maior
+comodidade, implementamos as seguintes op&#231;&#245;es de classe:
+
+<P>
+<DL>
+<DT><STRONG>plainheader</STRONG></DT>
+<DD>
+<BR>  O n&#250;mero da p&#225;gina aparece no canto superior direito da folha. &#201; padr&#227;o
+  , e portanto <SPAN  CLASS="textsl">default</SPAN>.
+
+<P>
+</DD>
+<DT><STRONG>header</STRONG></DT>
+<DD>
+<BR>  Al&#233;m do n&#250;mero da p&#225;gina no canto superior direito, aparece o
+  nome da se&#231;&#227;o no canto superior esquerdo. Se a impress&#227;o &#233; frente e
+  verso, nas p&#225;ginas pares (verso da folha), o nome das cap&#237;tulos aparece
+  no cabe&#231;alho da p&#225;gina.
+
+<P>
+</DD>
+<DT><STRONG>ruledheader</STRONG></DT>
+<DD>
+<BR>  O mesmo que <TT>header</TT>, mas com uma linha sublinhando o cabe&#231;alho.
+
+<P>
+</DD>
+<DT><STRONG>noheader</STRONG></DT>
+<DD>
+<BR>  Aplica-se o estilo padr&#227;o do <SPAN CLASS="logo,LaTeX">L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X</SPAN>, com a numera&#231;&#227;o no p&#233; da p&#225;gina.
+
+<P>
+</DD>
+</DL>
+
+<P>
+Outra alternativa &#233; usa o pacote
+<TT>fancyhdr</TT><A NAME="tex2html5"
+  HREF="#foot305"><SUP><SPAN CLASS="arabic">5</SPAN></SUP></A> e alterar os estilos de p&#225;gina adequados: 
+
+<P>
+
+<UL>
+<LI>O estilo de p&#225;gina dos t&#237;tulos de cap&#237;tulos &#233; sempre
+  <TT>plainheader</TT> .
+
+<P>
+</LI>
+<LI>Com excess&#227;o de <TT>noheader</TT><A NAME="tex2html6"
+  HREF="#foot696"><SUP><SPAN CLASS="arabic">6</SPAN></SUP></A>, cada op&#231;&#227;o dada acima aplica &#224;s
+  outras p&#225;ginas o estilo de p&#225;gina (<code>\pagestyle</code>) de <SPAN  CLASS="textit">mesmo
+    nome</SPAN>. 
+
+<P>
+</LI>
+</UL>
+
+<P>
+Uma forma de usar isso &#233; chamar a classe com a op&#231;&#227;o <TT>header</TT> e
+redefinir com os comandos do <TT>fancyhdr</TT> os estilos de p&#225;gina
+<TT>plainheader</TT> e <TT>header</TT>.
+
+<P>
+
+<H2><A NAME="SECTION00043000000000000000">
+T&#237;tulo de cap&#237;tulos e se&#231;&#245;es</A>
+</H2>
+
+<P>
+Leia os items <SPAN  CLASS="textit">numera&#231;&#227;o das se&#231;&#245;es</SPAN> em
+<A HREF="#subsec:_formas_de_apresentacao">A.1.4</A> e <SPAN  CLASS="textit">se&#231;&#245;es</SPAN> em
+<A HREF="#subsec:_outras_normas">A.2</A>. Isso &#233; o que foi implementado. A
+tipografia dos cap&#237;tulos ser em negrito e em it&#225;lico foi decidida baseado
+no livro [<A
+ HREF="abnt-classe-doc.html#desktop-publishing">DTP</A>], sobre tipografia. Leia a
+se&#231;&#227;o&nbsp;<A HREF="#subsubsec:_fontes_de_titulos_de_secoes">4.7.1</A> para personalizar a
+fonte em que s&#227;o impressos os t&#237;tulos dos cap&#237;tulos e se&#231;&#245;es (isto inclui
+t&#237;tulos em mai&#250;sculas).
+
+<P>
+
+<H2><A NAME="SECTION00044000000000000000"></A>
+   <A NAME="subsec:_format_anexo_apendice"></A><BR>
+T&#237;tulo de anexos e ap&#234;ndices
+</H2>
+
+<P>
+Se foram criados esses comandos para formatar o t&#237;tulo de anexos e
+ap&#234;ndices, &#233; por que n&#227;o fiquei satisfeito com o resultado oferecido,
+que &#233; exigido pela norma ou insinuado por seus exemplos. Ficar&#225; ent&#227;o a
+crit&#233;rio do usu&#225;rio decidir a sua formata&#231;&#227;o, j&#225; que o resultado varia
+muito caso a caso, dependendo por exemplo do comprimento dos nomes dos
+ap&#234;ndices ou anexos.
+
+<P>
+O que est&#225; escrito na norma &#233; que anexos e ap&#234;ndices s&#227;o identificados por
+letras mai&#250;sculas consecutivas, travess&#227;o e pelo t&#237;tulo. Veja o exemplo
+dado no texto original da norma NBR 14724 (com tamanho de fonte fiel ao
+original):
+
+<P>
+ANEXO A - Representa&#231;&#227;o
+  gr&#225;fica de contagem de c&#233;lulas inflamat&#243;rias presentes nas caudas em
+  regenera&#231;&#227;o - Grupo de controle I
+<BR><P>
+Apesar deste exemplo dar a entender, o texto da norma n&#227;o diz que a palavra
+``ANEXO'' tem que aparecer, nem que tenha que ser em mai&#250;sculas, e nem que
+se ocorrer quebra de linha no t&#237;tulo, a pr&#243;xima linha deve ser alinhada com
+o in&#237;cio do t&#237;tulo. As op&#231;&#245;es de classe <TT>anapname</TT>,
+<TT>anapindicindent</TT> e <TT>anapmaiusc</TT>, que s&#227;o todas
+<SPAN  CLASS="textsl">default</SPAN>, fazem como sugere o exemplo.
+
+<P>
+Pessoalmente, n&#227;o aprecio o estilo do exemplo acima, que em fontes
+grandes, normais de t&#237;tulos, ficaria absurdamente desproporcional.
+Experimente rodar o t&#237;tulo de anexo acima com a classe ABNT. Dependendo da
+conveni&#234;ncia, sinta-se livre para alterar o que quiser em prol de seu texto.
+
+<P>
+A op&#231;&#227;o <TT>anapnoname</TT> faz com que os t&#237;tulos sejam iguais aos dos
+cap&#237;tulos (mas a numera&#231;&#227;o ser&#225; em algarismos romanos mai&#250;sculos). A op&#231;&#227;o
+<TT>anapnormal</TT> desativa o mai&#250;sculo das palavras ``anexo'' e
+``ap&#234;ndice'' nos indicativos. A op&#231;&#227;o <TT>anapcustomindent</TT> faz com que
+o tamanho da indenta&#231;&#227;o das linhas ap&#243;s a primeira seja
+<TT>ABNTanapindent</TT>, que pode ser alterado com
+<TT>setlength</TT>.
+
+<P>
+O travess&#227;o no t&#237;tulo &#233; dado pelo comando <TT>ABNTtravessao</TT>.
+Ent&#227;o, se voc&#234; quiser se livrar dele, pode redefinir esse comando para ser
+um espa&#231;o, por exemplo. &#201; poss&#237;vel tamb&#233;m alterar a qualquer momento o
+tamanho da fonte, bastando redefinir o comando <TT>ABNTanapsize</TT>,
+que por <SPAN  CLASS="textsl">default</SPAN> &#233; <TT>LARGE</TT>.
+
+<P>
+Tamb&#233;m foi definido um comando que &#233; executado logo ap&#243;s o indicativo
+(``Anexo A -'', por exemplo). O comando <TT>ABNTaposindicativoanap</TT>
+permite muita flexibilidade. Vejamos alguns exemplos:
+
+<P>
+
+<UL>
+<LI>Para t&#237;tulo com ``Anexo A'' em uma linha e o t&#237;tulo em outra,
+  ambos alinhados &#224; esquerda, use a op&#231;&#227;o de classe
+  <TT>anapcustomindent</TT> e inclua 
+<PRE>
+\renewcommand{\ABNTtravessao}{}
+\setlength{\ABNTanapindent}{0cm}
+\renewcommand{\ABNTaposindicativoanap}{\protect\\[4mm]}
+</PRE>
+
+<P>
+</LI>
+<LI>Para t&#237;tulo com ``Anexo A'' em uma linha, alinhado &#224; esquerda, e o
+  t&#237;tulo em outra, centralizado, use a op&#231;&#227;o de classe
+  <TT>anapcustomindent</TT> e inclua 
+<PRE>
+\renewcommand{\ABNTtravessao}{}
+\setlength{\ABNTanapindent}{0cm}
+\renewcommand{\ABNTaposindicativoanap}
+                    {\protect\\[4mm]\protect\centering}
+</PRE>
+
+<P>
+</LI>
+<LI>Para algo similar aos anteriores, mas com tudo centralizado (o que
+  distoa dos t&#237;tulos dos cap&#237;tulos ), use a op&#231;&#227;o de classe
+  <TT>anapcustomindent</TT> e inclua 
+<PRE>
+\renewcommand{\ABNTtravessao}{}
+\setlength{\ABNTanapindent}{0cm}
+\renewcommand{\ABNTaposindicativoanap}
+                    {\protect\centering\protect\\[4mm]}
+</PRE>
+
+<P>
+</LI>
+</UL>
+
+<P>
+O usu&#225;rio pode criar o estilo que quiser.
+
+<P>
+
+<H2><A NAME="SECTION00045000000000000000"></A><A NAME="subsec:_espacamento_entrelinhas"></A><BR>
+Espa&#231;amento entrelinhas
+</H2>
+
+<P>
+A norma pede que o texto seja digitado com 1,5 de  espa&#231;o entrelinhas. Se 
+isso n&#227;o for corretamente tratado, a apar&#234;ncia final do seu trabalho ficar&#225;
+comprometida. A solu&#231;&#227;o usual -- apenas alterar o valor do comando
+<TT>baselinestretch</TT> -- estica <SPAN  CLASS="textit">todos</SPAN> os espa&#231;amentos
+verticais como espa&#231;os relacionados a figuras e tabelas, demasiado
+espa&#231;amento em equa&#231;&#245;es em destaque, notas de rodap&#233;, etc. Por esse motivo,
+optamos por usar o pacote <TT>setspace</TT>, que d&#225; o correto tratamento a
+essa quest&#227;o e est&#225; presente na maioria das distribui&#231;&#245;es <SPAN CLASS="logo,LaTeX">L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X</SPAN> recentes. 
+A aus&#234;ncia desse pacote causar&#225; uma mensagem de aviso
+(<SPAN  CLASS="textsl">warning</SPAN>). Se esse for o seu caso, basta procurar
+pelo pacote na CTAN<A NAME="tex2html7"
+  HREF="#foot732"><SUP><SPAN CLASS="arabic">7</SPAN></SUP></A>, instal&#225;-lo ou
+simplesmente colocar o arquivo <TT>setspace.sty</TT> no mesmo diret&#243;rio do
+seu documento. F&#225;cil, n&#227;o? Se voc&#234; n&#227;o quiser usar o pacote, apenas ignore
+o <SPAN  CLASS="textsl">warning</SPAN> e uma solu&#231;&#227;o adaptada ser&#225; adotada.
+
+<P>
+
+<H3><A NAME="SECTION00045100000000000000">
+Ambientes
+  espacosimples,
+  espacoememeio e
+  espacoduplo</A>
+</H3> 
+
+<P>
+A id&#233;ia &#233; n&#227;o se preocupar com o espa&#231;amento entrelinhas. No entanto,
+deixamos dispon&#237;veis ambientes e comandos para acertar o espa&#231;amento
+entrelinhas, se desejado. Fortemente desencorajamos alterar o espa&#231;amento
+redefinindo o comando <TT>baselinestretch</TT>. 
+
+<P>
+Para alterar o esquema de espa&#231;amento durante o texto, utilize um desses
+ambientes. Por exemplo, para deixar uma parte do texto com espa&#231;amento
+simples, use: 
+<PRE>
+\begin{espacosimples}
+  Texto extenso... (que pode ter vários parágrafos)
+\end{espacosimples}
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00045200000000000000">
+O comando espaco<SPAN  CLASS="textit">palavra ou n&#250;mero</SPAN></A>
+</H3>
+
+<P>
+O par&#226;metro desse comando pode ser as palavras <TT>simples</TT>,
+<TT>umemeio</TT> ou <TT>duplo</TT>, para que os espa&#231;amentos sejam feitos
+de acordo com a classe, ou um <SPAN  CLASS="textit">n&#250;mero decimal</SPAN> (como <TT>1.7</TT>),
+que &#233; o fator pelo qual &#233; multiplicado a dist&#226;ncia entre duas
+linhas. Prefira esse comando a redefinir o comando
+<TT>baselinestretch</TT>. O espa&#231;amento selecionado &#233; v&#225;lido apenas
+dentro do grupo ou ambiente. Por exemplo, use como em: 
+
+<P>
+<PRE>
+{\espaco{simples}
+Texto... (que pode ter vários parágrafos)
+}
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00046000000000000000"></A><A NAME="subsec:_citacoes_longas"></A><BR>
+Cita&#231;&#245;es longas
+</H2>
+
+<P>
+Uma cita&#231;&#227;o longa (mais de 3 linhas) deve vir em par&#225;grafo separado, com
+recuo de <SPAN  CLASS="textit">4&nbsp;cm</SPAN> da margem esquerda, em fonte menor, sem as aspas
+[<A
+ HREF="abnt-classe-doc.html#abnt-citacoes">NBR 10520</A>, 4.4] e com espa&#231;amento simples
+[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.3]. 
+
+<P>
+Uma regra de como fazer cita&#231;&#245;es em geral n&#227;o &#233; simples. &#201; prudente ler
+[<A
+ HREF="abnt-classe-doc.html#abnt-citacoes">NBR 10520</A>] se voc&#234; optar for fazer uso freq&#252;ente de
+cita&#231;&#245;es. Para satisfazer &#224;s exig&#234;ncias tipogr&#225;ficas que a norma pede para
+cita&#231;&#245;es longas, use o ambiente <TT>citacao</TT>.
+
+<P>
+Um exemplo pr&#225;tico -- extra&#237;do do texto original da norma NBR 10520
+exatamente como est&#225; l&#225; -- como &#233; digitado e seu respectivo resultado: 
+
+<P>
+<PRE>
+\begin{citacao}
+  A teleconferência permite ao indivíduo participar de um encontro
+  nacional ou regional sem a necessidade de deixar seu local de
+  origem. Tipos comuns de teleconferênia incluem o uso da televisão,
+  telefone e computador. Através de áudio conferência, utilizando
+  a companhia local de telefone, um sinal de áudio pode ser emitido
+  em um salão de qualquer dimensão (NICHOLIS, 1993, p. 181).
+\end{citacao}
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00047000000000000000"></A> <A NAME="subsec:_fontes"></A><BR>
+Fontes
+</H2>
+
+<P>
+
+<H3><A NAME="SECTION00047100000000000000"></A>
+   <A NAME="subsubsec:_fontes_de_titulos_de_secoes"></A><BR>
+Fontes do t&#237;tulo de cap&#237;tulos e se&#231;&#245;es
+</H3>
+
+<P>
+A fonte com que os cap&#237;tulos &#233; impressa &#233; dado pelo comando
+<TT>ABNTchapterfont</TT>. O comando <TT>ABNTchaptersize</TT> altera
+o tamanho da fonte dos cap&#237;tulos. A fonte com que as se&#231;&#245;es s&#227;o impressas &#233;
+dada pelo comando <TT>ABNTsectionfont</TT>. O
+<TT>ABNTtocchapterfont</TT> d&#225; a fonte em que os cap&#237;tulos s&#227;o
+apresentados no sum&#225;rio.
+
+<P>
+Originalmente, o <TT>ABNTchapterfont</TT> &#233;
+<TT>bfseriesitshape</TT>. Essa escolha particular foi motivada pelo 
+livro [<A
+ HREF="abnt-classe-doc.html#desktop-publishing">DTP</A>], e particularmente acho um estilo bonito e
+elegante. O tamanho padr&#227;o, dado por <TT>ABNTchaptersize</TT>, &#233;
+<TT>huge</TT>.  Por sua vez, o <TT>ABNTsectionfont</TT> &#233; definido
+originalmente por <TT>bfseries</TT>. Inicialmente, o comando 
+<TT>ABNTtocchapterfont</TT> &#233; <TT>ABNTchapterfontupshape</TT>,
+para acompanhar a fonte do cap&#237;tulo em primeria inst&#226;ncia. 
+
+<P>
+O usu&#225;rio pode sentir-se livre para alterar tais comandos a vontade para
+gerar os cap&#237;tulos e se&#231;&#245;es da maneira que quiser. No entanto &#233; prudente
+n&#227;o adicionar comandos de tamanho de fonte, como <TT>large</TT>,
+por exemplo. Isto &#233; porque o mesmo comando pode ser usado pelos v&#225;rios
+n&#237;veis de seccionamento. A fonte do <TT>section</TT> &#233; a mesma que a do
+<TT>subsection</TT>, e assim por diante.
+
+<P>
+Se voc&#234; quer t&#237;tulos de cap&#237;tulos e/ou se&#231;&#245;es em
+MAI&#218;SCULAS, o que &#233; um
+recurso <SPAN  CLASS="textit">dispon&#237;vel</SPAN>, e n&#227;o obrigat&#243;rio, use as op&#231;&#245;es
+de classe <TT>capchap</TT> e <TT>capsec</TT>, respectivamente. Assim voc&#234;
+n&#227;o precisar&#225; escrever tudo em mai&#250;sculas, e poder&#227;o aparecer em caixa
+normal no sum&#225;rio, por exemplo. A norma <SPAN  CLASS="textit">n&#227;o diz</SPAN> em nenhum momento
+que os itens do sum&#225;rio devem ter a mesma fonte dos t&#237;tulos. Apenas est&#225;
+dito que a hierarquia do seccionamento deve ser destacada na tipografia, o
+que &#233; o caso.
+
+<P>
+<SPAN  CLASS="textbf">Obs.&nbsp;1:</SPAN> Se voc&#234;
+vai usar mai&#250;sculas em algum dos t&#237;tulos, considere usar alguma fonte que
+n&#227;o seja <SPAN  CLASS="textit">extendida</SPAN> (muitas das fontes em negrito normais s&#227;o), ou o
+texto poder&#225; ficar muito largo, mesmo com poucas palavras, perdendo o
+t&#237;tulo sua beleza. Muitas outras op&#231;&#245;es de fonte, al&#233;m das citadas a
+seguir, est&#227;o disponiveis em <SPAN CLASS="logo,LaTeX">L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X</SPAN>.
+
+<P>
+<SPAN  CLASS="textbf">Obs. 2:</SPAN> Se voc&#234; quer
+fontes sans serif nos t&#237;tulos de cap&#237;tulos e se&#231;&#245;es, tente a seguinte
+sugest&#227;o: use as fontes normais do <SPAN CLASS="logo,LaTeX">L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X</SPAN> (Computer Modern), acrescente a
+op&#231;&#227;o <TT>capchap</TT> e, antes do 
+<TT>begindocument</TT>, acrescente
+
+<P>
+<PRE>
+\renewcommand{\ABNTchapterfont}{\bfseries\sffamily\fontseries{sbc}\selectfont}
+\renewcommand{\ABNTsectionfont}{\bfseries\sffamily}
+</PRE>
+
+<P>
+O <TT>bfseries</TT> dentro da redefini&#231;&#227;o do
+<TT>ABNTchapterfont</TT> &#233; somente para que o <SPAN  CLASS="textsl">auto bold math</SPAN>
+funcione, j&#225; que o t&#237;tulo &#233; em negrito.
+
+<P>
+
+<H3><A NAME="SECTION00047200000000000000">
+Op&#231;&#227;o de classe times</A>
+</H3>
+
+<P>
+Se voc&#234; deseja utilizar a fonte  Times Roman,
+que &#233; uma fonte bonita, pode adicionar a op&#231;&#227;o <TT>times</TT>, e a classe
+tentar&#225; executar isso para voc&#234;, tentando primeiro os melhores pacotes. Se
+o pacote <TT>mathptmx</TT> estiver presente (a maioria dos casos), o modo
+matem&#225;tico tamb&#233;m ser&#225; em  Times. A
+desvantagem &#233; que n&#227;o existe uma vers&#227;o em negrito para os s&#237;mbolos, e por
+isso n&#227;o h&#225; modo matem&#225;tico em negrito. No entanto, pessoalmente acho que
+as fontes Computer Modern (originais do <SPAN CLASS="logo,LaTeX">L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X</SPAN>) s&#227;o de excelente qualidade
+e compensa us&#225;-las.
+
+<P>
+
+<H3><A NAME="SECTION00047300000000000000"></A>
+<A NAME="subsubsec:_fontes_da_folha_de_rosto"></A><BR>
+Fontes da folha de rosto
+</H3>
+
+<P>
+Voc&#234; pode escolher livremente a fonte com que cada item da folha de rosto
+&#233; impresso. Cada um dos comandos da folha de rosto (que coletam dados), como
+<TT>autor</TT>, <TT>titulo</TT>, etc,  possui um comando que define
+sua formata&#231;&#227;o, e esse comando tem a seguinte lei de forma&#231;&#227;o:
+<TT><SPAN  CLASS="textit">&lt;comando&gt;</SPAN>format</TT>. Por exemplo, para escrever o t&#237;tulo,
+usa-se fonte no tamanho <TT>LARGE</TT>, no mesmo estilo dos t&#237;tulos dos
+cap&#237;tulos. Portanto o comando <TT>tituloformat</TT> original &#233; dado por
+<TT>LARGEABNTchapterfont</TT>. 
+Mude isso com o <TT>renewcommand</TT>, por exemplo 
+
+<P>
+<TT>renewcommandtituloformathugebfseries</TT> 
+
+<P>
+para ter o t&#237;tulo em <TT>huge</TT> e s&#243; em negrito.
+
+<P>
+
+<H3><A NAME="SECTION00047400000000000000">
+Fontes do cabe&#231;alho de p&#225;gina</A>
+</H3>
+
+<P>
+O esquema de cabe&#231;alho de p&#225;gina descrito na 
+se&#231;&#227;o&nbsp;<A HREF="#subsec:_cabecalhos_de_paginas">4.2</A> tamb&#233;m apresenta alguma
+flexibilidade nas fontes. 
+
+<P>
+
+<UL>
+<LI>A fonte em que o n&#250;mero da p&#225;gina ser&#225; impresso &#233; dado pelo comando
+  <TT>thepageformat</TT>, que por <SPAN  CLASS="textsl">default</SPAN> &#233; <TT>small</TT>.
+</LI>
+<LI>A fonte do nome do cap&#237;tulo (marca esquerda, que s&#243; &#233; usada em
+  impress&#227;o frente e verso) &#233;
+  <TT>leftmarkformat</TT>, inicialmente definida como
+  <TT>itshape</TT>. 
+</LI>
+<LI>A fonte do nome da se&#231;&#227;o (marca direita) &#233; 
+  <TT>rightmarkformat</TT>, sendo por <SPAN  CLASS="textsl">default</SPAN>
+  <TT>smallitshape</TT>.
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<P>
+
+<H1><A NAME="SECTION00050000000000000000"></A><A NAME="sec:_um_resumo_das_normas"></A><BR>
+Um resumo das normas
+</H1>
+
+<P>
+Fica muito dif&#237;cil formatar um texto acad&#234;mico
+sem um conhecimento b&#225;sico do conte&#250;do da norma. Vamos portanto apresentar
+um resumo de alguns conceitos da norma NBR 14724 ``Informa&#231;&#227;o e
+documenta&#231;&#227;o - Trabalhos acad&#234;micos - Apresenta&#231;&#227;o'', de Julho de 2001. 
+
+<P>
+
+<SMALL>
+
+<P>
+</SMALL>
+<H2><A NAME="SECTION00051000000000000000"></A>
+  <A NAME="subsec:_estrutura_e_algumas_descricoes"></A><BR>
+NBR 14724: estrutura e algumas descri&#231;&#245;es
+</H2>
+<P>
+<SMALL>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4] A estrutura de tese, disserta&#231;&#227;o ou de um
+trabalho acad&#234;mico, compreende elementos pr&#233;-textuais, elementos textuais e
+elementos p&#243;s-textuais, que aparecem no texto na seguinte ordem:
+</SMALL>
+<P><DL>
+<DT><STRONG>Pr&#233;-textuais</STRONG></DT>
+<DD>
+<BR>  Capa (obrigat&#243;rio) 
+<BR>Folha de rosto (obrigat&#243;rio) 
+<BR>Errata (opcional) 
+<BR>Folha de aprova&#231;&#227;o (obrigat&#243;rio) 
+<BR>Dedicat&#243;ria (opcional) 
+<BR>Agradeciomentos (opcional) 
+<BR>Ep&#237;grafe (opcional) 
+<BR>Resumo em l&#237;ngua vern&#225;cula (obrigat&#243;rio) 
+<BR>Resumo em l&#237;ngua estrangeira (obrigat&#243;rio) 
+<BR>Sum&#225;rio (obrigat&#243;rio) 
+<BR>Lista de ilustra&#231;&#245;es (opcional) 
+<BR>Lista de abreviaturas e siglas (opcional) 
+<BR>Lista de s&#237;mbolos (opcional) 
+</DD>
+<DT><STRONG>Textuais</STRONG></DT>
+<DD>
+<BR>  Introdu&#231;&#227;o 
+<BR>Desenvolvimento 
+<BR>Conclus&#227;o 
+</DD>
+<DT><STRONG>P&#243;s-textuais</STRONG></DT>
+<DD>
+<BR>  Refer&#234;ncias (obrigat&#243;rio) 
+<BR>Ap&#234;ndice (opcional) 
+<BR>Anexo (opcional) 
+<BR>Gloss&#225;rio (opcional) 
+</DD>
+</DL>
+<P>
+<SMALL>Algumas defini&#231;&#245;es e esclarecimentos contidos na norma:
+</SMALL>
+<P>
+<H3><A NAME="SECTION00051100000000000000"></A><A NAME="subsubsec:_elementos_pre-textuais"></A><BR>
+Elementos pr&#233;-textuais
+</H3>
+<P><DL>
+<DT><STRONG>Capa</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4.1.1] Obrigat&#243;rio, para prote&#231;&#227;o
+  externa e sobre o qual se imprimem informa&#231;&#245;es que ajudam na
+  identifica&#231;&#227;o e utiliza&#231;&#227;o do trabalho, na <SPAN  CLASS="textit">seguinte ordem:</SPAN>
+
+<P>
+<B>-</B> Nome do autor;
+
+<P>
+<B>-</B> T&#237;tulo;
+
+<P>
+<B>-</B> Subt&#237;tulo, se houver;
+
+<P>
+<B>-</B> N&#250;mero de volumes (se houver mais de um, deve constar em cada capa a
+  especifica&#231;&#227;o do respectivo volume);
+
+<P>
+<B>-</B> Local (cidade) da institui&#231;&#227;o onde deve ser apresentado;
+
+<P>
+<B>-</B> Ano do dep&#243;sito (entrega).
+
+<P>
+</DD>
+<DT><STRONG>Folha de rosto (Anverso)</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4.1.2]
+Os elementos devem figurar na <SPAN  CLASS="textit">seguinte ordem:</SPAN>
+
+<P>
+<B>-</B> Nome do autor: respons&#225;vel intelectual do trabalho;
+
+<P>
+<B>-</B> T&#237;tulo principal do trabalho: deve ser claro e preciso, identificando
+  o seu conte&#250;do e possibilitando a indexa&#231;&#227;o e recupera&#231;&#227;o da informa&#231;&#227;o;
+
+<P>
+<B>-</B> Subt&#237;tulo: se houver, deve ser evidenciada sua subordina&#231;&#227;o ao t&#237;tulo
+  principal, precedido de dois pontos (:);
+
+<P>
+<B>-</B> N&#250;mero de volumes (se houver mais de um, deve constar em cada folha
+  de rosto a especifica&#231;&#227;o do respectivo volume);
+
+<P>
+<B>-</B> Natureza (tese, disserta&#231;&#227;o e outros) e objetivo (aprova&#231;&#227;o em
+  disciplina, grau pretendido e outros); nome da institui&#231;&#227;o a que &#233;
+  submetido; &#225;rea de concentra&#231;&#227;o;
+
+<P>
+<B>-</B> Nome do orientador e, se houver, do co-orientador;
+
+<P>
+<B>-</B> Local (cidade) da institui&#231;&#227;o onde deve ser apresentado;
+
+<P>
+<B>-</B> Ano de dep&#243;sito (entrega).
+
+<P>
+</DD>
+<DT><STRONG>Folha de rosto (Verso)</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4.1.2] Deve constar
+  da ficha catalogr&#225;fica, conforme o C&#243;digo de Cataloga&#231;&#227;o Anglo-Americano
+  - CCAA2. 
+
+<P>
+</DD>
+<DT><STRONG>Folha de aprova&#231;&#227;o</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4.1.4] Elemento
+  obrigat&#243;rio, que contem autor, t&#237;tulo por extenso e subt&#237;tulo, se houver,
+  local e data de aprova&#231;&#227;o, nome, assinatura e institui&#231;&#227;o dos membros
+  componentes da banca examinadora. 
+
+<P>
+</DD>
+<DT><STRONG>Dedicat&#243;ria e Agradecimentos</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4.1.5 e 4.1.6]
+  Opcionais. Os agradecimentos s&#227;o dirigidos apenas &#224;queles que
+  contribu&#237;ram de maneira relevante &#224; elabora&#231;&#227;o do trabalho. 
+
+<P>
+</DD>
+<DT><STRONG>Resumo na l&#237;ngua vern&#225;cula</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4.1.8] Elemento
+  obrigat&#243;rio, que conciste na apresenta&#231;&#227;o concisa dos pontos relevantes
+  de um texto; constitui-se em uma seq&#252;&#234;ncia de frases concisas
+  e objetivas, e n&#227;o de uma simples enumera&#231;&#227;o de t&#243;picos, n&#227;o
+  ultrapassando 500 palavras, seguido, logo abaixo, das palavras
+  representativas do conte&#250;do do trabalho, isto &#233;, palavras-chave e/ou
+  descritores, conforme [<A
+ HREF="abnt-classe-doc.html#abnt-resumos">NBR 6028</A>].
+
+<P>
+</DD>
+<DT><STRONG>Resumo em l&#237;ngua estrangeira</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4.1.9] Elemento
+  obrigat&#243;rio, que consiste em uma vers&#227;o do resumo em idioma de divulga&#231;&#227;o
+  internacional (em ingl&#234;s <SPAN  CLASS="textsl">Abstract</SPAN>, em castelhano
+  <SPAN  CLASS="textsl">Resumen</SPAN>, em franc&#234;s <SPAN  CLASS="textsl">R&#233;sum&#233;</SPAN>, por exemplo). Deve ser
+  seguido das palavras representativas do conte&#250;do do trabalho, isto &#233;,
+  palavras-chave e/ou descritores, na l&#237;ngua.
+
+<P>
+</DD>
+<DT><STRONG>Sum&#225;rio</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4.1.10] Obrigat&#243;rio, que
+  consiste na enumera&#231;&#227;o das principais divis&#245;es, se&#231;&#245;es e outras partes do
+  trabalho, na mesma ordem e grafia<A NAME="tex2html8"
+  HREF="#foot714"><SUP><SPAN CLASS="arabic">8</SPAN></SUP></A> em que a mat&#233;ria nele sucede, acompanhado do
+  respectivo n&#250;mero da p&#225;gina.
+
+<P>
+</DD>
+<DT><STRONG>Lista de figuras e de tabelas</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4.1.11]
+  Opcionais, elaborados de acordo com a ordem apresentada no
+  texto, com cada item acompanhado do respectivo n&#250;mero da
+  p&#225;gina. 
+
+<P>
+</DD>
+<DT><STRONG>Lista de abreviaturas e siglas</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4.1.12]
+  Opcional. Consiste na rela&#231;&#227;o alfab&#233;tica das abreviaturas e
+  siglas utilizadas no texto, seguidas das palavras ou express&#245;es
+  correspondentes grafadas por extenso.
+
+<P>
+</DD>
+<DT><STRONG>Lista de s&#237;mbolos</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4.1.13] Elemento opcional,
+  que deve ser elaborado de acordo com a ordem apresentada no texto, com o
+  devido significado.
+
+<P>
+</DD>
+</DL>
+<P>
+<H3><A NAME="SECTION00051200000000000000">
+Elementos textuais</A>
+</H3>
+<P>
+<SMALL>Parte do trabalho em que &#233; exposta a mat&#233;ria. Deve conter tr&#234;s partes
+fundamentais: introdu&#231;&#227;o, desenvolvimento e conclus&#227;o.
+</SMALL>
+<P>
+<H3><A NAME="SECTION00051300000000000000"></A>
+<A NAME="subsubsec:_elementos_pos_textuais"></A><BR>
+Elementos p&#243;s-textuais
+</H3>
+<P><DL>
+<DD><P>
+</DD>
+<DT><STRONG>Ap&#234;ndice</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4.3.2] Elemento opcional, que
+  consiste em um texto ou documento <SPAN  CLASS="textit">elaborado pelo autor</SPAN>, a fim de
+  complementar sua argumenta&#231;&#227;o, sem preju&#237;zo da unidade nuclear do
+  trabalho. Os ap&#234;ndices s&#227;o identificados por letras mai&#250;sculas
+  consecutivas, travess&#227;o e pelos respectivos t&#237;tulos. Exemplo:
+<BR><P>
+AP&#202;NDICE A -
+  Avalia&#231;&#227;o
+      num&#233;rica de c&#233;lulas inflamat&#243;rias totais aos quatro dias de
+      evolu&#231;&#227;o.<BR>
+<P>
+AP&#202;NDICE B -
+  Avalia&#231;&#227;o de c&#233;lulas
+      musculares presentes nas caudas em regenera&#231;&#227;o.
+<BR><P>
+</DD>
+<DT><STRONG>Anexo</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4.3.3] Elemento opcional, que
+  consistem em um texto ou documento <SPAN  CLASS="textit">n&#227;o elaborado pelo autor</SPAN>, que
+  serve de fundamenta&#231;&#227;o, comprova&#231;&#227;o e ilustra&#231;&#227;o. Os anexos s&#227;o
+  identificados por letras mai&#250;sculas consecutivas, travess&#227;o e pelos
+  respectivos t&#237;tulos. Exemplo<A NAME="tex2html9"
+  HREF="#foot542"><SUP><SPAN CLASS="arabic">9</SPAN></SUP></A>:
+<BR><P>
+ANEXO A -
+  Representa&#231;&#227;o gr&#225;fica de contagem de c&#233;lulas
+    inflamat&#243;rias presentes nas caudas em regenera&#231;&#227;o - Grupo de controle
+    I<BR>
+<P>
+ANEXO B - 
+  Representa&#231;&#227;o gr&#225;fica de contagem de c&#233;lulas
+    inflamat&#243;rias presentes nas caudas em regenera&#231;&#227;o - Grupo de controle
+    II
+<BR><P>
+</DD>
+<DT><STRONG>Gloss&#225;rio</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 4.3.4] Opcional, que
+  consiste em uma lista em ordem alfab&#233;tica de palavras ou express&#245;es
+  t&#233;cnicas de uso restrito ou de sentido obscuro, utilizadas no texto,
+  acompanhadas das respectivas defini&#231;&#245;es.
+
+<P>
+</DD>
+<DT><STRONG>&#205;ndice remissivo</STRONG></DT>
+<DD>Nada consta sobre o &#237;ndice remissivo nesta
+  norma, nem ao menos em que posi&#231;&#227;o do texto este deve ser posto, quando
+  presente. Sua confec&#231;&#227;o est&#225; determinada na norma
+  [<A
+ HREF="abnt-classe-doc.html#abnt-indice-remissivo">NBR 6034</A>], da qual infelizmente n&#227;o temos acesso at&#233; o
+  presente momento. 
+
+<P>
+</DD>
+</DL>
+<P>
+<H3><A NAME="SECTION00051400000000000000"></A> <A NAME="subsec:_formas_de_apresentacao"></A><BR>
+Formas de apresenta&#231;&#227;o
+</H3>
+<P><DL>
+<DT><STRONG>Formato</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.1] O texto deve estar impresso em
+  papel branco, formato A4 (21,0&nbsp;cm x 29,7&nbsp;cm), no anverso da folha,
+  excetuando-se a folha de rosto.
+
+<P>
+</DD>
+<DT><STRONG>Projeto gr&#225;fico</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.1] O projeto gr&#225;fico &#233; de
+  responsabilidade do autor. 
+
+<P>
+</DD>
+<DT><STRONG>Fonte</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.1] Recomenda-se, para digita&#231;&#227;o, a
+  utiliza&#231;&#227;o de fonte de tamanho 12 para o texto e tamanho 10 para cita&#231;&#245;es
+  longas e notas de rodap&#233;.
+
+<P>
+</DD>
+<DT><STRONG>Margens</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.2] As folhas devem apresentar
+  margem esquerda e superior a 3&nbsp;cm; direita e inferior de 2&nbsp;cm.
+
+<P>
+</DD>
+<DT><STRONG>Espacejamento</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.3] Todo o texto deve ser
+  digitado com 1,5 de entrelinhas; as cita&#231;&#245;es longas,
+  as notas, as refer&#234;ncias e os resumos em vern&#225;culo e em l&#237;ngua
+  estrangeira devem ser digitados ou datilografados em espa&#231;o simples.
+
+<P>
+</DD>
+<DT><STRONG>Numera&#231;&#227;o das se&#231;&#245;es</STRONG></DT>
+<DD>
+<BR>  [<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.3.2] O indicativo
+  num&#233;rico de uma se&#231;&#227;o precede seu t&#237;tulo, alinhado &#224; esquerda, separado
+  por um espa&#231;o de caracter. Nos t&#237;tulos sem indicativo num&#233;rico, como
+  lista de ilustra&#231;&#245;es, sum&#225;rio, resumo, refer&#234;ncias e outros, devem ser
+  centralizados, conforme [<A
+ HREF="abnt-classe-doc.html#abnt-numeracao-progressiva">NBR 6024</A>].
+
+<P>
+[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.5] Para evidenciar a sistematiza&#231;&#227;o do conte&#250;do
+  do trabalho, deve-se adotar a numera&#231;&#227;o progressiva para as se&#231;&#245;es do
+  texto. Os t&#237;tulos das se&#231;&#245;es prim&#225;rias (cap&#237;tulos), por serem as
+  principais divis&#245;es do texto, devem iniciar em folha
+  distinta. Destacam-se gradativamente os t&#237;tulos das se&#231;&#245;es, utilizando-se
+  os recursos de negrito, it&#225;lico ou grifo e redondo, caixa alta ou
+  versal<A NAME="tex2html10"
+  HREF="#foot719"><SUP><SPAN CLASS="arabic">10</SPAN></SUP></A>, ou outro, conforme [<A
+ HREF="abnt-classe-doc.html#abnt-numeracao-progressiva">NBR 6024</A>].
+
+<P>
+</DD>
+<DT><STRONG>Pagina&#231;&#227;o</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.4] Todas as folhas do trabalho,
+  a partir da folha de rosto, devem ser contadas seq&#252;encialmente, mas n&#227;o
+  numeradas. A numera&#231;&#227;o &#233; colocada, a partir da primeira folha da parte
+  textual, em algarismos ar&#225;bicos, no canto superior direito da folha, a
+  2&nbsp;cm da borda superior, ficando o &#250;ltimo algarismo a 2&nbsp;cm da borda
+  direita da folha. No caso de o trabalho ser constitu&#237;do de mais de um
+  volume, deve-se manter uma &#250;nica seq&#252;&#234;ncia de numera&#231;&#227;o das folhas, do
+  primeiro ao &#250;ltimo volume. Havendo ap&#234;ndice e anexo, as suas folhas devem
+  ser numeradas de maneira cont&#237;nua e sua pagina&#231;&#227;o deve dar seguimento &#224;
+  do texto principal. 
+
+<P>
+</DD>
+<DT><STRONG>Equa&#231;&#245;es e f&#243;rmulas</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.8] Aparecem destacadas
+  no texto, de modo a facilitar sua leitura. Na seq&#252;&#234;ncia normal do texto,
+  &#233; permitido usar uma entrelinha maior para comportar seus elementos
+  (expoentes, &#237;ndices e outros). Quando destacadas do par&#225;grafo s&#227;o
+  centralizadas e, se necess&#225;rio, deve-se numer&#225;-las. Quando fragmentadas
+  em mais de uma linha, por falta de espa&#231;o, devem ser interrompidas antes
+  do sinal de igualdade ou depois dos sinais de adi&#231;&#227;o, subtra&#231;&#227;o
+  multiplica&#231;&#227;o e divis&#227;o.
+
+<P>
+</DD>
+<DT><STRONG>Figuras</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.9.1] Qualquer que seja seu tipo
+  (gr&#225;fico, fotografia, quadro, esquema e outros), sua identifica&#231;&#227;o
+  (<SPAN  CLASS="textsl">caption</SPAN>) aparece na parte <SPAN  CLASS="textit">inferior</SPAN> precedida da palavra
+  `Figura', seguida de seu n&#250;mero de ordem de ocorr&#234;ncia no texto em
+  algarismos ar&#225;bicos, do respectivo t&#237;tulo e/ou legenda explicativa da
+  fonte, se necess&#225;rio. As legendas devem ser breves e claras, dispensando
+  consulta ao texto. Devem ser inseridas o mais pr&#243;ximo poss&#237;vel do trecho
+  a que se referem.
+
+<P>
+</DD>
+<DT><STRONG>Tabelas</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-trab-academ">NBR 14724</A>, 5.9.2] T&#234;m numera&#231;&#227;o independente e
+  consecutiva; o t&#237;tulo (<SPAN  CLASS="textsl">caption</SPAN>) &#233; colocado na parte
+  <SPAN  CLASS="textit">superior</SPAN>, precedido da palavra `Tabela' e de seu n&#250;mero de ordem
+  em algarismos ar&#225;bicos; nas tabelas, utilizam-se fios horizontais e
+  verticais para separar os t&#237;tulos das colunas no cabe&#231;alho e fech&#225;-las na
+  parte inferior, <SPAN  CLASS="textit">evitando-se</SPAN> fios verticais para separar colinas e
+  fios horizontais para separar linhas; as fontes citadas, na constru&#231;&#227;o de
+  tabelas, e notas eventuais aparecem no rodap&#233; (da tabela) ap&#243;s o fio de
+  fechamento; caso sejam usadas tabelas reproduzidas de outros documentos,
+  a pr&#233;via autoriza&#231;&#227;o do autor se faz necess&#225;ria, n&#227;o sendo mencionada na
+  mesma; devem ser inseridas o mais pr&#243;ximo poss&#237;vel do trecho a que se
+  referem; se a tabela n&#227;o couber em uma folha, deve ser continuada na
+  folha seguinte e, nesse caso, n&#227;o &#233; delimitado por tra&#231;o horizontal na
+  parte inferior, sendo o t&#237;tulo e o cabe&#231;alho repetidos na folha seguinte.
+
+<P>
+</DD>
+</DL>
+<P>
+<H2><A NAME="SECTION00052000000000000000"></A> <A NAME="subsec:_outras_normas"></A><BR>
+Outras normas
+</H2>
+<P><DL>
+<DT><STRONG>Se&#231;&#245;es</STRONG></DT>
+<DD>
+<BR>  [<A
+ HREF="abnt-classe-doc.html#abnt-numeracao-progressiva">NBR 6024</A>, 2.2] As se&#231;&#245;es prim&#225;rias s&#227;o as
+  principais divis&#245;es do texto, denominadas ``cap&#237;tulos''; As se&#231;&#245;es
+  prim&#225;rias podem ser divididas em se&#231;&#245;es secund&#225;rias; as secund&#225;rias em
+  terci&#225;rias, e assim por diante.
+
+<P>
+[<A
+ HREF="abnt-classe-doc.html#abnt-numeracao-progressiva">NBR 6024</A>, 2.3] S&#227;o empregados algarismos ar&#225;bicos
+  na numera&#231;&#227;o; o indicativo de uma se&#231;&#227;o precede o t&#237;tulo ou a primeira
+  palavra do texto, se n&#227;o houver t&#237;tulo, separado por um espa&#231;o; o
+  indicativo da se&#231;&#227;o secund&#225;ria &#233; constitu&#237;do pelo indicativo da se&#231;&#227;o
+  prim&#225;ria que a precede seguido do n&#250;mero que lhe foi atribu&#237;do na
+  seq&#252;&#234;ncia do assunto e separado por ponto. Repete-se o mesmo processo em
+  rela&#231;&#227;o &#224;s demais se&#231;&#245;es; na leitura, n&#227;o se l&#234; os pontos (exemplo: 2.1.1
+  l&#234;-se ``dois um um'')
+
+<P>
+[<A
+ HREF="abnt-classe-doc.html#abnt-numeracao-progressiva">NBR 6024</A>, 4] Os indicatios devem ser citados no
+  texto de acordo com os seguintes exemplos:
+<BR>...se&#231;&#227;o 4...
+<BR>
+<BR>
+<BR>dotscap&#237;tulo 2...
+<BR>...9.2
+<BR>...<EM>1.1.2.2 par&#225;g. 3<SMALL CLASS="TINY">o</SMALL>
+<BR>ou
+   ...<SMALL CLASS="TINY">o</SMALL> par&#225;grafo de 1.1.2.2 
+
+<P>
+[<A
+ HREF="abnt-classe-doc.html#abnt-numeracao-progressiva">NBR 6024</A>, 5] Os t&#237;tulos das se&#231;&#245;es s&#227;o destacados
+  gradativamente, usando-se racionalmente os recursos de negrito, it&#225;lico
+  ou grifo, e redondo, caixa alta ou versal, etc.; Quando a se&#231;&#227;o tem
+  t&#237;tulo, este &#233; colocado na mesma linha do respectivo indicativo, e a
+  mat&#233;ria da se&#231;&#227;o pode come&#231;ar na linha seguinte da pr&#243;pria se&#231;&#227;o ou em
+  uma se&#231;&#227;o subseq&#252;ente.
+
+<P>
+</DD>
+<DT><STRONG>Sum&#225;rio</STRONG></DT>
+<DD>[<A
+ HREF="abnt-classe-doc.html#abnt-sumario">NBR 6027</A>, 4.1.d] A pagina&#231;&#227;o deve vir sobre uma
+  das seguintes formas: n&#250;mero da primeira p&#225;gina (p.ex.:
+  p.27); n&#250;mero das p&#225;ginas em que se distribui o texto; n&#250;mero
+  das p&#225;ginas extremas (p.ex.: p.71-143)
+
+<P>
+</DD>
+<DT><STRONG>Refer&#234;ncias bibliogr&#225;ficas</STRONG></DT>
+<DD>A normas [<A
+ HREF="abnt-classe-doc.html#abnt-ref-bib">NBR 6023</A>] &#233; t&#227;o
+  complicada e t&#227;o extensa (19 p&#225;ginas) que a melhor forma de garantir que
+  suas refer&#234;ncias sejam formatadas corretamente &#233; aprendendo a usar o
+   e aplicar um dos estilos  feitos pelo : para
+  cita&#231;&#227;o num&#233;rica por ordem de cita&#231;&#227;o ou cita&#231;&#227;o por ordem alfab&#233;tica. O
+  pessoal que trabalhou no estilo  est&#225; de parab&#233;ns pelo trabalho.
+
+<P>
+</DD>
+<DT><STRONG>Cita&#231;&#245;es</STRONG></DT>
+<DD>Se voc&#234; vai fazer uso freq&#252;ente de cita&#231;&#245;es, &#233; melhor
+  dar uma olhada na norma [<A
+ HREF="abnt-classe-doc.html#abnt-citacoes">NBR 10520</A>], que &#233; um pouco
+  complexa. Voc&#234; pode encontr&#225;-la em bibliotecas de algumas
+  universidades. D&#234; uma lida na nossa se&#231;&#227;o&nbsp;<A HREF="#subsec:_citacoes_longas">4.6</A>.
+
+<P>
+</DD>
+</DL>
+<P>
+<P>
+<SMALL></EM></SMALL> </EM></SMALL>
+<H2><A NAME="SECTION00060000000000000000">
+Refer&ecirc;ncias Bibliogr&aacute;ficas</A>
+</H2><DL COMPACT><DD>
+<P>
+
+<P>
+<P></P><DT><A NAME="cod-catalog">CCAA2</A>
+<DD> <SPAN  CLASS="textit">``C&#243;digo de Cataloga&#231;&#227;o
+    Anglo-Americano 2''</SPAN>, ed. S&#227;o Paulo: FEBAB, 1983-1985.
+
+<P>
+<P></P><DT><A NAME="desktop-publishing">DTP</A>
+<DD> <SPAN  CLASS="textit">``Desktop-Publishing on the
+    Arquimedes: DTP for all''</SPAN><A NAME="tex2html11"
+  HREF="#foot739"><SUP><SPAN CLASS="arabic">11</SPAN></SUP></A>, B. Goatly, ed. Sigma,
+  Reino Unido, 1991.
+
+<P>
+<P></P><DT><A NAME="abnt-ref-bib">NBR 6023</A>
+<DD> <SPAN  CLASS="textit">``Informa&#231;&#227;o e documenta&#231;&#227;o -
+    Refer&#234;ncias - Elabora&#231;&#227;o''</SPAN>, , 2000.
+
+<P>
+<P></P><DT><A NAME="abnt-numeracao-progressiva">NBR 6024</A>
+<DD> <SPAN  CLASS="textit">``Numera&#231;&#227;o
+    progressiva das se&#231;&#245;es de um documento''</SPAN>, , 1989.
+
+<P>
+<P></P><DT><A NAME="abnt-sumario">NBR 6027</A>
+<DD> <SPAN  CLASS="textit">``Sum&#225;rio''</SPAN>, , 1989.
+
+<P>
+<P></P><DT><A NAME="abnt-resumos">NBR 6028</A>
+<DD> <SPAN  CLASS="textit">``Resumos''</SPAN>, , 1990.
+
+<P>
+<P></P><DT><A NAME="abnt-indice-remissivo">NBR 6034</A>
+<DD> <SPAN  CLASS="textit">``Prepara&#231;&#227;o de &#237;ndice de
+  publica&#231;&#245;es''</SPAN>, , 1989.
+
+<P>
+<P></P><DT><A NAME="abnt-citacoes">NBR 10520</A>
+<DD> <SPAN  CLASS="textit">``Informa&#231;&#227;o e documenta&#231;&#227;o -
+    Apresenta&#231;&#227;o de cita&#231;&#245;es em documentos''</SPAN>, , 2001.
+
+<P>
+<P></P><DT><A NAME="abnt-trab-academ">NBR 14724</A>
+<DD> <SPAN  CLASS="textit">``Informa&#231;&#227;o e documenta&#231;&#227;o
+    - Trabalhos acad&#234;micos - apresenta&#231;&#227;o''</SPAN>, , 2001.
+
+<P>
+</DL>
+<P>
+<P><BR><HR><H4>Footnotes</H4>
+<DL>
+<DT><A NAME="foot90">...leqno</A><A
+ HREF="abnt-classe-doc.html#tex2html1"><SUP><SPAN CLASS="arabic">1</SPAN></SUP></A></DT>
+<DD>Numeração das equações no lado esquerdo em vez do
+  direito.
+
+</DD>
+<DT><A NAME="foot92">...fleqn</A><A
+ HREF="abnt-classe-doc.html#tex2html2"><SUP><SPAN CLASS="arabic">2</SPAN></SUP></A></DT>
+<DD>Equações em destaque alinhadas à esquerda em vez de
+  centralizadas.
+
+</DD>
+<DT><A NAME="foot726">...ProximoForaDoSumario</A><A
+ HREF="abnt-classe-doc.html#tex2html3"><SUP><SPAN CLASS="arabic">3</SPAN></SUP></A></DT>
+<DD>Isso é útil, por exemplo, quando
+    se quer inserir quebras de linha no título de um
+    <TT>chapter*</TT>. Inclua depois este capítulo no
+    sumário com
+    <TT>addcontentslinetocchapter<SPAN  CLASS="textit">nome do capítulo</SPAN></TT>.
+
+</DD>
+<DT><A NAME="foot675">... correta</A><A
+ HREF="abnt-classe-doc.html#tex2html4"><SUP><SPAN CLASS="arabic">4</SPAN></SUP></A></DT>
+<DD>A folha de rosto é contada na numeração no estilo
+  , mas não em outros estilos.
+
+</DD>
+<DT><A NAME="foot305">...fancyhdr</A><A
+ HREF="abnt-classe-doc.html#tex2html5"><SUP><SPAN CLASS="arabic">5</SPAN></SUP></A></DT>
+<DD>Pacote para configurar
+  estilos de página (cabeçalho e roda-pé)
+
+</DD>
+<DT><A NAME="foot696">...noheader</A><A
+ HREF="abnt-classe-doc.html#tex2html6"><SUP><SPAN CLASS="arabic">6</SPAN></SUP></A></DT>
+<DD>A opção
+    <TT>noheader</TT> que ativa o estilo de página <TT>plain</TT> para
+    todas as folhas.
+
+</DD>
+<DT><A NAME="foot732">... CTAN</A><A
+ HREF="abnt-classe-doc.html#tex2html7"><SUP><SPAN CLASS="arabic">7</SPAN></SUP></A></DT>
+<DD>Comprehensive <SPAN CLASS="logo-TeX">T<SMALL>E</SMALL>X</SPAN> Archive Network
+  (#2#1):   repositório na internet dos arquivos relacionados a <SPAN CLASS="logo-TeX">T<SMALL>E</SMALL>X</SPAN>.
+
+</DD>
+<DT><A NAME="foot714">... grafia</A><A
+ HREF="abnt-classe-doc.html#tex2html8"><SUP><SPAN CLASS="arabic">8</SPAN></SUP></A></DT>
+<DD><SPAN  CLASS="textsl">grafia</SPAN> significa aqui
+    ``o que/como está escrito'', não referindo-se a aspectos da fonte na qual
+    o texto é impresso.
+
+</DD>
+<DT><A NAME="foot542">... Exemplo</A><A
+ HREF="abnt-classe-doc.html#tex2html9"><SUP><SPAN CLASS="arabic">9</SPAN></SUP></A></DT>
+<DD>Os exemplos apresentados aqui para
+    anexos e apêndices são os do texto original na norma NBR&nbsp;14724,
+    exatamente como está lá.
+
+</DD>
+<DT><A NAME="foot719">... versal</A><A
+ HREF="abnt-classe-doc.html#tex2html10"><SUP><SPAN CLASS="arabic">10</SPAN></SUP></A></DT>
+<DD>Em português, <SPAN  CLASS="textsl">caixa alta</SPAN> ou <SPAN  CLASS="textsl">versal</SPAN> é o
+    estilo em que todos os caracteres estão em MAIÚSCULAS;
+    <SPAN  CLASS="textsl">versalete</SPAN> corresponde ao estilo S<SMALL>MALL </SMALL>C<SMALL>APITALS</SMALL> do
+    inglês.
+
+</DD>
+<DT><A NAME="foot739">... all''</A><A
+ HREF="abnt-classe-doc.html#tex2html11"><SUP><SPAN CLASS="arabic">11</SPAN></SUP></A></DT>
+<DD>No final de 2001, este livro estava
+    disponível em formato PDF na internet. Ainda pode ser encontrado no
+    site
+    #2#1,
+    armazenado (<SPAN  CLASS="textsl">cached</SPAN>) em formato HTML.
+
+</DD>
+</DL><BR><HR>
+
+</BODY>
+</HTML>

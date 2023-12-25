@@ -1,0 +1,43 @@
+Alt+F1 ou a tecla Super
+Alterna entre o panorama de Atividades e a área de trabalho. No panorama, comece a digitar para pesquisar instantaneamente seus aplicativos, contatos e documentos.
+
+Alt+F2
+Faz surgir a janela de comando (para executar rapidamente comandos).
+Usa as teclas de setas para acessar rapidamente comandos executados previamente.
+
+Super+Tab
+Alterna rapidamente entre janelas. Mantenha o Shift pressionado para uma ordem reversa de alternância.
+
+Super+`
+Alterna entre janelas do mesmo aplicativo ou do aplicativo selecionado depois após Super+Tab.
+Este atalho usa ` em teclados americanos, sendo que a tecla ` está sobre o Tab. Em todos os outros teclados, o atalho é Super mais a tecla que estiver sobre o Tab.
+
+Alt+Esc
+Alterna rapidamente entre janelas no espaço de trabalho atual. Mantenha o Shift pressionado para uma ordem reversa.
+
+Ctrl+Alt+Tab
+Dá ao teclado o foco na barra superior. No panorama de Atividades, alterna o foco do teclado entre a barra superior, o dash, o panorama de janelas, a lista de aplicativos e o campo de pesquisa. Use as teclas de setas para navegar.
+
+Super+A
+Mostra a lista de aplicativos.
+
+Super+Page Up  e Super+Page Down
+Alterna entre espaços de trabalho.
+
+Shift+Super+Page Up e Shift+Super+Page Down
+Move a janela atual para um espaço de trabalho diferente.
+
+Shift+Super+←
+Move a janela atual um monitor à esquerda.
+
+Shift+Super+→
+Move a janela atual um monitor à esquerda.
+
+Ctrl+Alt+Delete
+Show the Power Off dialog.
+
+Super+L
+Bloqueia o ecrã.
+
+Super+V
+Mostra a lista de notificação. Pressione Super+V novamente ou Esc para fechar.

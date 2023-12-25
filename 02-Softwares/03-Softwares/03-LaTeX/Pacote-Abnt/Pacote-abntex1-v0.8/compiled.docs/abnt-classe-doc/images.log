@@ -1,0 +1,51 @@
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.4.6)  2 NOV 2004 17:24
+**./images.tex
+(./images.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, n
+ohyphenation, loaded.
+
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size11.clo
+File: size11.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+))
+Runaway argument?
+{\usepackage {comment}\providecommand {\[1]{}\providecommand {\latex \ETC.
+! File ended while scanning use of \IfFileExists.
+<inserted text> 
+                \par 
+<*> ./images.tex
+                
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+! Emergency stop.
+<*> ./images.tex
+                
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 259 strings out of 95847
+ 2679 string characters out of 1195963
+ 47294 words of memory out of 1000001
+ 3281 multiletter control sequences out of 10000+50000
+ 3940 words of font info for 15 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 21i,0n,19p,114b,40s stack positions out of 1500i,500n,5000p,200000b,5000s
+No pages of output.

@@ -1,0 +1,12 @@
+
+Verifique a ISO:
+GNU/Linux
+Se já tem um Fedora antigo e quer verificar se a iso esta integra:
+Import Fedora's GPG key(s)
+curl -O https://fedoraproject.org/fedora.gpg
+Verify the checksum file is valid
+gpgv --keyring ./fedora.gpg Fedora-Workstation-39-1.5-x86_64-CHECKSUM
+Verify the checksum matches
+sha256sum -c Fedora-Workstation-39-1.5-x86_64-CHECKSUM
+If the output states that the file is valid, then it's ready to use!
+

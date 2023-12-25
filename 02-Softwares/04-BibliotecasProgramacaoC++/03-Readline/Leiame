@@ -1,0 +1,26 @@
+O que é?
+=========
+Um wrapper para a biblioteca Readline de C em C++.
+
+Download e instalação via github:
+=================================
+A versão mais atual deve ser baixada do site https://github.com/Svalorzen/cpp-readline
+
+
+Download e instalação usando pacotes:
+=====================================
+Normalmente a biblioteca readline já esta instalada em sistemas GNU/Linux.
+Procure por: /usr/lib64/libreadline.so
+
+Mas iremos usar a versão de desenvolvimento. Para tal instale o pacote readline-devel executando.
+dnf install readline-devel
+
+Vão aparecer os arquivos
+ls /usr/include/readline/ 
+chardefs.h  history.h  keymaps.h  readline.h  rlconf.h  rlstdc.h  rltypedefs.h  tilde.h
+
+Em nossos códigos vamos usar:
+#include <readline/readline.h>
+#include <readline/history.h>
+
+

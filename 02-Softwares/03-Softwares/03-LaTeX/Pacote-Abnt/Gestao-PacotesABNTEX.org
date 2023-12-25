@@ -1,0 +1,102 @@
+
+Coloque aqui informações sobre os pacotes e manuais do ABNTEX.
+Instruções de instalação e uso.
+A ideia é que baixem estas informações e mantenham no seu computador para tirar dúvidas.
+
+Diretório:
+/home/andreduartebueno/Dropbox/05-Gestao/Modelos/Modelos-Documentos-Diretorios/DocumentosAuxiliares
+
+*** LaTeX-LyX
+Repositório com documentos auxiliares, manuais e instrucões, TeX, LaTeX, Lyx.
+**** TODO Atualizar os arquivos da pasta/home/andreduartebueno/Dropbox/05-Gestao/Modelos/Modelos-Documentos-Diretorios/DocumentosAuxiliares-2-Manuais-Softwares/LaTeX-LyX/2-Pacotes/Pacote-abntex2[atualizar] para a versão mais recente
+**** TODO Ler sobre abntex2 (manuais e links).
+
+Bard:
+Aqui estão alguns exemplos de como o abntex2 pode ser usado para formatar documentos:
+Para formatar um artigo científico, você pode usar a classe abntex2-article.
+Para formatar uma monografia, você pode usar a classe abntex2-monografia.
+Para formatar uma dissertação, você pode usar a classe abntex2-dissertation.
+Para formatar uma tese, você pode usar a classe abntex2-thesis.
+
+Comando: dnf search texlive* | grep abnt
+texlive-abnt.noarch : Typesetting academic works according to ABNT rules
+texlive-abntex2.noarch : Typeset technical and scientific Brazilian documents based on ABNT rules
+texlive-abntex2-doc.noarch : Documentation for abntex2
+texlive-abntexto.noarch : LaTeX class for formatting academic papers in ABNT standards
+texlive-biblatex-abnt.noarch : BibLaTeX style for Brazil's ABNT rules
+texlive-biblatex-abnt-doc.noarch : doc files of biblatex-abnt
+
+Após a instalação dos pacotes acima:
+sudo dnf install  texlive-abnt.noarch texlive-abntex2.noarch texlive-abntex2-doc.noarch  texlive-abntexto.noarch texlive-biblatex-abnt.noarch texlive-biblatex-abnt-doc.noarch
+
+Abriu o arquivo master:
+/home/andreduartebueno/Dropbox/05-Gestao/Modelos/Modelos-Documentos-Diretorios/Modelo-AlunoBolsista/08-Resultados-DocumentoFinal-IC-MSC-DSC-abntex2/master.lyx
+e aparece a mensagem:
+Não foi possível encontrar o arquivo de layout: abntex2
+Será usado um textclass padrão com layouts padrão.
+O LyX não poderá produzir uma saída correta.
+
+A gestão e feita pelo programa:
+tlmgr - the native TeX Live Manager
+
+Para instalar o texconfig:
+dnf install texlive-texlive-scripts-extra
+Mas parece que parte das ações agora é feita pelo tlmgr...estudar
+
+Comando para verificar como esta sua instalação:
+texconfig conf
+=========================== version information ==========================
+TeX Live (https://tug.org/texlive) version 2022
+
+==================== binaries found by searching $PATH ===================
+PATH=/usr/bin:/home/andreduartebueno/.local/bin:/home/andreduartebueno/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/var/lib/snapd/snap/bin:/home/andreduartebueno/.emacs.d/bin
+kpsewhich: /usr/bin/kpsewhich
+updmap: /usr/bin/updmap
+fmtutil: /usr/bin/fmtutil
+texconfig: /usr/bin/texconfig
+tex: /usr/bin/tex
+pdftex: /usr/bin/pdftex
+mktexpk: /usr/bin/mktexpk
+dvips: /usr/bin/dvips
+dvipdfmx: /usr/bin/dvipdfmx
+
+=========================== active config files ==========================
+/usr/share/texlive/texmf-config/web2c/updmap.cfg
+/usr/share/texlive/texmf-dist/dvips/config/config.ps
+/usr/share/texlive/texmf-dist/tex/generic/tex-ini-files/pdftexconfig.tex
+/usr/share/texlive/texmf-dist/web2c/fmtutil.cnf
+/usr/share/texlive/texmf-dist/web2c/mktex.cnf
+/usr/share/texlive/texmf-dist/web2c/texmf.cnf
+/usr/share/texlive/texmf-dist/xdvi/XDvi
+
+============================= font map files =============================
+psfonts.map: /var/lib/texmf/fonts/map/dvips/updmap/psfonts.map
+pdftex.map: /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+ps2pk.map: /var/lib/texmf/fonts/map/dvips/updmap/ps2pk.map
+
+=========================== kpathsea variables ===========================
+TEXMFMAIN=/usr/share/texlive/texmf-dist
+TEXMFDIST=/usr/share/texlive/texmf-dist
+TEXMFLOCAL=/usr/share/texlive/texmf-local//
+TEXMFSYSVAR=/var/lib/texmf
+TEXMFSYSCONFIG=/usr/share/texlive/texmf-config
+TEXMFVAR=/home/andreduartebueno/.texlive2022/texmf-var
+TEXMFCONFIG=/home/andreduartebueno/.texlive2022/texmf-config
+TEXMFHOME=/home/andreduartebueno/texmf
+VARTEXFONTS=/home/andreduartebueno/.texlive2022/texmf-var/fonts
+TEXMF={{}/home/andreduartebueno/.texlive2022/texmf-config,/home/andreduartebueno/.texlive2022/texmf-var,/home/andreduartebueno/texmf,!!/usr/share/texmf,!!/usr/share/texlive/texmf-local//,!!/usr/share/texlive/texmf-config,!!/var/lib/texmf,!!/usr/share/texlive/texmf-dist}
+SYSTEXMF=/var/lib/texmf:/usr/share/texlive/texmf-local//:/usr/share/texlive/texmf-dist
+TEXMFDBS={!!/usr/share/texlive/texmf-local//,!!/usr/share/texlive/texmf-config,!!/var/lib/texmf,!!/usr/share/texlive/texmf-dist}
+WEB2C={{}/home/andreduartebueno/.texlive2022/texmf-config,/home/andreduartebueno/.texlive2022/texmf-var,/home/andreduartebueno/texmf,!!/usr/share/texmf,!!/usr/share/texlive/texmf-local//,!!/usr/share/texlive/texmf-config,!!/var/lib/texmf,!!/usr/share/texlive/texmf-dist}/web2c
+TEXPSHEADERS=.:{{}/home/andreduartebueno/.texlive2022/texmf-config,/home/andreduartebueno/.texlive2022/texmf-var,/home/andreduartebueno/texmf,!!/usr/share/texmf,!!/usr/share/texlive/texmf-local//,!!/usr/share/texlive/texmf-config,!!/var/lib/texmf,!!/usr/share/texlive/texmf-dist}/{dvips,fonts/{enc,type1,type42,type3}}//
+TEXCONFIG={{}/home/andreduartebueno/.texlive2022/texmf-config,/home/andreduartebueno/.texlive2022/texmf-var,/home/andreduartebueno/texmf,!!/usr/share/texmf,!!/usr/share/texlive/texmf-local//,!!/usr/share/texlive/texmf-config,!!/var/lib/texmf,!!/usr/share/texlive/texmf-dist}/dvips//
+ENCFONTS=.:{{}/home/andreduartebueno/.texlive2022/texmf-config,/home/andreduartebueno/.texlive2022/texmf-var,/home/andreduartebueno/texmf,!!/usr/share/texmf,!!/usr/share/texlive/texmf-local//,!!/usr/share/texlive/texmf-config,!!/var/lib/texmf,!!/usr/share/texlive/texmf-dist}/fonts/enc//
+TEXFONTMAPS=.:{{}/home/andreduartebueno/.texlive2022/texmf-config,/home/andreduartebueno/.texlive2022/texmf-var,/home/andreduartebueno/texmf,!!/usr/share/texmf,!!/usr/share/texlive/texmf-local//,!!/usr/share/texlive/texmf-config,!!/var/lib/texmf,!!/usr/share/texlive/texmf-dist}/fonts/map/{kpsewhich,pdftex,dvips,}//
+
+==== kpathsea variables from environment only (ok if no output here) ====
+
+
+
+**** TODO Modelo-DiretorioBolsita: Os modelos de TCC/MSC/DSC existentes usam arquivos do abntex1.
+**** TODO Modelo-DiretorioBolsita: Falta fazer funcionar  o abntex2. reclamando do arquivo de layout. Ler sobre.
+**** TODO Criar modelo de documento do LyX que usa apenas arquivos auxiliares do ABNTEX2.
