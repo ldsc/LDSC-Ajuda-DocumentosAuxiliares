@@ -29,18 +29,18 @@ O repositório esta subdividido nos seguintes subdiretórios:
 **** Inclui diversos guias de referência de comandos de terminal, Bash, GNU/Linux, git, UML, C++, entre outros.
 *** 03-Softwares
 **** Contem manuais e informações de softwares utilizados, incluindo:
-**** 00-[[https://www.gnu.org/software/bash/][Bash]]
-**** 01-[[https://www.gnome.org/][Gnome]]
-**** 02-[[http://www.gnuplot.info/][Gnuplot]]
-**** 03-[[https://www.latex-project.org/][LaTeX]]
-**** 04-[[https://www.lyx.org/][LyX]]
+- [[https://www.gnu.org/software/bash/][Bash]]
+- [[https://www.gnome.org/][Gnome]]
+- [[http://www.gnuplot.info/][Gnuplot]]
+- [[https://www.latex-project.org/][ LaTeX]]
+- [[https://www.lyx.org/][LyX]]
 *** 04-BibliotecasProgramacaoC++
-**** Contem manuais e informações de bibliotecas de programação utilizadas, incluindo:
-**** 01-CGnuplot
-**** 02-[[https://www.qcustomplot.com/][QCustomPlot]]
-**** 03-[[https://tiswww.case.edu/php/chet/readline/rltop.html][Readline]]
-**** 04-[[https://imagemagick.org/script/magick++.php][Magick++]]
-**** 05-[[https://www.gnu.org/software/gsl/][GSL]]
+Contem manuais e informações de bibliotecas de programação utilizadas, incluindo:
+- CGnuplot
+- [[https://www.qcustomplot.com/][QCustomPlot]]
+- [[https://tiswww.case.edu/php/chet/readline/rltop.html][Readline]]
+- [[https://imagemagick.org/script/magick++.php][Magick++]]
+- [[https://www.gnu.org/software/gsl/][GSL]]
 ** 03-MetodologiaCientifica-DicasEstudo
 *** Apostilas com dicas de como estudar, como se programar.
 
