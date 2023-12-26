@@ -1,152 +1,161 @@
 
 # Table of Contents
 
-1.  [Informações:](#orgf9b26a5)
-2.  [Organização do repositório](#org73dba68)
-    1.  [├── 01-ProjetoEngenharia-Metodologia-Instrucoes-Etapas](#orge071503)
-        1.  [Contem informações sobre a metodologia utilizada para desenvolvimento do projeto de engenharia das disciplinas de modelagem computacional.](#org679ebf8)
-    2.  [├── 02-Softwares](#org7fe4cfd)
-        1.  [01-InstalacaoGnuLinuxFedora](#org3b7952c)
-        2.  [02-GuiasDeReferencia](#orga1befb5)
-        3.  [03-Softwares](#org065f2d9)
-        4.  [04-BibliotecasProgramacaoC++](#org9c2a227)
-    3.  [├── 03-MetodologiaCientifica-DicasEstudo](#org2af9f1e)
-        1.  [Apostilas com dicas de como estudar, como se programar.](#org44f8590)
-3.  [Versão:](#org4bdb519)
-4.  [Data:](#orgb90c5b0)
-5.  [Autor de Contato:](#org6d01afc)
-6.  [Lista dos Autores:](#org3f44246)
-7.  [Áreas de pesquisa vinculadas:](#org5aaab73)
-8.  [Vinculo com:](#org36d2835)
-9.  [Paradigmas:](#org3ca01a6)
-10. [Tipo de Interface:](#orgaa124b8)
-11. [Plataformas Suportadas:](#org01f9e38)
-12. [Linguagens Utilizadas:](#orgab4ff20)
-13. [Bibliotecas Utilizadas (dependências):](#org1f90ee4)
-14. [Softwares utilizados (dependências)](#orgeea4cf8)
-15. [Tipo de Licença:](#org47ebf4d)
-16. [Novas Versões](#org98a576f)
-17. [Links:](#org99f8a05)
+1.  [Informações:](#org0d7fe8b)
+2.  [Organização do repositório](#orga444fcc)
+    1.  [01-ProjetoEngenharia-Metodologia-Instrucoes-Etapas](#orgfbf49aa)
+        1.  [Contem informações sobre a metodologia utilizada no desenvolvimento do projeto de engenharia das disciplinas de modelagem computacional.](#org57938a7)
+    2.  [02-Softwares](#org8c8cfa9)
+        1.  [01-InstalacaoGnuLinuxFedora](#orgdc8fc50)
+        2.  [02-GuiasDeReferencia](#orgdab996b)
+        3.  [03-Softwares](#orgf051529)
+        4.  [04-BibliotecasProgramacaoC++](#orgda1bfa3)
+    3.  [03-MetodologiaCientifica-DicasEstudo](#orgbb2cf19)
+        1.  [Apostilas com dicas de como estudar, como se programar.](#org5877a49)
+3.  [Versão:](#orgd8caaac)
+4.  [Data:](#orgce0f350)
+5.  [Autor de Contato:](#org5e4f1d1)
+6.  [Lista dos Autores:](#org43ce0f9)
+7.  [Áreas de pesquisa vinculadas:](#orgfa61aa5)
+8.  [Vinculo com:](#orga91ab0f)
+9.  [Paradigmas:](#org855abba)
+10. [Tipo de Interface:](#org3daa991)
+11. [Plataformas Suportadas:](#orga107eaf)
+12. [Linguagens Utilizadas:](#org4e3002c)
+13. [Bibliotecas Utilizadas (dependências):](#orgf648dce)
+14. [Softwares utilizados (dependências)](#org9fad5c8)
+15. [Tipo de Licença:](#orgc770013)
+16. [Novas Versões](#org20cbe53)
+17. [Links:](#orgb6ca864)
 
 
 
-<a id="orgf9b26a5"></a>
+<a id="org0d7fe8b"></a>
 
 # Informações:
 
--   Repositório com informações para alunos do LENEP/CCT/UENF.
+-   Repositório com informações para alunos do [LENEP](https://uenf.br/cct/lenep)/CCT/UENF.
+-   Informações sobre softwares e sistemas utilizados nas disciplinas de modelagem computacional.
+
+-   Lista disciplinas:
+    -   [Introdução à Engenharia de Petróleo](https://sites.google.com/view/professorandreduartebueno/ensino/introdu%C3%A7%C3%A3o-%C3%A0-engenharia-de-petr%C3%B3leo).
+    -   [Introdução ao Projeto de Engenharia](https://sites.google.com/view/professorandreduartebueno/ensino/introdu%C3%A7%C3%A3o-ao-projeto-de-engenharia).
+    -   [Fundamentos de Programação em C++](https://sites.google.com/view/professorandreduartebueno/ensino/fundamentos-de-programa%C3%A7%C3%A3o-em-c).
+    -   [Programação Orientada a Objeto com C++](https://sites.google.com/view/professorandreduartebueno/ensino/prog-orientada-objeto-c-2024).
+    -   [Projeto de Software Aplicado à Engenharia](https://sites.google.com/view/professorandreduartebueno/ensino/projeto-de-software-aplicado).
+    -   [Programação Paralela e Concorrente](https://sites.google.com/view/professorandreduartebueno/ensino/programa%C3%A7%C3%A3o-paralela-e-concorrente).
 
 
-<a id="org73dba68"></a>
+<a id="orga444fcc"></a>
 
 # Organização do repositório
 
-O repositório esta subdividido em subdiretórios com informações para alunos.
+O repositório esta subdividido nos seguintes subdiretórios:
 
-├── 01-ProjetoEngenharia-Metodologia-Instrucoes-Etapas
-├── 02-Softwares
-├── 03-MetodologiaCientifica-DicasEstudo
-
-
-<a id="orge071503"></a>
-
-## ├── 01-ProjetoEngenharia-Metodologia-Instrucoes-Etapas
+-   01-ProjetoEngenharia-Metodologia-Instrucoes-Etapas
+-   02-Softwares
+-   03-MetodologiaCientifica-DicasEstudo
 
 
-<a id="org679ebf8"></a>
+<a id="orgfbf49aa"></a>
 
-### Contem informações sobre a metodologia utilizada para desenvolvimento do projeto de engenharia das disciplinas de modelagem computacional.
-
-
-<a id="org7fe4cfd"></a>
-
-## ├── 02-Softwares
+## 01-ProjetoEngenharia-Metodologia-Instrucoes-Etapas
 
 
-<a id="org3b7952c"></a>
+<a id="org57938a7"></a>
+
+### Contem informações sobre a metodologia utilizada no desenvolvimento do projeto de engenharia das disciplinas de modelagem computacional.
+
+
+<a id="org8c8cfa9"></a>
+
+## 02-Softwares
+
+
+<a id="orgdc8fc50"></a>
 
 ### 01-InstalacaoGnuLinuxFedora
 
-1.  Informações diversas sobre software livre e instalação do sistema operacional GNU/Linux/Fedora, o sistema operacional utilizado nas disciplinas.
+1.  Informações diversas sobre:
+
+    1.  Software Livre. [FSF](https://www.fsf.org/).
+    
+    2.  Instalação do sistema operacional GNU/Linux/[Fedora](https://fedoraproject.org/), o sistema operacional utilizado nas disciplinas.
 
 
-<a id="orga1befb5"></a>
+<a id="orgdab996b"></a>
 
 ### 02-GuiasDeReferencia
 
-1.  Inclui diversos guias de referência de comandos de terminal, GNU/Linux, git, UML, C++, entre outros.
+1.  Inclui diversos guias de referência de comandos de terminal, Bash, GNU/Linux, git, UML, C++, entre outros.
 
 
-<a id="org065f2d9"></a>
+<a id="orgf051529"></a>
 
 ### 03-Softwares
 
 1.  Contem manuais e informações de softwares utilizados, incluindo:
 
-2.  01-Gnome
+2.  00-[Bash](https://www.gnu.org/software/bash/)
 
-3.  02-Gnuplot
+3.  01-[Gnome](https://www.gnome.org/)
 
-4.  03-LaTeX
+4.  02-[Gnuplot](http://www.gnuplot.info/)
 
-5.  04-LyX
+5.  03-[LaTeX](https://www.latex-project.org/)
 
-    .
+6.  04-[LyX](https://www.lyx.org/)
 
 
-<a id="org9c2a227"></a>
+<a id="orgda1bfa3"></a>
 
 ### 04-BibliotecasProgramacaoC++
 
-1.  Contem manuais e informações de bibliotecas utilizados, incluindo:
+1.  Contem manuais e informações de bibliotecas de programação utilizadas, incluindo:
 
 2.  01-CGnuplot
 
-3.  02-QCustomPlot
+3.  02-[QCustomPlot](https://www.qcustomplot.com/)
 
-4.  03-Realine
+4.  03-[Readline](https://tiswww.case.edu/php/chet/readline/rltop.html)
 
-5.  04-Magick++
+5.  04-[Magick++](https://imagemagick.org/script/magick++.php)
 
-6.  05-GSL
-
-
-<a id="org2af9f1e"></a>
-
-## ├── 03-MetodologiaCientifica-DicasEstudo
+6.  05-[GSL](https://www.gnu.org/software/gsl/)
 
 
-<a id="org44f8590"></a>
+<a id="orgbb2cf19"></a>
+
+## 03-MetodologiaCientifica-DicasEstudo
+
+
+<a id="org5877a49"></a>
 
 ### Apostilas com dicas de como estudar, como se programar.
 
-.
 
--   
-
-
-<a id="org4bdb519"></a>
+<a id="orgd8caaac"></a>
 
 # Versão:
 
 -   1.0.
 
 
-<a id="orgb90c5b0"></a>
+<a id="orgce0f350"></a>
 
 # Data:
 
 -   2024/2 - segundo semestre.
 
 
-<a id="org6d01afc"></a>
+<a id="org5e4f1d1"></a>
 
 # Autor de Contato:
 
 -   André Duarte Bueno <andreduartebueno@gmail.com>
 
 
-<a id="org3f44246"></a>
+<a id="org43ce0f9"></a>
 
 # Lista dos Autores:
 
@@ -154,7 +163,7 @@ O repositório esta subdividido em subdiretórios com informações para alunos.
 -   André Duarte Bueno <andreduartebueno@gmail.com>
 
 
-<a id="org5aaab73"></a>
+<a id="orgfa61aa5"></a>
 
 # Áreas de pesquisa vinculadas:
 
@@ -163,21 +172,21 @@ O repositório esta subdividido em subdiretórios com informações para alunos.
 -   &#x2026;
 
 
-<a id="org36d2835"></a>
+<a id="orga91ab0f"></a>
 
 # Vinculo com:
 
 -   [Trabalho da disciplina Projeto de Software Aplicado à Engenharia](https://sites.google.com/view/professorandreduartebueno/ensino/projeto-de-software-aplicado).
 
 
-<a id="org3ca01a6"></a>
+<a id="org855abba"></a>
 
 # Paradigmas:
 
 -   POO - Programação Orientada a Objeto (códigos em C++)
 
 
-<a id="orgaa124b8"></a>
+<a id="org3daa991"></a>
 
 # Tipo de Interface:
 
@@ -185,42 +194,42 @@ O repositório esta subdividido em subdiretórios com informações para alunos.
 -   Qt?
 
 
-<a id="org01f9e38"></a>
+<a id="orga107eaf"></a>
 
 # Plataformas Suportadas:
 
 -   Windows e GNU/Linux e Mac OS X (não testada).
 
 
-<a id="orgab4ff20"></a>
+<a id="org4e3002c"></a>
 
 # Linguagens Utilizadas:
 
 -   C++ 23.
 
 
-<a id="org1f90ee4"></a>
+<a id="orgf648dce"></a>
 
 # Bibliotecas Utilizadas (dependências):
 
 -   CGnuplot - <https://github.com/ldsc/CGnuplot>
 
 
-<a id="orgeea4cf8"></a>
+<a id="org9fad5c8"></a>
 
 # Softwares utilizados (dependências)
 
 -   gnuplot <http://www.gnuplot.info/>
 
 
-<a id="org47ebf4d"></a>
+<a id="orgc770013"></a>
 
 # Tipo de Licença:
 
 -   GPL
 
 
-<a id="org98a576f"></a>
+<a id="org20cbe53"></a>
 
 # Novas Versões
 
@@ -232,7 +241,7 @@ O repositório esta subdividido em subdiretórios com informações para alunos.
 -   Na descrição do projeto informe que trata-se de uma nova versão, que tem como base a versão anterior e DESTAQUE COM CLAREZA E OBJETIVIDADE QUAIS AS NOVIDADES DA NOVA VERSÃO.
 
 
-<a id="org99f8a05"></a>
+<a id="orgb6ca864"></a>
 
 # Links:
 

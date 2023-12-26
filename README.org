@@ -48,29 +48,36 @@ O repositório esta subdividido nos seguintes subdiretórios:
 - 1.0.
 
 * Data:
-- 2024/2 - segundo semestre.
+- 2023/2 - segundo semestre.
   
 * Autor de Contato:
 - André Duarte Bueno <andreduartebueno@gmail.com>
 
 * Lista dos Autores:
-- ...
 - André Duarte Bueno <andreduartebueno@gmail.com>
 
 * Áreas de pesquisa vinculadas: 
-- Modelagem Matemática Computacional
-- Engenharia de Reservatório
-- ...
+- Modelagem Matemática Computacional.
+- Modelagem Numérica Computacional.
+- Modelagem UML.
+- Algoritmos.
+- Programação Orientada a Objeto.
+- Linguagem de programação C++.
+- Biblioteca STL.
+- Processamento paralelo e concorrente.
+- Engenharia de Petróleo.
 
 * Vinculo com: 
 - [[https://sites.google.com/view/professorandreduartebueno/ensino/projeto-de-software-aplicado][Trabalho da disciplina Projeto de Software Aplicado à Engenharia]].
+- Atividades e trabalhos das disciplinas de modelagem computacional.
 
 * Paradigmas: 
-- POO - Programação Orientada a Objeto (códigos em C++)
+- POO - Programação Orientada a Objeto (códigos em C++).
 
 * Tipo de Interface: 
-- Terminal e gráfica (gnuplot).
-- Qt?
+- Terminal.
+- Gráfica (usando gnuplot/CGnuplot).
+- Qt (usando QCustomPlot).
 
 * Plataformas Suportadas: 
 - Windows e GNU/Linux e Mac OS X (não testada).
@@ -79,7 +86,10 @@ O repositório esta subdividido nos seguintes subdiretórios:
 - C++ 23.
 
 * Bibliotecas Utilizadas (dependências):
-- CGnuplot - https://github.com/ldsc/CGnuplot
+- CGnuplot
+- QCustomPlot
+- Magick++
+- Readline
 
 * Softwares utilizados (dependências)
 - gnuplot http://www.gnuplot.info/

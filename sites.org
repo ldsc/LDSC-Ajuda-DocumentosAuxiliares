@@ -1,0 +1,20 @@
+
+# Lista de sites
+* **Fedora**
+    * Site oficial: https://getfedora.org/
+* **Bash**
+    * Site oficial: https://www.gnu.org/software/bash/
+* **Gnome**
+    * Site oficial: https://www.gnome.org/
+* **Gnuplot**
+    * Site oficial: https://www.gnuplot.info/
+* **Cppreference**
+    * Site oficial: https://en.cppreference.com/
+* **Qcustomplot**
+    * Site oficial: https://qcustomplot.com/
+* **magick++**
+    * Site oficial: https://www.imagemagick.org/Magick++/
+    * https://imagemagick.org/index.php
+    * https://github.com/ImageMagick/
+* **Gnu readline**
+    * Site oficial: https://tiswww.case.edu/php/chet/readline/rltop.html
