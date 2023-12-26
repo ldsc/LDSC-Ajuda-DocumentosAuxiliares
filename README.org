@@ -19,7 +19,7 @@ O repositório esta subdividido nos seguintes subdiretórios:
 - 03-MetodologiaCientifica-DicasEstudo
 
 ** 01-ProjetoEngenharia-Metodologia-Instrucoes-Etapas
-*** Contem informações sobre a metodologia utilizada no desenvolvimento do projeto de engenharia das disciplinas de modelagem computacional.
+Contem informações sobre a metodologia utilizada no desenvolvimento do projeto de engenharia das disciplinas de modelagem computacional.
 ** 02-Softwares
 *** 01-InstalacaoGnuLinuxFedora
 **** Informações diversas sobre:
@@ -28,7 +28,7 @@ O repositório esta subdividido nos seguintes subdiretórios:
 *** 02-GuiasDeReferencia
 **** Inclui diversos guias de referência de comandos de terminal, Bash, GNU/Linux, git, UML, C++, entre outros.
 *** 03-Softwares
-**** Contem manuais e informações de softwares utilizados, incluindo:
+Contem manuais e informações de softwares utilizados, incluindo:
 - [[https://www.gnu.org/software/bash/][Bash]]
 - [[https://www.gnome.org/][Gnome]]
 - [[http://www.gnuplot.info/][Gnuplot]]
@@ -104,8 +104,18 @@ Contem manuais e informações de bibliotecas de programação utilizadas, inclu
 - Os nomes dos autores originais deve ser preservada na nova versão, ou seja, adicione a informação do número da versão, os nomes dos membros da nova equipe, mas jamais apague os nomes dos autores originais (isto seria plágio).
 - Na descrição do projeto informe que trata-se de uma nova versão, que tem como base a versão anterior e DESTAQUE COM CLAREZA E OBJETIVIDADE QUAIS AS NOVIDADES DA NOVA VERSÃO.
   
-* Links:
-- [[https://sites.google.com/view/professorandreduartebueno/][Site do Professor André Duarte Bueno]].
-- [[https://github.com/ldsc][Site do LDSC no github]].
-- [[https://uenf.br/cct/lenep][Site do LENEP]].
-- .
+* Links/Sites:
+** [[https://uenf.br/cct/lenep][Site do LENEP]]
+** [[https://sites.google.com/view/professorandreduartebueno/][Site do Professor André Duarte Bueno]]
+** [[https://github.com/ldsc][Site do LDSC no github]]
+** [[https://getfedora.org/][Fedora]]
+** [[https://www.gnu.org/software/bash/][Bash]]
+** [[https://www.gnome.org/][gnome]]
+** [[https://www.gnuplot.info/][gnuplot]]
+** [[https://en.cppreference.com/][Site de ajuda C++ - referência e exemplos]]
+** [[https://qcustomplot.com/][Biblioteca para fazer gráficos usando Qt]]
+** [[https://www.imagemagick.org/Magick++/][Biblioteca Magick++]]
+*** https://imagemagick.org/index.php
+*** https://github.com/ImageMagick/
+** [[https://tiswww.case.edu/php/chet/readline/rltop.html][Biblioteca Gnu readline]]
+
