@@ -1,0 +1,16 @@
+Para usar em seus códigos:
+
+Opção 1:
+Basta copiar os arquivos CGnuplot.cpp CGnuplot.h para dentro da sua estrutura de diretórios.
+Adicionar o arquivo CGnuplot.h nos seus códigos e o arquivo CGnuplot.cpp na compilação e linkagem.
+
+Exemplo de compilação:
+main.cpp CGnuplot.cpp
+
+Opção 2:
+Rodar o comando "cmake ." e depois compilar "make" e instalar a biblioteca libgnuplot.a  "make install" (como root).
+Isso vai instalar em seu sistema a biblioteca libgnuplot.a.
+Para uso basta adicionar o arquivo CGnuplot.h nos seus códigos e na hora de compilar incluir a biblioteca usando -lgnuplot.
+
+Exemplo de compilação com a biblioteca instalada:
+main.cpp -lgnuplot

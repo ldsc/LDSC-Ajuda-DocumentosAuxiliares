@@ -88,7 +88,7 @@ int main(int argc, char* argv[])
       // Teste geral
       // Terminal padrao do gnuplot no fedora 9
       // Se nao funcionar em seu sistema, comente a linha
-      Gnuplot::Terminal("wxt");       
+      Gnuplot::Terminal("qt");
 
       // ------------- Graficos 2D ----------------
       Gnuplot g2d = Gnuplot("lines"); // Construtor

@@ -1,7 +1,7 @@
-// Programa de teste da classe CGnuplot.                     
+// Programa de teste da classe CGnuplot.
 #include <iostream>
 
-#include "CGnuplot.h" 
+#include "CGnuplot.h"
 
 using namespace std;       // Usando espaco de nomes da std
 
@@ -26,8 +26,8 @@ int main(int argc, char* argv[])
 			<< "\n./cgnuplot.teste.min"
 			<< "\n================================================================================" << endl;
 
-  Gnuplot::Terminal("wxt");       // Tipo de terminal gráfico
-  
+    //Gnuplot::Terminal("wxt");       // Tipo de terminal gráfico
+  Gnuplot::Terminal("qt");       // Tipo de terminal gráfico
       // ------------- Graficos 2D ----------------
       Gnuplot g2d ("lines"); // Construtor
       g2d.Legend("inside").Legend("left").Legend("bottom").Legend("box");
@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
       g2d.YLabel("rotulo eixo y");    // Rotulo eixo y
       g2d.XRange(-10,10);             // Seta intervalo do eixo x.
       g2d.PlotEquation( "x*x*sin(x)");// Plota uma determinada equacao
-      wait_for_key(); 
+      wait_for_key();
                                       // Usando os diferentes estilos de graficos
 
       // Muda o estilo da funcao para linhas e replota
@@ -44,15 +44,14 @@ int main(int argc, char* argv[])
       g2d.Style("points");    // Muda estilo linha
       g2d.PlotEquation( "x*x*x*sin(x)");// Plota uma determinada equacao
       //g2d.Replot();                   // Replota o gráfico
-      wait_for_key(); 
+      wait_for_key();
 
       // Muda o estilo da funcao para impulsos, muda titulo e plota nova equacao
       cout << "Style(\"impulses\")" << endl;
       g2d.Style("impulses").Title("Style( impulses )").PlotEquation( "x*x+ 5");
-      wait_for_key(); 
+      wait_for_key();
 
       g2d.Reset();                    // Reseta estado do grafico
   cout << endl << "*** Fim do exemplo " << endl;
   return 0;
 }
-

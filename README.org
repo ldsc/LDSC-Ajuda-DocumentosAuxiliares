@@ -1,42 +1,48 @@
 #+TITLE: LDSC-Ajuda-DocumentosAuxiliares
 
 * Informações:
-- Repositório com informações para alunos do LENEP/CCT/UENF.
+- Repositório com informações para alunos do [[https://uenf.br/cct/lenep][LENEP]]/CCT/UENF.
+- Informações sobre softwares e sistemas utilizados nas disciplinas de modelagem computacional.
+
+- Lista disciplinas:
+  - [[https://sites.google.com/view/professorandreduartebueno/ensino/introdu%C3%A7%C3%A3o-%C3%A0-engenharia-de-petr%C3%B3leo][Introdução à Engenharia de Petróleo]].
+  - [[https://sites.google.com/view/professorandreduartebueno/ensino/introdu%C3%A7%C3%A3o-ao-projeto-de-engenharia][Introdução ao Projeto de Engenharia]].
+  - [[https://sites.google.com/view/professorandreduartebueno/ensino/fundamentos-de-programa%C3%A7%C3%A3o-em-c][Fundamentos de Programação em C++]].
+  - [[https://sites.google.com/view/professorandreduartebueno/ensino/prog-orientada-objeto-c-2024][Programação Orientada a Objeto com C++]].
+  - [[https://sites.google.com/view/professorandreduartebueno/ensino/projeto-de-software-aplicado][Projeto de Software Aplicado à Engenharia]].
+  - [[https://sites.google.com/view/professorandreduartebueno/ensino/programa%C3%A7%C3%A3o-paralela-e-concorrente][Programação Paralela e Concorrente]].
 
 * Organização do repositório
-O repositório esta subdividido em subdiretórios com informações para alunos.
+O repositório esta subdividido nos seguintes subdiretórios:
+- 01-ProjetoEngenharia-Metodologia-Instrucoes-Etapas
+- 02-Softwares
+- 03-MetodologiaCientifica-DicasEstudo
 
-├── 01-ProjetoEngenharia-Metodologia-Instrucoes-Etapas
-├── 02-Softwares
-├── 03-MetodologiaCientifica-DicasEstudo
-
-** ├── 01-ProjetoEngenharia-Metodologia-Instrucoes-Etapas
-*** Contem informações sobre a metodologia utilizada para desenvolvimento do projeto de engenharia das disciplinas de modelagem computacional.
-** ├── 02-Softwares
+** 01-ProjetoEngenharia-Metodologia-Instrucoes-Etapas
+*** Contem informações sobre a metodologia utilizada no desenvolvimento do projeto de engenharia das disciplinas de modelagem computacional.
+** 02-Softwares
 *** 01-InstalacaoGnuLinuxFedora
-**** Informações diversas sobre software livre e instalação do sistema operacional GNU/Linux/Fedora, o sistema operacional utilizado nas disciplinas.
+**** Informações diversas sobre:
+***** Software Livre. [[https://www.fsf.org/][FSF]]. 
+***** Instalação do sistema operacional GNU/Linux/[[https://fedoraproject.org/][Fedora]], o sistema operacional utilizado nas disciplinas.
 *** 02-GuiasDeReferencia
-**** Inclui diversos guias de referência de comandos de terminal, GNU/Linux, git, UML, C++, entre outros.
+**** Inclui diversos guias de referência de comandos de terminal, Bash, GNU/Linux, git, UML, C++, entre outros.
 *** 03-Softwares
 **** Contem manuais e informações de softwares utilizados, incluindo:
-**** 01-Gnome
-**** 02-Gnuplot
-**** 03-LaTeX
-**** 04-LyX
-.
+**** 00-[[https://www.gnu.org/software/bash/][Bash]]
+**** 01-[[https://www.gnome.org/][Gnome]]
+**** 02-[[http://www.gnuplot.info/][Gnuplot]]
+**** 03-[[https://www.latex-project.org/][LaTeX]]
+**** 04-[[https://www.lyx.org/][LyX]]
 *** 04-BibliotecasProgramacaoC++
-**** Contem manuais e informações de bibliotecas utilizados, incluindo:
+**** Contem manuais e informações de bibliotecas de programação utilizadas, incluindo:
 **** 01-CGnuplot
-**** 02-QCustomPlot
-**** 03-Realine
-**** 04-Magick++
-**** 05-GSL
-
-** ├── 03-MetodologiaCientifica-DicasEstudo
+**** 02-[[https://www.qcustomplot.com/][QCustomPlot]]
+**** 03-[[https://tiswww.case.edu/php/chet/readline/rltop.html][Readline]]
+**** 04-[[https://imagemagick.org/script/magick++.php][Magick++]]
+**** 05-[[https://www.gnu.org/software/gsl/][GSL]]
+** 03-MetodologiaCientifica-DicasEstudo
 *** Apostilas com dicas de como estudar, como se programar.
-.
-
-- 
 
 * Versão: 
 - 1.0.
