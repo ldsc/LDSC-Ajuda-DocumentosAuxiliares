@@ -1,0 +1,21 @@
+* GNOME - Guia de referência
+* Conhecendo o ambiente
+** Super: Alterna para modo que mostra as janelas e permite pesquisar por aplicativos.
+** Alt-F2: Mostra a janela de comandos.
+** Super-Tab: Para seleção da janela de aplicativo aberto.
+*** Use ` para selecionar uma das janelas do aplicativo com várias janelas abertas.
+** Alt+Esc: Alterna entre janelas.
+** Super-A: Lista de aplicativos.
+** Super-Page Up/Page Down: Alterna entre espaços de trabalho.
+** Shift Super-Page Up/Page Down: Move a janela atual para outro espaço de trabalho.
+** Shift Super ->: Move a janela atual para monitor a direita.
+** Shift Super <-: Move a janela atual para monitor a esquerda.
+** Super-L: Bloqueia o ecrã.
+** Super-V: Mostra a lista de notificação.
+* Captura de tela
+** PrintScrewn: Abre janela em que seleciona o método de captura a ser utilizado.
+** PrintScrewn: Captura a tela.
+** Alt-PrintScrewn: Captura a janela.
+** Shift-PrintScrewn: Captura área da janela.
+* Útil se estiver sem mouse
+** Ctrl+Alt+Tab: Foco do teclado na barra superior do gnome.

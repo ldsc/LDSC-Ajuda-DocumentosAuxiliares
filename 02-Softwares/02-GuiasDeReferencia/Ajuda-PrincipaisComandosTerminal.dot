@@ -1,0 +1,31 @@
+
+digraph Ajuda {
+    label = " == Ajuda para comandos GNU/Linux =="
+    bgcolor=lightblue
+    #layout=neato
+    #rankdir=LR
+    node [style=filled color=lightgoldenrod]
+    Ajuda Pacotes Arquivos Processos Disco Configuracao
+    node [style=filled color=magenta]
+    duf bat exa fzf git tldr
+    node [shape=rect style=filled color=lightyellow]
+Pacotes -> rpm-> dnf
+Ajuda -> man -> info -> tldr
+Listar -> ls -> tree -> exa -> exa__tree
+Localizar -> find -> locate -> fdupes -> fzf
+# exa -a --tree --icons
+Conteudo -> cat -> bat -> grep -> head -> tail
+Formatar -> awk
+ControleVersoes -> {git}
+Arquivos -> {Conteudo Listar Localizar Formatar Criptografia ControleVersoes}
+
+subgraph Cluster_Criptografia {
+    label = "Criptografia"
+    Criptografia -> gpg -> ssh -> scp
+}
+Processos -> top -> btop
+Disco -> du -> ncdu -> duf
+Configuracao -> bash_rc -> bash_profile -> "~/.emacs.d/adb-early-init-emacs28.org"}
+# ordem
+Ajuda -> Pacotes ->  Arquivos  -> Disco -> Processos ->Configuracao [style=invis]
+}
