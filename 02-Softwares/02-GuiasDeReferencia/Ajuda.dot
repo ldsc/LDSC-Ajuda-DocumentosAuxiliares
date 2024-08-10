@@ -1,0 +1,42 @@
+digraph Ajuda {
+    label = " == Ajuda para comandos GNU/Linux =="
+    labelloc=t
+    bgcolor=lightblue
+    #layout=neato
+    #rankdir=LR
+    #### Nós ###
+    node [style=filled color=lightgoldenrod]    Ajuda Pacotes Arquivos Diretórios Comprimir Processos Acesso Disco Configuração
+    node [style=filled color=greenyellow]       Básico Conteúdo Listar Localizar Formatar Criptografia ControleVersoes
+    node [style=filled color=magenta]           duf bat exa fzf git tldr btop
+    node [shape=rect style=filled color= lightyellow]
+    subgraph Cluster_Criptografia_zip {
+        label = "Criptografia"
+        Criptografia -> gpg -> ssh -> scp
+    }
+
+    ### Ligações ###
+    Ajuda -> man -> info -> tldr
+    Pacotes -> rpm-> dnf
+    Arquivos -> {Básico Conteúdo Listar Localizar Formatar Criptografia ControleVersoes}
+    Básico -> cp -> mv -> ln -> rm  -> file
+    Listar -> ls -> tree -> exa -> exa__tree
+    Localizar -> find -> locate -> fdupes -> fzf -> which -> whereis
+    # exa -a --tree --icons
+    Conteúdo -> cat -> bat -> grep -> head -> tail -> wc
+    Comprimir -> gzip -> bzip2 -> zip
+    Formatar -> awk
+    awk -> Criptografia [style=invis]
+    ControleVersoes -> git -> diff
+    Diretórios -> pwd -> mkdir -> rmdir
+    rmdir -> Comprimir [style=invis]
+    Acesso -> chmod -> chown -> chgrp
+    Processos -> top -> btop
+    btop -> Acesso [style=invis]
+
+    Disco -> du -> ncdu -> duf -> df -> mount -> sync
+    Configuração -> bash_rc -> bash_profile -> "~/.emacs.d/early-init.org"
+    ### Ordem
+    edge [style=invis]
+    {rank=same Criptografia Comprimir Acesso }
+    {rank=same  Ajuda Pacotes Arquivos Diretórios Processos Disco Configuração}
+}
