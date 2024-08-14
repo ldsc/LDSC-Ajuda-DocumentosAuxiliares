@@ -1,48 +1,54 @@
 
 # Table of Contents
 
-1.  [Informações:](#orgd72f212)
-2.  [Organização do repositório](#org6539438)
-    1.  [01-ProjetoEngenharia-Metodologia-Instrucoes-Etapas](#orgf25a248)
-    2.  [02-Softwares](#org9fc4e9b)
-        1.  [01-InstalacaoGnuLinuxFedora](#org123ba20)
-        2.  [02-GuiasDeReferencia](#org193bf6f)
-        3.  [03-Softwares](#orgf041b3c)
-        4.  [04-BibliotecasProgramacaoC++](#orgc9e0e1a)
-    3.  [03-MetodologiaCientifica-DicasEstudo](#org86340bb)
-        1.  [Apostilas com dicas de como estudar, como se programar.](#orgd900750)
-3.  [Versão:](#org2b96b24)
-4.  [Data:](#orgeece3b4)
-5.  [Autor de Contato:](#orgdbfe157)
-6.  [Lista dos Autores:](#org1d15c1d)
-7.  [Áreas de pesquisa vinculadas:](#orga891182)
-8.  [Vinculo com:](#org11b7d8d)
-9.  [Paradigmas:](#orgd907e19)
-10. [Tipo de Interface:](#org1a6d195)
-11. [Plataformas Suportadas:](#org67c0524)
-12. [Linguagens Utilizadas:](#orgfdad77d)
-13. [Bibliotecas Utilizadas (dependências):](#orga292171)
-14. [Softwares utilizados (dependências)](#orgf74f45d)
-15. [Tipo de Licença:](#orga17395e)
-16. [Novas Versões](#org4894c5b)
-17. [Links/Sites:](#org9dcb05a)
-    1.  [Site do LENEP](#orgb79f75f)
-    2.  [Site do Professor André Duarte Bueno](#orgdf4f305)
-    3.  [Site do LDSC no github](#org5ea46ee)
-    4.  [Fedora](#orgd89f42a)
-    5.  [Bash](#org3ccb28a)
-    6.  [gnome](#orgadb3455)
-    7.  [gnuplot](#org270b8e3)
-    8.  [Site de ajuda C++ - referência e exemplos](#orgc2d7cf8)
-    9.  [Biblioteca para fazer gráficos usando Qt](#org11c793a)
-    10. [Biblioteca Magick++](#orgae8e873)
-        1.  [https://imagemagick.org/index.php](#orga35fed6)
-        2.  [https://github.com/ImageMagick/](#org7b2715b)
-    11. [Biblioteca Gnu readline](#org7205ffd)
+1.  [Informações:](#org0be8a10)
+2.  [Organização do repositório](#orgac2db62)
+    1.  [01-ProjetoEngenharia-Metodologia-Instrucoes-Etapas](#org7da85db)
+    2.  [02-Softwares](#org7d681c9)
+        1.  [01-InstalacaoGnuLinuxFedora](#org412c818)
+        2.  [02-GuiasDeReferencia](#org329ef6d)
+        3.  [03-Softwares](#org0c80f56)
+        4.  [04-BibliotecasProgramacaoC++](#org49f482f)
+        5.  [Leia o arquivo LDSC-Ajuda-DocumentosAuxiliares/02-Softwares/Leiame.org que tem instruções como:](#orgbd3bbc2)
+    3.  [03-MetodologiaCientifica-DicasEstudo](#orgf27c3e0)
+        1.  [Apostilas com dicas de como estudar, como se programar.](#org9537723)
+3.  [Versão:](#org34603ef)
+4.  [Data:](#org840b53b)
+5.  [Autor de Contato:](#org836e467)
+6.  [Lista dos Autores:](#org33ecc6b)
+7.  [Áreas de pesquisa vinculadas:](#org7a9faa4)
+8.  [Vinculo com:](#orga123fe5)
+9.  [Paradigmas:](#org6450e19)
+10. [Tipo de Interface:](#org73a02d3)
+11. [Plataformas Suportadas:](#orgfde907f)
+12. [Linguagens Utilizadas:](#org5f26098)
+13. [Bibliotecas Utilizadas (dependências):](#org924975a)
+14. [Softwares utilizados (dependências)](#org584126e)
+15. [Tipo de Licença:](#org735e8a5)
+16. [Novas Versões](#org9ed6436)
+17. [Links/Sites:](#org0e40f4f)
+    1.  [Site do LENEP](#org98d6883)
+    2.  [Site do Professor André Duarte Bueno](#orga33b18f)
+    3.  [git para GNU/Linux](#org0db7125)
+    4.  [git para windows](#orgf79c80d)
+    5.  [Site do LDSC no github](#org1d51432)
+    6.  [Site para obter o Fedora](#org17fbac1)
+    7.  [Site do Bash](#orgb39ba6f)
+    8.  [Site do gnome](#org294c4a5)
+    9.  [Site do gnuplot](#orgbebb822)
+    10. [Site de ajuda C++ - referência e exemplos](#orgbaf846a)
+    11. [Biblioteca Qt](#org168b059)
+    12. [Instalação da Biblioteca Qt usando arquivos binários](#org8cab0ee)
+    13. [Biblioteca para fazer gráficos usando Qt](#orgc5b2c54)
+    14. [Biblioteca Magick++](#org4878e92)
+        1.  [https://imagemagick.org/index.php](#org3b2df6c)
+        2.  [https://github.com/ImageMagick/](#orga919be6)
+    15. [Biblioteca Gnu readline](#orgacf486e)
+    16. [Biblioteca graphviz](#orgadbc90e)
 
 
 
-<a id="orgd72f212"></a>
+<a id="org0be8a10"></a>
 
 # Informações:
 
@@ -58,7 +64,7 @@
     -   [Programação Paralela e Concorrente](https://sites.google.com/view/professorandreduartebueno/ensino/programa%C3%A7%C3%A3o-paralela-e-concorrente).
 
 
-<a id="org6539438"></a>
+<a id="orgac2db62"></a>
 
 # Organização do repositório
 
@@ -69,19 +75,19 @@ O repositório esta subdividido nos seguintes subdiretórios:
 -   03-MetodologiaCientifica-DicasEstudo
 
 
-<a id="orgf25a248"></a>
+<a id="org7da85db"></a>
 
 ## 01-ProjetoEngenharia-Metodologia-Instrucoes-Etapas
 
 Contem informações sobre a metodologia utilizada no desenvolvimento do projeto de engenharia das disciplinas de modelagem computacional.
 
 
-<a id="org9fc4e9b"></a>
+<a id="org7d681c9"></a>
 
 ## 02-Softwares
 
 
-<a id="org123ba20"></a>
+<a id="org412c818"></a>
 
 ### 01-InstalacaoGnuLinuxFedora
 
@@ -92,14 +98,14 @@ Contem informações sobre a metodologia utilizada no desenvolvimento do projeto
     2.  Instalação do sistema operacional GNU/Linux/[Fedora](https://fedoraproject.org/), o sistema operacional utilizado nas disciplinas.
 
 
-<a id="org193bf6f"></a>
+<a id="org329ef6d"></a>
 
 ### 02-GuiasDeReferencia
 
 1.  Inclui diversos guias de referência de comandos de terminal, Bash, GNU/Linux, git, UML, C++, entre outros.
 
 
-<a id="orgf041b3c"></a>
+<a id="org0c80f56"></a>
 
 ### 03-Softwares
 
@@ -112,7 +118,7 @@ Contem manuais e informações de softwares utilizados, incluindo:
 -   [LyX](https://www.lyx.org/)
 
 
-<a id="orgc9e0e1a"></a>
+<a id="org49f482f"></a>
 
 ### 04-BibliotecasProgramacaoC++
 
@@ -125,45 +131,66 @@ Contem manuais e informações de bibliotecas de programação utilizadas, inclu
 -   [GSL](https://www.gnu.org/software/gsl/)
 
 
-<a id="org86340bb"></a>
+<a id="orgbd3bbc2"></a>
+
+### Leia o arquivo LDSC-Ajuda-DocumentosAuxiliares/02-Softwares/Leiame.org que tem instruções como:
+
+1.  O que é o gnuplot?
+
+    1.  Como fazer gráficos com o gnuplot?
+    
+    2.  Como instalar o gnuplot?
+    
+    3.  Manuais como arquivo Gnuplot-Manual-ProfAndreBueno.pdf
+    
+    4.  Opcionalmente aprenda os atalhos lendo "Atalhos/Gnuplot-Atalhos-GuiaReferencia.pdf"
+
+2.  Como rodar exemplos em C++ usando o gnuplot para mostrar gráficos?
+
+3.  O que é Qt e como instalar a biblioteca Qt?
+
+4.  O que é  Qt-Creator e como instalar o Qt-Creator?
+
+
+<a id="orgf27c3e0"></a>
 
 ## 03-MetodologiaCientifica-DicasEstudo
 
 
-<a id="orgd900750"></a>
+<a id="org9537723"></a>
 
 ### Apostilas com dicas de como estudar, como se programar.
 
 
-<a id="org2b96b24"></a>
+<a id="org34603ef"></a>
 
 # Versão:
 
 -   1.0.
 
 
-<a id="orgeece3b4"></a>
+<a id="org840b53b"></a>
 
 # Data:
 
--   2023/2 - segundo semestre.
+-   2024/2 - segundo semestre.
 
 
-<a id="orgdbfe157"></a>
+<a id="org836e467"></a>
 
 # Autor de Contato:
 
 -   André Duarte Bueno <andreduartebueno@gmail.com>
 
 
-<a id="org1d15c1d"></a>
+<a id="org33ecc6b"></a>
 
 # Lista dos Autores:
 
 -   André Duarte Bueno <andreduartebueno@gmail.com>
 
 
-<a id="orga891182"></a>
+<a id="org7a9faa4"></a>
 
 # Áreas de pesquisa vinculadas:
 
@@ -178,7 +205,7 @@ Contem manuais e informações de bibliotecas de programação utilizadas, inclu
 -   Engenharia de Petróleo.
 
 
-<a id="org11b7d8d"></a>
+<a id="orga123fe5"></a>
 
 # Vinculo com:
 
@@ -186,14 +213,14 @@ Contem manuais e informações de bibliotecas de programação utilizadas, inclu
 -   Atividades e trabalhos das disciplinas de modelagem computacional.
 
 
-<a id="orgd907e19"></a>
+<a id="org6450e19"></a>
 
 # Paradigmas:
 
 -   POO - Programação Orientada a Objeto (códigos em C++).
 
 
-<a id="org1a6d195"></a>
+<a id="org73a02d3"></a>
 
 # Tipo de Interface:
 
@@ -202,21 +229,21 @@ Contem manuais e informações de bibliotecas de programação utilizadas, inclu
 -   Qt (usando QCustomPlot).
 
 
-<a id="org67c0524"></a>
+<a id="orgfde907f"></a>
 
 # Plataformas Suportadas:
 
 -   Windows e GNU/Linux e Mac OS X (não testada).
 
 
-<a id="orgfdad77d"></a>
+<a id="org5f26098"></a>
 
 # Linguagens Utilizadas:
 
--   C++ 23.
+-   C++ 20/23/26.
 
 
-<a id="orga292171"></a>
+<a id="org924975a"></a>
 
 # Bibliotecas Utilizadas (dependências):
 
@@ -226,21 +253,21 @@ Contem manuais e informações de bibliotecas de programação utilizadas, inclu
 -   Readline
 
 
-<a id="orgf74f45d"></a>
+<a id="org584126e"></a>
 
 # Softwares utilizados (dependências)
 
 -   gnuplot <http://www.gnuplot.info/>
 
 
-<a id="orga17395e"></a>
+<a id="org735e8a5"></a>
 
 # Tipo de Licença:
 
 -   GPL
 
 
-<a id="org4894c5b"></a>
+<a id="org9ed6436"></a>
 
 # Novas Versões
 
@@ -252,72 +279,97 @@ Contem manuais e informações de bibliotecas de programação utilizadas, inclu
 -   Na descrição do projeto informe que trata-se de uma nova versão, que tem como base a versão anterior e DESTAQUE COM CLAREZA E OBJETIVIDADE QUAIS AS NOVIDADES DA NOVA VERSÃO.
 
 
-<a id="org9dcb05a"></a>
+<a id="org0e40f4f"></a>
 
 # Links/Sites:
 
 
-<a id="orgb79f75f"></a>
+<a id="org98d6883"></a>
 
 ## [Site do LENEP](https://uenf.br/cct/lenep)
 
 
-<a id="orgdf4f305"></a>
+<a id="orga33b18f"></a>
 
 ## [Site do Professor André Duarte Bueno](https://sites.google.com/view/professorandreduartebueno/)
 
 
-<a id="org5ea46ee"></a>
+<a id="org0db7125"></a>
+
+## [git para GNU/Linux](https://git-scm.com/download/linux)
+
+
+<a id="orgf79c80d"></a>
+
+## [git para windows](https://git-scm.com/download/win)
+
+
+<a id="org1d51432"></a>
 
 ## [Site do LDSC no github](https://github.com/ldsc)
 
 
-<a id="orgd89f42a"></a>
+<a id="org17fbac1"></a>
 
-## [Fedora](https://getfedora.org/)
-
-
-<a id="org3ccb28a"></a>
-
-## [Bash](https://www.gnu.org/software/bash/)
+## [Site para obter o Fedora](https://getfedora.org/)
 
 
-<a id="orgadb3455"></a>
+<a id="orgb39ba6f"></a>
 
-## [gnome](https://www.gnome.org/)
-
-
-<a id="org270b8e3"></a>
-
-## [gnuplot](https://www.gnuplot.info/)
+## [Site do Bash](https://www.gnu.org/software/bash/)
 
 
-<a id="orgc2d7cf8"></a>
+<a id="org294c4a5"></a>
+
+## [Site do gnome](https://www.gnome.org/)
+
+
+<a id="orgbebb822"></a>
+
+## [Site do gnuplot](https://www.gnuplot.info/)
+
+
+<a id="orgbaf846a"></a>
 
 ## [Site de ajuda C++ - referência e exemplos](https://en.cppreference.com/)
 
 
-<a id="org11c793a"></a>
+<a id="org168b059"></a>
+
+## [Biblioteca Qt](https://www.qt.io/)
+
+
+<a id="org8cab0ee"></a>
+
+## [Instalação da Biblioteca Qt usando arquivos binários](https://www.qt.io/download-qt-installer-oss?hsCtaTracking=99d9dd4f-5681-48d2-b096-470725510d34%7C074ddad0-fdef-4e53-8aa8-5e8a876d6ab4)
+
+
+<a id="orgc5b2c54"></a>
 
 ## [Biblioteca para fazer gráficos usando Qt](https://qcustomplot.com/)
 
 
-<a id="orgae8e873"></a>
+<a id="org4878e92"></a>
 
 ## [Biblioteca Magick++](https://www.imagemagick.org/Magick++/)
 
 
-<a id="orga35fed6"></a>
+<a id="org3b2df6c"></a>
 
 ### <https://imagemagick.org/index.php>
 
 
-<a id="org7b2715b"></a>
+<a id="orga919be6"></a>
 
 ### <https://github.com/ImageMagick/>
 
 
-<a id="org7205ffd"></a>
+<a id="orgacf486e"></a>
 
 ## [Biblioteca Gnu readline](https://tiswww.case.edu/php/chet/readline/rltop.html)
+
+
+<a id="orgadbc90e"></a>
+
+## [Biblioteca graphviz](https://www.graphviz.org/)
 

@@ -1,21 +1,38 @@
-O que È?
-=========
-Fonte: https://www.qcustomplot.com/index.php/introduction
+Biblioteca para gr√°ficos usando QT
+===================================
 
-InglÍs:
-QCustomPlot is a Qt C++ widget for plotting and data visualization. It has no further dependencies and is well documented. This plotting library focuses on making good looking, publication quality 2D plots, graphs and charts, as well as offering high performance for realtime visualization applications. Have a look at the Setting Up and the Basic Plotting tutorials to get started.
-QCustomPlot can export to various formats such as vectorized PDF files and rasterized images like PNG, JPG and BMP. QCustomPlot is the solution for displaying of realtime data inside the application as well as producing high quality plots for other media.
+Site com informa√ß√µes gerais e op√ß√£o de download da biblioteca qcustomplot:
+https://www.qcustomplot.com/
 
-TraduÁ„o do google:
-QCustomPlot È um widget Qt C para plotagem e visualizaÁ„o de dados. N„o tem mais dependÍncias e est· bem documentado. Esta biblioteca de plotagem se concentra em criar plotagens, gr·ficos e tabelas 2D de boa aparÍncia e qualidade de publicaÁ„o, alÈm de oferecer alto desempenho para aplicativos de visualizaÁ„o em tempo real. DÍ uma olhada nos tutoriais de configuraÁ„o e plotagem b·sica para comeÁar. QCustomPlot pode exportar para v·rios formatos, como arquivos PDF vetorizados e imagens rasterizadas como PNG, JPG e BMP. QCustomPlot È a soluÁ„o para exibiÁ„o de dados em tempo real dentro do aplicativo, bem como para produÁ„o de plotagens de alta qualidade para outras mÌdias.
+Como usar?
 
+1) Instale o Qt-creator
+No Fedora abra um terminal e digite:
+sudo dnf install qt-creator
 
-Download e instalaÁ„o:
-======================
-https://www.qcustomplot.com/index.php/download
+No Windows:
+Acesse https://www.qt.io/download-qt-installer-oss?hsCtaTracking=99d9dd4f-5681-48d2-b096-470725510d34%7C074ddad0-fdef-4e53-8aa8-5e8a876d6ab4
+ou procure no google por Qt-Creator for Windows.
+O link em 14/08/24 √© este abaixo:
+https://d13lb3tujbc8s0.cloudfront.net/onlineinstallers/qt-online-installer-windows-x64-4.8.0.exe
 
+2) Instale a biblioteca qcustomplot:
+Download em https://www.qcustomplot.com/
 
-Exemplo de uso:
-===============
-https://www.qcustomplot.com/index.php/tutorials/settingup
+Opcionalmente use o site de ajuda da disciplina, que j√° inclui o QCustomPlot:
+https://github.com/ldsc/LDSC-Ajuda-DocumentosAuxiliares
+
+3) Ap√≥s o download e instala√ß√£o dos itens (1) e (2) pode rodar os exemplos da pasta 
+....QCustomPlot/qcustomplot-2024/examples
+
+3.1- Abra o Qt-Creator
+
+3.2- Selecione o item de menu: File->openfile or project
+Selecione o arquivo:
+...QCustomPlot/qcustomplot-2024/examples/axis-tags/axis-tags-example.pro
+
+3.3- Click em "configure project" no canto inferior direito.
+
+3.4- Click em "Run" no canto inferior esquerdo, bot√£o verde.
+tamb√©m pode pressionar CTRL+R.
 

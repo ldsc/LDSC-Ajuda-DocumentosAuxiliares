@@ -41,6 +41,18 @@ Contem manuais e informações de bibliotecas de programação utilizadas, inclu
 - [[https://tiswww.case.edu/php/chet/readline/rltop.html][Readline]]
 - [[https://imagemagick.org/script/magick++.php][Magick++]]
 - [[https://www.gnu.org/software/gsl/][GSL]]
+
+*** Leia o arquivo LDSC-Ajuda-DocumentosAuxiliares/02-Softwares/Leiame.org que tem instruções como:
+**** O que é o gnuplot?
+***** Como fazer gráficos com o gnuplot?
+***** Como instalar o gnuplot?
+***** Manuais como arquivo Gnuplot-Manual-ProfAndreBueno.pdf
+***** Opcionalmente aprenda os atalhos lendo "Atalhos/Gnuplot-Atalhos-GuiaReferencia.pdf"
+**** Como rodar exemplos em C++ usando o gnuplot para mostrar gráficos?
+**** O que é Qt e como instalar a biblioteca Qt?
+**** O que é  Qt-Creator e como instalar o Qt-Creator?
+
+
 ** 03-MetodologiaCientifica-DicasEstudo
 *** Apostilas com dicas de como estudar, como se programar.
 
@@ -48,7 +60,7 @@ Contem manuais e informações de bibliotecas de programação utilizadas, inclu
 - 1.0.
 
 * Data:
-- 2023/2 - segundo semestre.
+- 2024/2 - segundo semestre.
   
 * Autor de Contato:
 - André Duarte Bueno <andreduartebueno@gmail.com>
@@ -83,7 +95,7 @@ Contem manuais e informações de bibliotecas de programação utilizadas, inclu
 - Windows e GNU/Linux e Mac OS X (não testada).
 
 * Linguagens Utilizadas: 
-- C++ 23.
+- C++ 20/23/26.
 
 * Bibliotecas Utilizadas (dependências):
 - CGnuplot
@@ -107,15 +119,19 @@ Contem manuais e informações de bibliotecas de programação utilizadas, inclu
 * Links/Sites:
 ** [[https://uenf.br/cct/lenep][Site do LENEP]]
 ** [[https://sites.google.com/view/professorandreduartebueno/][Site do Professor André Duarte Bueno]]
+** [[https://git-scm.com/download/linux][git para GNU/Linux]]
+** [[https://git-scm.com/download/win][git para windows]]
 ** [[https://github.com/ldsc][Site do LDSC no github]]
-** [[https://getfedora.org/][Fedora]]
-** [[https://www.gnu.org/software/bash/][Bash]]
-** [[https://www.gnome.org/][gnome]]
-** [[https://www.gnuplot.info/][gnuplot]]
+** [[https://getfedora.org/][Site para obter o Fedora]]
+** [[https://www.gnu.org/software/bash/][Site do Bash]]
+** [[https://www.gnome.org/][Site do gnome]]
+** [[https://www.gnuplot.info/][Site do gnuplot]]
 ** [[https://en.cppreference.com/][Site de ajuda C++ - referência e exemplos]]
+** [[https://www.qt.io/][Biblioteca Qt]]
+** [[https://www.qt.io/download-qt-installer-oss?hsCtaTracking=99d9dd4f-5681-48d2-b096-470725510d34%7C074ddad0-fdef-4e53-8aa8-5e8a876d6ab4][Instalação da Biblioteca Qt usando arquivos binários]]
 ** [[https://qcustomplot.com/][Biblioteca para fazer gráficos usando Qt]]
 ** [[https://www.imagemagick.org/Magick++/][Biblioteca Magick++]]
 *** https://imagemagick.org/index.php
 *** https://github.com/ImageMagick/
 ** [[https://tiswww.case.edu/php/chet/readline/rltop.html][Biblioteca Gnu readline]]
-
+** [[https://www.graphviz.org/][Biblioteca graphviz]]

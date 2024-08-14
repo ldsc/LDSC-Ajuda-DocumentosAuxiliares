@@ -1,0 +1,121 @@
+* O que é este arquivo?
+** Arquivo com instruções de como baixar e instalar os pacotes necessários às disciplinas do Prof. André D. Bueno.
+** Site do Professor: https://sites.google.com/view/professorandreduartebueno/
+** Site com repositórios do LDSC: https://github.com/ldsc
+** Site de ajuda aos alunos:  https://github.com/ldsc/LDSC-Ajuda-DocumentosAuxiliares
+
+
+* Como baixar o repositório com a ajuda para alunos?
+** Instale o git
+*** Fedora 
+Abra um terminal e digite
+dnf install git
+Simples, prático e rápido.
+
+*** Windows
+Veja https://git-scm.com/download/win
+
+** Abra um terminal e crie um diretório de trabalho
+mkdir workdir
+
+** No diretório de trabalho baixe o repositório de ajuda
+cd workdir
+git clone https://github.com/ldsc/LDSC-Ajuda-DocumentosAuxiliares
+
+** Acesse o diretório LDSC-Ajuda-DocumentosAuxiliares e leia as instruções específicas
+
+
+* Como fazer gráficos com o gnuplot?
+** O que é o gnuplot?
+*** Aplicativo usado no mundo todo para fazer gráficos de alta qualidade.
+*** Simples, rápido, prático
+** Como instalar o gnuplot?
+*** Fedora:
+dnf install gnuplot
+Simples, rápido, prático
+** Acesse o diretório LDSC-Ajuda-DocumentosAuxiliares/02-Softwares/03-Softwares/02-Gnuplot
+** Leia os manuais disponibilizados em "Manuais", comece por: Gnuplot-Manual-ProfAndreBueno.pdf
+** Opcionalmente aprenda os atalhos lendo "Atalhos/Gnuplot-Atalhos-GuiaReferencia.pdf"
+
+
+* Como rodar exemplos em C++ usando o gnuplot para rodar mostrar gráficos?
+** Compilar e rodar os exemplos disponibilizados em LDSC-Ajuda-DocumentosAuxiliares/02-Softwares/04-BibliotecasProgramacaoC++/01-CGnuplot/ExemploDeUso
+*** Para rodar exemplo CGnuplot.teste.min.cpp:
+g++ CGnuplot.cpp CGnuplot.teste.min.cpp
+./a.out
+
+*** Para rodar exemplo CGnuplot.teste.cpp
+g++ CGnuplot.cpp CGnuplot.teste.cpp
+./a.out
+
+
+** Agora que rodou uns exemplos, leia de novo os Manuais do gnuplot, inicie por Gnuplot-Manual-ProfAndreBueno.pdf para aprender as diferentes possibilidades de uso. Note que os comando do gnuplot podem ser usados diretamente em seu código usando o operador <<, como em: gnupplot << "comando"
+
+
+* Como instalar a biblioteca Qt?
+** O que é Qt?
+*** Biblioteca gráfica para C++ e outras linguagens, como Python.
+*** Permite fazer rapidamente programas com interface gráfica elaborada.
+*** Seu uso consistente requer o aprendizado dos conceitos de programação orientada a objeto e C++
+** Como instalar Qt?
+*** Fedora
+dnf install Qt Qt-devel
+Simples, prático, rápido!
+*** Windows
+Tem vários vídeos e sites que mostram como instalar a biblioteca Qt no windows.
+
+
+* Como instalar o Qt-Creator?
+** O que é o  Qt-Creator?
+*** É uma IDE - ambiente integrado de desenvolvimento de software projetado para trabalhar de forma direta com a biblioteca gráfica do Qt.
+** Como instalar Qt-Creator?
+*** No Fedora abra um terminal e digite:
+sudo dnf install qt-creator
+Simples, prático, rápido!
+
+*** No Windows:
+Acesse https://www.qt.io/download-qt-installer-oss?hsCtaTracking=99d9dd4f-5681-48d2-b096-470725510d34%7C074ddad0-fdef-4e53-8aa8-5e8a876d6ab4
+ou procure no google por Qt-Creator for Windows.
+O link em 14/08/24 é este abaixo:
+https://d13lb3tujbc8s0.cloudfront.net/onlineinstallers/qt-online-installer-windows-x64-4.8.0.exe
+
+
+
+* Como rodar exemplos em C++ usando o QCustomPlot para mostrar gráficos?
+** Acesse o diretório LDSC-Ajuda-DocumentosAuxiliares/02-Softwares/03-Softwares/02-QCustomPlot
+** Leia informações básicos da biblioteca QCustomPlot no site: https://www.qcustomplot.com/
+** Instale a biblioteca qcustomplot:
+Download em https://www.qcustomplot.com/
+
+Opcionalmente use diretamente os arquivos da biblioteca que estão dentro de :
+LDSC-Ajuda-DocumentosAuxiliares/02-Softwares/04-BibliotecasProgramacaoC++/02-QCustomPlot/qcustomplot-2024
+
+** Após o download e instalação dos itens anteriores pode rodar os exemplos da pasta 
+....QCustomPlot/qcustomplot-2024/examples
+
+**** Abra o Qt-Creator
+**** Selecione o item de menu: File->openfile or project
+**** Selecione o diretório com o exemplo de interesse:
+examples/
+├── axis-tags
+├── interactions
+├── plots
+├── scrollbar-axis-range-control
+└── text-document-integration
+**** Abra o arquivo do projeto, arquivo com a extensão .pro, por exemplo:
+... QCustomPlot/qcustomplot-2024/examples/axis-tags/axis-tags-example.pro
+***** Click em "configure project" no canto inferior direito.
+***** Click em "Run" no canto inferior esquerdo, botão verde. Também pode pressionar CTRL+R.
+***** Se der tudo certo o programa vai ser executado.
+***** Agora abra os arquivos do projeto e entenda como ele funciona!
+***** Comece pelo main.cpp, depois mainwindow.h mainwindow.cpp ..
+*** Note que dentro do diretório LDSC-Ajuda-DocumentosAuxiliares/02-Softwares/04-BibliotecasProgramacaoC++/02-QCustomPlot/qcustomplot-2024/examples/ temos vários exemplos. Para rodar outros exemplos basta repetir as etapas: File->openfile or project, selecionar arquivo .pro, configurar, rodar.
+
+
+* O óbvio:
+** Programar no GNU/Linux é mais fácil. 
+** É fácil de constatar isso: 70% dos programadores programam no GNU/Linux.
+** O GNU/Linux já tem milhares de pacotes para engenheiros e programadores, sua instalação, como vimos é: Simples/Rápida.
+*** Na maior parte dos casos: sudo dnf install nomePacote
+** Então, instalar o GNU/Linux no seu PC/Notebook é uma maneira de acelerar as coisas.
+

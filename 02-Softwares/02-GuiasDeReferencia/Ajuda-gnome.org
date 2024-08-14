@@ -1,0 +1,50 @@
+* Gnome - Teclas de Atalho
+* Nota:
+** Lembre que vocêpode estar com  vários aplicativos e sistema e existe uma ordem na captura das teclas.
+** Sites: 
+*** https://help.gnome.org/users/gnome-terminal/stable/adv-keyboard-shortcuts.html.pt_BR
+*** https://www.edivaldobrito.com.br/atalhos-de-teclado-para-trabalhar-com-o-gnome/
+* Criando/Modificando atalhos:
+** Vá em preferêncais -> teclado -> atalhos de teclado.
+** Veja: https://help.gnome.org/users/gnome-terminal/stable/adv-keyboard-shortcuts.html.pt_BR
+* Principais
+** Ctrl + Alt + T -> Abre um terminal em branco.
+** Alt + F4 -> Fecha uma janela ativa.
+** Alt + Shift + Tab -> Alterna janelas na ordem inversa.
+** Alt + Tab -> Alterna janelas.
+** Ctrl + Alt + Esquerda (ou Direita) Direção -> Alterna espaço de trabalho.
+** Ctrl + “+” -> Aumenta a tela.
+** Ctrl + “-” -> Reduza a tela.
+** Alt + F2 -> Abre uma caixa que nos permitirá executar qualquer aplicativo, só temos que escrever o seu nome.
+** Print Screen -> Faz um screenshot da nossa área de trabalho.
+** Alt + Print Screen -> Faz uma captura de tela da janela ativa.
+** Swift + Print Screen -> Faz um screenshot da área indicada na área de trabalho.
+
+* Conhecendo o ambiente
+Super:  Panorama das Atividades/Área de trabalho.
+Alt+F2: Comandos rápidos.
+Super+Tab: Mostra ícone janelas.
+Super+`: Alterna janelas do mesmo aplicativo.
+Alt+Esc: Alterna cursor entre janelas.
+Ctrl+Alt+Tab: Alterna cursor para menus gnome (foco na barra superior).
+Super+A: Lista de aplicativos instalados.
+Super+PageUp/Down: Alterna entre espaços de trabalho.
+Shift+Super+PageUp/Down: Move a janela -> outro espaço de trabalho.
+Shift+Super+←→: Move a janela atual um monitor à esquerda/direita.
+Ctrl+Alt+Delete: Desligar computador.
+Super+L: Bloqueio da tela.
+Super+V: Mostra a lista de notificação.
+
+* Atalhos edição
+Ctrl+A:  Seleciona todo o texto ou todos os itens em uma lista.
+Ctrl+X: Recorta (remove) o texto selecionado ou os itens e coloca-os na área de transferência.
+Ctrl+C: Copia o texto selecionado ou os itens para a área de transferência.
+Ctrl+V: Cola o conteúdo da área de transferência.
+Ctrl+Z: Desfaz a última ação.
+
+* Captura de tela
+Prnt Scrn: Faz uma captura de tela.
+Alt+Prnt Scrn: Faz uma captura de uma janela.
+Shift+Prnt Scrn: Faça uma captura de uma área da tela. O ponteiro torna-se uma mira. Clique e arraste para selecionar uma área.
+Ctrl+Alt+Shift+R: Inicia e finaliza uma gravação de tela.
+

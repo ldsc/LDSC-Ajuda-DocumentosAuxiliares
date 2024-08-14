@@ -1,0 +1,8 @@
+Para rodar exemplo CGnuplot.teste.min.cpp:
+g++ CGnuplot.cpp CGnuplot.teste.min.cpp
+./a.out
+
+Para rodar exemplo CGnuplot.teste.cpp
+g++ CGnuplot.cpp CGnuplot.teste.cpp
+./a.out
+
