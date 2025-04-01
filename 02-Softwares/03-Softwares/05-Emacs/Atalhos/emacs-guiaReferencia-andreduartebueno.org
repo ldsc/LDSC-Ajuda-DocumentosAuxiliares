@@ -1,0 +1,1804 @@
+#+TITLE: Arquivo emacs-guiareferencia-bueno.org
+#+DESCRIPTION: Principais atalhos do editor de texto emacs e atalhos que foram adicionados no arquivo de inicialização.
+#+AUTHOR: André D. Bueno
+# #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://github.com/fniessen/org-html-themes/blob/master/src/readtheorg_theme/css/readtheorg.css">
+# #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+LANGUAGE: pt
+#+OPTIONS: num:nil
+#+TAGS: @ler(l) @testar(t) @testado(T) @atalhopessoal(p)
+
+
+* Projeto emacs-guiaReferencia-andreduartebueno.org:
+** Objetivo do projeto:
+*** Aprender a usar o /emacs/ de forma eficiente.
+*** Preparar material de apoio para uso do /emacs/.
+*** Preparar material a ser publicado na internet.
+*** Escrever um livro com exemplos de uso do emacs e guias de referências associados.
+**** Neste arquivo estão as atividades/TODOS associadas ao guiaDeReferencia as atividades associadas ao livro estão aqui:
+***** [[/home/andreduartebueno/Dropbox/02-Ensino/1-Apostilas-Livros-Pessoais/Livro-8-UsandoEmacs-AndreDuarteBueno/Livro/lyx/Todo-Livro-8-UsandoEmacs.org]]
+*** Tentar construir algo que simplifique e facilite o aprendizado mas sem podar as possibilidades avançadas.
+*** Não esqueça de adicionar as atualizações feitas aqui no livro do /emacs/!
+** Dividir para gerar subprodutos, a seguir possíveis guias a serem gerados:
+*** emacs-guiaReferencia-andreduartebueno.org:
+**** Versão tradicional, somente atalhos e comandos essenciais do /emacs/.
+*** emacs-orgMode-guiaReferencia-andreduartebueno.org
+**** Somente atalhos e comandos do orgMode (TODO) e agenda.
+*** emacs-elisp-lisp-guiaReferencia-andreduartebueno.org:
+**** Somente atalhos e comandos da parte de programação em elisp/lisp.
+*** emacs-lisp-guiaReferencia-andreduartebueno.org
+**** Somente atalhos e comandos da parte de programação em lisp.
+*** emacs-elisp-guiaReferencia-andreduartebueno.org
+**** Somente atalhos e comandos da parte de programação em elisp.
+*** Quando houver diferenças significativas entre emacs28 e emacs29 pense em criar e publicar dobrado.
+**** emacs28-gnome-guiaReferencia-andreduartebueno.org
+**** emacs29-gnome-guiaReferencia-andreduartebueno.org
+**** Sobre o guia:
+***** Já tem guias de referência do /emacs/ na internet. 
+***** Para ter algum destaque tem de criar algo diferente! 
+***** Criar algo que seja mais visual e prático, atalhos muito raros retire para não deixar poluído.
+***** Depois de criar os guias de referencia padrões, criar guias integrados.
+**** Criar um guia de referencia integrado para o /emacs/ no gnome. 
+***** Quatro sofwares em um guia: Gnome, Gnome-Terminal, Gnome-Navegador arquivos, Emacs.
+**** Retirar do guia atalhos de teclas de navegação úteis apenas para teclados muito reduzidos.
+***** Diversos atalhos dos guias de referência são usados apenas por quem tem teclado sem as setas e teclas de navegação, sendo que 99.9% dos usuários usam teclados com estas teclas. Então não é vantajoso ter estes atalhos. Acabam gerando muito texto não utilizado. Apenas listas estes atalhos e sugerir ao usuário o uso deles para funções nobres. Colocar isso no seu arquivo de inicialização.
+** TODO Verificar se tem todos os atalhos do arquivo
+[[/home/andreduartebueno/Dropbox/02-Ensino/1-Apostilas-Livros-Pessoais/Livro-8-UsandoEmacs-AndreDuarteBueno/emacs28-pt-br-refcard.pdf]]
+** TODO Ler o livro e trazer para cá os comandos efetivamente utilizados. Ao mesmo tempo levar para o livro os comandos aqui descritos.
+** TODO Gerar versão sem atalhos que envolvam as teclas de navegação tradicionais, isto reduz a quantidade de atalhos e deixa livre o seu uso.
+** TODO Quando completar aqui e no livro levar para o GuiaVisualDoEditorEmacs
+[[~/Dropbox/02-Ensino/1-Apostilas-Livros-Pessoais/Livro-8-UsandoEmacs-AndreDuarteBueno/Livro/imagens/P16-C03/visual-guia-referencia]]
+*** Verifique se o ideal não é gerar sempre guias visuais por serem mais bonitos e diferenciados.
+** TODO Rever a ordem, pois tem itens pouco usados antes do básico. Comparar com outros guias para decidir. No fundo, o guia que apresenta primeiro o mais usado é para iniciantes, para intermediário e avançado poderia ter um item daquilo que é pouco usado. Tipo guia para iniciantes, guia para intermediário e guia avançado específico. Você realmente deveria pensar em criar todos eles e criar uma figura ilustrando os guias. Veja imagem do programa dia no diretório
+[[//home/andreduartebueno/Dropbox/02-Ensino/1-Apostilas-Livros-Pessoais/Livro-8-UsandoEmacs-AndreDuarteBueno/guiaReferencia]]
+** TODO Adicionar exemplos bobos de ER com base em ER-guiaReferencia-andreduartebueno.org
+Exemplo ER:
+. Qualquer caracter.
+[ab] a ou b.
+[^ab] não tem a ou b.
+[0-9]* Número
+
+Exercício:
+Converter nome_de_arquivo em  NomeDeArquivo.
+
+* Guia de referência do /Emacs/
+** Autor: André Duarte Bueno
+** Objetivo do Guia:
+*** Um guia para facilitar e agilizar o uso do /emacs/ e seus comandos.
+*** /Emacs/ 28: /home/andreduartebueno/Dropbox/02-Ensino/1-Apostilas-Livros-Pessoais/Livro-8-UsandoEmacs-AndreDuarteBueno/MaterialBueno/emacs28-guiaReferencia-andreduartebueno.org [não pode ser link simbolico]
+*** /Emacs/ 29: /home/andreduartebueno/Dropbox/02-Ensino/1-Apostilas-Livros-Pessoais/Livro-8-UsandoEmacs-AndreDuarteBueno/MaterialBueno/emacs29-guiaReferencia-andreduartebueno.org [não pode ser link simbolico]
+** Sobre este guia
+- Sobre os atalhos:
+  - C : É a tecla CTRL.
+  - M : É a tecla ALT.
+  - S : É a tecla SHIFT.
+  - RET : É a tecla ENTER ou RETURN.
+- Alguns atalhos foram definidos pelo autor no arquivo de inicialização do /emacs/, nestes casos a descrição do atalho inclui a marcação [personalizado].
+* Para iniciar o /emacs/:
+- Modo normal: Abra um terminal e digite:
+emacs
+- Modo terminal:
+emacs -nw
+- Modo servidor:
+emacs --daemon
+- Modo cliente (compartilham informações):
+emacsclient -c -n
+– Para rodar sem carregar o arquivo de inicialização/configuração:
+emacs -q
+- Para saber a versão:
+emacs --version
+- Para configurar o diretório de inicialização (emacs>29):
+emacs --init-directory=DIR
+- Para não salvar a seção desktop:
+emacs --no-desktop
+- Para carregar última seção:
+M-x desktop-read
+
+* Para encerrar o /emacs/
+No /emacs/:
+C-x C-c : encerra o /emacs/
+No terminal:
+kill-all emacs
+
+* Ajuda do /emacs/
+C-h : Aguarde que aparece janela com lista de comandos associados (requer pacote which-key).
+C-h i : Info (para acessar manuais).
+C-h n : Para navegar na ajuda.
+C-h C-a : /Emacs/ apropos. Digite parte do comando e enter.
+C-h k : Ajuda sobre atalho (solicita digitação do atalho).
+C-h f : Ajuda sobre a função selecionada (mostra lista das funções).
+C-h b : Ajuda sobre lista atalhos (lista de atalhos).
+C-h a : Ajuda sobre assunto digitado (apropos).
+C-h m : Minor-Modes do buffer atual.
+C-h w : Lista dos comandos (no meu sistema mais de 7000 comandos).
+C-h v : Lista das variáveis.
+
+* Arquivos
+C-x C-f : Abre arquivo.
+C-x C-s : Salva o buffer em um arquivo.
+C-x s : Salvar todos os buffers modificados.
+C-x C-w : Salvar como.
+C-x C-v : reverter para última versão salva automaticamente, usado quando fizemos besteira.
+<F9> : Reverte para última versão salva automaticamente. <<Atalhos personalizados>>
+M-o : Lista arquivos recentes (recentf). <<Atalhos personalizados>>
+C-d : Atalho para desktop-read (reabrir arquivos última seção). <<Atalhos personalizados>>
+
+* Buffers
+C-F10 : Menu Buffers.
+C-x b : Seleciona buffer ou cria novo.
+C-x 4 b : Abre buffer em nova janela.
+C-x -> : Próximo buffer.
+C-x <- : Buffer anterior.
+C-x x r : Renomeia o buffer.
+C-x k : Deleta um buffer.
+C-x C-q : Somente leitura (alterna).
+Comandos para buffers: prepend-to-buffer; insert-buffer; append-to-buffer; append-to-file
+C-x i : Inserir arquivo (insert-file).
+C-x x i : Inserrir buffer (insert-buffer).
+* Janela com informações dos buffers
+C-x C-b : Abre janela dos buffers.
+--m marca para operação.
+--s marca para salvar.
+--d marca para deletar.
+--x executa comando.
+--o abre buffer em outra janela
+--1 abre em full screen.
+--g atualizar lista.
+--q sair da lista.
+* Minibuffers
+Minibuffers abertos para alguma atividade.
+M-p next.
+M-n previous.
+C-x esc esc : Reexecuta comando.
+Tab : Completa comando.
+Return : executa comando.
+? : Ajuda minibuffers.
+* Janelas
+Manipula janelas visíveis.
+C-x 0 : Fecha janela corrente.
+C-x 1 : Expande janela corrente.
+C-x 2 : Divide janela verticalmente.
+C-x 3 : Divide janela horizontalmente.
+C-x o : Alterna janela.
+* Frames
+C-x 5 2	: Abre um novo frame (make-frame-command).
+C-x 5 b : Abre arquivo em novo frame.
+C-x 5 : Mostra atalhos para manipular frames (requer pacote which-key).
+* Navegação Speedbar frame (c-/)
+b : Lista arquivos e buffers.
+f : Lista arquivos e diretórios.
+g : Atualiza informações.
+space : Expande descendentes.
+C : Copia arquivo.
+D : Deleta arquivo.
+R : Renomeia arquivo.
+M : Cria diretório.
+U : Sobe diretório.
+* Navegação dired (C-x C-f)
+O menu mostra os atalhos usados no modo dired.
+C-x d : Abre o diretório selecionado no Major-Mode Dired, navegável.
+C-x C-d : Abre o diretório selecionado como um texto.
+;;n : Próxima linha (space, seta para baixo).
+;;p : Linha anterior (seta para cima).
+PageDown : Próxima página.
+PageUp : Página anterior.
+;;\^\^ : Sobe diretório.
+** Visualização:
+s : Alterna a ordenação dos arquivos.
+v : Visualiza arquivo (não editável). Use "q" para sair.
+i : Selecione um diretório e pressione i para que o /emacs/ mostre no mesmo buffer.
+\$ : Oculta subdiretórios. Pressione novamente para mostrar.
+** Marcação:
+m : Marca para operação.
+d : Marca para deleção.
+u : Desmarca.
+\~ : Marca todos os arquivos "*~" para deleção (backup do arquivo inicial no /emacs/).
+\# : Marca todos os arquivos "#*#" para deleção (arquivos temporários do /emacs/).
+\** : Marca todos os arquivos executáveis para operação (use com cuidado).
+*/ : Marca todos os diretórios para operação (use com cuidado).
+*@ : Marca todos os links simbólicos para operação (use com cuidado).
+\%m : Marca todos os arquivos que atenderem a expressão regular (vai pedir a expressão regular).
+\%g : Marca todos os arquivos cujo conteúdo atende a expressão regular (vai pedir a expressão regular). Note que a pesquisa é feita no conteúdo do arquivo (super interessante e útil).
+\%l : Muda para minúsculo o nome dos arquivos marcados.
+\%u : Muda para maiúsculo o nome dos arquivos marcados.
+\%R : Renomeia arquivos usando expressão regular.
+*! : Desmarca todos os arquivos marcados.
+** Execução:
+h : Mostrar em outra janela uma ajuda sobre o Major-Mode Dired.
+g : Reabrir/atualizar o buffer (reabre dados do disco).
+Enter : Abrir o arquivo para edição (usa janela atual).
+o : Abrir o arquivo para edição (abre nova janela e vai para ela).
+C-o : Visualizar o arquivo em nova janela.
+c : Comprimir o arquivo.
+C : Copiar arquivo.
+D : Deletar imediatamente, pede confirmação.
+k : Deletar arquivos marcados.
+M : Executar comando chmod para arquivo(s) selecionados (muda propriedades do arquivo).
+O : Executar comando chown para arquivo(s) selecionados (muda proprietário do arquivo).
+R : Renomear imediatamente, executa comando "mv".
+S : Criar link simbólico, executa comando "ln -s".
+H : Criar um hard-link para o arquivo selecionado.
+A : Para todos os arquivos marcados/selecionados fazer pesquisa usando expressão regular. Vai mostrar resultados encontrados em janela auxiliar.
+Q : Para todos os arquivos marcados/selecionados fazer pesquisa e substituição usando expressão regular. Vai pedir a expressão regular e a seguir a substituição.
+x : Executar comando. Se marcou para deletar vai deletar.
+= : Ver diferenças entre arquivos ou diretórios. O primeiro é o que esta selecionado o segundo vai pedir. O mais adequado é usar o comando ediff (Menu->Tools->Compare(Ediff)->Two files).
+M-= : Ver diferenças entre dois arquivos de backup. Vai pedir o endereço do segundo.
+w : Copiar nome do arquivo para área de transferência (kill ring). Para copiar vários, marcar e então pressionar w.
+y : Mostra informações do tipo de arquivo.
+q : Fechar janela.
+* Navegação pelo documento
+C-Home : Início do documento.
+C-End : Fim do documento.
+C- -> : Movimenta para próxima palavra (M-f).
+C- <- : Movimenta para palavra anterior (M-b).
+Home : Início da linha.
+End : fim da linha.
+M-a : Início sentença.
+M-e : Fim da sentença.
+C-space C-space : Cria marcação.
+C-u C-space : Vai para marcação criada.
+* Navegação Bookmark
+C-x r l : Abre lista dos bookmarks (bookmark-bmenu-list) [Super-b].
+C-x r m : Cria bookmark (bookmark-set) [Super-m].
+C-x r b : Pula para bookmark (bookmark-jump) [Super-j].
+* Seleção
+C-space : Inicia seleção região, em seguida mover o cursor.
+C-x C-x : Alterna entre início e fim da marcação.
+C-x h : Seleciona todo o documento (C-a).
+Esc C-h : Seleciona função.
+C-M-h : Marca toda função.
+* Recortar, copiar e colar
+C-w : Recortar texto selecionado.
+C-k : Apaga restante da linha.
+M-w : Copiar texto selecionado.
+C-y : Colar.
+C-y M-y : Alterna colagem da área de transferência (repetir M-y).
+C-M-w C-w : Recorta para mesma área de transferência.
+F5 : Elimina espaços em branco inúteis (delete-trailing-whitespace).  <<Atalhos personalizados>>
+* Áreas retangulares
+C-x space : Seleção retangular (pode usar C-w para deletar, C-y para colar).
+C-x r k : Deleta retângulo selecionado.
+C-x r y : Cola último retangulo selecionado.
+* Edição
+C-o : Insere linha em branco (enter).
+C-M-o : Quebra de linha mantendo posição.
+C-x u : Undo. (C-z ou C-_).
+C-x z : Repete último comando (movimentação é comando).
+C-x C-t : Transposição linhas.
+Inserindo caracteres ‘’ “”
+C-x 8 [ : ‘
+C-x 8 ] : ’
+C-x 8 { : “
+C-x 8 } : ”
+M-x highlight-changes-mode : Mostra o que mudou a partir da execução do comando, mudanças aparecem em vermelho.
+C-u C-l : Centraliza a linha na janela.
+C-; : Para edição simultânea em todo doc (requer pacote iedit).
+* Pesquisa
+Nota: se o pacote Swiper estiver instalado mostra todas as ocorrências em janela auxiliar.
+C-s texto : Pesquisa por texto (C-s novamente repete pesquisa).
+C-r texto : Pesquisa para trás.
+M-% texto enter novoTexto: Pesquisa e substituição.
+C-M-s : Pesquisa por ER - Expresão Regular.
+C-M-% textoER Enter NovoTexto. Pesquisa e substituição de ER.
+C-g C-g : Cancela a pesquisa.
+* Maiúsculas e minúsculas
+M-u : Maiúscula.
+M-l : Minúscula.
+* Repetição de comandos
+M-n comando : repete n vezes o comando.
+Ex: M-5 ->.
+Ex: M-10 x [xxxxxxxxxx]
+C-u comando : Repete o comando 4 vezes (pode usar C-u C-u para 16x).
+C-u n comando : Repete o comando n vezes.
+* Seção de trabalho
+M-x desktop-save : Salva seção.
+M-x desktop-read : Recupera seção (C-d).  <<Atalhos personalizados>>
+M-x recover-session : Recupera seção após crash.
+* Fontes
+C-x C-+ : Aumenta fonte.
+C-x C-- : Reduz a fonte.
+S-mouse 1 : Menu fonte.
+* Charset
+M-x describe-current-coding-system : Descreve codificação corrente.
+M-x list-charset-chars : Lista os caracteres para o charset selecionado (ex: latin-1).
+M-x list-coding-systems : Lista as codificações suportadas (ex: iso-latin-1 iso-8859-1 latin-1).
+M-x set-language-environment : Seta a linguagem do ambiente (ex: Brazilian Portuguese).
+M-x set-buffer-file-coding-system : Seta para buffer corrente.
+M-x set-terminal-coding-system : Seta codificação para o terminal.
+M-x set-keyboard-coding-system : Seta codificação a ser usada na entrada pelo teclado.
+M-x prefer-coding-system : Seleciona ordem de preferência.
+C-x = : Mostra informações do caracter onde esta o cursor.
+C-h C : Descreve o sistema de codificação selecionado.
+C-h L : Descreve o ambiente de linguagem selecionado.
+C-h I : Descreve o método de entrada selecionado.
+C-x return k coding return : Para definir o método de entrada pelo teclado use o atalho (ex: Latin-1-unix).
+Ex via menu:
+Menu -> Options -> Multilingual Enviromment -> Set Coding Systems -> European -> Brazilian Portuguese
+M-x coding-system TAB : Mostra as diversas opções.
+* Menu
+F10 : Acessa o menu.
+S-F11 : Ativa Menu [personalização].
+S-F12 : Ativa barra tarefas  [personalização].
+C-mouse1 : Buffer menu.
+C-mouse2 : Propriedades do texto.
+C-mouse3 : Menus contextuais.
+* Tabulações
+M-x edit-tab-stops : Permite adicionar : nos pontos/locais de tabulação.
+C-x f : Define limite de preenchimento no cursor (use M-q para aplicar na região selecionada).
+M-x center-line : Centraliza o texto.
+* Comandos de shell
+Uma ajuda sobre comandos de shell aqui:
+[[/home/andreduartebueno/Dropbox/02-Ensino/1-Apostilas-Livros-Pessoais/Livro-7-FerramentasDeAuxilioAoProgramador-AndreDuarteBueno/Livro/lyx/P16-C01-ComandosDeShell-Apresentacao.pdf]]
+M-! : Executa comando de shell (aguarda retorno, ex: M-! sleep 3).
+M-& : Executa comando de shell assincrono (retorno imediado).
+M-x term : Abre shell em janela de terminal (terminal único).
+M-x ansi-term : Abre shell em janela de terminal (permite múltiplos terminais abertos).
+M-x shell : Abre shell que pode ser editado (Major-Mode Shell).
+Ex: Ajuda sobre um comando via tldr
+M-! tldr gnome-screenshot
+Ex: Captura de tela
+M-! gnome-screenshot -i (--interactive)
+M-! gnome-screenshot -d 5
+gnome-screenshot  -d 5 --file path/to/file.png
+
+Ex: Uso de sleep e import
+M-! sleep 3 && import -window root imagem.png
+M-! sleep 3 && import -screen root imagem.png
+* Org-mode
+** Navegação
+M-Enter : Cria nova seção.
+Tab : Mostra oculta conteúdo FOLDED -> CHILDREN -> SUBTREE
+Shift-Tab : Mostra sumário documento: OVERVIEW -> CONTENTS -> SHOW ALL
+C-c C-n : Próxima seção visível (org-next-visible-heading).
+C-c C-p : Seção anterior visível (org-previous-visible-heading).
+C-c C-f : Próxima seção mesmo nível (org-forward-heading-same-level).
+C-c C-b : Seção anterior mesmo nível (org-backward-heading-same-level).
+C-c C-u : Subir nível (outline-up-heading).
+C-c C-t : TODO.
+C-c C-a : Anotação.
+C-c C-j : org-goto.
+** Edição
+'# comentário
+'* Titulo
+'#+TITLE: O que é o emacs - org-mode
+'#+DESCRIPTION: Converte arquivo .org em arquivo html
+'#+AUTHOR: André D. Bueno
+'#+LANGUAGE: pt
+'#+TAGS: @ler(l) @testar(t) @testado(T) @atalhopessoal(p)
+'/itálico/ /itálico/
+'*negrito* negrito
+'_sublinhado_  sublinhado
+'+cancelado+  cancelado
+'=verbatim=  verbatim
+'~código~ código
+superIndice^x  A^{x}
+subIndice_x  A_{x}.
+Listas:
+- Lista simples:    - item.
+- Lista numerada:   1. item (C-c para alternar).
+- Lista descritiva: + item1 :: descrição item 1
+** Rótulos/labels e referências cruzadas
+'#+NAME: fig:nomeRótuloFigura
+'#+NAME: tab:nomeRótuloTabela
+Links:
+C-c C-L : Insere um link sem descrição.
+Formato: [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Org-Mode.html]]
+C-c C-l : Insere um link/rótulo com descrição.
+Formato : '[[link]descricao]]
+C-c C-o : Para ir para um rótulo.
+C-c C-x C-n : next link (próximo).
+C-c C-x C-p : Previous link (anterior).
+Tabela <<tab:tabelaNomeRef1>>
+
+Tabela <<tab:tabelaNomeRef2>>
+
+Para referenciar rótulo:
+Veja Tabela [[tab:tabelaNomeRef1]].
+Veja Tabela [[tab:tabelaNomeRef2]].
+** Tabelas
+https://orgmode.org/manual/Built_002din-Table-Editor.html
+https://www.youtube.com/watch?v=pRXRwQ1GGr4&list=PLGMx7bOKMJTw4p7vs1kTGBAnW81NB57Wv
+https://orgmode.org/manual/Formula-syntax-for-Calc.html
+
+*** Criar:
+| : Para iniciar tabela. Ex: |x|y|z|
+C-c | : Para criar tabela, informar dimensões: ex: 3x4
+Se tiver um texto selecionado C-c | tenta criar uma tabela.
+*** Navegar
+Tab e Shift-Tab : Para Navegar.
+M-S-seta : Adicionar(->)/Remover(<-) coluna.
+M-seta -> ou <-  : Mover/Alternar linhas/colunas.
+|- ou C-c -: Adicionar linha separadora.
+*** Equações:
+C-c space : Apaga conteúdo da célula.?
+C-c = : Para adicionar fórmulas em colunas.
+C-u C-c = : Para inserir fórmulas (field formula).?
+C-c + : Para somas (C-y confirma).
+C-c ? : Para ver conteúdo da célula.
+
+‘p20’ Seta para 20 dígitos de precisão.
+‘N’ Interpreta a equação como número (resultado).
+‘n3’ normal, ‘s3’ científico, ‘e2’ engenharia, ‘f4’ fixo.
+A equação aparece na forma #+TBLFM: $5=vmean($3..$4).
+Note que @2 indica linha 2. $3 indica coluna 3. 
+Para indicar linha 2 e coluna 3 use @2$3.
+C-c C-c : Para recalcular linha TBLFM selecionada.
+Posso usar funções definidas:
+tan($1): Tangente, sin($2): Seno,...
+Média : vmean($1..$3), Soma : vsum($1..$3).
+Posso definir onde se aplica: @7($3..$6)=vsum(@3..@6)
+Posso usar elisp:
+$6='( / (+ (* @2$3 $3) (* @2$4 $4)));N
+‘if($1 < 20, teen, string(""))’
+Ex:
+| id | Nome    |   n1 |   n2 |  média | (n1*p1 + n2*p2) / (n1+n2) |
+|    | Pesos   |    6 |    4 |        |                           |
+|----+---------+------+------+--------+---------------------------|
+|  0 | João    | 29.5 |  4.5 |    17. |                      19.5 |
+|  1 | Pedro   | 29.5 |    5 |  17.25 |                      19.7 |
+|  2 | Ana     |  55. |  5.5 |  30.25 |                      35.2 |
+|  3 | Claudia | 105. |  4.5 |  54.75 |                      64.8 |
+|    |         | 207. | 18.5 | 112.75 |                     131.6 |
+#+TBLFM: $3=vsum(@4..@7)::$5=vmean($3..$4)
+#+TBLFM: $6='( / (+ (* @2$3 $3) (* @2$4 $4)) (+ @2$3 @2$4));N
+#+TBLFM: @7($3..$6)=vsum(@3..@6)
+
+org-table-convert-region : Converte região em tabela.
+C-c / : Converte região selecionada em tabela (org-table-create-or-convert-from-region)
+
+Dica: o uso das equações no org-mode é interessante, mas requer atenção.
+** Figuras 
+*** Propriedades da imagem
+Pode-se definir propriedades, redimensionar/scale, rotacionar.
+https://orgmode.org/worg/org-tutorials/images-and-xhtml-export.html
+'#+CAPTION:    Título da imagem
+'#+NAME:       fig:nomeRótuloFigura
+'#+ATTR_HTML: :width 300 px :style border:2px solid black;
+'#+ATTR_HTML: :style float:left;margin:20px 20px 20px 0px;
+
+'#+attr_latex: scale=0.75
+*** Inserindo a imagem
+***Para adicionar coloque dentro de duplo colchetes a path absoluta ou relativa da imagem
+\[\[PathDaImagem.png\]\]
+São reconhecidos os formatos: jpeg, jpg, png, gif, tif.
+[[file:Org-mode-unicorn.png]]
+
+Ex:
+[[/home/andreduartebueno/Dropbox/02-Ensino/1-Apostilas-Livros-Pessoais/Livro-8-UsandoEmacs-AndreDuarteBueno/Livro/imagens/P16-C03/configuracao/icons/new.png]]
+E se for para gerar html pode-se usar
+<a href="/worg/images/orgmode/org-mode-unicorn.png">Monocerus glaucus</a>
+
+** TODO Todo
+TODO : Para adicionar todo basta escrever no início TODO..
+Shift-seta  <- -> : Alterna TODO/DONE
+M-seta <- -> : Muda nível  da seção.
+C-c C-t : Muda para TODO, DOING, DONE.
+C-c C-d : Adiciona data encerramento (deadline).
+DEADLINE: <2024-01-07 dom>
+*** Tags                                                            :@testar:
+C-c C-q : Adiciona tag. Aparece :@nomeTag no final da linha:
+Podemos criar listas de tags não exclusivas adicionando no documento:
+'#+TAGS: [ Project(P) : modeling(m) programming(p) testing(t) documenting(d) ]
+Podemos criar listas de tags exclusivas:
+'#+TAGS: { Local : @work(w) @home(h) @tennis(e) @Molly(M) }
+'#+TAGS: { Project(P) : modeling(m) programming(p) testing(t) documenting(d) }
+
+*** Captura de idéias
+Usado para enviar para arquivos "Projeto-TODO.org" as atividades que precisam ser realizadas sem necessidade de abrir o arquivo.
+Pode-se vincular atalhos "C-c a letra" a projetos específicos, exemplo no arquivo adb-early-init.org
+C-c a : Pede a letra do arquivo associado e depois pede a ideia (C-c a t para arquivo todo padrão).
+? não esta aparecendo o nome do livro quando digita C-c a?
+* Org-calendar
+C-S-d : Abre o calendário (M-x calendar).
+Menu->Tools->calendar :  Abre o calendário.
+. : Vai para data de hoje.
+i d : Insere atividade
+d : Mostra atividades.
+q : Fecha visualização.
+** Movimentação
+Mouse-2 : Menu geral (botão 2 do mouse).
+Mouse-3 : Menu do dia.
+.     : Mover para data de hoje.
+g-d   : Mover para data específica (pede ano, mês, dia).
+C- space: Marca início intervalo.
+PageDown/PageUp/</>/space : Teclas de navegação.
+# Atalhos configurados no adb-early-init.org
+C- <- : Retorna semana.
+C- -> : Avança semana.
+S- <- : Retorna mês.
+S- -> : Avança mês.
+M- <- : Retorna ano.
+M- -> : Avança ano.
+** Eventos - inserção
+i-d : Insere evento hoje.
+i-w : Evento que se repete toda semana.
+i-m : Evento que se repete todo mês.
+i-y : Evento que se repete todo ano.
+i-b : Bloco de ideias.
+i-c : Entrada que se repete ciclicamente.
+** Eventos - visualização
+Mouse-3 d : Mostra menu com eventos da data selecionada.
+s : Mostra arquivo com entradas do dia de hoje (editável).
+m : Destaca atividades programadas.
+u : Retira destaque.
+diary-print-entries : Imprime o calendário.
+diary-mail-entries : Envie lembretes por e-mail para si mesmo.
+* Org-calc (calculadora)
+** RPN Menu->Tools->Programmable calculator
+Enter : insere número na pilha.
+Shift - : para inserir número negativo.
+** Normal Menu->Tools->Simples calculator (M-x calculator)
+C-insert : copy.
+C-y : paste.
+q : quit.
+* Pesquisa internet [requer pacote google-this]
+M-s M-w : Pesquisa na internet pelo texto selecionado (mostra no /emacs/).
+Exemplo: pesquisa por "/emacs/ shortcut".
+C-c / : Menu do pacote google-this (abre no navegador de internet).
+C-c / enter: Pede texto e abre site do google.
+C-c t : Tradução da região selecionada.
+C-c / r : Pesquisa no cppreference.
+C-c / f : Informações do clima.
+* Modos de Programação
+** Shell
+M-! : Comando de shell (resultado no buffer "Shell Command Output").
+** Compilar
+F8 : Compilar [personalizado].
+?Definir atalho compilação?.
+** Expansão código [requer pacote yasnippet]
+Tab  : Expande atalho do yasnippet (ex: cls tab).
+S-Tab : Expande atalho do yasnippet [?porque repete?].
+** Comentários
+C-x ; : Seta coluna de comentário.
+M-q : Organiza comentário.
+M-; : Insere ou realinha comentário.
+C-x C-; : Comenta/descomenta linha toda. 
+C-u M-; : Apaga comentário.
+C-c C-c : Comenta toda região.
+M-j : Returno de carro acompanhado de comentário.
+** Navegação
+M-a : Início do texto.
+M-e : fim do texto.
+C-M-a : Início da função.
+C-M-e : Fim da função.
+M-x imenu : Janela de navegação.
+C-/ : Speedbar.
+** Seleção
+C-M-h : Seleciona a função.
+** Indentação
+C-c . : Define estilo indentação (ex:gnu,stroustrup,linux).
+C-c c-q : Indenta de acordo com estilo selecionado.
+C-M-\ : Indenta a região selecionada.
+M-m : Primeiro caracter válido da linha.
+
+C-c C-a : Ativa/desativa autonewline.
+C-c C-l : Ativa/desativa eletric mode.
+C-c C-w : Subword mode.
+C-c C-k : Alterna modo comentário (bloco/linha).
+** Tags - pesquisa [requer pacote ggtags]
+M-. : Pesquisa tag/função na posição do cursor (alterna entre declaração e definição).
+M-, : pop-tag-mark.
+M-] : Pesquisa por referências da função.
+M-n : Próxima ocorrência da tag (next).
+M-p : Ocorrência anterior da tag (previous).
+C-x M-? : Mostra definição da função.
+C-x 4. : Procura tag em outra janela.
+C-c g c : ggtags-create-tags.
+C-c g f : ggtags-find-file.
+C-c g h : ggtags-view-tag-history.
+C-c g r : ggtags-find-reference.
+C-c g s : ggtags-find-other-symbol.
+C-c g u : ggtags-update-tags.
+C-M-. : Procura tag com a regexp.
+C-c M-space : Salva pesquisa em registrador.
+C-c M-/ : Visualiza ou cola pesquisa.
+C-c M-j : Visita diretório raiz do projeto.
+** Tags - pesquisa por erros [requer pacote flycheck]
+M-x flycheck-mode : Ativa/Desativa verificação modo de verificação de erros.
+C-c !s : Seleciona o verificador de erros (ex: clang, cppcheck. googlelint).
+C-c !l : Lista os erros (flycheck-list-errors).
+C-c !c : Verifica por erros neste buffer.
+C-c !C : Apagar erros neste buffer.
+C-c !n : Próximo erro.
+C-c !p : Erro anterior.
+C-c !e : Explica o erro no ponto.
+C-c !x : Desativa checagem de erros.
+** Janela de compilação
+Menu->Tools->Compile Abre janela de compilação.
+C-x ' : Navega pelas mensagens de erro.
+C-o : Exibe o local correspondente.
+M-n : Próxima mensagem de erro (next).
+M-p : Mensagem de erro anterior (previous).
+M-g n : Próxima mensagem de erro.
+M-g p : Mensagem de erro anterior.
+return : Visite o local do erro selecionado.
+M-{ : Próxima mensagem de erro (ou em arquivo diferente).
+M-} : Mensagem de erro anterior (ou em arquivo diferente).
+q : Saia do buffer *compilation* (quit-window).
+* Usando registradores (memória)
+C-x r s : Copia para registrador (um caracter).
+C-x r i : Inserir aqui conteúdo do registrador.
+C-x r + : Adiciona no final do registrador (útil para juntar blocos de texto).
+M-x prepend-to-register : Adiciona no início do registrador.
+C-x r r : Copia região retangular para registrador (um caracter).
+
+* Usando macros (funções gravadas)
+C-x ( : Inicia gravação da macro.
+C-x ) : Finaliza gravação da macro.
+C-x C-k n : Dá um nome para a macro.
+C-x C-k r : Executa última macro na região selecionada.
+Note que se tiver 3 linhas selecionadas vai aplicar a macro 3x.
+C-x C-k C-v : Mostra última macro.
+C-x C-k C-e : Edita última macro.
+M-x insert-kbd-macro : Insere no buffer corrente uma macro nomeada como um código Lisp, util para ver se a macro é o que você espera. Lembre que a macro grava teclas digitadas e não o conteúdo existente, por exemplo, C-y cola o que esta no buffer no momento da execução da macro e não no momento da gravação.
+
+Exemplo de macro gravada, seleciona 10 linhas e copia para área transferência:
+(fset 'teste-selecaoLinhas-copiar
+   (kmacro-lambda-form [?\C-  down down down down down down down down down down ?\M-w] 0 "%d"))
+
+No exemplo abaixo pesquisa por texto da área de transferência "André D. Bueno" e troca por "André Duarte Bueno", note que se o texto da área de transferência for outro não funcionará.
+(fset 'renomeiaAD\.B-ADB
+   (kmacro-lambda-form [?\M-% ?\C-y return ?\C-y C-left left backspace ?u ?a ?r ?t ?e return ?!] 0 "%d"))
+   
+Macros de teclado:
+F3 : Inicia a gravação da macro (kmacro-start-macro-or-insert-counter).
+F4 : Finaliza gravação ou executa macro (kmacro-end-or-call-macro).
+C-u F3 : Reexecuta última macro.
+C-x C-k r : Executa macro na região selecionada (apply-macro-to-region-lines).
+C-x C-k x r : Armazena última macro no registrador r (kmacro-to-register).
+C-x r j r : Executa a macro armazenada no registrador r.
+
+* Programação LISP/ELISPx
+** Rodando códigos LISP/Elisp
+Pode rodar os códigos Elisp no buffer *scratch*, num buffer qualquer ou abrir uma janela iterativa com M-x ielm.
+Num buffer posicione o cursor no final do bloco (...) e pressione C-x C-e
+ou
+(define-key key-translation-map [ (super z) ] (kbd "C-x C-e"))
+** Átomos
+O retorno de um átomo é o próprio átomo.
+nil : falso
+1 : verdadeiro
+t : verdadeiro
+123 : inteiro
+123.4 : flutuante
+?a : valor 97 (código ascii da letra)
+'a : letra a
+** Variáveis
+Uma característica de Lisp/Elisp é que um símbolo pode armazenar simultaneamente um valor e uma função.
+No exemplo a seguir Area assume o valor 10 e é uma função que calcula a área de um círculo.
+A definição do comportamento depende do contexto.
+; Area é o valor 10.
+(setq Area 10)
+; Area é a função que recebe r e calcula a área.
+(fset 'Area '(lambda (r) (* pi r r)))
+; interpreta o valor de A
+Area        -> 10
+; interpreta como função área
+(Area 3)    -> 28.27
+(Area Area) -> 314.15
+** Saídas
+*** ': Mostra texto sem avaliar conteúdos
+'(variavel-1 variavel-2 minhaDog) -> (variavel-1 variavel-2 minhaDog)
+*** quote: Mostra texto sem avaliar conteúdos
+(quote ("Molly" "Bueno") ) -> "Molly" "Bueno"
+*** message: Mostra string formatada no /buffer/ temporário
+Usada por exemplo para mensagens em entrada de dados.
+(setq v1 "Hello")
+(setq v2 "world")
+(message "%s %s" v1 v2) ->"Hello world" 
+*** print: Mostra conteúdo de uma variável na linha de baixo
+(print v1) -> "Hello"
+"Hello"
+*** prin1: Mostra conteúdo de uma variável na mesma linha
+(prin1 v1) -> "Hello""Hello"
+*** insert: Insere resultado no buffer corrente
+(insert "Este texto será inserido no buffer corrente, na posição do cursor")
+*** format: Usada para formatar strings.
+Os possíveis marcadores são mostrados a seguir. Note a semelhança com printf de C.
+%s Uma string.
+%d Um número decimal com sinal.
+%o Um número octal.
+%x Um número hexadecimal.
+%X O mesmo que %x, mas em maiúsculas (coloca \ antes de ").
+%e Um número em notação exponencial.
+%f Um número em notação de ponto flutuante.
+%g Um número: ponto flutuante se <6 dígitos, exponencial se >=6 dígitos.
+%c Um único caracter.
+%S Um objeto Lisp, da forma como seria impresso pela função prinl.
+%% O caracter %.
+
+Exemplo: 
+(setq s "Molly Bueno")
+(print s)                 ->  "Molly Bueno"
+(format "Eu nunca ví doguinha mais linda que a %s" s) -> "Eu nunca ví doguinha mais linda que a Molly Bueno"
+(format "Eu nunca ví doguinha mais linda que a %S" s) -> "Eu nunca ví doguinha mais linda que a \"Molly Bueno\""
+** Entrada de dados
+*** read-string: Usada para solicitar strings ao usuário
+(setq nome (read-string  "Entre com o nome: "))
+(print nome) -> "Molly Bueno" 
+*** read-number: Usada para solicitar números ao usuário
+(setq n (read-number  "Entre com um número n: "))
+(print n) -> 3 -> 3.4
+*** read-char: Usada para solicitar caracteres ao usuário
+(setq c (read-char  "Entre com a letra c: "))
+(print c) -> 102 (f)
+
+Abaixo não funcionou
+(setq nomeCompleto (read-line  "Entre com o nome completo: "))
+(print nome)
+(setq b (read-byte  "Entre com um byte: "))
+(print b)
+
+** Expressões
+*** Expressões executadas : operadores
+;; Soma (operador listaElementos)
+( + 10 20) -> 30
+;; Note que repete o operador + até lista parâmetros finalizar
+( + 1 2 3 ) -> 6
+;; Sequência de operações realiza primeiro a mais interna
+(* pi ( * 3 ( + 1 2 3 ))) ->  58.548
+(setq resultado (* pi ( * 3 ( + 1 2 3 )))) ->  58.548
+(print resultado) ->  58.548
+
+;; Note que se os valores forem inteiros a operação é de inteiros e o resultado é truncado (como em C/C++), note entretanto que 4. é tratado como inteiro!:
+( * 10 3)          -> 30
+(/ 4 ( * 10 3))    -> 0 : 4/30 = 0
+(/ 4. ( * 10 3))   -> 0 : 4/30 = 0!
+(/ 4.0 ( * 10 3))  -> 0.133
+(/ 4. ( * 10.0 3)) -> 0.133
+(/ 4. ( * 10 3.0)) -> 0.133
+(/ 4. ( * 10. 3.)) -> 0.133
+*** 'expressao : Não executa a expressão
+'("Molly" "Bueno") -> ("Molly" "Bueno")
+*** eval : Executa uma expressão (mesmo que tenha o 'expr)
+Se for avaliar um átomo o resultado é imediatamente apresentado.
+(eval nil)   -> nil
+(eval 1)     -> 1
+(eval t)     -> t
+(eval 123)   -> 123
+(eval 123.4) -> 123.4
+(eval ?a)    -> 97
+(eval "oi tudo bem") -> "oi tudo bem"
+(setq minhaDog "Molly") ->  "Molly"
+(eval minhaDog) -> "Molly"
+
+Se for avaliar uma expressão que representa uma lista a mesma é avaliada como se fosse um código.
+Ou seja, podemos construir um código, armazenar numa lista e executar o mesmo.
+'(+ 3 4)        -> (+ 3 4)
+(eval '(+ 3 4)) -> 7
+
+Se tentamos avaliar algo não definido o elisp apresenta mensagem de erro:
+r        -> Symbol's value as variable is void: r.
+(eval r) -> Symbol's value as variable is void: r.
+*** eval-region: Avalia uma região.
+*** eval-buffer: Avalia um buffer.
+** Listas
+;; Como em std::forward_list de C++ e outras linguagens, um elemento de uma lista em lisp armazena um valor e um ponteiro para próximo elemento.
+De forma que o último elemento da lista deve ser um ponteiro para nil (nullo).
+Quando falarmos de cdr veremos que o cdr do último elemento deve ser nil.
+;; Criando lista temporária com as letras a,b,c.
+'( a b c ) -> ( a b c )
+;; na prática a lista acima tem na memória algo como:
+(a,pb)(b,pc)(c,nil)
+
+;; Lista armazenada na variável vogais
+(setq vogais '( a e i o u ))  -> ( a e i o u )
+
+;; Lista com número 1,2,3.
+(setq  numeros '( 1 2 3 )) -> (1 2 3)
+
+;; lista com nomes
+(setq doguinhos '(Molly Nina Koto Faisca))
+-> (Molly Nina Koto Faisca)
+
+;; Criando um map, uma lista de associação
+(setq map_nome_raca '((Molly "Border Collie")
+                  (Nina "Labrador")
+                  (Koto "SRD")
+                  (Faisca "Vira-Lata")))
+-> ((Molly "Border Collie") (Nina "Labrador") (Koto "SRD") (Faisca "Vira-Lata"))
+
+; Acessando elementos do mapa
+(assoc 'Molly map_nome_raca) -> (Molly "Border Collie")
+(assoc 'Nina map_nome_raca)  -> (Nina "Labrador")
+
+** Manipulando Listas
+*** cons: É usado para contruir listas adicionando elementos (temporário);
+cons recebe como parâmetros o próximo elemento e a lista.
+(setq x 1) -> 1
+(setq y 2) -> 2
+(setq z 3) -> 3
+; Abaixo criamos um par (primeiroElemento . segundoElemento)
+; note que tem um ponto separando os elementos.
+(cons  x y) -> (1 . 2)
+(setq par (cons x y)) -> (1 . 2)
+Cópia do primeiroElemento pode ser obtido com o comando car.
+(car par) -> 1
+Cópia do segundoElemento é obtido com o comando cdr.
+(cdr par) -> 2
+(print par) -> (1 . 2)
+; Abaixo temos o par (1 . 2) como primeiroElemento e 3 como segundoElemento
+(cons (cons  x y) z) -> ((1 . 2) . 3)
+(cons (cons (cons  x y) z) nil) -> (((1 . 2) .3))
+(cons par z) -> ((1 . 2) . 3)
+
+; Uma lista deve terminar com um nil (nullo).
+; Ou seja, o último ponteiro da lista deve apontar para nil (nullo).
+(cons 1 (cons 2 (cons 3 nil))) -> (1 2 3) : (1 ->2 ->3 ->nil)
+; Podemos passar nil diretamente, como acima ou indiretamente usando '(), como abaixo.
+(cons 1 (cons 2 (cons 3 '()))) -> (1 2 3)
+; No exemplo a seguir o fim da lista é o número 4, portanto não é uma lista.
+(cons 1 (cons 2 (cons 3 4))) -> (1 2 3 . 4)
+
+Exemplo:
+; Cria lista doguinhos
+(setq doguinhos '(Molly Nina Koto Faisca))
+(print doguinhos) -> (Molly Nina Koto Faisca)
+; Adiciona temporariamente o elemento Zeca
+(cons 'Zeca doguinhos) -> (Zeca Molly Nina Koto Faisca)
+;; Note que estes comandos geram uma lista temporária que é descartada se não for salva
+(print doguinhos) -> (Molly Nina Koto Faisca)
+;; Para efetivamente adicionar o Zeca na lista de doguinhos temos de usar o setq
+(setq doguinhos (cons 'Zeca doguinhos))
+(print doguinhos) -> (Zeca Molly Nina Koto Faisca)
+
+*** car: Extrai cópia do primeiro elemento da lista (temporário)
+Equiale a C++ front.
+(car '(Molly Bueno)) -> Molly
+(car doguinhos) -> Molly
+
+*** cdr: Retorna cópia da lista sem o primeiro elemento (temporário)
+(cdr '(Molly da Luz Bueno)) -> da Luz Bueno
+(print doguinhos) -> (Zeca Molly Nina Koto Faisca)
+(cdr doguinhos)   -> (Molly Nina Koto Faisca)
+(print doguinhos) -> (Molly Nina Koto Faisca)
+
+*** nth: Extrai o elemento 3 da lista, o índice começa em 0 (equivale a C++ v[nth])
+(nth 3 '(Molly da Luz Bueno)) -> Bueno
+(setq doguinhos '(Molly Nina Koto Faisca))
+(nth 3 doguinhos) -> Faisca
+(nth 0 doguinhos) -> Molly
+(setq resultado (nth 3 doguinhos)) -> Faisca
+(print resultado) -> Faisca
+(print doguinhos) -> (Molly Nina Koto Faisca)
+*** mapcar: Aplica função a todos os elementos da lista.
+(Equivalente C++: for_each(l.begin(),l.end(),nomeFuncao);)
+; Imprime elementos em linhas novas
+(mapcar 'print doguinhos)
+->
+Moly
+Nina
+Koto
+Faisca
+; Imprime elementos colados
+(mapcar 'prin1 doguinhos) -> MolyNinaKotoFaisca
+; reduce: Acumula valores [erro: reduce não funciona!]
+(reduce '+ '(1 2 3 4))
+
+; Abaixo não funciona ?
+( defun media ( lista ) " Calcula a media dos elementos de uma lista "
+( / ( reduce '+ lista ) ( length lista )))
+( media '(1 2 3) )
+
+; Abaixo funciona, mas  note que trunca o resultado para inteiro
+( defun media ( lista ) " Calcula a media dos elementos de uma lista "
+( / ( seq-reduce #'+ lista 0) ( length lista )))
+( media '(1. 2. 3. 4.) )
+
+** Vetores, vetores bool
+*** []: Cria vetores
+Podemos criar vetores usando [], veja exemplos:
+[0 1 2 3] -> [0 1 2 3]
+[?a ?b ?c ?d ?e] -> [97 98 99 100 101]
+["abcde"] -> ["abcde"]
+*** vector: Cria vetores
+; cria vetor com símbolo a, string1, string2 e valor numérico do caracter a.
+(vector 'a "string1" "string2" ?a)          -> [a "string1" "string2" 97]
+(setq v (vector 'a "string1" "string2" ?a)) -> [a "string1" "string2" 97]
+*** vconcat: Concatena vetores
+(vconcat [0 1 2 3] [?a ?b ?c ?d ?e] ["abcde"] )
+-> [0 1 2 3  'a 'b 99 100 101 "abcde"]
+*** Como verificar se é uma sequência, um array, uma string, um vetor
+Os comandos sequencep, arrayp, stringp, vectorp e bool−vector−p são usados para verificar o tipo do array.
+Veja exemplos:
+(setq str "abcdefg" ) -> "abcdefg"
+(sequencep  str)    -> t : é uma sequência.
+(arrayp        str) -> t : é um array.
+(stringp       str) -> t : é uma string.
+(vectorp       str) -> nil : não é um vetor.
+(bool−vector−p str) -> nil : não é um vetor boleano. [não tem no elisp].
+(vectorp [0 1 2 3]) -> t : é um vetor.
+(vectorp ( make−bool−vector 3 nil )) -> nil : um vetor de boleanos não é um vector. [?erro?]
+Note que um bool-vector não é um vector. É um tipo diferente.
+*** Criando vetor de inteiros
+[0 1 2 3] -> [0 1 2 3]
+(setq v [0 1 2 3]) -> [0 1 2 3]
+(print v) -> [0 1 2 3]
+(sequencep  v)    -> t : é uma sequência.
+(arrayp        v) -> t : é um array.
+(stringp       v) -> nil : não é uma string.
+(vectorp       v) -> t : é um vetor.
+
+*** Criando vetor de inteiros a partir do valor do caracter
+[?a ?b ?c ?d ?e] -> [97 98 99 100 101]
+(setq s1 [?a ?b ?c ?d ?e]) -> [97 98 99 100 101]
+(print s1) -> [97 98 99 100 101]
+(sequencep  s1) -> t : é uma sequência.
+(arrayp     s1) -> t : é um array.
+(stringp    s1) -> nil : não é uma string.
+(vectorp    s1) -> t : é um vetor.
+
+*** Criando vetor de caracteres
+["abcde"] -> ["abcde"]
+(setq s2 ["abcde"]) -> ["abcde"]
+(sequencep  s2) -> t : é uma sequência.
+(arrayp     s2) -> t : é um array.
+(stringp    s2) -> nil : não é uma string.
+(vectorp    s2) -> t : é um vetor.
+
+Dica: se quando avalia aparece dentro de [] é porque é um vetor.
+
+*** make−vector: Usada para criar um vetor.
+; [não funciona elisp]
+; vai de 0-5
+( make−vector 6 "abcde" )
+; Dica: use vector
+( vector 'abcde )
+*** make−bool−vector: Usada para criar um vetor de booleanos.
+; [?não funciona elisp?]
+; Armazena apenas t/verdadeiro e nil/falso.
+; é armazenada na memória como um vetor de caracteres no formato binário
+; #numeroElementos "listaElementos"
+; ex:
+( make−bool−vector 10 nil )
+( vconcat ( make−bool−vector 3 nil ))
+
+*** make-string: Usada para criar um vetor de caracteres.
+; [não funciona elisp]
+; 10 caracteres c
+( make−bool−vector 10 ?c )
+*** aref: Usada para acessar elementos de um vetor. Note que aref é abreviatura de /array reference/.
+(aref "abcdefg" 0) -> 97 ; a=97
+(aref "abcdefg" 1) -> 98 ; b=98
+(aref "abcdefg" 2) -> 99 ; c=99
+
+*** aset: Usada para setar elementos de um vetor. Note que aset é array set.
+(setq str "abcdefg" ) -> "abcdefg"
+(print str)           -> "abcdefg"
+; (aset tipo posição valor)
+(aset str 0 ?x)       -> 120
+(print str)           -> "xbcdefg"
+
+** String
+*** Criando string
+(setq s3 "abcde") -> "abcde"
+(sequencep  s3) -> t : é uma sequência.
+(arrayp     s3) -> t : é um array.
+(stringp    s3) -> t : é uma string.
+(vectorp    s3) -> nil : não é um vetor.
+
+(setq sdoguinhos '("Molly" "Nina" "Koto" "Faisca")) -> ("Molly" "Nina" "Koto" "Faisca")
+(sequencep  sdoguinhos) -> t : é uma sequência.
+(arrayp     sdoguinhos) -> t : é um array.
+(stringp    sdoguinhos) -> t : é uma string.
+(vectorp    sdoguinhos) -> nil : não é um vetor.
+
+(setq ldoguinhos '(Molly Nina Koto Faisca)) -> (Molly Nina Koto Faisca)
+(sequencep  ldoguinhos) -> t : é uma sequência.
+(arrayp     ldoguinhos) -> nil : não é um array.
+(stringp    ldoguinhos) -> nil : não é uma string.
+(vectorp    ldoguinhos) -> nil : não é um vetor.
+*** concat: Usado para concatenar strings.
+(concat "Molly" "Bueno")  -> "MollyBueno"
+(concat "Molly " "Bueno") -> "Molly Bueno"
+(setq s (concat "Molly " "Bueno")) -> "Molly Bueno"
+(print s) -> "Molly Bueno"
+
+*** substring: Usado para retornar parte da string.
+(substring s 0 5)  -> "Molly"
+(length s)         -> 11
+(string−width s)   -> [?não funciona elisp?]
+(substring s 6 11) -> "Bueno"
+*** clear-string: Usado para zerar a string.
+; [não funciona elisp]
+(clear−string s)  -> nil
+(length s)        -> 0
+*** string=: Verifica se duas strings são iguais.
+(print s)                 ->  "Molly Bueno"
+(prin1 s)                 ->  "Molly Bueno" na mesma linha
+(string= s "Molly Bueno") -> t
+(string= "abcde" ( string ?a ?b ?c ?d ?e )) -> t;
+(string= "MAIUSCULA" "maiuscula") -> nill (diferencia maiúsculas de minúsculas)
+*** char−to−string: Converte caracter para string
+; [não funciona elisp]
+(char−to−string ?c) ;; "c"
+*** string−to−char: Converte string para char
+; [não funciona elisp]
+(string−to−char "zero um dois três") ;; ?testar
+*** number−to−string:
+; [não funciona elisp]
+(number−to−string 5)   -> "5".
+(number−to−string −30) -> "30".
+(number−to−string 0)   -> "0".
+*** string−to−number:
+; [? não funciona elisp ?]
+; pode receber como segundo parâmetro a base do número
+?a -> 97
+(string−to−number "a")     -> 97
+?7 -> 55
+(string−to−number "7")     -> 55
+(string−to−number "15" 16) -> f : base 16 ?? testar.
+(string−to−number "0A" 16) -> 10
+(string−to−number "11" 2)  -> 3 : base 2 binária 0/1.
+*** ; [não funciona elisp].
+** Matrix
+; [?não funciona elisp?].
+*** Função para criar matriz
+( defun make−matrix ( rows cols init )
+( let (( m ( vector rows nil )))
+( dotimes (r rows )
+( aset m r ( vector cols init )))
+m ))
+*** Função para acessar elemento matriz
+( defun matref ( m i j)
+( aref ( aref m i) j ))
+*** Exemplo de uso
+(make-matrix 3 4 0)
+** Funções gerais do sistema
+*** random: Retorna número randômico.
+(random 5) -> retorna número entre 0 e 4.
+*** sleep-for: pausa
+(sleep-for 1) -> aguarda 1s
+** Funções para buffers e arquivos
+*** point: Retorna a posição do cursor. Semelhante a .
+Note que o arquivo tem 80589 caracteres e estamos na posição 44601.
+(point) -> 44601
+(point-min) -> 1 (início do buffer).
+(point-max) -> 80589 (fim do buffer).
+*** what-line: Retorna o número da linha onde esta o cursor.
+(what-line) -> Line 1059
+*** buffer-size: Retorna número de caracteres do buffer.
+(buffer-size) -> 66051
+*** buffer-name: Retorna o nome do buffer.
+(buffer-name) -> emacs-guiaReferencia-andreduartebueno.org
+*** buffer-file-name: Retorna o nome do arquivo. Lembre que existe um buffer na memória e se já foi salvo, estará associado a um arquivo. O nome do arquivo inclui a sua path.
+(buffer-file-name) -> /home/andreduartebueno/Dropbox/02-Ensino/1-Apostilas-Livros-Pessoais/Livro-8-UsandoEmacs-AndreDuarteBueno/MaterialBueno/emacs-guiaReferencia-andreduartebueno.org
+*** current-buffer: o buffer ativo no momento.
+(current-buffer) -> #<buffer emacs-guiaReferencia-andreduartebueno.org>
+(setq bbb (current-buffer))
+*** switch-to-buffer nomeBuffer: Alterna  cursor ativo para o buffer nomeBuffer.
+(switch-to-buffer nomeBuffer)
+(switch-to-buffer "scratch") -> Alterna para o buffer scratch e mostra o cursor neste buffer.
+*** bufferp: Informa se é um buffer
+(message "O objeto é um buffer: %s" (bufferp (current-buffer))) -> t
+*** get-buffer: Retorna o buffer como variável (retorna o objeto buffer).
+(get-buffer "scratch")
+*** rename-buffer: Renomeia o buffer corrente. Note que se estiver associado a um arquivo o nome do arquivo permanece o mesmo. Só atualiza o nome do buffer.
+(rename-buffer "novoNomeBuffer")
+*** set-buffer nomeBuffer: Neste caso estamos definindo que o buffer ativo é o buffer nomeBuffer, mas diferente de switch-to-buffer não alterna a visualização para lá. Note que podemos usar isso para setar um buffer onde uma saída será realizada.
+;; A saída será no buffer scratch
+(progn
+ (switch-to-buffer "scratch")
+ (insert  "\nOi, tudo bem 1!")
+ (insert  "\nOi, tudo bem 2!\n"))
+*** kill-buffer: Apaga/deleta o buffer.
+(kill-buffer nomeDoBuffer)
+*** buffer-list: Retorna lista com os nomes dos buffers existentes
+(buffer-list)
+-> (#<buffer *ielm*> #<buffer emacs-guiaReferencia-andreduartebueno.org>  #<buffer scratch> #<buffer *Messages*> #<buffer adb-early-init-emacs28.org> )
+*** get-buffer-create: Retorna o buffer, se o buffer não existe vai criar.
+(get-buffer-create "nomeDoBuffer")
+(get-buffer-create "scratch")
+*** erase-buffer: Apaga o conteúdo do buffer corrente.
+(erase-buffer)
+*** with-current-buffer: Muda temporariamente para o buffer, isto é, durante a execução de um código.
+(with-current-buffer nomeBuffer ...)
+*** pop-to-buffer:  Abre o buffer informado numa nova janela.
+(pop-to-buffer  "scratch")
+*** view-mode: Alterna para modo view-mode, somente leitura.
+(view-mode)
+*** goto-char: Move o cursor para posição n.
+Exemplo:
+; posição corrente
+(point) -> 3400
+; avançar 5 caracteres
+(goto-char (+ 5 (point)))
+123456789
+** Funções do usuário
+*** lambda: É uma função sem nome
+(lambda () "Resultado") -> (lambda nil "Resultado")
+(lambda () (* 8 9 )) -> (lambda nil (* 8 9 ))
+
+Para avaliar um lambda coloque dentro de ()
+((lambda () (* 8 9 ))) -> 72
+
+*** fset: Usada para dar um nome a uma função lambda (função set).
+(fset 'multiplica  (lambda (x y)
+   (* x y)))
+
+(multiplica 3 4) -> 12
+
+*** deffun: define uma função nomeada.
+O comentário é opcional.
+(defun NomeFuncao (parâmetros) "comentário"
+ (conteúdo))
+; comentário 
+(defun NomeFuncao (parâmetros)
+ (conteúdo))
+;; Criando função que soma o parâmetro x ao valor 3
+(defun FSoma3 (x) "Soma o valor 3 ao parâmetro x"
+ (+ 3 x))
+;; Executa função FSoma3 passando parâmetro 5
+(FSoma3 5) -> 8
+
+Podemos criar função com número de número de parâmetros variável.
+Se um valor não é passado o mesmo assume nil.
+(defun Concatena (a b c &optional d e ) "Soma os valores"
+ (concat a b c d e))
+(Concatena "1" "2" "3")
+(Concatena "1" "2" "3" "4")
+(Concatena "1" "2" "3" "4" "5")
+(concat "1" "2" "3" "4" "5")
+
+Também podemos usar &rest para receber os demais valores.
+; Cria função FormataString
+( defun FormataString (m1 m2 &rest m3 m4 )
+( print ( format "m1 = %s m2 = %s m3 = %s m4 = %s" m1 m2 m3 m4 )))
+; Uso, note que m3 pega todo resto para sí e m4 é nil
+(FormataString "msg1" "msg2")
+-> m1 = msg1 m2 = msg2 m3 = nil m4 = nil
+(FormataString "msg1" "msg2" "msg3")
+-> m1 = msg1 m2 = msg2 m3 = (msg3) m4 = nil
+(FormataString "msg1" "msg2" "msg3" "msg4")
+-> msg2 m3 = (msg3 msg4) m4 = nil
+
+Podemos criar uma função em linha (inline), cujo código  é substituído no local. Isso deixa a função mais rápida, e, como consequência aumenta o tamanho efetivo do código.
+Para usar inline troque defun por defsubst.
+Exemplo:
+ Jusofaan1@
+ ( defsubst FSoma2 (x y) (+ x y ))
+(FSoma2 3 4) -> 7
+
+; no exemplo abaixo criamos um find replace que atua no buffer informado
+(defun find-and-replace (buffer old-string new-string)
+  (interactive
+   (list
+    (current-buffer)
+    (read-string "String antiga: ")
+    (read-string "String nova: ")
+   )
+  )
+  (with-current-buffer buffer
+    (replace-string old-string new-string)
+  )
+)
+
+(find-and-replace (current-buffer) "olá" "oi")
+
+** progn: Use para construir pequenos programas com mais de uma linha de execução.
+Exemplo:
+(progn
+ (insert  "\nOi, tudo bem 1!\n")
+ (insert  "Oi, tudo bem 2!\n"))
+->
+Oi, tudo bem 1!
+Oi, tudo bem 2!
+
+*** let: Seta váriaveis internas a uma função; não é visível fora;
+(let (( x 5))
+(eval 'x )) -> 5
+
+(let (( x 5))
+(eval '(+ x 7) )) -> 12
+
+
+;; se usar message a mensagem aparece no buffer local e desaparece, use print
+(let ((dog-name "Molly")
+      (dog-propertie "muito linda")
+      (dog-raca "Border Collie")
+      (dog-age 7))
+      ;; message mostra mensagem
+      (message "Message aparece no buffer local e desaparece, somente a última message vai aparecer")
+      (message "A doguinha mais linda do mundo\né a %s,\nela é da raça %s e \né %s. \nEsta com %d anos de idade" dog-name dog-propertie dog-raca dog-age))
+
+;; Podemos criar uma função lambda e associar a mesma a um atalho.
+;; No exemplo a seguir C-x p move para janela anterior. Note que  requer as duas janelas abertas.
+(define-key global-map "\C-xp"
+(function (lambda() "" (interactive) (other-window -1))))
+
+** Estruturas condicionais
+*** if: estrutura condicional
+(if (condição) (acaoTrue) (acaoFalse))
+
+Exemplo:
+(defvar x 10 "valor de x=10") -> 10
+(print x) -> 10
+(defvar y 5  "valor de y=5")
+(if ( > x y )
+  ( message "true" )
+  ( message "false" )
+)
+
+Note que após o if temos apenas um bloco (verdadeiro) e um bloco (falso), se for necessário vários blocos use progn.
+Note que progn funciona como um bloco de código.
+Exemplo:
+(defun FuncaoProcessai (i) "Mostra i na tela"
+ (message "i=%d" i))
+(FuncaoProcessai 4) 
+(setq i 1)
+(setq max 10)
+( if (< i max )
+  ( progn
+  ( FuncaoProcessai i )
+  ( setq i (+ i 1))
+  )
+  ( message   "Valor final de i=%d" i)
+))
+
+Exemplo:
+Fonte: https://youtu.be/RhwCClMdaps?list=PLGMx7bOKMJTw4p7vs1kTGBAnW81NB57Wv&t=381
+(defun my-org-table-previous-row ()
+"Muda para linha anterior"
+(interactive)
+(unless (org-at-table-hline-p)
+        (org-table-maybe-eval-formula)
+        (org-table-maybe-recalculate-line))
+(if (and org-table-automatic-realign
+         org-table-may-need-update)
+    (org-table-align))
+(let ((col (org-table-current-column)))
+ (when (and (org-at-table-p)
+            (not (= (org-table-current-line) 1)))
+    (previous-line)
+    (unless (org-at-table-hline-p)
+      ( org-table-goto-column col)))))
+ 
+ (define-key org-mode-map (kbd "M-m") 'my-org-table-previous-row)
+
+*** when : Se verdadeiro executa ações 
+;; (when (condição) (ação1) (ação2)... )
+(when (> x y)
+  (message "x > y")
+  (sleep-for 1)
+  (message "Uma mensagem!"))
+
+*** cond : Várias condicionais e ações
+;; A forma cond permite um número arbitrário de condicionais e ações.
+;; (cond ((< number 1) (message "Number < 1"))
+(setq numero 4)
+(cond
+(( < numero 3 ) (message "Numero < 3"))
+(( < numero 5 ) (message "Numero < 5"))
+(t              (message "Numero >= 5")))
+** Estruturas de repetição
+*** dolist: Para cada elemento da lista realição ação (c++ for(auto e: lista))
+; equivale a for_each de C++
+(setq doguinhos '(Molly Nina Koto Faisca))
+(dolist (element doguinhos)
+(print element))
+*** dotimes: Repete n vezes
+; equivale a um for de C/C++.
+;; (dotimes (count n value)  (ação1 a ser repetida)(ação2 a ser repetida))
+(let (value)
+(dotimes (count 4 value)
+  (cons count value)
+  (print value)
+  (print count)))
+
+Explicação:
+Cria a variável local value com valor nulo.
+Repete 4x as expressões abaixo, o valor final é retornado em value.
+Adiciona count na lista value e seta value;
+
+*** while: Enquanto tiver elementos na lista realização ação
+;; while
+(setq doguinhos '(Molly Nina Koto Faisca))
+(while doguinhos
+ (print (car doguinhos))
+ (setq doguinhos (cdr doguinhos)))
+*** while: Enquanto verdadeiro repete ação
+;; while count
+(setq count 20)
+(while (< count 10)
+(message count)
+(setq count (1+ count)))
+
+*** conditional-case:
+;; condicional-case
+(condition-case
+	var
+	bodyform
+	error-handler)
+
+Exemplo:
+(condition-case (var bodyform error-handler …)
+  (condition bodyform)
+  (condition bodyform)
+  …
+  (t error-handler))
+    
+* Expressões regulares
+** TODO Conferir com capítulo de expressões regulares do livro
+** TODO Colocar este capítulo como apêndice do livro do /emacs/ e com adaptações para que funcione no /emacs/
+. Casa com qualquer caracter (exceto nova linha \n).
+Ex: Andr. -> casa com: André
+
+\| Uma opção.
+Ex: x|y -> casa com x ou y.
+
+\{n\} n repetições.
+Ex: x\{3\} -> casa com xxx.
+
+\* Padrão anterior é repetido 0 ou mais vezes.
+Ex: A* -> casa com: nada, A, AA, AAA, ...
+
+\+ Padrão anterior é repetido 1 ou mais vezes.
+
+? Padrão anterior pode casar uma ou zero vezes.
+Ex: ?B -> casa com: B, BB, BBB, ...
+
+[ Casa com qualquer caracter da lista.
+Ex: [abc -> casa com: a, b, c
+
+^ Início da linha.
+Ex: ^(setq -> casa com: (setq no início da linha.
+
+$ Final de  um buffer.
+
+Padrão ansi:
+[:ascii:] Caracter ASCII.
+[:alnum:] Caracter alfanumérico.
+[:alpha:] Caracter alfabético.
+[:blank:] Espaços e tabs.
+[:digit:] Dígitos numéricos.
+[:lower:] Letras minúsculas.
+[:upper:] Letras maiúsculas.
+
+* Principais comandos M-x
+count-words : Conta palavras.
+keep-lines	: Delete all lines not matching the provided regex.
+flush-lines	: Delete all lines matching the provided regex.
+sort-lines	: Sort lines in region alphabetically.
+delete-duplicate-lines	: Delete all but one copy of any identical lines in the region.
+ff-find-other-file	: Find the header or source file corresponding to this file.
+
+* Leituras complementares
+https://aleph0.info/jp/emacs-lisp.pdf
+Ler sobre Escopo léxico em lisp. Explica como funciona o escopo e a avaliação dinâmica (em tempo de execução).
+
+* Exemplos práticos de uso de LISP/ELISP
+Exemplo:
+Digamos que temos a sequência de números abaixo
+123789
+123789
+123789
+E que queremos colar, depois do 123 os valores 456.
+Como temos 3 linhas vamos criar 3 linhas com os valores 456.
+Podemos fazer isso digitando 3 linhas com os valores 456, ou digitar uma vez copiar e colar 2x, ou ainda fazer um código em ELISP que cria a coluna com os valores.
+Lembre que dotimes repete um comando e insert insere um resultado no buffer corrente, então vamos escrever e executar o código abaixo:
+(dotimes (count 3)
+  (insert "\n456"))
+456
+456
+456
+
+Agora vamos copiar o retângulo com os valores 456 para a área de transferência.
+Selecione o retangulo usando C-x space e mova o cursor.
+Copie usando M-w ou recorte usando C-w;
+Agora selecione o intervalo onde vai colar, pressione C-x space e selecione uma linha vertical movendo o cursor para baixo.
+Pressione C-y para colar.
+
+Após aplicar os comandos
+123456789
+123456789
+123456789
+
+Outra possibilidade é digitar f3 gravar uma sequência de teclas e pressionar f4 para finalizar;
+Depois pressiona f4 para repetir a macro.
+
+
+
+
+** Testes
+(message "Hello world!")
+(print  "Hello world!")
+( make−string 10 ?a )
+( insert "A word is dead when it ’ s said , they say " )
+
+* ; [não funciona elisp].
+* /Emacs/ 28 e 29
+Criei aliases para rodar /emacs/ 28 e 29.
+alias emacs28="/home/andreduartebueno/emacs28/emacs-28.2/src/emacs-28.2.1"/
+alias emacs28="emacs --init-directory=~/.emacs.d-v29/"
+alias emacs="emacs --init-directory=~/.emacs.d-v29/"
+alias emacs-29.1="emacs-29.1 --init-directory=~/.emacs.d-v29/"
+
+* Atalhos personalizados no arquivo de inicialização  :@atalhopessoal:
+#+NAME: Atalhos personalizados
+Repetir aqui os atalhos que foram personalizados no arquivo de inicialização do /emacs/.
+
+Adicionar atalho para:
+M-x highlight-changes-mode : Mostra o que mudou a partir da execução do comando, mudanças aparecem em vermelho.
+
+* Atalhos raramente usados porque tem teclas navegação, personalizar os mesmos
+M-a : Início sentença.
+M-e : Fim da sentença.
+C-= : No modo org-mode, tabela,use C-= para inserir equação
+
+* Tabela Atalhos definidos pelo gnome, /emacs/ e neste arquivo(personalização)
+- A seguir tabela que mostra os atalhos definidos pelo gnome, /emacs/ e neste arquivo
+  |-----------------+-----------------------------------------------------------+---|
+  | Atalho          | Descrição                                                 |   |
+  |-----------------+-----------------------------------------------------------+---|
+  | F1              | Ajuda                                                     |   |
+  | F2              | sem resposta visivel                                      |   |
+  | F3              | start macro teclado                                       |   |
+  | F4              | end macro teclado (ou roda última macro)                  |   |
+  | F5              | deleta espaços inúteis                                    |   |
+  | F6              | ivy-resume                                                |   |
+  | F7              | salva arquivo                                             |   |
+  | F8              | compilar                                                  |   |
+  | F9              | reverte buffer se modificado externamente                 |   |
+  | F10             | acessa menu                                               |   |
+  | F11             | ativa/desativa menu                                       |   |
+  | F12             | ativa/desativa barra de tarefas                           |   |
+  |-----------------+-----------------------------------------------------------+---|
+  | Ctrl            | Pressione Ctrl + Fi                                       |   |
+  |-----------------+-----------------------------------------------------------+---|
+  | F1              | undefined                                                 |   |
+  | F2              | undefined                                                 |   |
+  | F3              | undefined                                                 |   |
+  | F4              | undefined                                                 |   |
+  | F5              | undefined                                                 |   |
+  | F6              | undefined                                                 |   |
+  | F7              | undefined                                                 |   |
+  | F8              | undefined                                                 |   |
+  | F9              | gnome clipboard - lista copy                              |   |
+  | F10             | gnome clipboard - zerar a lista                           |   |
+  | F11             | sem resposta visivel                                      |   |
+  | F12             | sem resposta visivel                                      |   |
+  | Alt Tab         | gnome - Alterna foco do teclado barra superior/janela     |   |
+  | Alt Shift R     | gnome - Inicia/para gravação da tela ou parte da tela     |   |
+  |-----------------+-----------------------------------------------------------+---|
+  | Shift           | Pressione Shift + Fi                                      |   |
+  |-----------------+-----------------------------------------------------------+---|
+  | F1              | Atalhos de ajuda do /emacs/                                 |   |
+  | F2              | janela para completar comando                             |   |
+  | F3              | Inicia definição de macro (repete?)                       |   |
+  | F4              | sem resposta visivel                                      |   |
+  | F5              | sem resposta visivel                                      |   |
+  | F6              | ivy-resume                                                |   |
+  | F7              | salva arquivo                                             |   |
+  | F8              | compila                                                   |   |
+  | F9              | indefinido                                                |   |
+  | F10             | menu                                                      |   |
+  | F11             | ativa/desativa menu                                       |   |
+  | F12             | ativa/desativa barra de tarefas                           |   |
+  |                 |                                                           |   |
+  |-----------------+-----------------------------------------------------------+---|
+  | Alt             | Pressione Alt + fi                                        |   |
+  |-----------------+-----------------------------------------------------------+---|
+  | F1              | undefined                                                 |   |
+  | F2              | gnome - Executar comando                                  |   |
+  | F3              | undefined                                                 |   |
+  | F4              | Parece matar processo corrente                            |   |
+  | F5              |                                                           |   |
+  | F6              |                                                           |   |
+  | F7              |                                                           |   |
+  | F8              |                                                           |   |
+  | F9              |                                                           |   |
+  | F10             |                                                           |   |
+  | F11             |                                                           |   |
+  | F12             |                                                           |   |
+  | ESC             | gnome - Alterna entre as janelas do espaço atual          |   |
+  |-----------------+-----------------------------------------------------------+---|
+  |-----------------+-----------------------------------------------------------+---|
+  | Super           | Pressione Super + fi                                      |   |
+  |-----------------+-----------------------------------------------------------+---|
+  | F1              | gnome - Ajuda gnome                                       |   |
+  | F2              | undefined                                                 |   |
+  | F3              |                                                           |   |
+  | F4              |                                                           |   |
+  | F5              |                                                           |   |
+  | F6              |                                                           |   |
+  | F7              |                                                           |   |
+  | F8              |                                                           |   |
+  | F9              |                                                           |   |
+  | F10             | gnome - Acessar o menu de aplicativos                     |   |
+  | F11             |                                                           |   |
+  | F12             |                                                           |   |
+  | A               | gnome - Abrir visão/lista de aplicativos                  |   |
+  | space           | gnome - Alternar método de entrada                        |   |
+  | H               | gnome - Esconder janela                                   |   |
+  | L               | gnome - Bloquear tela                                     |   |
+  | M               | gnome - Alternar a área de notificações                   |   |
+  | N               | gnome - Expandir e focar uma notificação                  |   |
+  | V               | gnome - Mostra a lista de notificação.                    |   |
+  | --              | gnome - Pressione Super+V novamente ou Esc para fechar.   |   |
+  | tab             | gnome - Alternar ao próximo aplicativo                    |   |
+  |                 |                                                           |   |
+  | shift tab       | gnome - Alternar ao aplicativo anterior                   |   |
+  | '               | gnome - Alternar a próxima janela do aplicativo atual     |   |
+  | shift '         | gnome - Alternar a janela anterior do aplicativo atual    |   |
+  | PageDown        | gnome - Alternar ao próximo espaço de trabalho            |   |
+  | PageUp          | gnome - Alternar ao espaço de trabalho anterior           |   |
+  | shift PageDown  | gnome - Mover janela para o próximo espaço de trabalho    |   |
+  | shift PageUp    | gnome - Mover janela para o espaço de trabalho anterior   |   |
+  | shift <-        | gnome - Mover janela para o espaço de trabalho a esquerda |   |
+  | shift ->        | gnome - Mover janela para o espaço de trabalho a direita  |   |
+  |-----------------+-----------------------------------------------------------+---|
+  | Tab Or C-i      | Next Item                                                 |   |
+  | Shift-Tab       | Previous Item                                             |   |
+  | Return    / C-m | Open                                                      |   |
+  | r               | Recent files                                              |   |
+  | m               | Bookmarks                                                 |   |
+  | p               | Projects                                                  |   |
+  | a               | Org-Mode Agenda                                           |   |
+  | e               | Registers                                                 |   |
+  | g               | Refresh contents                                          |   |
+  | {               | Previous section                                          |   |
+  | }               | Next section                                              |   |
+  | Tab       / C-i | Nest item                                                 |   |
+  | Shift-Tab       | Previous Item                                             |   |
+  |                 |                                                           |   |
+  |-----------------+-----------------------------------------------------------+---|
+  | Site Youtube    |                                                           |   |
+  |-----------------+-----------------------------------------------------------+---|
+  | space           | Pausa/reprodução                                          |   |
+  | m               | Mute                                                      |   |
+  | c               | Closed caption / texto                                    |   |
+  | f               | Tela cheia                                                |   |
+  | <- e ->         | Retroceder/avançar 5 segundos                             |   |
+  | Home e End      | Início e fim                                              |   |
+  | /               | Caixa de pesquisa                                         |   |
+  | Shift-N         | Next vídeo                                                |   |
+  | Shift-P         | Vídeo anterior                                            |   |
+  |                 |                                                           |   |
+
+Fonte: https://github.com/VernonGrant/emacs-keyboard-shortcuts
+Shortcuts:
+Shortcut	CommandInvoked	Description
+C-x Esc Esc	repeat-complex-command	Edit and re-evaluate last complex command.
+C-h m	describe-mode	Help information for the current buffers modes.
+C-h f	describe-function	Help information for a function.
+C-h x	describe-command	Help information for a command (a function available using M-x).
+C-h l	view-lossage	Show log for key presses and commands.
+C-k	kill-line	Kill rest of line, or line if empty.
+C-/	undo	Undo.
+C-g C-/	undo-redo	Redo.
+C-y	yank	Yank from kill ring.
+M-y	yank-pop	Yank down the kill ring.
+C-y M-y	yank-pop	Cycle through kills after a yank.
+M-/	dabbrev-expand	Dabbrev (word) expand.
+M-C-/	dabbrev-completion	Dabbrev (word) completion.
+C-x s	save-some-buffers	Save all buffers.
+C-x C-s	save-buffer	Save current buffer.
+C-x C-w	write-file	Write the current buffer, can provide new file name.
+C-o	open-line	Add blank line below.
+C-x C-o	delete-blank-lines	Delete all blank lines below.
+C-x C-c	save-buffers-kill-terminal	Quit /Emacs/.
+C-x <left>	previous-buffer	Switch to the previous buffer.
+C-x <right>	next-buffer	Switch to the next buffer.
+M--	negative-argument	Prefix to perform negative meta commands.
+C--	negative-argument	Prefix to perform negative commands.
+C-a	move-beginning-of-line	Move cursor to the beginning of the line.
+C-e	move-end-of-line	Move cursor to the end of the line.
+M-a	backward-sentence	Move cursor to the beginning of the sentence.
+M-e	forward-sentence	Move cursor to the end of the sentence.
+M-m	back-to-indentation	Move cursor to the first non-whitepsace character on the line.
+M-k	kill-sentence	Kill rest the rest of theing of the line.
+M-l	downcase-word	Lowercase word forward.
+M-c	capitalize-word	Capitalize word forward.
+M-u	upcase-word	Uppercase word forward.
+C-<space> C-<space>	set-mark-command	Add mark to mark ring.
+C-u C-<space>	set-mark-command	Jump to previous mark.
+C-x f	set-fill-column	Set fill column number.
+M-q	fill-paragraph	Wrap/reformat to fill column.
+M-v	scroll-down-command	Page up.
+C-v	scroll-up-command	Page down.
+M-^	delete-indentation	Join previous line.
+M-- M-^	delete-indentation	Join following line.
+M-<	beginning-of-buffer	Go to start of file.
+M->	end-of-buffer	Go to end of file.
+M-{	backward-paragraph	Previous paragraph.
+M-}	forward-paragraph	Next paragraph.
+C-x C-f	find-file	Find file.
+C-x C-v	find-alternate-file	Find alternative file.
+C-x k	kill-buffer	Kill current or named buffer.
+C-x o	other-window	Go to next window, split.
+C-x O	other-window	Go back to previous window, split.
+C-x i	insert-file	Insert file contents into the current file.
+C-x h	mark-whole-buffer	Highlight entire buffer.
+C-M-\	indent-region	Re-indent code region in region or from previous mark point.
+C-x C-x	exchange-point-and-mark	Put the mark where point is now, and point where the mark is now.
+C-x C-j	dired-jump	Open Dired jump.
+C-x SPC	rectangle-mark-mode	Rectangle edit mode, can use string-insert-rectangle.
+C-x +	balance-windows	Resize all splits to equal sizes.
+C-x 5 2	make-frame-command	Open in new frame.
+C-x r SPC	point-to-register	Point-to-register.
+C-x r j	jump-to-register	Jump-to-register.
+g	revert-buffer	Refresh page, workes on many UI pages.
+M-s o	occur	List lines using regex.
+M-s h r	highlight-regexp	Highlights regex expression.
+M-r	move-to-window-line-top-bottom	Move cursor to top, middle and bottom.
+C-l	recenter-top-bottom	Move text in relation to the cursor, to top, middle and bottom.
+M-!	shell-command	Run a shell command.
+M-&	async-shell-command	Async shell command.
+C-u 0	universal-argument	Infinite count prefix.
+C-u {count}	universal-argument	Repeat operation x amount of times.
+C-x z	repeat	Repeat command.
+C-x backspace	backward-kill-sentence	Clear mini-buffer.
+C-k C-k C-y C-y		Duplicate line. (Place cursor at start)
+M-g M-g	goto-line	Go to line.
+C-x b	switch-to-buffer	Quick switch buffer.
+C-x 1	delete-other-windows	Kill other windows.
+M-z (char)	zap-to-char	Zap up to char.
+C-M-\	indent-region	Re-indent region.
+C-x * g	calc-dispatch	Eval in new buffer.
+M-<space>	just-one-space	Removes extra whitespace between two words.
+C-u M-x	universal-argument	Run command with additional options.
+C-x TAB	indent-rigidly	Allows you to manually indent a region inwards or outwards.
+C-x x t	toggle-truncate-lines	Turn on or off line truncation.
+locate	Find a files matching a pattern across the entire system.
+recentf	Shows a list of recent files, if recentf mode is enabled.
+Macros
+Shortcut	Command Invoked	Description
+C-x (	kmacro-start-macro	Define keyboard macro.
+C-x )	kmacro-end-macro	End keyboard macro definition.
+C-x e	kmacro-end-and-call-macro	Playback keyboard macro, can just keep pressing e after first press.
+C-x C-k <space>	kmacro-step-edit-macro	Open keyboard macro debugger.
+C-x C-k e	edit-kbd-macro	Enter macro editor, (C-c C-c) to finish editing.
+C-x C-k n	kmacro-name-last-macro	Save the keyboard macro for later use.
+insert-kbd-macro	Insert a saved macro into the file, in /Emacs/ lisp.
+Project
+Shortcut	Command Invoked	Description
+C-x p !	project-shell-command	Run shell-command in the current project's root directory.
+C-x p &	project-async-shell-command	Run async-shell-command in the current project's root directory.
+C-x p f	project-find-file	Visit a file (with completion) in the current project.
+C-x p F	project-or-external-find-file	Visit a file (with completion) in the current project or external roots.
+C-x p b	project-switch-to-buffer	Display buffer in the selected window, for a buffer belonging to the current project.
+C-x p s	project-shell	Start an inferior shell in the current project's root directory.
+C-x p d	project-find-dir	Start Dired in a directory inside the current project.
+C-x p D	project-dired	Start Dired in the current project's root.
+C-x p v	project-vc-dir	Run VC-Dir in the current project's root.
+C-x p c	project-compile	Run compile in the project root.
+C-x p e	project-eshell	Start Eshell in the current project's root directory.
+C-x p k	project-kill-buffers	Kill the buffers belonging to the current project.
+C-x p p	project-switch-project	Switch to another project by running an /Emacs/ command.
+C-x p g	project-find-regexp	Find all matches for REGEXP in the current project's roots.
+C-x p G	project-or-external-find-regexp	Find all matches for REGEXP in the project roots or external roots.
+C-x p r	project-query-replace-regexp	Query-replace REGEXP in all the files of the project.
+C-x p x	project-execute-extended-command	Execute an extended command in project root.
+Balanced Expressions
+Shortcut	Command Invoked	Description
+C-M-f	forward-sexp	Forward over an sexps.
+C-M-b	backward-sexp	Backward over a sexps.
+C-M-d	down-list	Move down into a sexps.
+C-M-u	backward-up-list	Move up out of a sexps.
+C-M-n	forward-list	Move forward to the sexps.
+C-M-p	backward-list	Move backward to the previous sexps.
+C-M-k	kill-sexp	Kill down into sexps.
+M-(	insert-parentheses	Wraps region in parenthesis.
+Incremental Search
+Shortcut	Command Invoked	Description
+C-M-s	isearch-forward-regexp	Regex search.
+C-s	isearch-forward	Incremental search.
+C-s C-s	isearch-repeat-forward	Repeat incremental search.
+C-s C-w	isearch-yank-word-or-char	Enter incremental search and start expanding the selection.
+C-r	isearch-backward	Incremental search backward.
+C-r C-r	isearch-repeat-backward	Repeat incremental search backward.
+C-s C-y	isearch-yank-kill	Start incremental search using yanked text.
+C-s M-y	isearch-yank-pop-only	Start incremental search from kill ring string.
+C-r	recursive-edit	During query replace, enter recursive edit mode.
+C-M-c	exit-recursive-edit	During query replace, exit recursive edit mode and continue query replacement.
+C-]	abort-recursive-edit	During query replace, exit recursive edit mode and query replace modes.
+M-s o	isearch-occur	Show all lines matching the search term in occur.
+M-s e	isearch-edit-string	To edit the search string in the minibuffer.
+M-s h r	isearch-highlight-regexp	Highlights the last search string.
+Query Replace
+Shortcut	Command Invoked	Description
+M-%	query-replace	Start a query replace operation.
+!		Replace all remaining matches in this buffer with no more questions.
+^		Move point back to previous match.
+u		Undo previous replacement.
+U		undo all replacements.
+E		Edit the replacement string.
+Tags
+Shortcut	Command Invoked	Description
+M-.	xref-find-definitions	Jump to tag.
+M-,	xref-go-back	Jump back.
+C-x 4 .	xref-find-definitions-other-window	Visit tag in new split.
+C-x 5 .	xref-find-definitions-other-frame	Visit tag in new frame.
+Xref
+Shortcut	Command Invoked	Description
+M-.	xref-find-definitions	Find definitions at point.
+M-,	xref-go-back	Pop marker and return.
+M-?	xref-find-references	Find references matching a pattern.
+C-M-.	xref-find-apropos	Find symbols matching a pattern.
+Bookmarks
+Shortcut	Command Invoked	Description
+C-x r m	bookmark-set	Create / set bookmark.
+C-x r b	bookmark-jump	Open bookmark.
+C-x r l	bookmark-bmenu-list	List bookmarks.
+Abbrev
+Shortcut	Command Invoked	Description
+C-x a g	add-global-abbrev	Add global abbrev.
+C-x a l	add-mode-abbrev	Add local abbrev.
+C-q		Mute abbrev.
+Ivy Buffer
+Shortcut	Command Invoked	Description
+S-<space>	ivy-restrict-to-matches	Narrow search to current term.
+C-M-p	ivy-previous-line-and-call	Preview up.
+C-M-n	ivy-next-line-and-call	Preview down.
+M-o	ivy-dispatching-done	Open item options.
+Occur Buffer
+Shortcut	Command Invoked	Description
+e	occur-edit-mode	Directly edit the entry in place.
+C-c C-c	occur-mode-goto-occurrence	Return back to occur mode after edit.
+Dired Buffer
+Shortcut	Command Invoked	Description
+C-o	dired-display-file	Preview file but stay in Dired buffer.
+C-u k	dired-do-kill-lines	Remove section.
+X	dired-do-shell-command	Execute shell command on file.
+Q	dired-do-find-regexp-and-replace	Query replace marked files, <space> accept, n decline and C-x s to save all.
++	dired-create-directory	Create directory.
+^	dired-up-directory	Go up one directory.
+find-name-dired	Recursively find a file.
+IBuffer
+Shortcut	Command Invoked	Description
+/ /	ibuffer-filter-disable	Remove all filtering currently in effect.
+/ m	ibuffer-filter-by-used-mode	Add a filter by a major mode now in use.
+/ n	ibuffer-filter-by-name	Add a filter by buffer name.
+/ f	ibuffer-filter-by-filename	Add a filter by filename.
+Q	ibuffer-do-query-replace	Query replace in each of the marked buffers.
+Grep Buffer
+Shortcut	Command Invoked	Description
+C-c C-K	command kill-compilation	Kill process.
+Compile Buffer
+Shortcut	Command Invoked	Description
+?	describe-mode	Describe-mode.
+g	recompile	Recompile.
+h	describe-mode	Describe-mode.
+q	quit-window	Quit-window.
+compile	Run one of the targets in your make file.
+Interactively Do Things (Ido) Buffer
+Shortcut	Command Invoked	Description
+M-f	ido-wide-find-file-or-pop-dir	Find file recursively. Search into sub directory.
+?	ido-completion-help	See a full list of all matching buffers.
+C-j	ido-select-text	Choose selected file/folder/text from minibuffer. e,g. Open folder in Dired .
+C-x C-f ... C-d	dired	Enter dired on the current directory.
+C-x C-f ... C-f	find-file	Fallback to non-Ido, while finding a files.
+C-x C-b ... C-b	ido-switch-buffer	Fallback to non-Ido, while finding a buffer.
+Interface To Spell (Ispell) and On The Fly Spell (Flyspell)
+Shortcut	Command Invoked	Description
+M $	ispell-word	Check and correct spelling of the word at point.
+C-M i	completion-at-point	Complete the word before point based on the spelling dictionary.
+M-TAB	flyspell-auto-correct-word	Automatically corrects the current word at point, will also cycle between option.
+C-c $	flyspell-correct-word-before-point	Correct word before point.
+flyspell-mode	Enable Fly-spell mode, which highlights all misspelled words.
+flyspell-prog-mode	Enable Fly-spell mode for comments and strings only.
+flyspell-buffer	Check and correct spelling in the buffer.
+Org Buffer
+Shortcut	Command Invoked	Description
+S-M-RET	org-insert-todo-heading	Insert a new TODO entry below the current one.
+C-c / t	org-match-sparse-tree	View todo items in a sparse tree.
+C-c C-t	org-todo	Toggle todo item state.
+C-c C-s	org-schedule	Schedule todo item.
+C-c C-d	org-deadline	Add deadline to todo item.
+C-c [	org-agenda-file-to-front	Add file to agenda.
+C-c ]	org-remove-file	Remove file to agenda.
+C-c .	org-timestamp	Insert current date.
+C-c C-e	org-export-dispatch	Open exporter.
+C-c C-e #	org-export-dispatch	Insert template.
+C-c C-e P x	org-export-dispatch	Export specific project.
+EWW
+Shortcut	Command Invoked	Description
+B	eww-list-bookmarks	Display your bookmarks.
+b	eww-add-bookmark	Add the current page as a bookmark.
+l	eww-back-url	Go to the previously displayed page.
+r	eww-forward-url	Go to the next displayed page.
+g	eww-reload	Reload the current page.
+G	eww	Go to a new address.
+H	eww-list-histories	Shows a list of your histories.
+TAB	shr-next-link	Skip to the next link.
+
+

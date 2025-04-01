@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 13.0.2, 2024-08-14T18:01:26. -->
+<!-- Written by QtCreator 13.0.2, 2024-08-14T19:57:00. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -240,11 +240,13 @@
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
     <value type="QString" key="PerfRecordArgsId">-e cpu-cycles --call-graph dwarf,4096 -F 250</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey"></value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/andreduartebueno/Dropbox/05-Gestao/Modelos/Modelos-Documentos-Diretorios/LDSC-Ajuda-DocumentosAuxiliares/02-Softwares/04-BibliotecasProgramacaoC++/02-QCustomPlot/qcustomplot-2024/examples/plots/plot-examples.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/andreduartebueno/Dropbox/05-Gestao/Modelos/Modelos-Documentos-Diretorios/LDSC-Ajuda-DocumentosAuxiliares/02-Softwares/04-BibliotecasProgramacaoC++/02-QCustomPlot/qcustomplot-2024/examples/plots/plot-examples.pro</value>
     <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
+    <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/andreduartebueno/Dropbox/05-Gestao/Modelos/Modelos-Documentos-Diretorios/LDSC-Ajuda-DocumentosAuxiliares/02-Softwares/04-BibliotecasProgramacaoC++/02-QCustomPlot/qcustomplot-2024/examples/plots/build/Qt_6_6_2_qt6-Debug</value>
    </valuemap>
    <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>

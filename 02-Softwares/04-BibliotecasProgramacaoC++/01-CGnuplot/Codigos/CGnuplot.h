@@ -153,6 +153,7 @@ public:
  //---------------------------------------------------------------------------------Construtores
   /// @brief Construtor, seta o estilo do grafico na construcao.
   Gnuplot (const std::string & style = "points");
+
   /// @brief Construtor, plota um grafico a partir de um vector, diretamente na construcao.
   Gnuplot (const std::vector < double >&x,
 	   const std::string & title = "",

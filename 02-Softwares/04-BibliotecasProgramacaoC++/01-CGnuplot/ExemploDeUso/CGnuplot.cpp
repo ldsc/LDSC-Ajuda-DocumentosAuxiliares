@@ -74,7 +74,7 @@
 #include "CGnuplot.h"
 
 // Se estamos no windows // defined for 32 and 64-bit environments
-#if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__TOS_WIN__)
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__TOS_WIN__) 
  #include <io.h>                // for _access(), _mktemp()
  #define GP_MAX_TMP_FILES  27   // 27 temporary files it's Microsoft restriction
 // Se estamos no unix, GNU/Linux, Mac Os X
@@ -106,8 +106,7 @@ std::string Gnuplot::m_sGNUPlotPath = "/usr/bin/";
 std::string Gnuplot::terminal_std = "windows";
 // Se estamos no unix, GNU/Linux
 #elif ( defined(unix) || defined(__unix) || defined(__unix__) ) && !defined(__APPLE__)
-std::string Gnuplot::terminal_std = "qt";
-//std::string Gnuplot::terminal_std = "x11";
+std::string Gnuplot::terminal_std = "x11";
 // Se estamos Mac Os X
 #elif defined(__APPLE__)
 std::string Gnuplot::terminal_std = "aqua";
@@ -1264,7 +1263,7 @@ Gnuplot& Gnuplot::operator<<(const std::string &cmdstr)
 void Gnuplot::init()
 {
     // char * getenv ( const char * name );  get value of an environment variable
-    // Retrieves a C string containing the value of the environment variable whose
+    // Retrieves a C string containing the value of the environment variable whose 
     // name is specified as argument.
     // If the requested variable is not part of the environment list, the function returns a NULL pointer.
 #if ( defined(unix) || defined(__unix) || defined(__unix__) ) && !defined(__APPLE__)
