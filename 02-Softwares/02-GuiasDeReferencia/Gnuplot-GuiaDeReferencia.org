@@ -1,0 +1,504 @@
+#+TITLE: gnuplot-GuiaReferenciaSoftwares.org
+#+AUTHOR: André Duarte Bueno - bueno@flenep.uenf.br
+#+TODO: TODO DOING | DONE  DELEGATE FUTURE
+#+TAGS: { @UENF(o) @CASA(h) } LER(r) RESUMIR(R) AULA(a) PROJETO(p)
+
+* GNUPLOT - Guia de Referência de Comandos (por funcionalidade)
+
+Fonte: geminni! TESTAR ANTES DE USAR!
+
+** Definição do Ambiente e Saída
+*** set terminal <terminal_type> <options>
+
+    : Define o tipo de saída gráfica (e.g., png, jpeg, svg, pdf, qt, x11).
+    : <options> dependem do terminal (e.g., size, font, linewidth).
+
+*** set output "<filename>"
+
+    : Redireciona a saída gráfica para um arquivo. Sem filename, retorna para a saída padrão.
+
+*** unset output
+
+    : Cancela a redireção para arquivo.
+
+*** set encoding <encoding>
+
+    : Define a codificação de caracteres (e.g., iso_8859-1, utf8).
+
+*** set locale "<locale>"
+
+    : Define as configurações regionais para formatação de números e datas.
+
+*** set font "<fontname>,<fontsize>"
+
+    : Define a fonte padrão para textos.
+
+*** set size <width>,<height>
+
+    : Define as dimensões da saída gráfica (relativas ou absolutas).
+
+*** set origin <x>,<y>
+
+    : Define a origem do gráfico na saída (relativa).
+
+*** set termoption <option>
+
+    : Define opções específicas do terminal.
+
+** Definição do Gráfico
+*** plot <ranges> <data> <style>, <data> <style>, ...
+
+    : Comando principal para plotar dados.
+    : <ranges>: define os limites dos eixos (e.g., [xmin:xmax], [ymin:ymax]).
+    : <data>: especifica a fonte dos dados (arquivo, inline, função).
+    : <style>: define o estilo de plotagem (e.g., lines, points, linespoints, histogram).
+
+*** splot <ranges> <data> <style>, <data> <style>, ...
+
+    : Comando para plotar dados em 3D (superfícies, pontos, linhas).
+    : <ranges>: define os limites dos eixos x, y e z.
+
+*** replot
+
+    : Re-executa o último comando `plot` ou `splot`.
+
+** Definição de Eixos
+*** set xrange [<min>:<max>]
+
+    : Define os limites do eixo x.
+
+*** set yrange [<min>:<max>]
+
+    : Define os limites do eixo y.
+
+*** set zrange [<min>:<max>]
+
+    : Define os limites do eixo z (para `splot`).
+
+*** set autoscale <axis>
+
+    : Ativa ou desativa o ajuste automático da escala do eixo (<axis>: x, y, z, xy, etc.).
+
+*** unset autoscale <axis>
+
+    : Desativa o ajuste automático da escala do eixo.
+
+*** set [xyz]tics <options>
+
+    : Controla a colocação e formatação das marcas de escala nos eixos.
+    : <options>: e.g., add, border, format, interval, rotate, scale.
+
+*** unset [xyz]tics
+
+    : Desativa as marcas de escala do eixo.
+
+*** set [xyz]label "<text>"
+
+    : Define o rótulo do eixo.
+
+*** unset [xyz]label
+
+    : Remove o rótulo do eixo.
+
+*** set [xyz]minorgrid
+
+    : Ativa as linhas de grade menores nos eixos.
+
+*** unset [xyz]minorgrid
+
+    : Desativa as linhas de grade menores nos eixos.
+
+*** set [xyz]grid
+
+    : Ativa as linhas de grade nos eixos.
+
+*** unset [xyz]grid
+
+    : Desativa as linhas de grade nos eixos.
+
+*** set logscale <axis>
+
+    : Define a escala logarítmica para o eixo.
+
+*** unset logscale <axis>
+
+    : Remove a escala logarítmica do eixo.
+
+** Legenda e Título
+*** set title "<text>"
+
+    : Define o título do gráfico.
+
+*** unset title
+
+    : Remove o título do gráfico.
+
+*** set key <options>
+
+    : Controla a aparência e a posição da legenda.
+    : <options>: e.g., bottom, top, left, right, inside, outside, box, nobox.
+
+*** unset key
+
+    : Remove a legenda.
+
+** Estilos de Plotagem
+*** with lines
+
+    : Plota os dados conectados por linhas.
+
+*** with points
+
+    : Plota os dados como pontos.
+
+*** with linespoints
+
+    : Plota os dados com linhas conectando pontos.
+
+*** with impulses
+
+    : Plota barras verticais da linha de base até os pontos.
+
+*** with steps
+
+    : Plota uma função degrau.
+
+*** with fsteps
+
+    : Plota uma função degrau com o degrau no ponto.
+
+*** with histeps
+
+    : Plota uma função degrau com o degrau antes do ponto.
+
+*** with boxes
+
+    : Plota caixas (retângulos).
+
+*** with histograms
+
+    : Plota um histograma.
+
+*** with dots
+
+    : Plota pequenos pontos densamente espaçados.
+
+*** with vectors
+
+    : Plota vetores.
+
+*** with filledcurves
+
+    : Plota áreas preenchidas.
+
+*** with pm3d
+
+    : Plota dados 3D com cores mapeadas para um terceiro valor.
+
+*** with image
+
+    : Plota dados como uma imagem.
+
+*** with labels
+
+    : Plota texto em coordenadas específicas.
+
+*** with boxplot
+
+    : Plota um box plot (diagrama de caixa).
+
+** Dados e Funções
+*** using <specifiers>
+
+    : Especifica quais colunas dos dados usar e como transformá-las.
+    : <specifiers>: e.g., 1:2, 2:($3+$4), "stringcolumn":numericcolumn.
+
+*** inline data
+
+    $DATA
+    1 2
+    3 4
+    5 6
+    end
+    : Define dados diretamente no script.
+
+*** plot "<filename>" using ...
+
+    : Plota dados de um arquivo.
+
+*** f(x) = <expression>
+
+    : Define uma função de uma variável.
+
+*** g(x,y) = <expression>
+
+    : Define uma função de duas variáveis.
+
+*** set samples <n>
+
+    : Define o número de pontos a serem amostrados para plotar funções.
+
+*** set isosamples <n>
+
+    : Define o número de amostras em cada direção para `splot` de funções.
+
+** Personalização Adicional
+*** set style <style_element> <options>
+
+    : Define estilos para diferentes elementos do gráfico (e.g., line, point, fill).
+
+*** set palette <options>
+
+    : Controla a paleta de cores para plotagens com `pm3d` ou `image`.
+
+*** set colorbox <options>
+
+    : Controla a exibição da barra de cores associada à paleta.
+
+*** set arrow <tag> <options>
+
+    : Desenha uma seta no gráfico.
+
+*** set object <tag> <options>
+
+    : Desenha formas geométricas (e.g., rectangle, circle, ellipse) no gráfico.
+
+*** set label <tag> "<text>" at <x>,<y>{,<z>} <options>
+
+    : Coloca um rótulo de texto em coordenadas específicas.
+
+** Controle de Fluxo e Scripts
+*** load "<filename>"
+
+    : Executa comandos de um arquivo de script do gnuplot.
+
+*** if (<condition>) { ... } else { ... }
+
+    : Estrutura condicional.
+
+*** do for [var = start:end:increment] { ... }
+
+    : Loop `for`.
+
+*** pause <time> "<message>"
+
+    : Pausa a execução do script.
+
+*** print <expression>
+
+    : Imprime o valor de uma expressão.
+
+** Ajuda e Informação
+*** help <command>
+
+    : Exibe a ajuda para um comando específico.
+
+*** show <parameter>
+
+    : Exibe o valor atual de um parâmetro.
+
+*** show all
+
+    : Exibe todos os parâmetros configuráveis.
+
+*** version
+
+    : Exibe a versão do gnuplot.
+
+* Gnuplot.h
+** Class  Gnuplot
+
+{ public:
+  static void   Terminal (const std::string & type);
+  //---------------------------------------------------------------------------------Construtores
+  /// @brief Construtor, seta o estilo do grafico na construcao.
+  Gnuplot (const std::string & style = "points");
+  /// @brief Construtor, plota um grafico a partir dde um vector, diretamente na construcao.
+  Gnuplot (const std::vector < double >&x,const std::string & title = "",const std::string & style = "points",
+	   const std::string & labelx = "x",const std::string & labely = "y");
+  /// @brief Construtor, plota um grafico do tipo x_y a partir de vetores, diretamente na construcao.
+  Gnuplot (const std::vector < double >&x,const std::vector < double >&y,const std::string & title = "",
+	   const std::string & style = "points",const std::string & labelx = "x",const std::string & labely = "y");
+  /// @brief Construtor, plota um grafico de x_y_z a partir de vetores, diretamente na construcao.
+  Gnuplot (const std::vector < double >&x,const std::vector < double >&y,const std::vector < double >&z,
+	   const std::string & title = "",const std::string & style = "points",const std::string & labelx = "x",
+	   const std::string & labely = "y",const std::string & labelz = "z");
+  /// @brief Destrutor, necessario para deletar arquivos temporarios.
+  ~Gnuplot ();
+  //--------------------------------------------------------------------------------------------
+  /// @brief Envia comando para o gnuplot.
+  Gnuplot & cmd (const std::string & cmdstr);
+  /// @brief Sobrecarga operador <<, funciona como Comando.
+  Gnuplot & operator<< (const std::string & cmdstr);
+  /// @brief  Seta estilos de linhas (em alguns casos sao necessarias informacoes adicionais).
+  /// lines, points, linespoints, impulses, dots, steps, fsteps, histeps,
+  /// boxes, histograms, filledcurves
+  Gnuplot & Style (const std::string & stylestr = "points");
+  /// @brief  Ativa suavizacao. Argumentos para interpolacoes e aproximacoes.
+  /// csplines, bezier, acsplines (para dados com valor > 0), sbezier, unique,
+  /// frequency (funciona somente com plot_x, plot_xy, plotfile_x,
+  Gnuplot & Smooth (const std::string & stylestr = "csplines");
+  /// @brief Escala o tamanho do ponto usado na plotagem.
+  Gnuplot & PointSize (const double pointsize = 1.0);
+  /// @brief Ativa/Desativa o grid (padrao = desativado).
+  Gnuplot & Grid (bool _fgrid = 1);
+  /// @brief Seta taxa de amostragem das funcoes, ou dos dados de interpolacao.
+  Gnuplot & Samples (const int samples = 100);
+  /// @brief Seta densidade de isolinhas para plotagem de funcoes como superficies (para plotagen 3d).
+  Gnuplot & IsoSamples (const int isolines = 10);
+  /// @brief Ativa/Desativa remocao de linhas ocultas na plotagem de superficies (para plotagen 3d).
+  Gnuplot & Hidden3d (bool _fhidden3d = 1);
+  /// @brief Ativa/Desativa desenho do contorno em superficies (para plotagen 3d).
+  /// @param base, surface, both.
+  Gnuplot & Contour (const std::string & position = "base");
+  /// @brief  Ativa/Desativa a visualizacao da superficie (para plotagen 3d).
+  Gnuplot & Surface (int _fsurface = 1);  /// @brief Ativa/Desativa a legenda (a legenda é setada por padrao).
+  Gnuplot & Legend (const std::string & position = "default");
+  /// @brief Ativa/Desativa a legenda (a legenda é setada por padrao).
+  Gnuplot & Legend (int _flegend);
+  /// @brief Ativa/Desativa o titulo da secao do gnuplot.
+  Gnuplot & Title (const std::string & title = "");  /// @brief Seta o rotulo (nome) do eixo y.
+  Gnuplot & YLabel (const std::string & label = "y");  /// @brief Seta o rotulo (nome) do eixo x.
+  Gnuplot & XLabel (const std::string & label = "x");
+  /// @brief Seta o rotulo (nome) do eixo z.
+  Gnuplot & ZLabel (const std::string & label = "z");
+  /// @brief Seta intervalo do eixo x.
+  Gnuplot & XRange (const int iFrom, const int iTo);
+  /// @brief Seta intervalo do eixo y.
+  Gnuplot & YRange (const int iFrom, const int iTo);  /// @brief Seta intervalo do eixo z.
+  Gnuplot & ZRange (const int iFrom, const int iTo);
+  /// @brief Seta escalonamento automatico do eixo x (default).
+  Gnuplot & XAutoscale ();
+  /// @brief Seta escalonamento automatico do eixo y (default).
+  Gnuplot & YAutoscale ();
+  /// @brief Seta escalonamento automatico do eixo z (default).
+  Gnuplot & ZAutoscale ();
+  /// @brief Ativa escala logaritma do eixo x (logscale nao e setado por default).
+  Gnuplot & XLogscale (const double base = 10);
+  /// @brief Ativa/Desativa escala logaritma do eixo x (logscale nao e setado por default).
+  Gnuplot & XLogscale (bool _fxlogscale);  /// @brief Ativa escala logaritma do eixo y (logscale nao e setado por default).
+  Gnuplot & YLogscale (const double base = 10);
+  /// @brief Ativa/Desativa escala logaritma do eixo y (logscale nao e setado por default).
+  Gnuplot & YLogscale (bool _fylogscale);  /// @brief Ativa escala logaritma do eixo y (logscale nao e setado por default).
+  Gnuplot & ZLogscale (const double base = 10);  /// @brief Ativa/Desativa escala logaritma do eixo y (logscale nao e setado por default).
+  Gnuplot & ZLogscale (bool _fzlogscale);
+  /// @brief Seta intervalo da palette (autoscale por padrao).
+  Gnuplot & CBRange (const int iFrom, const int iTo);
+  //----------------------------------------------------------------------------------
+  /// @brief Plota dados de um arquivo de disco.
+  /// @brief Plota dados de um arquivo de disco.
+  Gnuplot & PlotFile (const std::string & filename,const int column = 1, const std::string & title = "");
+    /// @brief Plota dados de um vector.
+  Gnuplot & PlotVector (const std::vector < double >&x,const std::string & title = "");
+  /// @brief Plota pares x,y a partir de um arquivo de disco.
+  Gnuplot & PlotFile (const std::string & filename, const int column_x = 1,
+		      const int column_y = 2, const std::string & title = "");
+  /// @brief Plota pares x,y a partir de vetores.
+  Gnuplot & PlotVector (const std::vector < double >&x, const std::vector < double >&y,
+			const std::string & title = "");
+  /// @brief Plota pares x,y com barra de erro dy a partir de um arquivo.
+  Gnuplot & plotfile_xy_err (const std::string & filename,
+			     const int column_x = 1, const int column_y = 2,
+			     const int column_dy =3, const std::string & title = "");
+  /// @brief Plota pares x,y com barra de erro dy a partir de um arquivo.
+  Gnuplot & PlotFileXYErrorBar (const std::string & filename,
+				const int column_x = 1, const int column_y = 2,
+				const int column_dy = 3, const std::string & title = "");
+  /// @brief Plota pares x,y com barra de erro dy a partir de vetores.
+  Gnuplot & PlotVectorXYErrorBar (const std::vector < double >&x, const std::vector < double >&y,
+				  const std::vector < double >&dy, const std::string & title = "");
+  /// @brief  Plota valores de x,y,z a partir de um arquivo de disco.
+  Gnuplot & PlotFile (const std::string & filename, const int column_x = 1,
+		      const int column_y = 2,const int column_z = 3, const std::string & title = "");
+  /// @brief  Plota valores de x,y,z a partir de vetores.
+  Gnuplot & PlotVector (const std::vector < double >&x,const std::vector < double >&y,
+			const std::vector < double >&z,const std::string & title = "");
+  /// @brief Plota uma equacao da forma y = ax + b, voce fornece os coeficientes a e b.
+  Gnuplot & PlotSlope (const double a, const double b,const std::string & title = "");
+  /// @brief Plota uma  equacao fornecida como uma std::string y=f(x).
+  /// Escrever somente a funcao f(x) e nao y= ;   /// A variavel independente deve ser x.
+  /// Exemplo: gnuplot->PlotEquation(CFuncao& obj);
+  Gnuplot & PlotEquation (const std::string & equation,const std::string & title = "");
+  /// @brief Plota uma equacao fornecida na forma de uma std::string z=f(x,y).
+  /// Escrever somente a funcao f(x,y) e nao z=, as vaiaveis independentes sao x e y.
+  // gnuplot->PlotEquation3d(CPolinomio());
+  Gnuplot & PlotEquation3d (const std::string & equation,const std::string & title = "");
+  /// @brief Plota uma imagem.
+  Gnuplot & PlotImage (const unsigned char *ucPicBuf,const int iWidth, const int iHeight,
+		       const std::string & title = "");
+  //----------------------------------------------------------------------------------
+  // Repete o ultimo comando de plotagem, seja plot (2D) ou splot (3D)
+  // Usado para visualizar plotagens, após mudar algumas opcoes de plotagem
+  // ou quando gerando o mesmo grafico para diferentes dispositivos (showonscreen, savetops)
+  Gnuplot & Replot ();
+  // Reseta uma sessao do gnuplot (próxima plotagem apaga definicoes previas)
+  Gnuplot & Reset ();  // Reseta uma sessao do gnuplot e seta todas as variaveis para o default
+  Gnuplot & ResetAll ();
+  // Verifica se a sessao esta valida
+  bool  is_valid ();
+  // Verifica se a sessao esta valida
+  bool  IsValid ();
+};
+typedef Gnuplot   CGnuplot;
+#endif
+
+** Teste minimo
+
+// Programa de teste da classe CGnuplot.
+#include <iostream>
+
+#include "CGnuplot.h"
+
+using namespace std;       // Usando espaco de nomes da std
+
+void wait_for_key ()
+{
+  cout << endl << "Pressione ENTER para continuar..." << endl;
+  std::cin.clear();                             // Zera estado de cin
+  std::cin.ignore(std::cin.rdbuf()->in_avail());// Ignora
+  std::cin.get();                               // Espera o pressionamento do enter
+  return;
+}
+
+int main(int argc, char* argv[])
+{
+
+	cout  << "\n================================================================================"
+			<< "\n====================== Programa de teste da LIB_LDSC ==========================="
+			<< "\n================================================================================" << endl;
+
+	cout  << "\n================================================================================"
+			<< "\nUSO:"
+			<< "\n./cgnuplot.teste.min"
+			<< "\n================================================================================" << endl;
+
+    //Gnuplot::Terminal("wxt");       // Tipo de terminal gráfico
+  Gnuplot::Terminal("qt");       // Tipo de terminal gráfico
+      // ------------- Graficos 2D ----------------
+      Gnuplot g2d ("lines"); // Construtor
+      g2d.Legend("inside").Legend("left").Legend("bottom").Legend("box");
+      g2d.Title("Titulo do grafico"); // Titulo do grafico
+      g2d.XLabel("rotulo eixo x");    // Rotulo eixo x
+      g2d.YLabel("rotulo eixo y");    // Rotulo eixo y
+      g2d.XRange(-10,10);             // Seta intervalo do eixo x.
+      g2d.PlotEquation( "x*x*sin(x)");// Plota uma determinada equacao
+      wait_for_key();
+                                      // Usando os diferentes estilos de graficos
+
+      // Muda o estilo da funcao para linhas e replota
+      cout << "g2d.Style(\"points\")" << endl;
+      g2d.Style("points");    // Muda estilo linha
+      g2d.PlotEquation( "x*x*x*sin(x)");// Plota uma determinada equacao
+      //g2d.Replot();                   // Replota o gráfico
+      wait_for_key();
+
+      // Muda o estilo da funcao para impulsos, muda titulo e plota nova equacao
+      cout << "Style(\"impulses\")" << endl;
+      g2d.Style("impulses").Title("Style( impulses )").PlotEquation( "x*x+ 5");
+      wait_for_key();
+
+      g2d.Reset();                    // Reseta estado do grafico
+  cout << endl << "*** Fim do exemplo " << endl;
+  return 0;
+}
+

@@ -1,0 +1,572 @@
+#+TITLE: bash-GuiaReferenciaSoftwares.org
+#+AUTHOR: André Duarte Bueno - bueno@lenep.uenf.br
+#+TODO: TODO DOING | DONE  DELEGATE FUTURE
+#+TAGS: { @UENF(o) @CASA(h) } LER(r) RESUMIR(R) AULA(a) PROJETO(p)
+
+Abaixo gerado pelo gemini a partir da organização do seu material, aula de terminal, assim que puder copie para cá o que tem na aula de terminal.
+Um guia rápido e prático com comandos comuns do Bash e outras ferramentas de linha de comando úteis.
+
+* 1.5 Como obter ajuda
+
+Obter informações sobre como usar comandos é essencial.
+
+*** man Exibe o manual completo de um comando.
+**** <comando> Nome do comando para o qual buscar ajuda.
+***** Exemplo: =man ls=
+*** info Exibe a documentação de um comando, geralmente mais detalhada que man para alguns programas (como os do GNU).
+**** <comando> Nome do comando.
+***** Exemplo: =info coreutils=
+*** --help Exibe um resumo rápido de uso e opções comuns. A maioria dos comandos suporta esta opção.
+**** <comando> --help
+***** Exemplo: =ls --help=
+* 1.6 Como obter informações de seu computador
+
+Comandos para conhecer o hardware e o sistema.
+
+** uname Exibe informações sobre o sistema operacional.
+*** -a Exibe todas as informações disponíveis (kernel name, hostname, kernel release, kernel version, machine hardware name, operating system).
+*** -s Exibe o nome do kernel.
+*** -r Exibe a versão do kernel (release).
+**** Exemplo: =uname -a=
+** hostname Exibe ou define o nome do host do sistema.
+**** Exemplo: =hostname=
+** df Exibe informações sobre o espaço em disco usado e disponível dos sistemas de arquivos montados.
+*** -h Formato legível para humanos (KiB, MiB, GiB).
+*** -T Exibe o tipo de sistema de arquivos.
+**** Exemplo: =df -hT=
+** free Exibe a quantidade de memória livre e usada no sistema.
+*** -h Formato legível para humanos (KiB, MiB, GiB).
+**** Exemplo: =free -h=
+** lshw Lista informações detalhadas de hardware (pode precisar de sudo).
+*** -short Exibe um resumo em formato de árvore.
+**** Exemplo: =sudo lshw -short=
+** lspci Lista todos os dispositivos PCI.
+**** Exemplo: =lspci=
+** lsusb Lista todos os dispositivos USB.
+**** Exemplo: =lsusb=
+** cat /etc/os-release Exibe informações sobre a distribuição Linux.
+**** Exemplo: =cat /etc/os-release=
+** whoami Exibe o nome de usuário efetivo atual.
+**** Exemplo: =whoami=
+* 1.7 Como gerenciar pacotes
+
+Comandos para instalar, remover e atualizar software (depende da distribuição).
+
+** Para sistemas baseados em Debian/Ubuntu (apt):
+*** sudo apt update Atualiza a lista de pacotes disponíveis nos repositórios.
+*** sudo apt upgrade Atualiza todos os pacotes instalados para suas versões mais recentes.
+*** sudo apt install <pacote> Instala um novo pacote.
+*** sudo apt remove <pacote> Remove um pacote (mantém arquivos de configuração).
+*** sudo apt purge <pacote> Remove um pacote e seus arquivos de configuração.
+*** apt search <termo> Busca por pacotes que contenham o termo.
+**** Exemplo: =sudo apt install fzf=
+** Para sistemas baseados em Fedora/RHEL (dnf ou yum):
+*** sudo dnf check-update Verifica por atualizações disponíveis.
+*** sudo dnf upgrade Atualiza todos os pacotes instalados.
+*** sudo dnf install <pacote> Instala um novo pacote.
+*** sudo dnf remove <pacote> Remove um pacote.
+*** dnf search <termo> Busca por pacotes que contenham o termo.
+**** Exemplo: =sudo dnf install fzf=
+** Para sistemas baseados em Arch Linux (pacman):
+*** sudo pacman -Sy Sincroniza os bancos de dados dos repositórios.
+*** sudo pacman -Su Atualiza todos os pacotes instalados.
+*** sudo pacman -S <pacote> Instala um novo pacote.
+*** sudo pacman -R <pacote> Remove um pacote (mantém dependências não usadas).
+*** sudo pacman -Rs <pacote> Remove um pacote e suas dependências não usadas.
+*** pacman -Ss <termo> Busca por pacotes que contenham o termo.
+**** Exemplo: =sudo pacman -S fzf=
+* 1.8 Como gerenciar processos
+
+Visualizar, controlar e encerrar processos em execução.
+
+** ps Exibe informações sobre processos em execução.
+*** aux Exibe processos de todos os usuários (a), processos sem um terminal de controle (x), e lista completa (u). Muito comum.
+*** -ef Similar a aux, formato padrão do System V.
+**** Exemplo: =ps aux=
+**** Exemplo com fzf: =ps aux | fzf= (Para buscar processos interativamente)
+** top Exibe processos em tempo real, uso de CPU, memória, etc.
+*** Pressione 'q' para sair.
+*** Pressione 'M' para ordenar por uso de memória.
+*** Pressione 'P' para ordenar por uso de CPU.
+**** Exemplo: =top=
+** htop Uma alternativa interativa e visualmente aprimorada para 'top'.
+*** Pressione F10 ou 'q' para sair.
+**** Exemplo: =htop= (Pode precisar instalar)
+** kill Envia um sinal para um processo. O sinal padrão é TERM (15), que pede ao processo para terminar. KILL (9) força o término.
+*** <PID> O ID do processo alvo.
+*** -9 <PID> Força o término (não permite ao processo 'limpar' antes de sair).
+**** Exemplo: =kill 12345= (substitua 12345 pelo PID)
+**** Exemplo: =kill -9 12345=
+** killall Encerra processos pelo nome.
+*** <nome_do_processo> O nome do executável.
+*** -9 <nome_do_processo> Força o término.
+**** Exemplo: =killall firefox=
+** pkill Encerra processos baseados em critérios (nome, usuário, etc.).
+*** -u <usuario> <nome_do_processo> Encerra processos de um usuário específico com um nome específico.
+**** Exemplo: =pkill -u joao chrome=
+** fg Traz um job (comando rodando em segundo plano) para o primeiro plano.
+*** <%jobspec> Número do job (opcional, se houver apenas um em segundo plano).
+**** Exemplo: =fg=
+** bg Coloca um job (comando parado ou rodando em primeiro plano) para rodar em segundo plano.
+*** <%jobspec> Número do job (opcional).
+**** Exemplo: =bg=
+** jobs Lista os jobs rodando em segundo plano ou parados na sessão atual do shell.
+**** Exemplo: =jobs=
+* 1.9 Como gerenciar a memória
+
+Verificar o uso de memória RAM e Swap.
+
+** free Exibe o uso de memória.
+*** -h Formato legível para humanos.
+**** Exemplo: =free -h= (Ver seção 1.6 também)
+** top / htop Monitora o uso de memória em tempo real (ver seção 1.8).
+**** Exemplo: =top= ou =htop=
+* 1.10 Como gerenciar os discos
+
+Verificar espaço, sistemas de arquivos e montagem de discos.
+
+** df Exibe o espaço livre em disco dos sistemas de arquivos.
+*** -h Formato legível para humanos.
+*** -i Exibe informações de inodes.
+**** Exemplo: =df -hi= (Ver seção 1.6 também)
+** du Exibe o uso de espaço em disco de arquivos e diretórios.
+*** -h Formato legível para humanos.
+*** -s Exibe apenas o total para cada argumento.
+*** -c Exibe um total geral.
+*** --max-depth=<N> Limita a profundidade da árvore de diretórios para N.
+**** Exemplo: =du -sh /home/usuario=
+**** Exemplo com fzf: =du -h . | sort -h | fzf= (Para encontrar os maiores arquivos/diretórios)
+** fdisk Utilitário para particionamento de discos (geralmente precisa de sudo). CUIDADO: Comandos destrutivos.
+*** -l <dispositivo> Lista as tabelas de partição de um dispositivo.
+**** Exemplo: =sudo fdisk -l /dev/sda=
+** lsblk Lista dispositivos de bloco (discos, partições).
+*** -f Exibe informações sobre sistemas de arquivos.
+**** Exemplo: =lsblk -f=
+** mount Monta um sistema de arquivos.
+*** -t <tipo> Especifica o tipo de sistema de arquivos (ex: ext4, ntfs, vfat).
+*** <dispositivo> <ponto_de_montagem> O dispositivo e onde montar.
+**** Exemplo: =sudo mount /dev/sdb1 /mnt/usb=
+** umount Desmonta um sistema de arquivos.
+*** <ponto_de_montagem_ou_dispositivo> O ponto de montagem ou o dispositivo a desmontar.
+**** Exemplo: =sudo umount /mnt/usb=
+* 1.11 Como usar diretórios
+
+Navegar e manipular diretórios.
+
+** pwd Exibe o caminho absoluto do diretório de trabalho atual (Print Working Directory).
+**** Exemplo: =pwd=
+** cd Altera o diretório de trabalho (Change Directory).
+*** <diretorio> Caminho para o novo diretório.
+*** .. Sobe um nível no diretório.
+*** - Volta para o diretório anterior.
+**** Exemplo: =cd /home/usuario/Documentos=
+**** Exemplo: =cd ..=
+**** Exemplo: =cd -=
+**** Exemplo com fzf: =cd $(fzf)= (Para navegar interativamente entre diretórios recentes ou encontrados)
+** ls Lista o conteúdo de um diretório (List).
+*** -l Lista detalhada (permissões, dono, tamanho, data).
+*** -a Inclui arquivos e diretórios ocultos (cujo nome começa com '.').
+*** -h Com -l, formata tamanhos em formato legível para humanos.
+*** -R Lista recursivamente subdiretórios.
+**** Exemplo: =ls -lah=
+**** Exemplo: =ls -R /home/usuario/Documentos=
+** mkdir Cria diretórios (Make Directory).
+*** -p Cria diretórios pais se necessário.
+**** Exemplo: =mkdir novo_diretorio=
+**** Exemplo: =mkdir -p projeto/src/docs=
+** rmdir Remove diretórios (Remove Directory). O diretório deve estar vazio.
+**** Exemplo: =rmdir diretorio_vazio=
+* 1.12 Como usar diretórios e arquivos (Operações)
+
+Operações comuns que envolvem tanto diretórios quanto arquivos.
+
+** cp Copia arquivos e diretórios (Copy).
+*** <origem> <destino> Copia origem para destino.
+*** -r Copia diretórios recursivamente.
+*** -i Pergunta antes de sobrescrever.
+*** -v Mostra arquivos enquanto copia.
+**** Exemplo: =cp arquivo.txt backup/arquivo_backup.txt=
+**** Exemplo: =cp -rv minha_pasta /mnt/backup/=
+** mv Move ou renomeia arquivos e diretórios (Move).
+*** <origem> <destino> Move origem para destino, ou renomeia origem para destino se ambos estiverem no mesmo diretório.
+*** -i Pergunta antes de sobrescrever.
+*** -v Mostra arquivos enquanto move/renomeia.
+**** Exemplo: =mv arquivo.txt documentos/=
+**** Exemplo: =mv antigo_nome.txt novo_nome.txt=
+** rm Remove arquivos e diretórios (Remove). CUIDADO: Remoção permanente na maioria dos casos.
+*** <arquivo_ou_diretorio> O item a ser removido.
+*** -r Remove diretórios e seu conteúdo recursivamente.
+*** -f Força a remoção (ignora arquivos inexistentes, nunca pergunta). Use com extrema cautela!
+*** -i Pergunta antes de remover cada item.
+**** Exemplo: =rm arquivo_antigo.txt=
+**** Exemplo: =rm -rv pasta_para_remover/=
+**** Exemplo: =rm -rf pasta_critica/= (USE COM O MÁXIMO CUIDADO!)
+** find Busca arquivos e diretórios. Muito poderoso e complexo.
+*** <caminho> -name <nome> Encontra arquivos/diretórios com um nome específico.
+*** <caminho> -type <tipo> Encontra itens de um tipo ('f' para arquivo, 'd' para diretório).
+*** <caminho> -size +|-<N>c/k/M/G Encontra arquivos maiores (+) ou menores (-) que N bytes/kB/MB/GB.
+*** <caminho> -mtime +|-<N> Encontra arquivos modificados há mais (+) ou menos (-) de N dias.
+*** <caminho> -delete Deleta os itens encontrados (CUIDADO!).
+*** <caminho> -exec <comando> {} \; Executa um comando para cada item encontrado. '{}' representa o item.
+**** Exemplo: =find . -name "*.log"= (Busca arquivos .log no diretório atual e subdiretórios)
+**** Exemplo: =find /home/usuario -type f -size +1G= (Busca arquivos maiores que 1GB em /home/usuario)
+**** Exemplo: =find . -name "*.tmp" -delete= (Deleta arquivos .tmp no diretório atual e subdiretórios)
+**** Exemplo com fzf: =find . -type f | fzf= (Para buscar arquivos interativamente no resultado do find)
+** locate Busca arquivos usando um banco de dados pré-indexado (muito rápido, mas não em tempo real). Precisa rodar =sudo updatedb= periodicamente.
+*** <nome> O nome do arquivo ou parte dele.
+**** Exemplo: =locate .bashrc=
+** fzf Um "finder" de linha de comando difuso e interativo. Pode ser usado para filtrar listas, arquivos, históricos, etc.
+*** Usado geralmente combinado com outros comandos via pipe.
+**** Exemplo: =ls -l | fzf= (Filtra a saída longa do ls)
+**** Exemplo: =history | fzf= (Busca no histórico de comandos)
+**** Exemplo: =vim $(fzf)= (Abre um arquivo selecionado interativamente com vim)
+**** Exemplo: =cd $(fzf)= (Navega interativamente entre diretórios. Pode precisar de configuração específica no seu shell).
+* 1.13 Como usar arquivos
+
+Visualizar, editar e manipular o conteúdo de arquivos.
+
+** cat Concatena e exibe o conteúdo de arquivos (usado principalmente para exibir).
+*** <arquivo> O arquivo a ser exibido.
+**** Exemplo: =cat ~/.bashrc=
+**** Exemplo: =cat arquivo1.txt arquivo2.txt > arquivo_combinado.txt= (Concatena e salva em novo arquivo)
+** less Exibe o conteúdo de um arquivo página por página. Permite rolar para frente e para trás. (Preferível a 'more').
+*** <arquivo> O arquivo a ser visualizado.
+*** Pressione 'barra de espaço' para avançar, 'b' para voltar, '/' para buscar, 'q' para sair.
+**** Exemplo: =less arquivo_grande.log=
+** more Similar a less, mas geralmente só permite rolar para frente.
+**** Exemplo: =more arquivo.txt=
+** head Exibe as primeiras linhas de um arquivo.
+*** -n <numero> Exibe as primeiras N linhas.
+**** Exemplo: =head -n 10 /var/log/syslog=
+** tail Exibe as últimas linhas de um arquivo. Muito útil para monitorar logs em tempo real.
+*** -n <numero> Exibe as últimas N linhas.
+*** -f Monitora o arquivo para novas linhas (follow). Pressione Ctrl+C para sair.
+**** Exemplo: =tail -n 20 arquivo.log=
+**** Exemplo: =tail -f /var/log/kern.log=
+** grep Procura por padrões em arquivos ou streams.
+*** <padrao> <arquivo(s)> O padrão (string ou regex) e os arquivos a serem buscados.
+*** -i Ignora caixa alta/baixa (case-insensitive).
+*** -v Inverte a correspondência (mostra linhas que *não* contêm o padrão).
+*** -n Exibe o número da linha onde o padrão foi encontrado.
+*** -R Procura recursivamente em diretórios.
+**** Exemplo: =grep "erro" /var/log/syslog=
+**** Exemplo: =grep -iv "info" arquivo.log= (Busca linhas que não contêm "info", ignorando caixa)
+**** Exemplo com pipe: =ps aux | grep firefox= (Busca a linha do processo firefox)
+**** Exemplo com fzf: =grep "funcao" *.py | fzf= (Filtra os resultados do grep interativamente)
+** sed Editor de stream para filtrar e transformar texto. Muito usado para substituições.
+*** 's/<padrao>/<substituicao>/g' Substitui todas as ocorrências do padrão pela substituição na linha.
+**** Exemplo: =sed 's/antigo/novo/g' arquivo.txt > arquivo_modificado.txt=
+**** Exemplo com pipe: =cat arquivo.txt | sed 's/a/A/g'=
+** awk Linguagem de programação para processamento de texto linha a linha. Útil para extrair colunas ou processar dados estruturados.
+*** '{ print $1 }' Imprime a primeira coluna.
+*** '{ print $2, $5 }' Imprime a segunda e a quinta colunas.
+*** '/<padrao>/ { <acao> }' Executa ação em linhas que correspondem ao padrão.
+**** Exemplo: =awk '{ print $1 }' /etc/passwd= (Imprime os nomes de usuário)
+**** Exemplo: =ps aux | awk '{ print $2, $11 }'= (Imprime PID e comando de cada processo)
+** touch Cria um arquivo vazio ou atualiza o timestamp de um arquivo existente.
+*** <arquivo> O nome do arquivo.
+**** Exemplo: =touch novo_arquivo.txt=
+** file Determina o tipo de um arquivo.
+*** <arquivo> O arquivo a ser inspecionado.
+**** Exemplo: =file documento.pdf=
+** bat Uma alternativa moderna para 'cat' com realce de sintaxe e integração com git. (Pode precisar instalar)
+*** <arquivo> O arquivo a ser exibido.
+**** Exemplo: =bat script.sh=
+* 1.14 Como manipular pdfs
+
+Ferramentas de linha de comando para operações básicas com PDFs.
+
+** pdftk (PDF Toolkit) Ferramenta poderosa para juntar, dividir, rotacionar, etc. (Pode precisar instalar)
+*** A1 B1 C1 cat output output.pdf Junta arquivos A1.pdf, B1.pdf, C1.pdf em output.pdf.
+*** in input.pdf cat 1-10 output output.pdf Extrai páginas 1-10 de input.pdf para output.pdf.
+*** input.pdf cat 1east 2north output output.pdf Rotaciona página 1 para leste e 2 para norte.
+**** Exemplo: =pdftk doc1.pdf doc2.pdf cat output combined.pdf=
+** qpdf Ferramenta para transformações estruturais em PDFs (criptografar, linearizar, etc.). (Pode precisar instalar)
+*** --encrypt <senha_usuario> <senha_dono> <key_length> -- <entrada.pdf> <saida.pdf> Criptografa um PDF.
+**** Exemplo: =qpdf --encrypt userpass ownerpass 256 -- unencrypted.pdf encrypted.pdf=
+** pdfinfo Exibe informações sobre um PDF. (Parte do pacote poppler-utils)
+*** <arquivo.pdf> O arquivo PDF.
+**** Exemplo: =pdfinfo document.pdf=
+** pdftoppm Converte PDF para formatos de imagem (PNG, JPEG). (Parte do pacote poppler-utils)
+*** -png <entrada.pdf> <prefixo> Converte para PNG, criando arquivos prefixo-000001.png, etc.
+**** Exemplo: =pdftoppm -png manual.pdf manual_page=
+** gs (Ghostscript) Interpretador PostScript e PDF. Pode ser usado para conversões e otimizações. (Pode precisar instalar)
+*** -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dBATCH -sOutputFile=output.pdf input.pdf Converte/otimiza PDF.
+**** Exemplo: =gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dBATCH -sOutputFile=smaller.pdf large.pdf=
+* 1.15 Como manipular imagens
+
+Ferramentas de linha de comando para processamento de imagens.
+
+** convert (ImageMagick) Poderosa ferramenta para converter, redimensionar, editar imagens em diversos formatos. (Pode precisar instalar o pacote imagemagick)
+*** <entrada> <saida> Converte entre formatos.
+*** -resize <largura>x<altura> Redimensiona.
+*** -rotate <graus> Rotaciona.
+*** -crop <largura>x<altura>+<x>+<y> Corta.
+**** Exemplo: =convert imagem.jpg imagem.png=
+**** Exemplo: =convert original.jpg -resize 50% resized.jpg=
+**** Exemplo: =convert photo.jpg -rotate 90 rotated.jpg=
+** identify (ImageMagick) Exibe informações sobre arquivos de imagem.
+*** <arquivo> O arquivo de imagem.
+**** Exemplo: =identify imagem.jpg=
+** ffmpeg Ferramenta multimídia, mas pode manipular sequências de imagens e converter formatos. (Pode precisar instalar)
+*** -i input.png output.jpg Converte uma imagem (para casos simples).
+*** -i input_%04d.png output.gif Converte uma sequência de PNGs em um GIF animado.
+**** Exemplo: =ffmpeg -i image.png image.webp=
+* 1.16 Como executar comandos para root/administrador
+
+Executar comandos com privilégios elevados.
+
+** sudo Executa um comando como outro usuário, por padrão o root (Superuser Do). Requer a senha do usuário atual.
+*** <comando> O comando a ser executado com privilégios de root.
+*** -i Executa um shell de login como o usuário alvo (geralmente root).
+**** Exemplo: =sudo apt update=
+**** Exemplo: =sudo fdisk -l=
+**** Exemplo: =sudo -i= (Inicia uma sessão como root - CUIDADO!)
+** su Troca de usuário (Substitute User). Sem argumento, troca para root (pede a senha do root). Com nome de usuário, troca para aquele usuário (pede a senha dele).
+*** <usuario> O nome do usuário para o qual trocar.
+*** - Inicia uma sessão de login (carrega o ambiente do usuário).
+**** Exemplo: =su= (Torna-se root, pede senha do root)
+**** Exemplo: =su - <usuario>= (Inicia uma sessão de login como <usuario>)
+* 1.17 Como criptografar arquivos
+
+Proteger arquivos usando criptografia.
+
+** gpg (GNU Privacy Guard) Implementação do OpenPGP. Usado para criptografia e assinatura.
+*** -c <arquivo> Criptografa um arquivo usando criptografia simétrica (com senha).
+*** -d <arquivo.gpg> Descriptografa um arquivo.
+*** -e -r <destinatario> <arquivo> Criptografa para um destinatário usando chave pública.
+*** --gen-key Gera um par de chaves (pública/privada).
+**** Exemplo: =gpg -c documento_secreto.txt= (Criará documento_secreto.txt.gpg)
+**** Exemplo: =gpg -d documento_secreto.txt.gpg=
+** openssl Ferramenta de linha de comando para várias operações SSL/TLS e criptográficas.
+*** enc -aes-256-cbc -salt -in <entrada> -out <saida> Criptografa usando AES-256 com senha.
+*** enc -aes-256-cbc -d -in <entrada> -out <saida> Descriptografa.
+**** Exemplo: =openssl enc -aes-256-cbc -salt -in plain.txt -out encrypted.enc= (Pedirá uma senha)
+**** Exemplo: =openssl enc -aes-256-cbc -d -in encrypted.enc -out decrypted.txt= (Pedirá a senha)
+* 1.18 Como se comunicar com outros computadores
+
+Ferramentas de rede e comunicação.
+
+** ping Envia pacotes ICMP para um host de rede para testar a conectividade.
+*** <host> Endereço IP ou nome do host.
+*** -c <numero> Envia um número limitado de pacotes.
+**** Exemplo: =ping google.com=
+**** Exemplo: =ping -c 4 192.168.1.1=
+** ssh Conecta-se a um servidor remoto de forma segura (Secure Shell).
+*** <usuario>@<host> Nome de usuário e endereço do host remoto.
+*** -p <porta> Especifica uma porta diferente da padrão (22).
+**** Exemplo: =ssh usuario@servidor.exemplo.com=
+**** Exemplo: =ssh -p 2222 outro_servidor.net=
+** scp Copia arquivos de forma segura entre hosts (Secure Copy).
+*** <origem> <destino> Os caminhos de origem e destino. Podem incluir <usuario>@<host>:.
+*** -r Copia diretórios recursivamente.
+**** Exemplo: =scp local_file.txt usuario@servidor:/caminho/remoto/=
+**** Exemplo: =scp usuario@servidor:/caminho/remoto/remote_file.txt .= (Copia para o diretório atual)
+**** Exemplo: =scp -r local_folder/ usuario@servidor:/caminho/=
+** wget Download de arquivos da web (sem interação).
+*** <url> O URL do arquivo a baixar.
+*** -O <arquivo_saida> Salva o arquivo com um nome diferente.
+*** -c Continua download interrompido.
+**** Exemplo: =wget https://exemplo.com/arquivo.zip=
+**** Exemplo: =wget -O pagina.html https://exemplo.com/=
+** curl Ferramenta para transferir dados com sintaxe de URL, suporta vários protocolos. Muito usado em scripts para interagir com APIs.
+*** <url> O URL para a requisição.
+*** -O Salva a saída em um arquivo com o mesmo nome remoto.
+*** -o <arquivo_local> Salva a saída em um arquivo com nome especificado.
+*** -L Segue redirecionamentos.
+*** -I Mostra apenas cabeçalhos HTTP.
+**** Exemplo: =curl https://exemplo.com/= (Exibe o conteúdo da página)
+**** Exemplo: =curl -O https://exemplo.com/arquivo.tar.gz=
+**** Exemplo: =curl -I https://exemplo.com/=
+** nc (netcat) Ferramenta para ler e escrever através de conexões de rede. Útil para debug e tarefas simples de rede.
+*** -l -p <porta> Escuta em uma porta.
+*** <host> <porta> Conecta a um host e porta.
+**** Exemplo: =nc -l -p 12345= (Servidor simples na porta 12345)
+**** Exemplo: =nc localhost 12345= (Cliente conecta ao servidor)
+** ss (Socket Statistics) Utilitário para investigar sockets. (Substituto moderno para netstat).
+*** -t Exibe sockets TCP.
+*** -u Exibe sockets UDP.
+*** -l Exibe sockets em estado de escuta (listening).
+*** -p Exibe processos que usam o socket.
+*** -n Não resolve nomes de serviço/host.
+**** Exemplo: =ss -tulnp= (Exibe sockets TCP/UDP em escuta com processos, sem resolução de nomes)
+** netstat (Network Statistics) Utilitário mais antigo para exibir conexões de rede, tabelas de roteamento, estatísticas, etc. (ss é recomendado em sistemas modernos).
+*** -tulnp Exibe sockets TCP/UDP em escuta com processos, sem resolução de nomes (similar ao ss acima).
+**** Exemplo: =netstat -tulnp=
+* 1.19 Como programar em bash (exemplos básicos)
+
+Elementos fundamentais para escrever scripts Bash.
+
+** Estrutura básica de um script
+
+#+BEGIN_SRC bash
+#!/bin/bash
+# Este é um comentário. Linhas começando com # são ignoradas.
+
+# Seu código bash começa aqui
+echo "Olá, mundo!" # Exibe texto na tela
+#+END_SRC
+
+** Variáveis
+
+#+BEGIN_SRC bash
+#!/bin/bash
+
+nome="João"
+idade=30
+
+echo "Olá, $nome!"
+echo "Você tem $idade anos."
+
+# Acessando variáveis: prefixe com $
+# Não há espaços ao definir variáveis: VAR=valor
+#+END_SRC
+
+** Entrada do usuário
+
+#+BEGIN_SRC bash
+#!/bin/bash
+
+read -p "Qual é o seu nome? " seu_nome
+echo "Prazer em conhecer, $seu_nome!"
+#+END_SRC
+
+** Estruturas condicionais (if)
+
+#+BEGIN_SRC bash
+#!/bin/bash
+
+idade=25
+
+if [ "$idade" -ge 18 ]; then
+  echo "Você é maior de idade."
+elif [ "$idade" -ge 12 ]; then
+  echo "Você é um adolescente."
+else
+  echo "Você é uma criança."
+fi
+
+# Operadores de comparação comuns em [ ]:
+# -eq (igual), -ne (diferente), -lt (menor que), -le (menor ou igual), -gt (maior que), -ge (maior ou igual) para números.
+# = (igual), != (diferente) para strings.
+# -z (string vazia), -n (string não vazia).
+# -f (arquivo existe e é regular), -d (diretório existe), -e (arquivo ou diretório existe).
+#+END_SRC
+
+** Loops (for e while)
+
+#+BEGIN_SRC bash
+#!/bin/bash
+
+# Loop for - iterando sobre uma lista
+for fruta in maçã banana laranja; do
+  echo "Eu gosto de $fruta."
+done
+
+# Loop for - iterando sobre números
+for i in {1..5}; do
+  echo "Número: $i"
+done
+
+# Loop while
+contador=1
+while [ $contador -le 3 ]; do
+  echo "Contador: $contador"
+  ((contador++)) # Incrementa a variável
+done
+#+END_SRC
+
+** Funções
+
+#+BEGIN_SRC bash
+#!/bin/bash
+
+# Definição de uma função
+saudar() {
+  echo "Olá, $1!" # $1 é o primeiro argumento passado para a função
+}
+
+# Chamando a função
+saudar "Mundo"
+saudar "Script Bash"
+#+END_SRC
+
+** Redirecionamento e Pipes
+
+#+BEGIN_SRC bash
+#!/bin/bash
+
+# Redirecionar saída padrão para arquivo
+ls -l > lista.txt
+
+# Redirecionar saída padrão (append)
+echo "Mais uma linha" >> lista.txt
+
+# Redirecionar erro padrão para arquivo
+find /root -name "*.conf" 2> erros.log
+
+# Redirecionar saída padrão e erro padrão para arquivo
+ls / caminho_inexistente > saida_erros.txt 2>&1
+
+# Pipe: Conecta a saída de um comando à entrada de outro
+ls -l | grep "txt" # Lista arquivos e filtra os que contêm "txt"
+#+END_SRC
+
+** Status de saída
+
+#+BEGIN_SRC bash
+#!/bin/bash
+
+ls /caminho/inexistente
+echo "Status do comando 'ls': $?" # $? contém o status de saída do último comando. 0 geralmente indica sucesso, diferente de 0 indica erro.
+
+grep "existente" arquivo_que_existe.txt
+echo "Status do comando 'grep': $?"
+#+END_SRC
+
+* 1.20 Programas úteis por categoria
+
+Uma lista de ferramentas de linha de comando que expandem as capacidades do Bash.
+
+** Editores de Texto (CLI)
+*** nano - Editor simples e amigável para iniciantes.
+*** vim - Editor poderoso com curva de aprendizado íngreme, muito configurável.
+*** emacs - Outro editor poderoso e extensível, com sua própria filosofia.
+** Gerenciadores de Arquivos (CLI)
+*** mc (Midnight Commander) - Gerenciador de arquivos com duas painéis, inspirado no Norton Commander.
+*** nnn - Gerenciador de arquivos rápido e minimalista.
+** Controle de Versão
+*** git - Sistema de controle de versão distribuído mais popular. Essencial para desenvolvimento.
+**** =git clone <url>= Clona um repositório.
+**** =git status= Verifica o estado do repositório.
+**** =git add <arquivo>= Adiciona arquivos para staging.
+**** =git commit -m "mensagem"= Commita as mudanças.
+**** =git push= Envia os commits para o repositório remoto.
+**** =git pull= Baixa e integra mudanças do repositório remoto.
+** Ferramentas Modernas e Utilitários
+*** fzf - Finder de linha de comando difuso e interativo (já mencionado, mas vale reforçar).
+*** bat - 'cat' com esteróides (realce de sintaxe, números de linha).
+*** exa - Alternativa moderna ao 'ls' com mais funcionalidades e cores (precisa instalar).
+*** htop - Monitor de processos interativo e aprimorado (já mencionado, mas vale reforçar).
+*** tmux / screen - Multiplexadores de terminal. Permitem ter múltiplas sessões em uma única janela e persistir sessões mesmo após desconectar.
+**** =tmux new -s <nome>= Cria uma nova sessão tmux.
+**** =tmux attach -t <nome>= Anexa a uma sessão existente.
+**** =tmux list-sessions= Lista sessões.
+**** Dentro de uma sessão tmux, atalho padrão Ctrl+b seguido de outra tecla (ex: c para nova janela, % para split vertical, " para split horizontal, seta para mudar painel, d para desanexar).
+*** ripgrep (rg) - Alternativa muito rápida ao grep (precisa instalar).
+*** fd - Alternativa simples e rápida ao find (precisa instalar).
+** Outros Utilitários Úteis
+*** tree - Exibe a estrutura de diretórios em formato de árvore.
+*** ncdu - Analisador de uso de disco em ncurses (interativo).
+*** rsync - Ferramenta rápida e versátil para copiar arquivos localmente ou remotamente, com sincronização.
+**** -a (archive mode), -h (human-readable), -v (verbose), --delete (deleta arquivos no destino que não existem na origem).
+**** Exemplo: =rsync -avz origem/ destino/= (Sincroniza origem para destino, zips dados)
+**** Exemplo: =rsync -avz --delete origem/ usuario@remoto:/destino/= (Sincroniza remotamente)
+*** cron / crontab - Utilitário para agendar comandos para serem executados em horários específicos.
+**** =crontab -e= Edita o crontab do usuário atual.
+**** =crontab -l= Lista o crontab do usuário atual.
+**** Formato da linha: minuto hora dia_do_mes mes dia_da_semana comando
+**** Exemplo: =0 2 * * * /home/usuario/backup.sh= (Executa backup.sh todos os dias às 2:00 AM)
+* gpg: Verificando assinatura
+** gpg --search-keys assinatura
+** gpg --search-keys 79BDB88F9BBF73910FD4095B6A2AF96194843C65

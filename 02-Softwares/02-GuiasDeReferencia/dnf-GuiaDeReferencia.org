@@ -1,0 +1,71 @@
+#+TITLE: dnf-GuiaReferenciaSoftwares.org
+#+AUTHOR: André Duarte Bueno - bueno@flenep.uenf.br
+#+TODO: TODO DOING | DONE  DELEGATE FUTURE
+#+TAGS: { @UENF(o) @CASA(h) } LER(r) RESUMIR(R) AULA(a) PROJETO(p)
+
+https://docs.fedoraproject.org/pt_BR/quick-docs/dnf/
+
+* Arquivos de configuração
+/etc/dnf/dnf.conf - Sistema dnf
+/etc/yum.repos.d/ - repositórios instalados
+Ex:
+[Dropbox]
+name=Dropbox Repository
+baseurl=http://linux.dropbox.com/fedora/$releasever/
+gpgkey=https://linux.dropbox.com/fedora/rpm-public-key.asc
+enabled=0 [aqui pode ser ativado=1 ou desativado=0]
+
+* Para listar todos os repositórios configurados:
+
+dnf repolist
+dnf repolist --enabled
+dnf repolist --disabled
+
+* Pesquisa pacotes disponíveis no repositório:
+
+dnf search <termo_de_pesquisa>
+ex:
+dnf search calculator
+dnf search editor
+
+* Instalar pacotes:
+
+dnf install <nome_do_pacote>
+
+* Verificar por atualizações:
+
+dnf check-update
+
+* Atualizar pacotes:
+
+dnf update <nome_do_pacote>
+dnf update
+
+* Remover pacotes:
+
+dnf remove <nome_do_pacote>
+
+* Lista dos pacotes instalados e disponíveis:
+
+dnf list
+
+* Remove pacotes não utilizados que foram instalados como dependências:
+
+dnf autoremove
+
+* Reverte um pacote para uma versão anterior:
+
+dnf downgrade <nome_do_pacote>
+
+* Informações do pacote:
+
+dnf info <nome_do_pacote>
+
+* Permite pesquisar informações sobre pacotes em repositórios.
+
+dnf repoquery 
+
+* Limpa o cache do DNF
+
+dnf clean all
+

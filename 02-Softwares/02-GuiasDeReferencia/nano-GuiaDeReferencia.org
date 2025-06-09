@@ -1,0 +1,102 @@
+#+TITLE: nano-GuiaReferenciaSoftwares.org
+#+AUTHOR: André Duarte Bueno - bueno@flenep.uenf.br
+#+TODO: TODO DOING | DONE  DELEGATE FUTURE
+#+TAGS: { @UENF(o) @CASA(h) } LER(r) RESUMIR(R) AULA(a) PROJETO(p)
+
+
+Referência: https://www.nano-editor.org/dist/latest/cheatsheet.html
+Legenda: C=Ctrl, M-Alt.
+
+* Para executar:
+nano Abrir o nano.
+nano +n nomeArquivo Abrir o arquivo no nano na linha n.
+nano arq1 arq2 arq3 Abrir vários arquivos.
+nano -v arq1  Abrir arquivo no modo somente leitura.
+nano -h Mostrar help.
+nano -m Habilitar o uso do mouse.
+* Comandos do emacs no nano - digite Ctrl-x e depois o atalho do emacs
+Principais Atalhos do Emacs no Nano:
+Atalho (Emacs) -> Atalho (Nano) : Função
+C-a -> Ctrl + X + C-a : Ir para o início da linha (igual a Home)
+C-e -> Ctrl + X + C-e : Ir para o fim da linha (igual a End)
+C-b -> Ctrl + X + C-b : Ir para o caractere anterior
+C-f -> Ctrl + X + C-f : Ir para o caractere seguinte
+M-b -> Ctrl + X + M-b : Ir para o início da palavra anterior
+M-f -> Ctrl + X + M-f : Ir para o início da palavra seguinte
+C-k -> Ctrl + X + C-k : Cortar a linha (como no Emacs)
+C-u -> Ctrl + X + C-u : Desfazer a última ação
+C-y -> Ctrl + X + C-y : Recolocar texto cortado
+C-x -> Ctrl + X + C-x : Intercalar a seleção (como no Emacs)
+C-w -> Ctrl + X + C-w : Cortar a seleção (como no Emacs)
+C-s -> Ctrl + X + C-s : Abrir caixa de pesquisa
+C-p -> Ctrl + X + C-p : Ir para a linha anterior
+C-n -> Ctrl + X + C-n : Ir para a linha seguinte
+
+* Interface:
+M-n Ativar/desativar númeração das linhas.
+M-p Ativar/desativar espaços em branco visíveis.
+M-x Ocultar ou exibir as linhas de ajuda.
+C-l Atualizar a tela.
+M-m Habilitar o mouse.
+
+* Movimentação:
+C-b Um caractere para trás.
+C-f Um caractere para frente.
+C-← Uma palavra para trás.
+C-→ Uma palavra à frente.
+C-a Para início da linha.
+C-e Para o fim da linha.
+C-p Uma linha.
+C-n Uma linha abaixo.
+C-↑ Para o bloco anterior.
+C-↓ Para o próximo bloco.
+C-y Uma página acima (pg-up).
+C-v Uma página abaixo (pg-down).
+M-\ Para o topo do buffer, início do documento.
+M-/ Para o fim do buffer, fim do documento.
+M-↑ Rolar a janela de visualização para cima.
+M-↓ Rolar a janela de visualização para baixo.
+M-< Alternar para o buffer anterior.
+M-> Alternar para o buffer seguinte.
+
+* Edição:
+M-a	Marcar início do texto a ser selecionado.
+C-k	Cortar a linha selecionada.
+C-K Cortar.
+M-6 Copiar.
+C-u	Colar.
+C-] Completar a palavra atual.
+M-Del Excluir linha atual.
+M-u Desfazer última ação.
+C-j Justificar parágrafo ou região.
+M-J Justificar buffer inteiro.
+
+* Pesquisar e substituir:
+C-w	Pesquisar texto ou ER (M-w Repetir).
+C-q Pesquisar para trás texto ou ER (M-q Repetir).
+C-\	Pesquisar e substituir texto ou ER (M-r).
+
+* Operações:
+C-t Executar comando (função ou comando externo).
+M-b Executar verificação de sintaxe.
+M-f Executar um formatador.
+M-: Iniciar/parar a gravação da macro.
+M-; Reproduzir macro.
+C-t M-f Criar novo buffer.
+
+* Arquivos:
+C-s Salvar o arquivo.
+C-o	Salvar arquivo com outro nome.
+C-b Salvar o arquivo e fazer backup da última versão.
+C-r	Insere arquivo na posição atual do cursor.
+
+* Informação/Ajuda:
+
+C-g	Ajuda/Help (tem os atalhos).
+C-c Informar posição do cursor (linha/coluna/caractere).
+M-d Contar linhas/palavras/caracteres.
+
+* Para sair/exit:
+
+C-x	Sair do Nano.
+

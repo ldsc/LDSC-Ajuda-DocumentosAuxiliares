@@ -1,0 +1,51 @@
+#+TITLE: cmake-GuiaReferenciaSoftwares.org
+#+AUTHOR: André Duarte Bueno - bueno@lenep.uenf.br
+#+TODO: TODO DOING | DONE  DELEGATE FUTURE
+#+TAGS: { @UENF(o) @CASA(h) } LER(r) RESUMIR(R) AULA(a) PROJETO(p)
+
+* CMake
+CMake (Sistema de Build) e QMake
+Ferramentas para automatizar o processo de construção de software complexo.
+
+cmake: Ferramenta de geração de projetos de build, amplamente utilizada em C++.
+
+make / ninja: Ferramentas que executam o build gerado pelo CMake.
+
+qmake: Sistema de build tradicionalmente usado com o framework Qt.
+
+
+* Criação do diretório de build (boa prática: fora do diretório fonte):
+mkdir build
+cd build
+(Ou, como discutido para Dropbox, mkdir ~/Builds/MeuProjeto && cd ~/Builds/MeuProjeto)
+
+* Gerar os arquivos de build (Makefiles ou Nija files):
+cmake /caminho/para/seu/projeto/fonte/ # Aponta para o diretório onde está o CMakeLists.txt
+# Se você quiser especificar um gerador diferente (ex: Ninja):
+# cmake -G "Ninja" /caminho/para/seu/projeto/fonte/
+
+* Compilar o projeto:
+make # Se CMake gerou Makefiles (padrão em muitos sistemas)
+# OU
+# ninja # Se CMake foi configurado para gerar arquivos Ninja
+
+* Limpar o build:
+make clean # Limpa os arquivos de build gerados pelo Make
+# OU
+# ninja clean # Limpa os arquivos de build gerados pelo Ninja
+
+* Instalar o projeto (se configurado no CMakeLists.txt):
+sudo make install
+Exemplo de uso útil (qmake - para projetos Qt):
+
+* Gerar o Makefile:
+qmake seu_projeto.pro # 'seu_projeto.pro' é o arquivo de projeto do qmake
+
+* Compilar o projeto:
+make
+
+* Limpar o build:
+make clean
+
+* Instalar o projeto (se configurado no arquivo .pro):
+sudo make install
