@@ -1,114 +1,253 @@
-* Git
-** Iniciando
-git remote -v
-    Informa lista repositórios remotos(url).
-git init
-    Inicia repositório.
-git clone usuário@host:/caminho/para/repositorio
-    Clona repositório existente.    
+#+TITLE: Guia de Referência Moderno: Git & GitHub
+#+AUTHOR: André D. Bueno
+#+DATE: 2026-01-31
+#+OPTIONS: toc:t num:t
+# --- DEFINIÇÃO DE TAMANHO DA FONTE ---
+#+LATEX_CLASS_OPTIONS: [6pt]
 
-** Configurações:
+# --- PACOTES DE FONTE E IDIOMA ---
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \usepackage[T1]{fontenc}
+#+LATEX_HEADER: \usepackage{lmodern}
+#+LATEX_HEADER: \usepackage[brazil]{babel}
 
-git config --global user.name  <nome_usuário>
-git config --global user.email <email_usuário>
-git config --global core.editor <nome_editor_padrão>
-git config --global push.default simple 
-    Quando não especificado o branch, só envia branch de trabalho 
+# --- CONFIGURAÇÃO DA PÁGINA (A4 RETRATO) ---
+#+LATEX_HEADER: \usepackage[a4paper, portrait, top=1cm, bottom=1cm, left=1cm, right=1cm]{geometry}
 
-** Arquivos
+# --- OUTROS PACOTES ---
+#+LATEX_HEADER: \usepackage{indentfirst}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{hyperref}
+#+LATEX: \clearpage
 
-git add <nomeArquivo>
-git add [*]
-    Adiciona arquivo no índice (necessário sempre que o arquivo foi modificado!).
-git rm <nomeArquivo>
-    Remove arquivo.
-git mv <nomeAntes> <nomeNovo>
-    Renomeia arquivo.
-    ex: git rm --cached nomeArquivo (remove arquivo do cache)
-git diff [<nome_commit>]
-    Informa diferenças entre arquivos locais e os do <nome_commit>.
-git diff
-    Mostra diferenças.
-git remote add <nome> <url>
-git remote add pendrive "caminho/nomeRepositório"
-    Refere-se a repositório num dispositivo, como o pendrive.
+* Guia de Referência Moderno: Git & GitHub - Prof. Bueno
+* Configuração Inicial & Autenticação
+Antes de começar, garanta que sua identidade e métodos de acesso ao github estão configurados.
 
-** Operações usuais
+** Baixar o git
+- Linux (Debian/Ubuntu): =sudo apt install git=
+- Fedora: =sudo dnf install git=
+- Windows/Mac: http://git-scm.com
 
-git commit [-a] [-m "comentario"]
-    Envia p/repositório local. -m já coloca comentário. -a já adiciona arquivos rastreados.
-git push [<nome_repositório>] [<nome_branch>]
-git push [<nome_repositório>] --all [--tags]
-    Envia todos os ramos para repositório remoto. --tags envia todas as tags.
-git pull (ou rebase)
-    Trás do repositório remoto p/workspace(diretório de trabalho)(mesmo que fetch+merge).
+** Identidade Básica
+Configura seu nome nas "etiquetas" dos commits.
+#+begin_src sh
+  git config --global user.name "Seu Nome"
+  git config --global user.email "seu_email@exemplo.com"
+  git config --global core.editor "emacs"  # ou code, vim, nano
+  git config --global init.defaultBranch main  # Padroniza 'main'
+  git config --global pull.rebase true         # Evita merges desnecessários ao baixar
+  git config --global color.ui auto
+#+end_src
 
-** Informações
+** Autenticação Moderna (SSH)
+O GitHub não aceita mais senha de usuário no terminal. Use Chaves SSH.
+1. *Gerar Chave:*
+   #+begin_src sh
+     ssh-keygen -t ed25519 -C "seu_email@exemplo.com"
+     # Dê Enter em tudo (sem passphrase para agilidade)
+   #+end_src
+2. *Ativar Agente:*
+   #+begin_src sh
+     eval "$(ssh-agent -s)"
+     ssh-add ~/.ssh/id_ed25519
+   #+end_src
+3. *Copiar e Colar no GitHub:*
+   Exiba a chave com =cat ~/.ssh/id_ed25519.pub= e cole em *Settings -> SSH keys*.
 
-git show
-    Informa de forma detalhada o último commite (o que foi modificado - diff).
-git shortlog [-n]
-        Mostra primeira linha commit. Opção -n commits de cada autor. 
-git blame arquivo
-    Informa quem modificou arquivo, em que data e dados commit.
-git status [-s]
-    Informa estado atual. Opção -s versão compactada
-git log [-n --since==<date>   --graph --all nomeArquivo]
-    Mostra logs dos commits. Opção -n últimos n commits. 
-    Opção  --since, desde data, formato "yesterday" "5.days"
-    Opção --graph forma gráfica. Opção --all todos os ramos/tags.
+* GitHub: Primeiros Passos
 
-** Ramos/Tags:
+** Criar Repositório (Do Zero)
+1. No site, clique em *New repository*.
+2. *Dica:* Se for subir um código que já existe no seu PC, crie o repo *VAZIO* (sem README/gitignore).
 
-git branch [-a]
-    Informa lista ramos existentes e indica o atual com *.
-git branch <nome_branch>
-    Cria o ramo <nome_branch> mas não alterna para ele.
-git checkout -b <nome_funcionalidade>
-    Cria um ramo a partir do ramo de trabalho e alterna para ele.
-git checkout <nome_branch>
-    Alterna para o ramo <nome_branch>.
-git rebase master
-    Trás eventuais modificações no master para o ramo em que esta trabalhando.
-git branch -m novoNomeRamo
-    Renomeia o ramo de trabalho.
-git branch -d <nome_branch>
-    Exclui o ramo <nome_branch>.
-git clean [-f] [-n] 
-    Exclui os arquivos não rastreados. Opção -n apenas exibe. -f força.
-git fetch [<repo>] [<branch>]    
-    Baixa dados do repositório para repositório local (use pull para trazer p/diretório trabalho).
+** Clonar Repositório Existente
+#+begin_src sh
+  # Use SEMPRE a opção SSH (git@github...)
+  git clone git@github.com:usuario/nome-do-projeto.git
+  ex:
+  $ Ajuda
+  git clone https://github.com/ldsc/LDSC-Ajuda-DocumentosAuxiliares
+  # Modelo de projeto completo
+  git clone https://github.com/ldsc/LDSC-ProjetoEngenharia-2-Software-TituloProjeto-ModeloCompleto
+#+end_src
 
-** Notas/Observações:
+** Adicionar Colaboradores
+Settings -> Collaborators -> Add people (insira o email do aluno/colega).
 
-HEAD -> Aponta para o branch atual.
-refs/heads/<nome_branchs>
-refs/tags/<nome_tags>
-refs/remotes/<nome_repositórios>
+#+LATEX: \clearpage
 
-** Ferramentas:
+* Fluxo de Trabalho Diário
+A rotina sagrada do desenvolvedor.
 
-diff, kdiff, kdiff3, tkdiff, meld, xxdiff, vimdiff, p4merge
+** Verificar Estado (O comando mais importante)
+#+begin_src sh
+  git status  # Mostra o que mudou e onde você está
+#+end_src
 
-** Exemplo: 
+** Preparar (Staging)
+#+begin_src sh
+  git add .              # Adiciona TUDO (novos, modificados, deletados)
+  git add -u             # Adiciona apenas modificados (ignora arquivos novos)
+#+end_src
 
-Criando ramo, implementando e testando funcionalidade e mesclando com ramo master
-    Depois precisa verificar se esta tudo certo (compilar/testar)
-    e finalmente você deve ir para ramo master e puxar dados do ramo que foi finalizado.
-    ex: estou no convertendoHierarquiaObjetosGrafoParaCpp11
-git checkout -b convertendoHierarquiaObjetosGrafoParaCpp11
-    implementa as novidades, compila, testa
-git rebase master
-    Trás eventuais modificações no master para o ramo em que esta trabalhando.
-git mergetool
-    Ferramenta controle merge (requer p4merge).
-    compilar e testar
-git rebase --continue
-git checkout master  
-    Alterna para o master
-git merge convertendoHierarquiaObjetosGrafoParaCpp11
-    Mescla ramo de atualização com master; compilar e testar
-git commit -m "mesclado master com convertendoHierarquiaObjetosGrafoParaCpp11"
+** Salvar (Commit)
+#+begin_src sh
+  git commit -m "verbo/ação: o que foi feito"
+#+end_src
 
-git config --global user.name "André Duarte Bueno"
-git config --global user.email andreduartebueno@gmail.com
+** Sincronizar (Sync)
+#+begin_src sh
+  git pull origin main    # Baixa atualizações
+  git push origin main    # Envia seus commits
+#+end_src
+
+
+
+* Padrões de Nomes (Branches e Tags)
+Evite dores de cabeça seguindo convenções universais.
+
+** Prefixos Recomendados
+Para criar branches organizadas (=git switch -c nome=):
+| Prefixo     | Uso                                   | Exemplo                          |
+| :---        | :---                                  | :---                             |
+| =feat/=     | Nova funcionalidade                   | =feat/nova-interface-grafica=    |
+| =fix/=      | Correção de erro (bug)                | =fix/correcao-calculo-imc=       |
+| =docs/=     | Apenas documentação                   | =docs/atualiza-readme=           |
+| =refactor/= | Melhoria de código (sem mudar função) | =refactor/limpeza-classe-pessoa= |
+
+** O que NÃO fazer (Proibido)
+1. *Espaços:* Jamais use espaços. Use hifens (=minha-branch=) ou underscores.
+   - ❌ =corrigir erro= | ✅ =fix/corrigir-erro=
+2. *Acentos e Cedilha:* Evite caracteres latinos, pois terminais Windows/Linux podem divergir na codificação.
+   - ❌ =correção-do-cabeçalho= | ✅ =fix/correcao-cabecalho=
+3. *Nomes Vagos:*
+   - ❌ =teste=, =temp=, =ajuste=, =seuNome=
+
+** Tags de Versão (Semantic Versioning)
+Use o padrão =vX.Y.Z=.
+- =v1.0.0= (Major): Mudança que quebra compatibilidade.
+- =v1.1.0= (Minor): Nova funcionalidade (compatível).
+- =v1.1.1= (Patch): Correção de bug simples.
+
+#+LATEX: \clearpage
+
+* Manipulação de Branches (Modernizado)
+
+| Ação             | Comando Moderno           | Comando Antigo (Legacy)     |
+| :---             | :---                      | :---                        |
+| *Criar e Mudar*  | =git switch -c feat/nome= | =git checkout -b feat/nome= |
+| *Mudar de Ramo*  | =git switch feat/nome=    | =git checkout feat/nome=    |
+| *Voltar p/ Main* | =git switch main=         | =git checkout master=       |
+| *Deletar Ramo*   | =git branch -d feat/nome= | =git branch -d feat/nome=   |
+
+
+* Correções, Ajustes e "Salva-Vidas"
+
+** Desfazer alterações locais (Antes do Commit)
+#+begin_src sh
+  git restore arquivo.txt       # Descarta mudanças no arquivo
+  git restore .                 # PERIGO: Descarta TUDO não salvo
+#+end_src
+
+** "Guardar para depois" (Stash)
+Útil para interrupções rápidas (ex: corrigir bug urgente na main).
+#+begin_src sh
+  git stash                   # Guarda trabalho incompleto
+  git switch main             # Muda de branch
+  # ...corrige bug...
+  git switch feat/minha-branch
+  git stash pop               # Recupera o trabalho
+#+end_src
+
+** O Botão de Pânico (Reset)
+#+begin_src sh
+  # Destrói commits locais e deixa igual ao último ponto salvo
+  git reset --hard HEAD
+#+end_src
+
+* Ferramentas e Interfaces Gráficas
+Nem tudo precisa ser feito no terminal.
+
+** Clientes Git (GUIs)
+Facilitam a visualização do histórico e resolução de conflitos.
+
+1. *GitKraken:* (Linux/Win/Mac)
+   - Visualmente o mais bonito e poderoso. Gratuito para repos públicos.
+   - Site: https://www.gitkraken.com
+
+2. *Gitg:* (Linux - GNOME)
+   - Simples e leve, ótimo para ver o histórico.
+   - Instalação: =sudo apt install gitg= ou =sudo dnf install gitg=
+
+3. *Git Cola:* (Linux - FOSS)
+   - Interface rápida e funcional.
+   - Instalação: =sudo apt install git-cola=
+
+** Plugins para Editores (Essenciais)
+
+*** Para Alunos (VS Code)
+- *GitLens:*
+  - O padrão de mercado. Mostra quem editou cada linha (Blame) direto no código e histórico visual.
+- *Git Graph:*
+  - Cria o desenho da árvore de commits dentro do VS Code.
+
+*** Para o Professor (Emacs)
+- *Magit:* É indiscutivelmente a melhor interface de Git já criada para qualquer editor.
+  - Permite fazer stage de pedaços de código (hunks), rebase interativo e commit com poucos atalhos.
+  - Instalação: via MELPA (=M-x package-install RET magit=).
+
+* Arquivo .gitignore (Modelo Acadêmico)
+Crie este arquivo na raiz para ignorar lixo gerado por compiladores e editores.
+
+#+begin_src text
+  # --- C++ ---
+  *.o   *.obj    *.exe   *.out
+  bin/    build/
+  # --- LaTeX / LyX ---
+  *.aux   *.log   *.toc   *.fls   *.fdb_latexmk   *.synctex.gz
+  *.pdf  # Opcional: Se quiser gerar o PDF localmente mas não subir
+  *.lyx~ # Backup do LyX
+  # --- Editores ---
+  # Emacs
+  *~
+  \#*\#
+  .\#*
+  # VS Code
+  .vscode/
+  *.code-workspace
+  # --- Sistema ---
+  .DS_Store
+  Thumbs.db
+#+end_src
+
+* Receitas Práticas (Exemplos)
+
+** 1. Commit com Data Passada
+#+begin_src sh
+  git add .
+  git commit -m "Implementação do módulo X" --date="2026-01-20 14:00:00"
+#+end_src
+
+** 2. Criar Tags de Versão (Releases)
+#+begin_src sh
+  git tag -a v0.2.4 -m "Versão com correção do bug de login"
+  git push origin v0.2.4
+#+end_src
+
+** 3. Corrigir mensagem do último commit
+#+begin_src sh
+  git commit --amend -m "Nova mensagem correta"
+  # CUIDADO: Não faça isso se já deu push!
+#+end_src
+
+** 4. Sincronizar um Fork (Upstream)
+Atualizar seu projeto com o original do professor.
+#+begin_src sh
+  git remote add upstream https://github.com/professor/projeto.git
+  git fetch upstream
+  git switch main
+  git merge upstream/main
+  git push origin main
+#+end_src
