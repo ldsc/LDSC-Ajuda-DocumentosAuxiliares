@@ -26,8 +26,8 @@ class  Gnuplot
   /// boxes, histograms, filledcurves
   Gnuplot & Style (const std::string & stylestr = "points");
   /// @brief  Ativa suavizacao. Argumentos para interpolacoes e aproximacoes.
-  /// csplines, bezier, acsplines (para dados com valor > 0), sbezier, unique, 
-  /// frequency (funciona somente com plot_x, plot_xy, plotfile_x, 
+  /// csplines, bezier, acsplines (para dados com valor > 0), sbezier, unique,
+  /// frequency (funciona somente com plot_x, plot_xy, plotfile_x,
   Gnuplot & Smooth (const std::string & stylestr = "csplines");
   /// @brief Escala o tamanho do ponto usado na plotagem.
   Gnuplot & PointSize (const double pointsize = 1.0);
@@ -108,7 +108,7 @@ class  Gnuplot
   Gnuplot & PlotSlope (const double a, const double b,const std::string & title = "");
   /// @brief Plota uma  equacao fornecida como uma std::string y=f(x).
   /// Escrever somente a funcao f(x) e nao y= ;   /// A variavel independente deve ser x.
-  /// Exemplo: gnuplot->PlotEquation(CFuncao& obj); 
+  /// Exemplo: gnuplot->PlotEquation(CFuncao& obj);
   Gnuplot & PlotEquation (const std::string & equation,const std::string & title = "");
   /// @brief Plota uma equacao fornecida na forma de uma std::string z=f(x,y).
   /// Escrever somente a funcao f(x,y) e nao z=, as vaiaveis independentes sao x e y.

@@ -1,14 +1,14 @@
 /**
 ===========================================================================
-Lista com as principais novidades de c++20/14/17/20/23
+Lista com as principais novidades de C++20/14/17/20/23
 Autor: André Duarte Bueno.
-Nota: procure nos diretórios por c++20-14-17-20-23.cpp
-Referencias: livros de c++20/14/17/20/23
+Nota: procure nos diretórios por C++20-14-17-20-23.cpp
+Referencias: livros de C++20/14/17/20/23
 Sites: isocpp.org herbsutter.com en.cppreference.com
 
 ===========================================================================
 Lista com os principais arquivos #include
-=========================================================================== 
+===========================================================================
 */
 #include <algorithm>    // Algoritmos da STL
 #include <functional>   // Funções
@@ -24,7 +24,7 @@ namespace fs = std::filesystem;
 
 ===========================================================================
 Lista com as principais novidades de c++20 -> Núcleo da linguagem
-=========================================================================== 
+===========================================================================
 // [ ] ---------------------------------------------------------------------> auto
 auto x = 3;
 auto x { 1 };    // inteiro no C++17, lista inicialização no  c++20
@@ -48,7 +48,7 @@ char16_t s16[] = u"UTF-16 cstring. ";                   // const char16_t[].
 char32_t s32[] = U"UTF-32 cstring. ";                   // const char32_t[].
 cout << u8"This is a Unicode Character: \u2018"       << endl;
 
-// [ ] ---------------------------------------------------------------------> raw strings 
+// [ ] ---------------------------------------------------------------------> raw strings
 // c++20 fornece a opção de raw strings literal: R("string \t 1"), não é interpretada
 cout <<  "(\a xx \b yy \t zz \n)" << endl;
 cout << R"(\a xx \b yy \t zz \n)" << endl;
@@ -65,15 +65,15 @@ enum class EDiaSemanaCpp11 { segunda = 2, terca = 3, quarta = 4, quinta = 5, sex
 
 // [ ] ---------------------------------------------------------------------> enum class: tipo
 // Também podemos definir o tipo usado pela enumeração
-enum class EMesesAnoCpp11: unsigned int { janeiro = 1, fevereiro, marco, abril, 
+enum class EMesesAnoCpp11: unsigned int { janeiro = 1, fevereiro, marco, abril,
 maio, junho, julho, agosto, setembro, outubro, novembro, dezembro };
 
-// [ ] ---------------------------------------------------------------------> union 
+// [ ] ---------------------------------------------------------------------> union
 union UMiscelanea {   bool b;  int i;  double d;
   CPonto p;   // c++20 retirou restrição dos tipos aceitos em uniões
-  UMisccelanea() { new( &p ) CPonto(); }     
+  UMisccelanea() { new( &p ) CPonto(); }
 };
-// [ ] ---------------------------------------------------------------------> static_assert 
+// [ ] ---------------------------------------------------------------------> static_assert
 // Mensagem de erro em tempo de compitalção
 static_assert(constant-expression, error-message);
 static_assert(sizeof(int) <= sizeof(T), "A dimensão de T não é suficiente!");
@@ -126,7 +126,7 @@ int main() {                                // Chama função saida, imprime valor
 
 // [ ] ---------------------------------------------------------------------> Funções lambda
 /*auto nomeFuncao = [captura](parametros)->tipoRetorno {corpo da funcao}
-[]: Não capturar nada. 
+[]: Não capturar nada.
 [=]: Todas as variáveis externas são capturadas por valor.
 [&]: Todas as variáveis externas são capturadas por referência.
 [x, &y]: capturar x por valor(cópia) e y por referência.
@@ -149,7 +149,7 @@ auto ptr_funcao2 = [](int x, int y) { return x + y; }
 cout << " x + y = " << ptr_funcao2(3,4) << endl;
 
 // Usando função lambda com captura por referencia
-int soma = 0; 
+int soma = 0;
 auto Soma = [&soma]( int x ) { soma += x; cout << "Soma = " << soma << endl; };
 Soma(10);
 
@@ -181,12 +181,12 @@ CPonto(int xy) : CPonto(xy,xy) 	{}  // um construtor chama o outro
 // [ ] ---------------------------------------------------------------------> default e delete
 class NonCopyable { public:  // Diz para o compilador desabilitar o operator= (não criar)
   NonCopyable& operator=(const NonCopyable&) = delete;
-  
+
   // Diz para o compilador desabilitar o construtor de cópia (não criar)
   NonCopyable(const NonCopyable&) = delete;
-  
+
   // Diz para o compilador criar o construtor default
-  NonCopyable() = default; 
+  NonCopyable() = default;
 
 // [ ] ---------------------------------------------------------------------> override e final
 class CPonto { virtual auto Entrada() -> void;
@@ -201,7 +201,7 @@ char s[] = "Olá Mundo!";
 for_each( s, s + sizeof(s), [] (char c){ cout << c << endl; });
 int vc[] = { 1 , 2 , 3 , 4 , 5 , 6 , 7 };
 for_each( begin(vc), end(vc), [](int x) { cout << x << ' ';});
-int soma = 0;  
+int soma = 0;
 for_each( begin(vc), end(vc), [&soma] (int x) { soma += x;});
 
 ===============================================================================
@@ -224,46 +224,46 @@ void Teste( vector<int> &v , string msg )
     cout << "Pelo menos um positivo\n"; }
 int main() {  vector<int> v1{   1, 2, 3, 4, 5};    Teste( v1 , "v1"  );
               vector<int> v2{ 0,-1, 2, 3, 4, 5};   Teste( v2  , "v2" ); }
-              
+
 // [ ] ---------------------------------------------------------------------> unique_ptr
 std::unique_ptr<int> ptr_int3( new int(3) );     // Cria ponteiro e objeto
 cout << *ptr_int3 << endl;                       // Usa
 unique_ptr<int> ptr_int5  = std::move(ptr_int3); // Transfere propriedade
-cout << *ptr_int5 << endl;                       // Usa 
+cout << *ptr_int5 << endl;                       // Usa
 ptr_int5.reset();                                // Destrõe
-ptr_int3.reset();                                // Não faz nada.      
+ptr_int3.reset();                                // Não faz nada.
 
 // [ ] ---------------------------------------------------------------------> shared_ptr
 // Use shared_ptr? quando quizer vários ponteiros apontando para mesmo objeto,
-// somente quando o último for deletado o objeto será efetivamente deletado. 
+// somente quando o último for deletado o objeto será efetivamente deletado.
 shared_ptr<int> ptr_int6(new int(6));            // Cria ponteiro e objeto
 cout << *ptr_int6 << endl;                       // Usa
 shared_ptr<int> ptr_int7 = ptr_int6;             // ptr7 aponta p/ mesmo objeto que ptr6
 cout << *ptr_int7 << endl;
-ptr_int6.reset();                                // Não destrõe e objeto 
-cout << *ptr_int7 << endl;                       // Usa objeto 
+ptr_int6.reset();                                // Não destrõe e objeto
+cout << *ptr_int7 << endl;                       // Usa objeto
 ptr_int7.reset();                                // Agora deleta objeto
 
 // [ ] ---------------------------------------------------------------------> weak_ptr
 shared_ptr<int> ptr_int8(new int(8));
 cout << *ptr_int8 << endl;
-weak_ptr<int> wptr_int8 = ptr_int8;            // ptr_int8 owns the memory. 
+weak_ptr<int> wptr_int8 = ptr_int8;            // ptr_int8 owns the memory.
   {
   shared_ptr<int> ptr_int9 = wptr_int8.lock(); // Agora p8 e p9 acessam a mesma memória.
   cout << *ptr_int9 << endl;
-  if( ptr_int9 )                               // Sempre verifique o ponteiro 
+  if( ptr_int9 )                               // Sempre verifique o ponteiro
     cout << *ptr_int9 << endl;                 // Faça algo com ptr_int9
   }     // ptr_int9 é destruído; ptr_int8 volta a ter a propriedade.
-  cout << *ptr_int8 << endl; 
+  cout << *ptr_int8 << endl;
   ptr_int8.reset();                            // A memoria é deletada.
 }
 
-// [ ] ---------------------------------------------------------------------> function 
+// [ ] ---------------------------------------------------------------------> function
 #include <functional>
 function<double(double)> fx2 = [](double x) { return x*x;};  // funcao f
 function<double(double)> f2x = [](double x) { return 2.0*x;};// funcao g
 // Cada vez mais perto da notação matemática! Agrupando funções, como g(f(x));
-std::function<double(double)> gf(function<double(double)> f, function<double(double)> g ) 
+std::function<double(double)> gf(function<double(double)> f, function<double(double)> g )
      { return [=](double x) { return g(f(x)); };
 // Uso de gf, cria funcao fx4, retorna double, recebe funcao
 function<double(double)> fx4 = gf(fx2, fx2);
@@ -291,7 +291,7 @@ int main() {
   cout << "p.first   = " << p.first 	<< " , p.second  = " 	<< p.second << endl;
 
 // [ ] ---------------------------------------------------------------------> tuple
-// Mostra uso de tuple, get<>, tie, pair 
+// Mostra uso de tuple, get<>, tie, pair
 #include <tuple>
 // Cria tuple com 3 doubles
 tuple<double, double, double> notasJoao(8.7,4.2,5.7);
@@ -300,19 +300,19 @@ cout<< "\nJoao\n"
       << "P2: " << get<1>(notasJoao) << ", "	// usando funcao get<indice>(objeto_tuple)
       << "P3: " << get<2>(notasJoao) << '\n';
 std::get<2>(notasJoao) = 6.3; 		        // Nota p3 corrigida, usa referencia.
-      
+
 // Mostra uso da funcao tie() para obter, separadamente, os valores da tuple
 double n1,n2,n3;
 tie(n1, n2, n3) = notasJoao;
 cout<< "\nJoao\n" << "n1: " << n1 << ", " << "n2: " << n2 << ", " << "n3: " << n3 << '\n';
 
 auto [a,b,c] = notasJoao; // C++17
-// [ ] ---------------------------------------------------------------------> forward_as_tuple 
+// [ ] ---------------------------------------------------------------------> forward_as_tuple
 // forward_as_tuple cria objeto temporario que funciona como uma tupla
-// para objetos rvalue (right value). Note que como sao rvalue, nao alocam espaco em disco; 
+// para objetos rvalue (right value). Note que como sao rvalue, nao alocam espaco em disco;
 #include <tuple>	// std::tuple e std::make_tuple
 // Note que os parametros da tuple sao right value
-void print_pack (std::tuple<std::string&&,double&&> pack) 
+void print_pack (std::tuple<std::string&&,double&&> pack)
 {   std::cout << std::get<0>(pack) << ", " << std::get<1>(pack) << std::endl; }
 int main() { print_pack (std::forward_as_tuple(string("Joao"), 8.7)); }
 
@@ -320,22 +320,22 @@ int main() { print_pack (std::forward_as_tuple(string("Joao"), 8.7)); }
 bool is_even(int N) { return N % 2 == 0; } // Retorna verdadeiro se for par
 int main() {   vector<int> v{1,2,3,4,5,6};
   for_each (v.begin(),v.end(),[](int ev){ cout << ev << '\t'; });  // Vetor v antes de remove_if
-  remove_if(v.begin(),v.end(),is_even);  
+  remove_if(v.begin(),v.end(),is_even);
   for_each (v.begin(),v.end(),[](int ev){ cout << ev << '\t'; });  // Vetor v depois de remove_if
 
   // Efetivamente remove elementos no intervalo final do vetor
   v2.erase(remove_if(v2.begin(), v2.end(), is_even), v2.end());  }
 
 // [ ] ---------------------------------------------------------------------> random
-// O gerador números randomicos tem duas partes; um motor que gera números randomicos 
-// e uma distribuição matemática. 
+// O gerador números randomicos tem duas partes; um motor que gera números randomicos
+// e uma distribuição matemática.
 // Motores: linear_congruential_engine,subtract_with_carry_engine e mersenne_twister_enginee.
-// Distribuições: uniform_int_distribution, uniform_real_distribution, 
+// Distribuições: uniform_int_distribution, uniform_real_distribution,
 // bernoulli_distribution, binomial_distribution, geometric_distribution, poisson_distribution,
-// normal_distribution, student_t_distribution, chi_squared_distribution, 
-// exponential_distribution, gamma_distribution, lognormal_distribution, 
-// cauchy_distribution, lognormal_distribution, weibull_distribution, 
-// extreme_value_distribution, fisher_f_distribution, negative_binomial_distribution,  
+// normal_distribution, student_t_distribution, chi_squared_distribution,
+// exponential_distribution, gamma_distribution, lognormal_distribution,
+// cauchy_distribution, lognormal_distribution, weibull_distribution,
+// extreme_value_distribution, fisher_f_distribution, negative_binomial_distribution,
 // discrete_distribution, piecewise_constant_distribution, piecewise_linear_distribution.
 #include <random>
 int main()
@@ -344,13 +344,13 @@ int main()
   int numeroRandomico = distribuicao(motor);           // Gera número aleatório
 
   std::normal_distribution<double>  normal(0.0,1.0);   // Normal, media 0 e desvio padrao 1
-  cout << " media = " << normal.mean() << " desvio padrao = " << normal.stddev() 
+  cout << " media = " << normal.mean() << " desvio padrao = " << normal.stddev()
        << " max = " << normal.max() << " min = " << normal.min() << endl;
   normal = normal_distribution<double>(12,3);          // Seta media = 12 e desvio padrao = 3
 
 std::default_random_engine motor2;           // Cria motor, usa default
-auto Normal = std::bind(normal, motor2);     // Cria gerador de número aleatorio 
-vector<double> vna(500);                     // Cria vetor de numeros aleatorios 
+auto Normal = std::bind(normal, motor2);     // Cria gerador de número aleatorio
+vector<double> vna(500);                     // Cria vetor de numeros aleatorios
 for( double &ev : vna )	ev = Normal();       // Gera números aleatóros
 }
 
@@ -362,7 +362,7 @@ int main() { // Cria objeto time_point
 // Define valor de start como sendo agora (antes do processamento)
   start = chrono::system_clock::now();
 // Chama função com determinado tempo de processamento
-  int result = sin(45);  
+  int result = sin(45);
 // Define valor de end como sendo agora (depois do processamento)
   auto end = chrono::system_clock::now();
 // count() retorna numero ticks, a diferença é convertida em segundos.
@@ -378,8 +378,8 @@ int main() { // Cria objeto time_point
 // match_results - representa as ocorrências, casos em que a ER foi encontrada.
 // regex_search - função usada para localizar uma ocorrência da ER.
 // regex_replace - função que substitue a ocorrência encontrada por outro texto.
-// As funções regex_search e regex_replace recebem uma expressão regular e uma string e 
-// escreve as ocorrências encontradas na estrutura match_results. 
+// As funções regex_search e regex_replace recebem uma expressão regular e uma string e
+// escreve as ocorrências encontradas na estrutura match_results.
 int main(){
 if (regex_match ("Palmeiras, Campeão Mundial 1951", regex("r") ) )
  cout << "\nA expressão regular \"(ras)\" foi encontrada em \"Palmeiras, Campeão Mundial 1951\"";
@@ -389,17 +389,17 @@ string s ("Palmeiras campeão mundial 1951");	// string a ser pesquisada
 regex er ("r)");				// expressao regular usada na pesquisa
 if (regex_match (s,er))			// faz a procura
  cout << "\nA expressão regular \"(ras)\" foi encontrada em \"Palmeiras, Campeão Mundial 1951\"";
-  
+
 // Faz a procura usando iteradores
 if ( regex_match ( s.begin(), s.end(), er ) )    cout << "range matched\n";
 
 // o mesmo que match_results<const char*> cm;
-cmatch cm;    
+cmatch cm;
 regex_match ("Palmeiras, Campeão Mundial 1951",cm,er);
 cout << "string literal with " << cm.size() << " matches\n";
 
 // o mesmo que match_results<string::const_iterator> sm;
-smatch sm;    
+smatch sm;
 regex_match (s,sm,er);
 cout << "string object with " << sm.size() << " matches\n";
 
@@ -412,12 +412,12 @@ cout << "As ocorrências são: ";
 for (unsigned i=0; i<sm.size(); ++i) {    cout << "[" << sm[i] << "] ";  }
 }
 ---
-#include <regex> 
-int main(){ std::string fnames[] = {"foo.txt", "bar.txt", "zoidberg"}; 
+#include <regex>
+int main(){ std::string fnames[] = {"foo.txt", "bar.txt", "zoidberg"};
 std::regex txt_regex("[a-z]+\\.txt");
-for (const auto &fname : fnames) 
+for (const auto &fname : fnames)
         std::cout << fname << ": " << std::regex_match(fname, txt_regex) << '\n';}
-        
+
 // [ ] ---------------------------------------------------------------------> threads (c++20/14/17)
 // g++ -std=c++17 thread-Resumo.cpp -o thread-Resumo -lpthread
 #include <thread>
@@ -445,18 +445,18 @@ std::cout   << "\n================THREADS======================";
   COlaMundo obj;        // Cria objeto
   thread t3{obj}; 	    // Cria a thread t3
                         // ...códigos de main em paralelo...
-  thread t4( &FuncaoDestacada );                  
+  thread t4( &FuncaoDestacada );
   t4.detach();          // Torna a thread destacada, t4 não tem mais acesso a join(), usa sleep_for
   t1.join();t2.join();  // Aguarda retorno das threads
-  if(! t4.joinable())   // Verifica se não foi destacada  
+  if(! t4.joinable())   // Verifica se não foi destacada
 	this_thread::sleep_for ( chrono::seconds(1) );  // Aguarda 1 segundo
   thread t5{&COlaMundo::Repeat,&obj,3}; // executa 3x
 
   thread t6 = move(t1); // Move t1 para t6
-  
-  cout  << "\nMain thread, this_thread::get_id() = " << this_thread::get_id() 
-        << "\nMain thread, t.get_id() = " << t.get_id() 
-        << "\nNúmero de threads, thread::hardware_concurrency() = " 
+
+  cout  << "\nMain thread, this_thread::get_id() = " << this_thread::get_id()
+        << "\nMain thread, t.get_id() = " << t.get_id()
+        << "\nNúmero de threads, thread::hardware_concurrency() = "
         << thread::hardware_concurrency() << endl;
 
   return 0;
@@ -484,7 +484,7 @@ public:
 	if( !t.joinable())
 		throw std::logic_error("Not joinable!");	}
     /// Destrutor chama join automaticamente.
-    ~scoped_thread() { t.join(); }   
+    ~scoped_thread() { t.join(); }
     /// Construtor de copia desativado
     scoped_thread(scoped_thread const&)=delete;
     /// Operador de atribuicao desativado
@@ -494,11 +494,11 @@ public:
 int main() {
     COlaMundo obj;
     // dispara thread com objeto_funcao
-    thread t(obj); 
+    thread t(obj);
     // cria thread_guard que chama join automaticamente
     thread_guard tg(t); // quando sai de escopo.
     // dispara thread que executa f1, vai chamar join automaticamente
-    scoped_thread st( std::thread ( f1, "thread secundaria" ) ); 
+    scoped_thread st( std::thread ( f1, "thread secundaria" ) );
 }
 std::cout   << "\n================THREADS com vector======================";
 int main() {
@@ -512,7 +512,7 @@ int main() {
     }
   for(auto& t : vthreads)
       t.join();					            // Aguarda finalização
-      
+
   // for_each(vthread.begin(), vthread.end(), std::mem_fun_ref(&std::thread::join));
 }
 std::cout   << "\n================THREADS Parâmetros======================";
@@ -545,10 +545,10 @@ class CContador  {
     std::mutex mutex_c;    // Cria um mutex = mutual exclusion
     int contador{0};
 public:
-    void operator++() {  
-        mutex_c.lock();    // Bloqueia 
-        ++contador;        
-        mutex_c.unlock();  // Libera 
+    void operator++() {
+        mutex_c.lock();    // Bloqueia
+        ++contador;
+        mutex_c.unlock();  // Libera
       }
     int Valor() { return contador; }
 };
@@ -556,10 +556,10 @@ int main() {
  CContador contador;
  vector<thread> vthreads;
  for( int i = 0; i < 40; ++i ) {
-  vthreads.push_back( thread( 
+  vthreads.push_back( thread(
     [&contador]() { for(int i = 0; i < 100000; ++i){ ++contador; } }));}
- for(auto& thread : vthreads) 
-	 thread.join(); 
+ for(auto& thread : vthreads)
+	 thread.join();
  cout << contador.Valor() << endl;
  return 0;
 }
@@ -618,7 +618,7 @@ void data_processing_thread() {
     }	}
 int main() {
     std::thread t1(data_preparation_thread);  // Produz dados
-    std::thread t2(data_processing_thread);	  // Consome dados    
+    std::thread t2(data_processing_thread);	  // Consome dados
     t1.join();    t2.join();
 }
 
@@ -628,7 +628,7 @@ std::cout   << "\n================THREADS ASYNC FUTURE======================";
 int  f1() {    return 42;}
 void f2(std::string const& message)  { cout << (message + "\n"); }
 
-int main() {        
+int main() {
 // Dispara função usando async
 auto a1 = async(f2,"1 - Olá mundo disparado usando async(write_message\n");
 // Dispara função write_message usando std::launch::async
@@ -640,12 +640,12 @@ a1.wait();  a2.wait(); a3.wait();  // Aguarda retorno de chamada a async.
 
 std::future<int> resultado = std::async(processar1);
 thread t (processar2);
-std::cout << "The answer is "<< resultado.get() << std::endl; 
-t.join();   
+std::cout << "The answer is "<< resultado.get() << std::endl;
+t.join();
 }
 int find_the_answer() { throw std::runtime_error("Unable to find the answer");}
 int main() {
- auto f =  async( find_the_answer ) ; 
+ auto f =  async( find_the_answer ) ;
  try {      cout << "the answer is "<< f.get() << "\n";     }
  catch( runtime_error const& e ) { cout << "\nCaught exception: " << e.what() << endl;}
 return 0;
@@ -682,18 +682,18 @@ void AguardandoNotificacao ( int id , std::shared_future<int> sf ) {
 }
 int main()  {
   std::promise<int> p;                  // Cria um promise
-  auto sf = p.get_future().share(); 
+  auto sf = p.get_future().share();
   thread t1(AguardandoNotificacao, 1 ,sf);
-  thread t2(AguardandoNotificacao, 2 ,sf);  
+  thread t2(AguardandoNotificacao, 2 ,sf);
   cout << "Waiting\n"; cin.get();
-  p.set_value(42);  
+  p.set_value(42);
   t2.join(); t1.join();
   return 0;
 }
 
 ===========================================================================
 Lista com as principais novidades de C++14 -> Núcleo da linguagem
-=========================================================================== 
+===========================================================================
 
 --> extensão das possibilidades das funções lambda, por exemplo com o uso de auto.
 auto lambda = [](auto x, auto y) {return x + y;}; //C++14
@@ -711,7 +711,7 @@ decltype(auto) look_up_a_string_2() { return lookup2(); }//C++14
 
 --> extensão do uso de constexpr que agora suportam o uso de if, switch, e de loops (incluindo range-based for loops).
 
---> uso de auto para determinar o tipo de retorno de uma função: 
+--> uso de auto para determinar o tipo de retorno de uma função:
 auto Pi() { return 3.1415 };
 
 --> uso de variable templates.
@@ -725,21 +725,21 @@ auto a3 = 0b101010; // ... binary
 
 ===========================================================================
 Lista com as principais novidades de C++14 -> Biblioteca std
-=========================================================================== 
+===========================================================================
 --> uso de literais definidos pelo usuário para tipos de biblioteca padrão (user-defined literals for standard library types).
 
 --> Facilita uso de std::string
 string s = string("c++20 não permite ")
-          + string(" somar diretamente strings"); 
-using namespace std::string_literals; 
-string s = "C++14 permite, "s 
-          + " basta informar que é uma string adicionando s"s; 
+          + string(" somar diretamente strings");
+using namespace std::string_literals;
+string s = "C++14 permite, "s
+          + " basta informar que é uma string adicionando s"s;
 
 --> Facilita uso de chrono
 using namespace std::literals::chrono_literals;
 auto duration = 1h + 2min + 3s + 4ms + 5us + 6ns;
 
---> uso de sequências de inteiros determinados em tempo de compilação. 
+--> uso de sequências de inteiros determinados em tempo de compilação.
 
 --> uso de std::make_unique - substitiu new.
 std::unique_ptr<ClasseX> v = std::make_unique<ClasseX>();
@@ -750,7 +750,7 @@ double x = 123'456'789;
 
 ===========================================================================
 Lista com as principais novidades de C++17 -> Núcleo da linguagem
-=========================================================================== 
+===========================================================================
 
 --> uso de assert sem texto.
 
@@ -761,7 +761,7 @@ Lista com as principais novidades de C++17 -> Núcleo da linguagem
 --> uso de atributos em namespaces e enumerações.
 
 --> uso de unicialização em if e switch.
- if(inicialização, condição) {...} 
+ if(inicialização, condição) {...}
  if(int x=4; x+j<4) {...j--...}
 
 --> uso de if constexpr(expression).
@@ -782,7 +782,7 @@ Lista com as principais novidades de C++17 -> Núcleo da linguagem
   a captura de *this cria uma cópia do objeto.
 
 --> agora constexpr pode ser usada com lambda
- constexpr auto N = [] (int n) { return n;} 
+ constexpr auto N = [] (int n) { return n;}
  static_assert ( N(5) == 5 );
 
 --> adicionada variável de pré-processamento _has_include
@@ -790,7 +790,7 @@ Lista com as principais novidades de C++17 -> Núcleo da linguagem
 --> uso facilitado de tuplas
  auto [a,b,c] = notasJoao; // C++17 notasJoao é uma tupla
 
---> atributos/variáveis inline 
+--> atributos/variáveis inline
  class X { static inline const double pi = 3.1415; };
 
 --> static_assert sem mensagem;
@@ -810,10 +810,10 @@ Lista com as principais novidades de C++17 -> Núcleo da linguagem
   Removidos os trigraphs;
   Removido operador operator++(bool);
   Removidos auto_ptr, random_shufle e outros.
-  
+
 ===========================================================================
-Lista com as principais novidades de C++17 -> Biblioteca std 
-=========================================================================== 
+Lista com as principais novidades de C++17 -> Biblioteca std
+===========================================================================
 --> Adiçao da biblioteca std::filesystem baseada em boost::filesystem.
 
 --> uso de funções matemática especiais - Mathematical Special Functions.
@@ -837,7 +837,7 @@ Lista com as principais novidades de C++17 -> Biblioteca std
 
 --> std::uncaught_exceptions, as a replacement of std::uncaught_exception
 
---> New insertion functions try_emplace and insert_or_assign for std::map and std::unordered_map 
+--> New insertion functions try_emplace and insert_or_assign for std::map and std::unordered_map
 
 --> Uniform container access: std::size, std::empty and std::data
 
@@ -845,7 +845,7 @@ Lista com as principais novidades de C++17 -> Biblioteca std
 
 ===========================================================================
 Lista com as principais novidades de C++17 -> Biblioteca filesystem (C++17)
-=========================================================================== 
+===========================================================================
 // Resumo dos comandos da biblioteca filesystem.
 // Para compilar: g++ -std=c++17 filesystem-00-resumo.cpp -o resumo -lstdc++fs
 #include <filesystem>
@@ -855,18 +855,18 @@ using namespace std;
 int main() {
 auto p = fs::current_path();
 std::cout   << "\n================Informações da path======================"
-            << "\nPath completa: " << p 
+            << "\nPath completa: " << p
             << "\nNote que o Caminho corrente pode ser decomposto nas seguintes partes:"
-            << "\nroot_name()="       << p.root_name()     
+            << "\nroot_name()="       << p.root_name()
             << "\nroot_directory()="  << p.root_directory()
-            << "\nroot_path()="       << p.root_path()     
-            << "\nroot_path().string() =" << p.root_path().string() 
-            << "\nparent_path()="     << p.parent_path()   
-            << "\nfileName()="        << p.fileName()      
+            << "\nroot_path()="       << p.root_path()
+            << "\nroot_path().string() =" << p.root_path().string()
+            << "\nparent_path()="     << p.parent_path()
+            << "\nfileName()="        << p.fileName()
             << "\nextension()="       << p.extension();
             //<< "\nnative_file_string()      =" << p.native_file_string()
             //<< "\nnative_directory_string() =" << p.native_directory_string()
-            //<< "\nrelative_path().string()  =" << p.relative_path().string() 
+            //<< "\nrelative_path().string()  =" << p.relative_path().string()
             //<< "\nbranch_path().string()    =" << p.branch_path().string()<< endl;
 std::cout   << "\nis_block_file (device)     = " << is_block_file(p)
             << "\nis_character_file (device) = " << is_character_file(p)
@@ -876,24 +876,24 @@ std::cout   << "\nis_block_file (device)     = " << is_block_file(p)
             << "\nis_regular_file            = " << is_regular_file(p)
             << "\nis_socket                  = " << is_socket(p)
             << "\nis_symlink                 = " << is_symlink    (p)
-            << "\nis_empty                   = "  << fs::is_empty(p)         
-            << "\nexists                     = "  << fs::exists(p);    
+            << "\nis_empty                   = "  << fs::is_empty(p)
+            << "\nexists                     = "  << fs::exists(p);
     // Também posso criar uma path, um caminho para um arquivo
     fs::path p1 = "/tmp/teste/imagens/img1.pgm";
     ofstream img1(p1);                          // Cria arquivo
     string spgm = "p4 \n2 2 4\n1 2\n3 4\n" ;    // Cria string com conteúdo arquivo processado
     img1 << spgm;                               // Substitui conteúdo do arquivo
     img1.close();                               // Fecha o arquivo antes de mudar seu nome
-cin.get();    
+cin.get();
     // Arquivo com . no nome
     fs::path p2 = "/tmp/teste/imagens/img1.processada.pbm";
     // Caso em que o arquivo tem . só tem extensão (arquivo oculto no GNU/Linux)
     fs::path p3 = "/tmp/teste/imagens/.arquivoOcultoNoLinux";
-std::cout   << "\n================DISCO======================";   
+std::cout   << "\n================DISCO======================";
     // Informações de espaço em disco
     fs::space_info home = fs::space("/home");
     cout  <<"\nDiretório" << "Capacidade"     << "Livre"     <<  "Disponível\n"
-         << setw(20) << "/home: " << setw(20) << home.capacity << setw(20) 
+         << setw(20) << "/home: " << setw(20) << home.capacity << setw(20)
          << home.free << setw(20) << " " << home.available  << '\n';
 std::cout   << "\n================DIRETÓRIOS======================";
     // Criando um diretório e tentando copiar
@@ -907,11 +907,11 @@ std::cout   << "\n================DIRETÓRIOS======================";
         cout << "\nNão deu para copiar o arquivo /tmp/teste/imagens/img1.pgm: " << e.what() << '\n';
     }
     try { fs::copy(dir1, dir2);                       // Cópia sem recursão e com recursão
-          fs::copy("/tmp/teste/imagens", 
+          fs::copy("/tmp/teste/imagens",
                  "/tmp/teste/imagens.backup2", fs::copy_options::recursive);
     } catch(fs::filesystem_error& e) {
-        std::cout << "Não deu para copiar o diretório: " << e.what() << '\n';    }        
-    //fs::remove_all("/tmp/teste"); // Removendo diretório        
+        std::cout << "Não deu para copiar o diretório: " << e.what() << '\n';    }
+    //fs::remove_all("/tmp/teste"); // Removendo diretório
     // Iterando pelo diretório
     cout << "\nVai iterar não recursivamente pelo diretório e mostrar as paths :";
     for(auto& arq: fs::directory_iterator("/tmp/teste"))  // Itera pelo diretório
@@ -929,7 +929,7 @@ std::cout   << "\n================ARQUIVOS======================";
     p4.replace_extension(".pbm");                // Substitui extensão da path
     p4 +=".backup";
     fs::copy(p1,p4);                             // Cópia de arquivos
-    
+
 std::cout   << "\n================LINKS======================";
     cout << "\n\nVai criar links:";              // Criando links
     fs::create_hard_link("/tmp/teste/imagens/img1.pbm", "/tmp/teste/imagens/hard_link_img1.pbm");
@@ -939,7 +939,7 @@ std::cout   << "\n================LINKS======================";
     fs::create_directory_symlink("/tmp/teste/imagens/","symlink_imagens");
     fs::path p7 = "symlink_imagens";             // link simbólico diretório
     system("tree /tmp/teste");
-  std::cout << "Os caminhos para p1 e p2 são equivalentes? " 
+  std::cout << "Os caminhos para p1 e p2 são equivalentes? "
             << equivalent(p1,p2) << endl;
   std::cout << "O tamanho do p1 é de " <<  file_size(p1) << "bytes" << endl;
   auto ftime = fs::last_write_time(p1);
@@ -957,12 +957,12 @@ memset( ponteiroVetor, 0, vetorSize * sizeof(tipo) );
 
 ===========================================================================
 Lista com as principais novidades de C++20 -> Núcleo da linguagem
-=========================================================================== 
+===========================================================================
 --> adição de concepts ou conceitos, expandindo as possibilidades de uso dos templates.
 
 --> adição de modules simplificando e melhorando a velocidade da compilação.
 
---> adição de coroutines 
+--> adição de coroutines
  co_await para suspender a execução até retomar.
  co_yield para suspender a execução retornando um valor.
  co_return para completar a execução retornando um valor.
@@ -1014,7 +1014,7 @@ Lista com as principais novidades de C++20 -> Núcleo da linguagem
 
 ===========================================================================
 Lista com as principais novidades de C++20 -> Biblioteca
-=========================================================================== 
+===========================================================================
 --> ranges (The One Ranges Proposal)[96]
 
 --> std::make_shared and std::allocate_shared for arrays[97]
@@ -1045,9 +1045,9 @@ Lista com as principais novidades de C++20 -> Biblioteca
 
 --> std::bind_front[113]
 
---> Attributes in C++20: 
-    [[likely]], 
-    [[unlikely]], 
+--> Attributes in C++20:
+    [[likely]],
+    [[unlikely]],
     [[no_unique_address]]
 
 ============================================================================
@@ -1067,7 +1067,7 @@ Dicas estilo de código (código limpo)
 
 - Nome classe CNomeClasse, ex: class CFuncao; class CFDarcy: public CFuncao;
 - Nome objeto CFFuncao funcao2G; CFDarcy functionDarcy
-- Nome dos métodos devem indicar ação (verbos); 
+- Nome dos métodos devem indicar ação (verbos);
 ex: funcao->Salvar(fileName); funcao->Ler(fileName);
 ex: funcao->SalvarDisco(fileName); funcao->LerDadosDisco(fileName);
 ex: funcao2G->Read(fileName); funcao2G->Write(fileName);

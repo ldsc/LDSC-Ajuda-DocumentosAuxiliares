@@ -7,7 +7,6 @@
 #+OPTIONS: num:nil
 #+TAGS: @ler(l) @testar(t) @testado(T) @atalhopessoal(p)
 
-
 * Projeto emacs-guiaReferencia-andreduartebueno.org:
 ** Objetivo do projeto:
 *** Aprender a usar o /emacs/ de forma eficiente.
@@ -132,8 +131,7 @@ C-x x r : Renomeia o buffer.
 C-x k : Deleta um buffer.
 C-x C-q : Somente leitura (alterna).
 Comandos para buffers: prepend-to-buffer; insert-buffer; append-to-buffer; append-to-file
-C-x i : Inserir arquivo (insert-file).
-C-x x i : Inserrir buffer (insert-buffer).
+
 * Janela com informações dos buffers
 C-x C-b : Abre janela dos buffers.
 --m marca para operação.
@@ -530,6 +528,74 @@ Shift - : para inserir número negativo.
 C-insert : copy.
 C-y : paste.
 q : quit.
+* Magit — Resumo, Instalação e Uso Básico
+O Magit é uma interface avançada para Git integrada ao Emacs.
+Ele permite realizar praticamente todas as operações de versionamento
+sem sair do editor, com forte ênfase em clareza, segurança e controle.
+
+O Magit não oculta o Git; ao contrário, expõe explicitamente o estado do
+repositório e incentiva boas práticas de versionamento.
+
+** Instalação
+#+begin_src emacs-lisp
+(use-package magit
+  :ensure t)
+#+end_src
+
+** Configuração mínima recomendada
+
+Configurações simples que melhoram a experiência inicial:
+
+#+begin_src emacs-lisp
+;; Atalho global para o status do Magit
+(global-set-key (kbd "C-x g") 'magit-status)
+
+;; Evita confirmações excessivas em operações comuns
+(setq magit-no-confirm '(stage-all-changes
+                          unstage-all-changes))
+#+end_src
+
+** Uso básico
+
+O fluxo de trabalho no Magit segue explicitamente o modelo do Git:
+- *Working Tree*
+- *Staging Area*
+- *Repository*
+
+O ponto de entrada principal é:
+- =C-x g= → abre o buffer *magit-status*
+
+** Operações básicas no buffer magit-status
+
+A partir do buffer de status:
+
+- =g= → atualizar o status
+- =s= → adicionar (stage) alteração sob o cursor
+- =u= → remover (unstage) alteração
+- =S= → adicionar todas as alterações
+- =c c= → criar commit
+- =P p= → push para repositório remoto
+- =F p= → pull do repositório remoto
+O Magit sempre solicita confirmação explícita antes de operações destrutivas.
+
+** Commits
+Fluxo típico de commit:
+1. Selecionar alterações desejadas (=s=).
+2. Iniciar commit com =c c=.
+3. Escrever mensagem de commit no buffer apropriado.
+4. Confirmar o commit.
+Esse processo reforça o conceito de commits atômicos e bem documentados.
+
+** Integração com GitHub
+O Magit funciona diretamente com repositórios hospedados no GitHub:
+- Push e pull via HTTPS ou SSH.
+- Suporte a autenticação moderna (tokens ou chaves SSH).
+- Integração natural com fluxos baseados em *pull requests*.
+
+Para uso acadêmico, o Magit permite que todo o ciclo de versionamento
+ocorra dentro do Emacs, reduzindo troca de contexto e erros operacionais.
+
+
 * Pesquisa internet [requer pacote google-this]
 M-s M-w : Pesquisa na internet pelo texto selecionado (mostra no /emacs/).
 Exemplo: pesquisa por "/emacs/ shortcut".
@@ -660,8 +726,7 @@ nil : falso
 t : verdadeiro
 123 : inteiro
 123.4 : flutuante
-?a : valor 97 (código ascii da letra)
-'a : letra a
+?a : letra a com valor 97
 ** Variáveis
 Uma característica de Lisp/Elisp é que um símbolo pode armazenar simultaneamente um valor e uma função.
 No exemplo a seguir Area assume o valor 10 e é uma função que calcula a área de um círculo.
@@ -728,7 +793,9 @@ Abaixo não funcionou
 (setq b (read-byte  "Entre com um byte: "))
 (print b)
 
-** Expressões
+* [revisando os comandos - PAREI AQUI]
+- Testar o comando.
+- Se tiver dúvida comparar com outros guias.** Expressões
 *** Expressões executadas : operadores
 ;; Soma (operador listaElementos)
 ( + 10 20) -> 30
@@ -798,12 +865,11 @@ Quando falarmos de cdr veremos que o cdr do último elemento deve ser nil.
 -> ((Molly "Border Collie") (Nina "Labrador") (Koto "SRD") (Faisca "Vira-Lata"))
 
 ; Acessando elementos do mapa
-(assoc 'Molly map_nome_raca) -> (Molly "Border Collie")
-(assoc 'Nina map_nome_raca)  -> (Nina "Labrador")
+(assoc 'Molly map_nome_raca)
+-> (Molly "Border Collie")
 
 ** Manipulando Listas
-*** cons: É usado para contruir listas adicionando elementos (temporário);
-cons recebe como parâmetros o próximo elemento e a lista.
+*** cons: É usado para contruir listas adicionando elementos; cons recebe como parâmetros a lista e o próximo elemento.
 (setq x 1) -> 1
 (setq y 2) -> 2
 (setq z 3) -> 3
@@ -811,15 +877,14 @@ cons recebe como parâmetros o próximo elemento e a lista.
 ; note que tem um ponto separando os elementos.
 (cons  x y) -> (1 . 2)
 (setq par (cons x y)) -> (1 . 2)
-Cópia do primeiroElemento pode ser obtido com o comando car.
+O primeiroElemento pode ser obtido com o comando car.
 (car par) -> 1
-Cópia do segundoElemento é obtido com o comando cdr.
+O segundoElemento é obtido com o comando cdr.
 (cdr par) -> 2
-(print par) -> (1 . 2)
+
 ; Abaixo temos o par (1 . 2) como primeiroElemento e 3 como segundoElemento
 (cons (cons  x y) z) -> ((1 . 2) . 3)
 (cons (cons (cons  x y) z) nil) -> (((1 . 2) .3))
-(cons par z) -> ((1 . 2) . 3)
 
 ; Uma lista deve terminar com um nil (nullo).
 ; Ou seja, o último ponteiro da lista deve apontar para nil (nullo).
@@ -841,48 +906,40 @@ Exemplo:
 (setq doguinhos (cons 'Zeca doguinhos))
 (print doguinhos) -> (Zeca Molly Nina Koto Faisca)
 
-*** car: Extrai cópia do primeiro elemento da lista (temporário)
-Equiale a C++ front.
+*** car: Extrai o primeiro elemento da lista (c++ front)
 (car '(Molly Bueno)) -> Molly
 (car doguinhos) -> Molly
 
-*** cdr: Retorna cópia da lista sem o primeiro elemento (temporário)
+*** cdr: Elimina o primeiro elemento da lista
+(Equivalente C++: pop_front)
 (cdr '(Molly da Luz Bueno)) -> da Luz Bueno
-(print doguinhos) -> (Zeca Molly Nina Koto Faisca)
-(cdr doguinhos)   -> (Molly Nina Koto Faisca)
+(car doguinhos) -> Molly
 (print doguinhos) -> (Molly Nina Koto Faisca)
 
-*** nth: Extrai o elemento 3 da lista, o índice começa em 0 (equivale a C++ v[nth])
-(nth 3 '(Molly da Luz Bueno)) -> Bueno
+*** nth: Extrai o elemento 3 da lista, o índice começa em 0 (c++ v[n])
 (setq doguinhos '(Molly Nina Koto Faisca))
+(nth 3 '(Molly da Luz Bueno)) -> Bueno
 (nth 3 doguinhos) -> Faisca
 (nth 0 doguinhos) -> Molly
 (setq resultado (nth 3 doguinhos)) -> Faisca
 (print resultado) -> Faisca
 (print doguinhos) -> (Molly Nina Koto Faisca)
+
 *** mapcar: Aplica função a todos os elementos da lista.
-(Equivalente C++: for_each(l.begin(),l.end(),nomeFuncao);)
-; Imprime elementos em linhas novas
+(Equivalente C++: for_each(l.begin(),l.end(),f);)
 (mapcar 'print doguinhos)
 ->
 Moly
 Nina
 Koto
 Faisca
-; Imprime elementos colados
-(mapcar 'prin1 doguinhos) -> MolyNinaKotoFaisca
+
 ; reduce: Acumula valores [erro: reduce não funciona!]
 (reduce '+ '(1 2 3 4))
-
-; Abaixo não funciona ?
+;
 ( defun media ( lista ) " Calcula a media dos elementos de uma lista "
-( / ( reduce '+ lista ) ( length lista )))
+(/ ( reduce ’+ lista ) ( length lista )))
 ( media '(1 2 3) )
-
-; Abaixo funciona, mas  note que trunca o resultado para inteiro
-( defun media ( lista ) " Calcula a media dos elementos de uma lista "
-( / ( seq-reduce #'+ lista 0) ( length lista )))
-( media '(1. 2. 3. 4.) )
 
 ** Vetores, vetores bool
 *** []: Cria vetores
@@ -890,13 +947,13 @@ Podemos criar vetores usando [], veja exemplos:
 [0 1 2 3] -> [0 1 2 3]
 [?a ?b ?c ?d ?e] -> [97 98 99 100 101]
 ["abcde"] -> ["abcde"]
-*** vector: Cria vetores
+***  vector: Cria vetores
 ; cria vetor com símbolo a, string1, string2 e valor numérico do caracter a.
-(vector 'a "string1" "string2" ?a)          -> [a "string1" "string2" 97]
-(setq v (vector 'a "string1" "string2" ?a)) -> [a "string1" "string2" 97]
+(vector 'a "string1" "string2" ?a)          -> [a string1 string2 97]
+(setq v (vector 'a "string1" "string2" ?a)) -> [a string1 string2 97]
 *** vconcat: Concatena vetores
-(vconcat [0 1 2 3] [?a ?b ?c ?d ?e] ["abcde"] )
--> [0 1 2 3  'a 'b 99 100 101 "abcde"]
+(vconcat [0 1 2 3] [?a ?b ?c ?d ?e] ["abcde"] ) -> [0 1 2 3 97 98 99 100 101 "abcde"]
+
 *** Como verificar se é uma sequência, um array, uma string, um vetor
 Os comandos sequencep, arrayp, stringp, vectorp e bool−vector−p são usados para verificar o tipo do array.
 Veja exemplos:
@@ -907,7 +964,7 @@ Veja exemplos:
 (vectorp       str) -> nil : não é um vetor.
 (bool−vector−p str) -> nil : não é um vetor boleano. [não tem no elisp].
 (vectorp [0 1 2 3]) -> t : é um vetor.
-(vectorp ( make−bool−vector 3 nil )) -> nil : um vetor de boleanos não é um vector. [?erro?]
+(vectorp ( make−bool−vector 3 nil )) -> nil : um vetor de boleanos não é um vector.
 Note que um bool-vector não é um vector. É um tipo diferente.
 *** Criando vetor de inteiros
 [0 1 2 3] -> [0 1 2 3]
@@ -944,7 +1001,7 @@ Dica: se quando avalia aparece dentro de [] é porque é um vetor.
 ; Dica: use vector
 ( vector 'abcde )
 *** make−bool−vector: Usada para criar um vetor de booleanos.
-; [?não funciona elisp?]
+; [não funciona elisp]
 ; Armazena apenas t/verdadeiro e nil/falso.
 ; é armazenada na memória como um vetor de caracteres no formato binário
 ; #numeroElementos "listaElementos"
@@ -956,15 +1013,15 @@ Dica: se quando avalia aparece dentro de [] é porque é um vetor.
 ; [não funciona elisp]
 ; 10 caracteres c
 ( make−bool−vector 10 ?c )
-*** aref: Usada para acessar elementos de um vetor. Note que aref é abreviatura de /array reference/.
+
+*** aref: Usada para acessar elementos de um vetor. Note que aref é array reference.
 (aref "abcdefg" 0) -> 97 ; a=97
-(aref "abcdefg" 1) -> 98 ; b=98
-(aref "abcdefg" 2) -> 99 ; c=99
+(aref "abcdefg" 2) -> 98 ; b=98
+(aref "abcdefg" 3) -> 99 ; c=99
 
 *** aset: Usada para setar elementos de um vetor. Note que aset é array set.
 (setq str "abcdefg" ) -> "abcdefg"
 (print str)           -> "abcdefg"
-; (aset tipo posição valor)
 (aset str 0 ?x)       -> 120
 (print str)           -> "xbcdefg"
 
@@ -976,7 +1033,7 @@ Dica: se quando avalia aparece dentro de [] é porque é um vetor.
 (stringp    s3) -> t : é uma string.
 (vectorp    s3) -> nil : não é um vetor.
 
-(setq sdoguinhos '("Molly" "Nina" "Koto" "Faisca")) -> ("Molly" "Nina" "Koto" "Faisca")
+(setq sdoguinhos '("Molly" "Nina" "Koto" "Faisca") -> ("Molly" "Nina" "Koto" "Faisca")
 (sequencep  sdoguinhos) -> t : é uma sequência.
 (arrayp     sdoguinhos) -> t : é um array.
 (stringp    sdoguinhos) -> t : é uma string.
@@ -987,17 +1044,19 @@ Dica: se quando avalia aparece dentro de [] é porque é um vetor.
 (arrayp     ldoguinhos) -> nil : não é um array.
 (stringp    ldoguinhos) -> nil : não é uma string.
 (vectorp    ldoguinhos) -> nil : não é um vetor.
+
 *** concat: Usado para concatenar strings.
 (concat "Molly" "Bueno")  -> "MollyBueno"
 (concat "Molly " "Bueno") -> "Molly Bueno"
 (setq s (concat "Molly " "Bueno")) -> "Molly Bueno"
-(print s) -> "Molly Bueno"
+(print s)-> "Molly Bueno"
 
 *** substring: Usado para retornar parte da string.
 (substring s 0 5)  -> "Molly"
 (length s)         -> 11
-(string−width s)   -> [?não funciona elisp?]
+(string−width s)   -> [não funciona elisp]
 (substring s 6 11) -> "Bueno"
+
 *** clear-string: Usado para zerar a string.
 ; [não funciona elisp]
 (clear−string s)  -> nil
@@ -1020,7 +1079,7 @@ Dica: se quando avalia aparece dentro de [] é porque é um vetor.
 (number−to−string −30) -> "30".
 (number−to−string 0)   -> "0".
 *** string−to−number:
-; [? não funciona elisp ?]
+; [não funciona elisp]
 ; pode receber como segundo parâmetro a base do número
 ?a -> 97
 (string−to−number "a")     -> 97
@@ -1031,7 +1090,7 @@ Dica: se quando avalia aparece dentro de [] é porque é um vetor.
 (string−to−number "11" 2)  -> 3 : base 2 binária 0/1.
 *** ; [não funciona elisp].
 ** Matrix
-; [?não funciona elisp?].
+; [não funciona elisp].
 *** Função para criar matriz
 ( defun make−matrix ( rows cols init )
 ( let (( m ( vector rows nil )))
@@ -1050,36 +1109,42 @@ m ))
 (sleep-for 1) -> aguarda 1s
 ** Funções para buffers e arquivos
 *** point: Retorna a posição do cursor. Semelhante a .
-Note que o arquivo tem 80589 caracteres e estamos na posição 44601.
-(point) -> 44601
+Note que o arquivo tem 64015 caracteres e estamos na posição 32604.
+(point) -> 32604
 (point-min) -> 1 (início do buffer).
-(point-max) -> 80589 (fim do buffer).
+(point-max) -> 66052 (fim do buffer).
 *** what-line: Retorna o número da linha onde esta o cursor.
-(what-line) -> Line 1059
+(what-line) -> Line 914
+
 *** buffer-size: Retorna número de caracteres do buffer.
 (buffer-size) -> 66051
 *** buffer-name: Retorna o nome do buffer.
 (buffer-name) -> emacs-guiaReferencia-andreduartebueno.org
 *** buffer-file-name: Retorna o nome do arquivo. Lembre que existe um buffer na memória e se já foi salvo, estará associado a um arquivo. O nome do arquivo inclui a sua path.
 (buffer-file-name) -> /home/andreduartebueno/Dropbox/02-Ensino/1-Apostilas-Livros-Pessoais/Livro-8-UsandoEmacs-AndreDuarteBueno/MaterialBueno/emacs-guiaReferencia-andreduartebueno.org
+
 *** current-buffer: o buffer ativo no momento.
 (current-buffer) -> #<buffer emacs-guiaReferencia-andreduartebueno.org>
-(setq bbb (current-buffer))
+
 *** switch-to-buffer nomeBuffer: Alterna  cursor ativo para o buffer nomeBuffer.
 (switch-to-buffer nomeBuffer)
 (switch-to-buffer "scratch") -> Alterna para o buffer scratch e mostra o cursor neste buffer.
+
 *** bufferp: Informa se é um buffer
 (message "O objeto é um buffer: %s" (bufferp (current-buffer))) -> t
+
 *** get-buffer: Retorna o buffer como variável (retorna o objeto buffer).
 (get-buffer "scratch")
 *** rename-buffer: Renomeia o buffer corrente. Note que se estiver associado a um arquivo o nome do arquivo permanece o mesmo. Só atualiza o nome do buffer.
 (rename-buffer "novoNomeBuffer")
+
 *** set-buffer nomeBuffer: Neste caso estamos definindo que o buffer ativo é o buffer nomeBuffer, mas diferente de switch-to-buffer não alterna a visualização para lá. Note que podemos usar isso para setar um buffer onde uma saída será realizada.
-;; A saída será no buffer scratch
+; [não funciona elisp].
 (progn
  (switch-to-buffer "scratch")
  (insert  "\nOi, tudo bem 1!")
  (insert  "\nOi, tudo bem 2!\n"))
+
 *** kill-buffer: Apaga/deleta o buffer.
 (kill-buffer nomeDoBuffer)
 *** buffer-list: Retorna lista com os nomes dos buffers existentes
@@ -1095,7 +1160,7 @@ Note que o arquivo tem 80589 caracteres e estamos na posição 44601.
 *** pop-to-buffer:  Abre o buffer informado numa nova janela.
 (pop-to-buffer  "scratch")
 *** view-mode: Alterna para modo view-mode, somente leitura.
-(view-mode)
+
 *** goto-char: Move o cursor para posição n.
 Exemplo:
 ; posição corrente
@@ -1103,6 +1168,7 @@ Exemplo:
 ; avançar 5 caracteres
 (goto-char (+ 5 (point)))
 123456789
+
 ** Funções do usuário
 *** lambda: É uma função sem nome
 (lambda () "Resultado") -> (lambda nil "Resultado")
@@ -1112,17 +1178,11 @@ Para avaliar um lambda coloque dentro de ()
 ((lambda () (* 8 9 ))) -> 72
 
 *** fset: Usada para dar um nome a uma função lambda (função set).
-(fset 'multiplica  (lambda (x y)
-   (* x y)))
-
+(fset 'multiplica (lambda (x y) (* x y)))
 (multiplica 3 4) -> 12
 
 *** deffun: define uma função nomeada.
-O comentário é opcional.
 (defun NomeFuncao (parâmetros) "comentário"
- (conteúdo))
-; comentário 
-(defun NomeFuncao (parâmetros)
  (conteúdo))
 ;; Criando função que soma o parâmetro x ao valor 3
 (defun FSoma3 (x) "Soma o valor 3 ao parâmetro x"
@@ -1154,26 +1214,8 @@ Também podemos usar &rest para receber os demais valores.
 Podemos criar uma função em linha (inline), cujo código  é substituído no local. Isso deixa a função mais rápida, e, como consequência aumenta o tamanho efetivo do código.
 Para usar inline troque defun por defsubst.
 Exemplo:
- Jusofaan1@
- ( defsubst FSoma2 (x y) (+ x y ))
+( defsubst FSoma2 (x y) (+ x y ))
 (FSoma2 3 4) -> 7
-
-; no exemplo abaixo criamos um find replace que atua no buffer informado
-(defun find-and-replace (buffer old-string new-string)
-  (interactive
-   (list
-    (current-buffer)
-    (read-string "String antiga: ")
-    (read-string "String nova: ")
-   )
-  )
-  (with-current-buffer buffer
-    (replace-string old-string new-string)
-  )
-)
-
-(find-and-replace (current-buffer) "olá" "oi")
-
 ** progn: Use para construir pequenos programas com mais de uma linha de execução.
 Exemplo:
 (progn
@@ -1254,29 +1296,27 @@ Fonte: https://youtu.be/RhwCClMdaps?list=PLGMx7bOKMJTw4p7vs1kTGBAnW81NB57Wv&t=38
  
  (define-key org-mode-map (kbd "M-m") 'my-org-table-previous-row)
 
-*** when : Se verdadeiro executa ações 
+
+
 ;; (when (condição) (ação1) (ação2)... )
 (when (> x y)
   (message "x > y")
   (sleep-for 1)
   (message "Uma mensagem!"))
 
-*** cond : Várias condicionais e ações
 ;; A forma cond permite um número arbitrário de condicionais e ações.
 ;; (cond ((< number 1) (message "Number < 1"))
 (setq numero 4)
 (cond
 (( < numero 3 ) (message "Numero < 3"))
-(( < numero 5 ) (message "Numero < 5"))
+((< numero 5)   (message "Numero < 5"))
 (t              (message "Numero >= 5")))
 ** Estruturas de repetição
 *** dolist: Para cada elemento da lista realição ação (c++ for(auto e: lista))
-; equivale a for_each de C++
 (setq doguinhos '(Molly Nina Koto Faisca))
 (dolist (element doguinhos)
 (print element))
-*** dotimes: Repete n vezes
-; equivale a um for de C/C++.
+*** dotimes: Repete n vezes (equivale a um for de C/C++)
 ;; (dotimes (count n value)  (ação1 a ser repetida)(ação2 a ser repetida))
 (let (value)
 (dotimes (count 4 value)
@@ -1302,25 +1342,17 @@ Adiciona count na lista value e seta value;
 (message count)
 (setq count (1+ count)))
 
-*** conditional-case:
+*** condicional-case:
 ;; condicional-case
 (condition-case
 	var
 	bodyform
 	error-handler)
-
-Exemplo:
-(condition-case (var bodyform error-handler …)
-  (condition bodyform)
-  (condition bodyform)
-  …
-  (t error-handler))
-    
-* Expressões regulares
+** Expressões regulares
 ** TODO Conferir com capítulo de expressões regulares do livro
 ** TODO Colocar este capítulo como apêndice do livro do /emacs/ e com adaptações para que funcione no /emacs/
 . Casa com qualquer caracter (exceto nova linha \n).
-Ex: Andr. -> casa com: André
+Ex: Andr. -> casa com: André.
 
 \| Uma opção.
 Ex: x|y -> casa com x ou y.
@@ -1353,15 +1385,9 @@ Padrão ansi:
 [:lower:] Letras minúsculas.
 [:upper:] Letras maiúsculas.
 
-* Principais comandos M-x
-count-words : Conta palavras.
-keep-lines	: Delete all lines not matching the provided regex.
-flush-lines	: Delete all lines matching the provided regex.
-sort-lines	: Sort lines in region alphabetically.
-delete-duplicate-lines	: Delete all but one copy of any identical lines in the region.
-ff-find-other-file	: Find the header or source file corresponding to this file.
 
-* Leituras complementares
+
+** Leituras complementares
 https://aleph0.info/jp/emacs-lisp.pdf
 Ler sobre Escopo léxico em lisp. Explica como funciona o escopo e a avaliação dinâmica (em tempo de execução).
 
@@ -1392,10 +1418,8 @@ Após aplicar os comandos
 123456789
 123456789
 
-Outra possibilidade é digitar f3 gravar uma sequência de teclas e pressionar f4 para finalizar;
-Depois pressiona f4 para repetir a macro.
-
-
+** TODO Corrigir aqui e depois copiar para lyx;
+** TODO Converter esta parte em elisp-guiareferencia-bueno.org
 
 
 ** Testes
@@ -1405,21 +1429,29 @@ Depois pressiona f4 para repetir a macro.
 ( insert "A word is dead when it ’ s said , they say " )
 
 * ; [não funciona elisp].
+* Principais comandos M-x
+count-words : Conta palavras.
+keep-lines	: Delete all lines not matching the provided regex.
+flush-lines	: Delete all lines matching the provided regex.
+sort-lines	: Sort lines in region alphabetically.
+delete-duplicate-lines	: Delete all but one copy of any identical lines in the region.
+ff-find-other-file	: Find the header or source file corresponding to this file.
+
 * /Emacs/ 28 e 29
 Criei aliases para rodar /emacs/ 28 e 29.
-alias emacs28="/home/andreduartebueno/emacs28/emacs-28.2/src/emacs-28.2.1"/
-alias emacs28="emacs --init-directory=~/.emacs.d-v29/"
+alias emacs28="/home/andreduartebueno/emacs28/emacs-28.2/src/emacs-28.2.1"
+alias emacs29="emacs --init-directory=~/.emacs.d-v29/"
 alias emacs="emacs --init-directory=~/.emacs.d-v29/"
 alias emacs-29.1="emacs-29.1 --init-directory=~/.emacs.d-v29/"
 
 * Atalhos personalizados no arquivo de inicialização  :@atalhopessoal:
 #+NAME: Atalhos personalizados
 Repetir aqui os atalhos que foram personalizados no arquivo de inicialização do /emacs/.
-
-Adicionar atalho para:
-M-x highlight-changes-mode : Mostra o que mudou a partir da execução do comando, mudanças aparecem em vermelho.
+Adicionar atalho para: M-x highlight-changes-mode : Mostra o que mudou a partir da execução do comando, mudanças aparecem em vermelho.
 
 * Atalhos raramente usados porque tem teclas navegação, personalizar os mesmos
+C- -> : Movimenta para próxima palavra (M-f).
+C- <- : Movimenta para palavra anterior (M-b).
 M-a : Início sentença.
 M-e : Fim da sentença.
 C-= : No modo org-mode, tabela,use C-= para inserir equação
@@ -1432,7 +1464,7 @@ C-= : No modo org-mode, tabela,use C-= para inserir equação
   | F1              | Ajuda                                                     |   |
   | F2              | sem resposta visivel                                      |   |
   | F3              | start macro teclado                                       |   |
-  | F4              | end macro teclado (ou roda última macro)                  |   |
+  | F4              | end macro teclado                                         |   |
   | F5              | deleta espaços inúteis                                    |   |
   | F6              | ivy-resume                                                |   |
   | F7              | salva arquivo                                             |   |
@@ -1801,4 +1833,8 @@ G	eww	Go to a new address.
 H	eww-list-histories	Shows a list of your histories.
 TAB	shr-next-link	Skip to the next link.
 
+
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
