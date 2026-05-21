@@ -1,0 +1,73 @@
+#+TITLE: Guia de Autenticação e Clonagem via SSH no GitHub
+#+AUTHOR: Prof. André D. Bueno
+#+OPTIONS: toc:nil ^:nil num:nil
+#+LATEX_HEADER: \usepackage[a4paper, margin=1cm]{geometry}
+#+LATEX_HEADER: \renewcommand{\normalsize}{\fontsize{8}{10}\selectfont}
+
+* Guia de Autenticação e Clonagem via SSH no GitHub
+
+** Como Clonar um Repositório Usando SSH (Sem usar HTTPS)
+
+Para clonar repositórios sem precisar digitar usuário e senha (usando apenas a sua chave SSH), você deve sempre copiar a URL que começa com =git@github.com:= em vez da URL tradicional com =https://=.
+
+O comando padrão é: git clone git@github.com:usuario/nome-do-repositorio.git
+
+Exemplo: git clone git@github.com:ldsc/ProjetoEngenharia-Didatico-03-Equipamentos-SistemaInterruptorLampada.git
+
+** Passo a Passo: Substituir Chave SSH (Esquecimento de Passphrase)
+
+Se o sistema pedir a /passphrase/ e você não se lembrar dela, siga os passos abaixo para gerar uma chave limpa e configurar seu repositório local.
+
+*** Passo 1: Gerar a nova chave SSH (Sem senha)
+Abra o terminal e execute o comando:
+#+BEGIN_SRC bash
+ssh-keygen -t ed25519 -C "bueno@lenep.uenf.br"
+#+END_SRC
+
+Atenção às perguntas do terminal:
+1. =Enter file in which to save the key...= -> Aperte *[Enter]*
+2. =Overwrite (y/n)?= -> Digite *y* e aperte *[Enter]* (para sobrescrever a chave antiga)
+3. =Enter passphrase...= -> Deixe em branco, apenas aperte *[Enter]*
+4. =Enter same passphrase again:= -> Aperte *[Enter]* novamente
+
+*** Passo 2: Registrar a nova chave no sistema operacional
+Ative o agente do SSH e adicione a nova chave criada à memória do sistema:
+#+BEGIN_SRC bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+#+END_SRC
+
+*** Passo 3: Adicionar a chave pública ao seu perfil do GitHub
+1. Mostre o conteúdo da chave pública no terminal:
+   #+BEGIN_SRC bash
+   cat ~/.ssh/id_ed25519.pub
+   #+END_SRC
+2. Copie todo o texto exibido (ele começa com =ssh-ed25519=).
+3. Vá no navegador até o GitHub:
+   - Clique na sua *Foto de Perfil* (canto superior direito) -> *Settings*.
+   - Na barra lateral esquerda, clique em *SSH and GPG keys*.
+   - Remova a chave antiga (clicando em *Delete*).
+   - Clique em *New SSH Key*.
+   - Cole o texto copiado no campo *Key* e dê um título no campo *Title* (ex: =PC Bueno=).
+   - Clique em *Add SSH Key*.
+
+*** Passo 4: Atualizar o seu repositório local existente para usar SSH
+Se você já deu =git init= e adicionou o repositório via HTTPS, mude a URL local para apontar para o endereço SSH correto, exemplo:
+#+BEGIN_SRC bash
+Modelo: git remote set-url origin git@github.com:ldsc/NomeDoSeuProjeto.git
+git remote set-url origin git@github.com:ldsc/ProjetoEngenharia-Didatico-03-Equipamentos-SistemaInterruptorLampada.git
+#+END_SRC
+
+*** Passo 5: Testar a conexão e fazer o envio (Push)
+1. Teste se o GitHub reconhece a sua nova chave:
+   #+BEGIN_SRC bash
+   ssh -T git@github.com
+   #+END_SRC
+   /A resposta deve ser: Hi andreduartebueno! You've successfully authenticated.../
+
+2. Faça o envio inicial do seu projeto sem que nenhuma senha seja solicitada:
+   #+BEGIN_SRC bash
+     git add .
+     git commit -m "mensagem informando o que atualizou"
+     git push -u origin main
+   #+END_SRC
